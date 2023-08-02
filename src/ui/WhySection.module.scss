@@ -1,6 +1,6 @@
 .container {
   display: flex;
-  gap: 5rem;
+  gap: 3rem;
   //   background-color: red;
   padding-top: 2rem;
 }
@@ -16,11 +16,6 @@
   img {
     border-radius: 3px;
   }
-}
-
-.detailsContainer {
-  background-color: blue;
-  width: 50%;
 }
 
 .pic1 {
@@ -41,4 +36,38 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.detailsContainer {
+  //   background-color: blue;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.details {
+  //   background-color: purple;
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.icon {
+  font-size: 4rem;
+}
+
+.detailContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading {
+  font-size: 1.6rem;
+}
+
+.detail {
+  font-size: 1.2rem;
 }
