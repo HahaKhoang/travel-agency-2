@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  gap: 5rem;
+  //   background-color: red;
+  padding-top: 2rem;
+}
+
+.pictureContainer {
+  width: 50%;
+  //   background-color: orange;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 175px 175px;
+  gap: 1rem;
+
+  img {
+    border-radius: 3px;
+  }
+}
+
+.detailsContainer {
+  background-color: blue;
+  width: 50%;
+}
+
+.pic1 {
+  grid-column: 1/-1;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pic2 {
+  grid-row: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pic3 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

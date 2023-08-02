@@ -5,7 +5,7 @@ import { IoMdHappy, IoMdAirplane, IoIosList } from "react-icons/io";
 
 function HowSection() {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <SectionHeader header="How it works" />
       <div className={styles.boxContainer}>
         <Box
@@ -24,7 +24,7 @@ function HowSection() {
           icon={<IoMdAirplane />}
         />
       </div>
-    </div>
+    </section>
   );
 }
 
