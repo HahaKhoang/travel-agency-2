@@ -5,7 +5,6 @@ function ExpandingCardItem({ curActive, onActive, img, text, num }) {
 
   function handleToggle() {
     onActive(num);
-    console.log(num);
   }
 
   const active = `${isOpen ? styles.active : ""}`;
