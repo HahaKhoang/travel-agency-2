@@ -9,6 +9,7 @@ function ExpandingCardItem({ curActive, onActive, img, text, num }) {
   }
 
   const active = `${isOpen ? styles.active : ""}`;
+  const textActive = `${isOpen ? styles.textActive : ""}`;
 
   return (
     <div
@@ -18,7 +19,7 @@ function ExpandingCardItem({ curActive, onActive, img, text, num }) {
       }}
       onClick={handleToggle}
     >
-      <h3>{text}</h3>
+      <h3 className={textActive}>{text}</h3>
     </div>
   );
 }

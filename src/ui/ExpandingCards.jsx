@@ -2,6 +2,9 @@ import styles from "./ExpandingCards.module.scss";
 import kyoto from "../../public/img/kyoto.jpg";
 import fuji from "../../public/img/fuji.jpg";
 import tokyo from "../../public/img/tokyo.jpg";
+import arashiyama from "../../public/img/arashiyama.jpg";
+import japaneseFood from "../../public/img/japaneseFood.jpg";
+
 import { useState } from "react";
 import ExpandingCardItem from "./ExpandingCardItem";
 
@@ -9,6 +12,8 @@ const tours = [
   { img: kyoto, text: "Explore Kyoto" },
   { img: tokyo, text: "Explore Tokyo" },
   { img: fuji, text: "Explore Fuji" },
+  { img: arashiyama, text: "Explore nature" },
+  { img: japaneseFood, text: "Eat your way through Japan" },
 ];
 
 function ExpandingCards() {
