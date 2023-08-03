@@ -3,6 +3,7 @@ import MainHeading from "../ui/MainHeading";
 import Subheading from "../ui/Subheading";
 import HowSection from "../ui/HowSection";
 import WhySection from "../ui/WhySection";
+import ToursSection from "../ui/ToursSection";
 
 function Home() {
   return (
@@ -12,6 +13,7 @@ function Home() {
       <Subheading />
       <HowSection />
       <WhySection />
+      <ToursSection />
     </>
   );
 }
