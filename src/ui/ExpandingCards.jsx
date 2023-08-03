@@ -3,61 +3,29 @@ import kyoto from "../../public/img/kyoto.jpg";
 import fuji from "../../public/img/fuji.jpg";
 import tokyo from "../../public/img/tokyo.jpg";
 import { useState } from "react";
+import ExpandingCardItem from "./ExpandingCardItem";
+
+const tours = [
+  { img: kyoto, text: "Explore Kyoto" },
+  { img: tokyo, text: "Explore Tokyo" },
+  { img: fuji, text: "Explore Fuji" },
+];
 
 function ExpandingCards() {
-  const [active, setActive] = useState("true");
-
-  const removeClass = () => {
-    setActive(false);
-  };
-
-  const activeClass = () => {
-    removeClass();
-    setActive(true);
-  };
+  const [curActive, setCurActive] = useState(0);
 
   return (
     <div className={styles.container}>
-      <div
-        className={`${styles.panel} ${styles.active} `}
-        style={{
-          backgroundImage: `url(${kyoto})`,
-        }}
-      >
-        <h3>Explore Kyoto</h3>
-      </div>
-      <div
-        className={`${styles.panel} `}
-        style={{
-          backgroundImage: `url(${tokyo})`,
-        }}
-      >
-        <h3>Explore Kyoto</h3>
-      </div>
-      {/* <div
-        className={`${styles.panel} `}
-        style={{
-          backgroundImage: `url(${fuji})`,
-        }}
-      >
-        <h3>Explore Kyoto</h3>
-      </div>
-      <div
-        className={`${styles.panel} `}
-        style={{
-          backgroundImage: `url(${kyoto})`,
-        }}
-      >
-        <h3>Explore Kyoto</h3>
-      </div>
-      <div
-        className={`${styles.panel} `}
-        style={{
-          backgroundImage: `url(${tokyo})`,
-        }}
-      >
-        <h3>Explore Kyoto</h3>
-      </div> */}
+      {tours.map((el, i) => (
+        <ExpandingCardItem
+          img={el.img}
+          text={el.text}
+          key={el.text}
+          num={i}
+          curActive={curActive}
+          onActive={setCurActive}
+        ></ExpandingCardItem>
+      ))}
     </div>
   );
 }
