@@ -1,24 +1,60 @@
 .box {
-  width: 15rem;
-  height: 15rem;
+  width: 22rem;
+  height: 25rem;
   border: 1px solid black;
-  border-radius: 3px;
+  border-radius: 7px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5rem;
+  padding: 2rem;
+  text-align: center;
+  background-color: aliceblue;
+
+  @media (max-width: 900px) {
+    width: 20rem;
+    height: 23rem;
+    padding: 1rem;
+    background-color: orange;
+  }
+
+  @media (max-width: 800px) {
+    width: 19rem;
+    height: 23rem;
+
+    background-color: bisque;
+  }
+
+  @media (max-width: 750px) {
+    width: 16rem;
+    height: 25rem;
+    padding: 0 1rem;
+    background-color: aquamarine;
+  }
 }
 
 .icon {
   font-size: 7rem;
+
+  @media (max-width: 1000px) {
+    font-size: 6rem;
+  }
 }
 
 .header {
   font-size: 2rem;
   margin-bottom: 1.6rem;
+
+  @media (max-width: 1000px) {
+    font-size: 1.6rem;
+    margin-bottom: 0.4rem;
+  }
 }
 
 .description {
   font-size: 1.2rem;
+
+  @media (max-width: 1000px) {
+    font-size: 1rem;
+  }
 }
