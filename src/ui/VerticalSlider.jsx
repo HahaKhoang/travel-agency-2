@@ -16,49 +16,53 @@ const data = [
 const images = [{ image: arashiyama }, { image: fuji }, { image: kyoto }];
 
 function VerticalSlider() {
-  const [activeImage, setActiveImage] = useState(0);
-  const [clicked, setClicked] = useState(false);
-  const maxSlide = images.length;
+  const maxSlide = data.length;
+  const [activeCustomer, setActiveCustomer] = useState(maxSlide);
+  const [clickedDown, setClickedDown] = useState(false);
 
-  function nextSlide() {
-    if (activeImage === maxSlide - 1) {
-      setActiveImage(0);
-    } else {
-      setActiveImage((prevState) => prevState + 1);
-      setClicked(true);
+  function changeSlide(direction) {
+    if (direction === "down") {
+      if (activeCustomer === maxSlide - 1) {
+        setActiveCustomer(maxSlide);
+      } else {
+        setActiveCustomer((prevState) => prevState - 1);
+      }
     }
+    setClickedDown(true);
   }
-  console.log("Next slide: " + activeImage, clicked);
+  console.log(activeCustomer);
+
+  // const slideDown = clickedDown
+  //   ? `translateY(${100 * (i - activeCustomer)}%)`
+  //   : "";
 
   return (
     <div className={styles.container}>
       <div className={styles["left-container"]}>
-        {data.map((el) => (
-          <VerticalSliderItem
-            name={el.name}
-            tour={el.tour}
+        {data.map((el, i) => (
+          <div
             key={el.name}
-            color={el.color}
-            image={el.image}
-          />
+            style={{
+              backgroundColor: `${el.color}`,
+              transform: clickedDown
+                ? `translateY(${100 * (i - activeCustomer)}%)`
+                : "",
+            }}
+          >
+            <h1>{el.name}</h1>
+            <p>{el.tour}</p>
+          </div>
         ))}
       </div>
-      <div className={styles["right-container"]}>
-        {images.map((el, i) => (
-          <VerticalSliderPicture
-            key={i}
-            image={el.image}
-            index={i}
-            activeImage={activeImage}
-            clicked={clicked}
-          />
-        ))}
-      </div>
+      <div className={styles["right-container"]}></div>
       <div className={styles["button-container"]}>
-        <button className={styles["up-button"]} onClick={nextSlide}>
+        <button className={styles["up-button"]}>
           <IoIosArrowRoundUp />
         </button>
-        <button className={styles["down-button"]}>
+        <button
+          className={styles["down-button"]}
+          onClick={() => changeSlide("down")}
+        >
           <IoIosArrowRoundDown />
         </button>
       </div>

@@ -1,5 +1,33 @@
 .subheading {
-  font-size: 4rem;
-  text-align: center;
-  padding: 2rem 0;
+  font-size: 2.6rem;
+  width: 100%;
+  // background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-container {
+  position: relative;
+  height: 70px;
+  // background-color: green;
+  display: inline;
+  overflow: hidden;
+}
+
+.words-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // background-color: red;
+  padding: 0 1rem;
+}
+
+.text-word {
+  height: 70px;
+  font-weight: 600;
+  color: blue;
+  display: block;
+  transition: 0.5s;
+  line-height: 70px;
 }

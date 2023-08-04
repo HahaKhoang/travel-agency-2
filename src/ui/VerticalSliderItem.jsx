@@ -1,8 +1,17 @@
 import styles from "./VerticalSliderItem.module.scss";
 
-function VerticalSliderItem({ name, tour, color }) {
+function VerticalSliderItem({
+  name,
+  tour,
+  color,
+  clicked,
+  index,
+  activeCustomer,
+}) {
+  const click = clicked ? `translateY(${100 * (index - activeCustomer)}%)` : "";
+
   return (
-    <div style={{ backgroundColor: color }}>
+    <div style={{ backgroundColor: color, transform: `${click}` }}>
       <h1>{name}</h1>
       <p>{tour}</p>
     </div>

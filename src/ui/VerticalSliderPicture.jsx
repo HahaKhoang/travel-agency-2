@@ -6,7 +6,7 @@ function VerticalSliderPicture({ activeImage, image, index, clicked }) {
 
   return (
     <div
-      className={`${styles.container} `}
+      // className={`${styles.container} `}
       style={{
         backgroundImage: `url(${image})`,
         transform: `${click}`,
