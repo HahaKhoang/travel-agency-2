@@ -17,40 +17,18 @@ const images = [{ image: arashiyama }, { image: fuji }, { image: kyoto }];
 
 function VerticalSlider() {
   const [activeImage, setActiveImage] = useState(0);
-  const length = images.length;
-  const maxSlide = images.length - 1;
+  const [clicked, setClicked] = useState(false);
+  const maxSlide = images.length;
 
-  const nextSlide = () => {
-    setActiveImage(activeImage === maxSlide ? 0 : activeImage + 1);
-    // if (activeImage === null) setActiveImage(0);
-    // else {
-    //   setActiveImage(activeImage === maxSlide ? 0 : activeImage + 1);
-    // }
-    // if (activeImage === maxSlide) setActiveImage(0);
-    // else {
-    //   setActiveImage((curState) => curState++);
-    // }
-    console.log(activeImage);
-  };
-
-  const prevSlide = () => {
-    setActiveImage(activeImage === 0 ? length - 1 : activeImage - 1);
-  };
-
-  //   const active = `activeImage === i ? transform: translateY(activeImage * 100) : ''`;
-
-  // <div
-  //   className={ind === activeImageNum ? "currentSlide active" : "currentSlide"}
-  //   key={ind}
-  // >
-  //   {ind === activeImageNum && <img src={currentSlide.url} className="image" />}
-  // </div>;
-
-  // const goToSlide = function (slide) {
-  //   slides.forEach(
-  //     (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
-  //   );
-  // };
+  function nextSlide() {
+    if (activeImage === maxSlide - 1) {
+      setActiveImage(0);
+    } else {
+      setActiveImage((prevState) => prevState + 1);
+      setClicked(true);
+    }
+  }
+  console.log("Next slide: " + activeImage, clicked);
 
   return (
     <div className={styles.container}>
@@ -72,6 +50,7 @@ function VerticalSlider() {
             image={el.image}
             index={i}
             activeImage={activeImage}
+            clicked={clicked}
           />
         ))}
       </div>
