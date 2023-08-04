@@ -6,19 +6,24 @@
   border-radius: 7px;
   margin: 0 auto;
 
-  // background-color: pink;
-  @media (min-width: 1000px) {
-    max-width: 90vw;
-  }
+  background-color: pink;
+  // @media (min-width: 1000px) {
+  //   max-width: 90vw;
+  // }
 
-  @media (min-width: 1600px) {
-    max-width: 60vw;
+  // @media (min-width: 1600px) {
+  //   max-width: 60vw;
+  // }
+
+  @media (min-width: 1500px) {
+    max-width: 100rem;
+    background-color: green;
   }
 }
 
 .main {
   //   padding: 4rem 8rem 6.4rem;
-  overflow: scroll;
+  // overflow: scroll;
   // background-color: yellow;
   padding: 0 8rem 20rem;
 

@@ -16,17 +16,20 @@ const data = [
 const images = [{ image: arashiyama }, { image: fuji }, { image: kyoto }];
 
 function VerticalSlider() {
-  const [activeImage, setActiveImage] = useState(null);
+  const [activeImage, setActiveImage] = useState(0);
   const length = images.length;
   const maxSlide = images.length - 1;
 
   const nextSlide = () => {
-    // setActiveImage(activeImage === maxSlide ? 0 : activeImage + 1);
-    if (activeImage === null) setActiveImage(0);
-    else {
-      setActiveImage(activeImage === maxSlide ? 0 : activeImage + 1);
-    }
-
+    setActiveImage(activeImage === maxSlide ? 0 : activeImage + 1);
+    // if (activeImage === null) setActiveImage(0);
+    // else {
+    //   setActiveImage(activeImage === maxSlide ? 0 : activeImage + 1);
+    // }
+    // if (activeImage === maxSlide) setActiveImage(0);
+    // else {
+    //   setActiveImage((curState) => curState++);
+    // }
     console.log(activeImage);
   };
 
@@ -42,6 +45,12 @@ function VerticalSlider() {
   // >
   //   {ind === activeImageNum && <img src={currentSlide.url} className="image" />}
   // </div>;
+
+  // const goToSlide = function (slide) {
+  //   slides.forEach(
+  //     (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
+  //   );
+  // };
 
   return (
     <div className={styles.container}>
