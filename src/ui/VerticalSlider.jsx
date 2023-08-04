@@ -16,9 +16,32 @@ const data = [
 const images = [{ image: arashiyama }, { image: fuji }, { image: kyoto }];
 
 function VerticalSlider() {
-  const [activeImage, setActiveImage] = useState(0);
+  const [activeImage, setActiveImage] = useState(null);
+  const length = images.length;
+  const maxSlide = images.length - 1;
 
-  const transform = `translateY(-${activeImage * 100})`;
+  const nextSlide = () => {
+    // setActiveImage(activeImage === maxSlide ? 0 : activeImage + 1);
+    if (activeImage === null) setActiveImage(0);
+    else {
+      setActiveImage(activeImage === maxSlide ? 0 : activeImage + 1);
+    }
+
+    console.log(activeImage);
+  };
+
+  const prevSlide = () => {
+    setActiveImage(activeImage === 0 ? length - 1 : activeImage - 1);
+  };
+
+  //   const active = `activeImage === i ? transform: translateY(activeImage * 100) : ''`;
+
+  // <div
+  //   className={ind === activeImageNum ? "currentSlide active" : "currentSlide"}
+  //   key={ind}
+  // >
+  //   {ind === activeImageNum && <img src={currentSlide.url} className="image" />}
+  // </div>;
 
   return (
     <div className={styles.container}>
@@ -33,13 +56,18 @@ function VerticalSlider() {
           />
         ))}
       </div>
-      <div className={styles["right-container"]} style={{ transform }}>
+      <div className={styles["right-container"]}>
         {images.map((el, i) => (
-          <VerticalSliderPicture key={i} image={el.image} />
+          <VerticalSliderPicture
+            key={i}
+            image={el.image}
+            index={i}
+            activeImage={activeImage}
+          />
         ))}
       </div>
       <div className={styles["button-container"]}>
-        <button className={styles["up-button"]}>
+        <button className={styles["up-button"]} onClick={nextSlide}>
           <IoIosArrowRoundUp />
         </button>
         <button className={styles["down-button"]}>
