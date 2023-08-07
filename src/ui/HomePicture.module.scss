@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  //   background-color: blue;
+  background-color: blue;
   display: flex;
   height: 35rem;
   padding: 2rem 0;
@@ -8,18 +8,23 @@
 
 .textContainer {
   width: 40%;
-  //   background-color: orange;
+  background-color: orange;
   margin-right: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 2rem;
+
+  @media (max-width: 800px) {
+    width: 50%;
+    background-color: green;
+  }
 }
 
 .text {
   display: flex;
   gap: 1rem;
-  //   background-color: purple;
+  background-color: purple;
 
   img {
     width: 50px;
@@ -43,7 +48,7 @@
 }
 
 .pictureContainer {
-  //   background-color: pink;
+  background-color: pink;
   width: 100%;
   object-fit: cover;
   border-radius: 3px;

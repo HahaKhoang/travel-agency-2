@@ -22,7 +22,7 @@ function VerticalSlider() {
 
   function changeSlide(direction) {
     if (direction === "down") {
-      if (activeCustomer === maxSlide - 1) {
+      if (activeCustomer === 1) {
         setActiveCustomer(maxSlide);
       } else {
         setActiveCustomer((prevState) => prevState - 1);
@@ -30,7 +30,10 @@ function VerticalSlider() {
     }
     setClickedDown(true);
   }
-  console.log(activeCustomer);
+  console.log(
+    "active customer: " + activeCustomer,
+    "clicked down: " + clickedDown
+  );
 
   // const slideDown = clickedDown
   //   ? `translateY(${100 * (i - activeCustomer)}%)`
