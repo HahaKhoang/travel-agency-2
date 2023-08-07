@@ -1,13 +1,10 @@
 import SectionHeader from "./SectionHeader";
 import styles from "./HowSection.module.scss";
 import Box from "./Box";
-import { IoMdHappy, IoMdAirplane, IoIosList } from "react-icons/io";
 import {
-  RiCheckDoubleLine,
   RiEmotionHappyLine,
   RiListUnordered,
   RiSuitcaseLine,
-  RiUser5Line,
 } from "react-icons/ri";
 
 function HowSection() {

@@ -29,7 +29,6 @@ function Carousel() {
     autoplay: false,
     autoplaySpeed: 1000,
     accessibility: true,
-    // centerMode: true,
   };
   return (
     <div className={styles.container}>
