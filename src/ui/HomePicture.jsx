@@ -2,6 +2,8 @@ import styles from "./HomePicture.module.scss";
 import tokyo from "../../public/img/tokyo.jpg";
 import kyoto from "../../public/img/kyoto.jpg";
 import fuji from "../../public/img/fuji.jpg";
+import tea from "../../public/img/tea.jpg";
+import onsen from "../../public/img/onsen.jpg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -30,32 +32,32 @@ function HomePicture() {
           </div>
         </div>
         <div className={styles.text}>
-          <img src={tokyo} className={styles.icon} />
+          <img src={onsen} className={styles.icon} />
           <div className={styles.textDetails}>
             <p className={styles.title}>Relax in an onsen</p>
             <p className={styles.details}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
-              ullam quam cumque excepturi{" "}
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
+              dolores quaerat cumque distinctio itaque a voluptas magni
             </p>
           </div>
         </div>
         <div className={styles.text}>
-          <img src={tokyo} className={styles.icon} />
+          <img src={fuji} className={styles.icon} />
           <div className={styles.textDetails}>
             <p className={styles.title}>Hike Mt. Fuji</p>
             <p className={styles.details}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
-              ullam quam cumque excepturi{" "}
+              A cumque aperiam illum dolor, explicabo quo repellat voluptates
+              ipsa, provident exercitationem odio impedit. Eaque magnam
             </p>
           </div>
         </div>
         <div className={styles.text}>
-          <img src={tokyo} className={styles.icon} />
+          <img src={tea} className={styles.icon} />
           <div className={styles.textDetails}>
             <p className={styles.title}>Experience a tea ceremony</p>
             <p className={styles.details}>
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
-              ullam quam cumque excepturi{" "}
+              Debitis fuga, at numquam facere quisquam impedit velit architecto,
+              doloremque perspiciatis accusamus maxime ipsa iure!
             </p>
           </div>
         </div>
