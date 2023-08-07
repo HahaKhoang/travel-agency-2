@@ -1,14 +1,13 @@
 .container {
   width: 100%;
-  background-color: blue;
+  // background-color: blue;
   display: flex;
-  padding: 2rem 0;
+  gap: 3rem;
 }
 
 .textContainer {
   width: 40%;
-  background-color: orange;
-  margin-right: 3rem;
+  // background-color: orange;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,26 +15,27 @@
 
   @media (max-width: 800px) {
     width: 50%;
-    background-color: green;
+    // background-color: green;
   }
 }
 
 .text {
   display: flex;
-  gap: 1rem;
-  background-color: purple;
+  gap: 1.2rem;
+  // background-color: purple;
+}
 
-  img {
-    width: 50px;
-    height: 50px;
-    border-radius: 3px;
-  }
+.icon {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 7px;
 }
 
 .textDetails {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 0.4rem;
 }
 
 .title {
@@ -52,6 +52,7 @@
   border-radius: 7px;
 }
 
-.picture {
-  opacity: 50%;
-}
+// .picture {
+//   opacity: 50%;
+//   width: 50%;
+// }

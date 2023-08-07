@@ -3,6 +3,8 @@ import tokyo from "../../public/img/tokyo.jpg";
 import kyoto from "../../public/img/kyoto.jpg";
 import fuji from "../../public/img/fuji.jpg";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function HomePicture() {
   const settings = {
@@ -18,9 +20,9 @@ function HomePicture() {
     <div className={styles.container}>
       <div className={styles.textContainer}>
         <div className={styles.text}>
-          <img src={tokyo} />
+          <img src={tokyo} className={styles.icon} />
           <div className={styles.textDetails}>
-            <p className={styles.title}>Title</p>
+            <p className={styles.title}>Bar hop in Tokyo</p>
             <p className={styles.details}>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
               ullam quam cumque excepturi{" "}
@@ -28,9 +30,9 @@ function HomePicture() {
           </div>
         </div>
         <div className={styles.text}>
-          <img src={tokyo} />
+          <img src={tokyo} className={styles.icon} />
           <div className={styles.textDetails}>
-            <p className={styles.title}>Title</p>
+            <p className={styles.title}>Relax in an onsen</p>
             <p className={styles.details}>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
               ullam quam cumque excepturi{" "}
@@ -38,9 +40,9 @@ function HomePicture() {
           </div>
         </div>
         <div className={styles.text}>
-          <img src={tokyo} />
+          <img src={tokyo} className={styles.icon} />
           <div className={styles.textDetails}>
-            <p className={styles.title}>Title</p>
+            <p className={styles.title}>Hike Mt. Fuji</p>
             <p className={styles.details}>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
               ullam quam cumque excepturi{" "}
@@ -48,9 +50,9 @@ function HomePicture() {
           </div>
         </div>
         <div className={styles.text}>
-          <img src={tokyo} />
+          <img src={tokyo} className={styles.icon} />
           <div className={styles.textDetails}>
-            <p className={styles.title}>Title</p>
+            <p className={styles.title}>Experience a tea ceremony</p>
             <p className={styles.details}>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem
               ullam quam cumque excepturi{" "}
