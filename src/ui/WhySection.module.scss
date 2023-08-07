@@ -56,13 +56,14 @@
 }
 
 .icon {
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
 .detailContainer {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 0.4rem;
 }
 
 .heading {
@@ -71,4 +72,5 @@
 
 .detail {
   font-size: 1.2rem;
+  font-family: "Open Sans", sans-serif;
 }

@@ -3,7 +3,7 @@ import styles from "./WhySection.module.scss";
 import lofoten from "../../public/img/lofoten.jpg";
 import nz from "../../public/img/nz.jpg";
 import svalbard from "../../public/img/svalbard.jpg";
-import { IoIosStarOutline } from "react-icons/io";
+import { RiNumber1, RiNumber2, RiNumber3 } from "react-icons/ri";
 
 function WhySection() {
   return (
@@ -18,37 +18,39 @@ function WhySection() {
         <div className={styles.detailsContainer}>
           <div className={styles.details}>
             <span className={styles.icon}>
-              <IoIosStarOutline />
+              <RiNumber1 />
             </span>
             <div className={styles.detailContainer}>
-              <p className={styles.heading}>Heading</p>
+              <p className={styles.heading}>Budget-friendly</p>
               <p className={styles.detail}>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Perferendis dolore, soluta porro dolores
+                I have been traveling around the world for the past decade and
+                it takes financial planning to afford this lifestyle!
               </p>
             </div>
           </div>
           <div className={styles.details}>
             <span className={styles.icon}>
-              <IoIosStarOutline />
+              <RiNumber2 />
             </span>
             <div className={styles.detailContainer}>
-              <p className={styles.heading}>Heading</p>
+              <p className={styles.heading}>Experienced traveler</p>
               <p className={styles.detail}>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Perferendis dolore, soluta porro dolores
+                I have lived across 5 continents and have traveled from the
+                places as south as New Zealand to places as far north as
+                Svalbard
               </p>
             </div>
           </div>{" "}
           <div className={styles.details}>
             <span className={styles.icon}>
-              <IoIosStarOutline />
+              <RiNumber3 />
             </span>
             <div className={styles.detailContainer}>
-              <p className={styles.heading}>Heading</p>
+              <p className={styles.heading}>Unforgettable experiences</p>
               <p className={styles.detail}>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Perferendis dolore, soluta porro dolores
+                When traveling, I love experiencing the cultural aspects of each
+                place I visit because it gives me a better insight into
+                understanding that place!
               </p>
             </div>
           </div>

@@ -1,5 +1,5 @@
 .container {
-  background-color: red;
+  //   background-color: red;
   height: 26rem;
   width: 85%;
   display: flex;
@@ -39,4 +39,8 @@
   border-radius: 50%;
   height: 4rem;
   width: 4rem;
+}
+
+.name {
+  font-weight: 500;
 }

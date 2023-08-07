@@ -17,7 +17,7 @@ function CarouselItem({ name, tour, background }) {
           quibusdam recusandae tenetur, libero harum quisquam nisi porro eum,
           rem veniam.
         </p>
-        <p>{name}</p>
+        <p className={styles.name}>{name}</p>
         {/* <p>Seoul, South Korea</p> */}
       </div>
     </div>

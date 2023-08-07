@@ -20,7 +20,7 @@
   //   width: 100rem;
   //   background-color: green;
   // }
-  background-color: red;
+  // background-color: red;
   height: 100%;
   width: 100rem;
   margin: 0 auto;
@@ -36,11 +36,11 @@
 .main {
   //   padding: 4rem 8rem 6.4rem;
   // overflow: scroll;
-  background-color: yellow;
+  // background-color: yellow;
   padding: 0 8rem 20rem;
 
   @media (max-width: 1000px) {
     padding: 0 4rem 20rem;
-    background-color: aquamarine;
+    // background-color: aquamarine;
   }
 }

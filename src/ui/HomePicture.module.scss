@@ -2,7 +2,7 @@
   width: 100%;
   background-color: blue;
   display: flex;
-  height: 35rem;
+  // height: 35rem;
   padding: 2rem 0;
 }
 
@@ -49,7 +49,22 @@
 
 .pictureContainer {
   background-color: pink;
+  width: 60%;
+
+  // height: 100%;
+  // object-fit: contain;
+  border-radius: 7px;
+}
+
+.picture {
   width: 100%;
-  object-fit: cover;
-  border-radius: 3px;
+  height: 100%;
+  object-fit: fill;
+  // opacity: 50%;
+}
+
+.slider {
+  height: 100%;
+  width: 100%;
+  background-color: orange;
 }
