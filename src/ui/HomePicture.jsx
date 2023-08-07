@@ -59,7 +59,7 @@ function HomePicture() {
         </div>
       </div>
       <div className={styles.pictureContainer}>
-        <Slider {...settings} className={styles.slider}>
+        <Slider {...settings}>
           <img src={tokyo} className={styles.picture} />
           <img src={kyoto} className={styles.picture} />
           <img src={fuji} className={styles.picture} />

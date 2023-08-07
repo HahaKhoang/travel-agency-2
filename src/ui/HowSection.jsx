@@ -2,6 +2,13 @@ import SectionHeader from "./SectionHeader";
 import styles from "./HowSection.module.scss";
 import Box from "./Box";
 import { IoMdHappy, IoMdAirplane, IoIosList } from "react-icons/io";
+import {
+  RiCheckDoubleLine,
+  RiEmotionHappyLine,
+  RiListUnordered,
+  RiSuitcaseLine,
+  RiUser5Line,
+} from "react-icons/ri";
 
 function HowSection() {
   return (
@@ -11,17 +18,17 @@ function HowSection() {
         <Box
           header="Meet Kathy"
           description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem ullam quam cumque excepturi"
-          icon={<IoMdHappy />}
+          icon={<RiEmotionHappyLine />}
         />
         <Box
           header="Finalize details"
           description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem ullam quam cumque excepturi"
-          icon={<IoIosList />}
+          icon={<RiListUnordered />}
         />
         <Box
           header="Enioy your trip"
           description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem ullam quam cumque excepturi"
-          icon={<IoMdAirplane />}
+          icon={<RiSuitcaseLine />}
         />
       </div>
     </section>
