@@ -5,31 +5,43 @@ import kyoto from "../../public/img/kyoto.jpg";
 import fuji from "../../public/img/fuji.jpg";
 import arashiyama from "../../public/img/arashiyama.jpg";
 import CarouselItem from "./CarouselItem";
+import styles from "./Carousel.module.scss";
 
 const data = [
-  { name: "Hanbin", tour: "Explore Kyoto", color: "#e4dddd" },
-  { name: "Dongwoon", tour: "Explore Fuji", color: "#bdbcbc" },
-  { name: "Keanu", tour: "Explore Tokyo", color: "#7a7878" },
+  {
+    name: "Hanbin",
+    tour: "Explore Kyoto",
+    image: arashiyama,
+  },
+  { name: "Dongwoon", tour: "Explore Fuji", image: fuji },
+  { name: "Keanu", tour: "Explore Tokyo", image: kyoto },
+  { name: "Tablo", tour: "Food Tour", image: arashiyama },
+  { name: "Illa", tour: "Cultural Kyoto", image: kyoto },
 ];
-
-const images = [{ image: arashiyama }, { image: fuji }, { image: kyoto }];
 
 function Carousel() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 10000,
+    speed: 1000,
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 1000,
+    accessibility: true,
+    // centerMode: true,
   };
   return (
-    <div>
+    <div className={styles.container}>
       <Slider {...settings}>
-        <CarouselItem />
-        <CarouselItem />
-        <CarouselItem />
+        {data.map((el) => (
+          <CarouselItem
+            name={el.name}
+            tour={el.tour}
+            key={el.name}
+            background={el.image}
+          />
+        ))}
       </Slider>
     </div>
   );

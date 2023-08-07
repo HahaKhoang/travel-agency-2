@@ -1,15 +1,15 @@
 import styles from "./CarouselItem.module.scss";
 import matcha from "../../public/img/matcha.jpg";
 
-function CarouselItem() {
+function CarouselItem({ name, tour, background }) {
   return (
     <div
       className={styles.container}
-      style={{ backgroundImage: `url(${matcha})` }}
+      style={{ backgroundImage: `url(${background})` }}
     >
       <div className={styles.box}></div>
       <div className={styles.stripe}>
-        <p>Exlore Kyoto</p>
+        <p className={styles.tour}>{tour}</p>
         <img src={matcha} className={styles.avatar} />
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, earum
@@ -17,8 +17,8 @@ function CarouselItem() {
           quibusdam recusandae tenetur, libero harum quisquam nisi porro eum,
           rem veniam.
         </p>
-        <p>Hanbin</p>
-        <p>Seoul, South Korea</p>
+        <p>{name}</p>
+        {/* <p>Seoul, South Korea</p> */}
       </div>
     </div>
   );
