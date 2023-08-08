@@ -22,6 +22,7 @@ const data = [
 function Carousel() {
   const settings = {
     dots: true,
+    dotsClass: `slick-dots ${styles.dots}`,
     infinite: true,
     speed: 1000,
     slidesToShow: 3,

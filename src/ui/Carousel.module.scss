@@ -2,3 +2,9 @@
   //   background-color: orange;
   margin-top: 2rem;
 }
+
+.dots {
+  button::before {
+    color: red !important;
+  }
+}
