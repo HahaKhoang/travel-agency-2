@@ -9,11 +9,31 @@ import { useState } from "react";
 import ExpandingCardItem from "./ExpandingCardItem";
 
 const tours = [
-  { img: kyoto, text: "Explore Kyoto" },
-  { img: tokyo, text: "Explore Tokyo" },
-  { img: fuji, text: "Explore Fuji" },
-  { img: arashiyama, text: "Explore nature" },
-  { img: japaneseFood, text: "Eat your way through Japan" },
+  {
+    img: kyoto,
+    text: "Explore Kyoto",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
+  },
+  {
+    img: tokyo,
+    text: "Explore Tokyo",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
+  },
+  {
+    img: fuji,
+    text: "Explore Fuji",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
+  },
+  {
+    img: arashiyama,
+    text: "Explore nature",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
+  },
+  {
+    img: japaneseFood,
+    text: "Eat your way through Japan",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
+  },
 ];
 
 function ExpandingCards() {
@@ -27,6 +47,7 @@ function ExpandingCards() {
           text={el.text}
           key={el.text}
           num={i}
+          desc={el.desc}
           curActive={curActive}
           onActive={setCurActive}
         ></ExpandingCardItem>
