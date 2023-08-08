@@ -5,8 +5,6 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Tours from "./pages/Tours";
 import Contact from "./pages/Contact";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (

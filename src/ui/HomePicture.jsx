@@ -5,16 +5,16 @@ import fuji from "../../public/img/fuji.jpg";
 import tea from "../../public/img/tea.jpg";
 import onsen from "../../public/img/onsen.jpg";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 
 function HomePicture() {
   const settings = {
     dots: true,
     infinite: true,
-    speed: 500,
+    speed: 2500,
     fade: true,
-    // autoplay: true,
+    autoplay: true,
     cssEase: "linear",
     arrows: false,
   };
