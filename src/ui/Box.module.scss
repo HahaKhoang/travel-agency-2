@@ -33,8 +33,12 @@
   }
 }
 
-.icon {
-  font-size: 7rem;
+.image {
+  width: 9rem;
+  height: 9rem;
+  border-radius: 50%;
+  object-fit: cover;
+  padding: 1.8rem;
 
   @media (max-width: 1000px) {
     font-size: 6rem;

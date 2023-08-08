@@ -13,8 +13,8 @@ function Home() {
       <HomePicture />
       <Subheading />
       <HowSection />
-      <WhySection />
       <ToursSection />
+      <WhySection />
       <TestimonialsSection />
     </>
   );

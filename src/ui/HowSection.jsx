@@ -1,11 +1,9 @@
 import SectionHeader from "./SectionHeader";
 import styles from "./HowSection.module.scss";
 import Box from "./Box";
-import {
-  RiEmotionHappyLine,
-  RiListUnordered,
-  RiSuitcaseLine,
-} from "react-icons/ri";
+import plane from "../../public/img/plane.jpg";
+import kathy from "../../public/img/kathy.jpg";
+import matcha from "../../public/img/matcha.jpg";
 
 function HowSection() {
   return (
@@ -15,17 +13,17 @@ function HowSection() {
         <Box
           header="Meet Kathy"
           description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem ullam quam cumque excepturi"
-          icon={<RiEmotionHappyLine />}
+          img={kathy}
         />
         <Box
           header="Finalize details"
           description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem ullam quam cumque excepturi"
-          icon={<RiListUnordered />}
+          img={matcha}
         />
         <Box
           header="Enioy your trip"
           description="Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quidem ullam quam cumque excepturi"
-          icon={<RiSuitcaseLine />}
+          img={plane}
         />
       </div>
     </section>

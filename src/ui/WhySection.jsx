@@ -8,7 +8,10 @@ import { RiNumber1, RiNumber2, RiNumber3 } from "react-icons/ri";
 function WhySection() {
   return (
     <section>
-      <SectionHeader header="Why choose Kathy?" />
+      <SectionHeader
+        header="Why choose Kathy?"
+        link="Get to know Kathy better"
+      />
       <div className={styles.container}>
         <div className={styles.pictureContainer}>
           <img src={lofoten} className={styles.pic1} />

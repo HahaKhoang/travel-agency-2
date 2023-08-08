@@ -1,4 +1,4 @@
-import matcha from "../../public/img/matcha.jpg";
+import kathy from "../../public/img/kathy.jpg";
 import styles from "./AboutDetails.module.scss";
 
 function AboutDetails() {
@@ -6,7 +6,7 @@ function AboutDetails() {
     <>
       {/* <p className={styles.header}>About me</p> */}
       <div className={styles.container}>
-        <img src={matcha} className={styles.pic} />
+        <img src={kathy} className={styles.pic} />
 
         <div className={styles.description}>
           <p className={styles.header}>About me</p>
