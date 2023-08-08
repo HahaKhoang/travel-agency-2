@@ -24,6 +24,7 @@ function ExpandingCardItem({ curActive, onActive, img, text, num, desc }) {
       <div className={`${textActive} ${styles.box}`}>
         <p className={styles.header}> {text}</p>
         <p>{desc}</p>
+        <a className={styles.link}>&rarr; Read more</a>
       </div>
     </div>
   );
