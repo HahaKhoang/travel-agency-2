@@ -1,0 +1,27 @@
+.header {
+  font-size: 3rem;
+}
+
+.container {
+  //   background-color: orange;
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+.pic {
+  width: 30rem;
+  height: 30rem;
+  object-fit: contain;
+  border-radius: 7px;
+}
+
+.description {
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  //   background-color: red;
+}
