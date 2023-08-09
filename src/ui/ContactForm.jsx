@@ -58,12 +58,12 @@ function ContactForm() {
             <textarea
               id="freeform"
               name="freeform"
-              rows="4"
+              rows="7"
               cols="30"
             ></textarea>
           </div>
           <div className={styles["form-row"]}>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" className={styles.button} />
           </div>
         </form>
       </div>
