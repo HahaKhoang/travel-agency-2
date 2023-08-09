@@ -5,7 +5,6 @@
   background-repeat: no-repeat;
   border-radius: 7px;
   color: white;
-  // text-shadow: 2px 2px 2px black;
   cursor: pointer;
   flex: 0.5;
   margin: 0.4rem;
@@ -13,15 +12,26 @@
   transition: flex 0.7s ease-in;
 }
 
-// h3 {
-//   font-size: 1.6rem;
-//   position: absolute;
-//   bottom: 0.8rem;
-//   left: 0.8rem;
-//   opacity: 0;
-//   transition: all 1.5s;
-// transition: opacity .3s ease-in 04s;
-// }
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 .box {
   position: absolute;
@@ -33,7 +43,10 @@
   opacity: 0;
   border-radius: 7px;
   color: black;
-  transition: all 0.3s ease-out 0.2s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
 }
 
 .active {
@@ -42,6 +55,8 @@
 
 .textActive {
   opacity: 1;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
 }
 
 .boxActive {
