@@ -1,5 +1,4 @@
 import styles from "./ContactForm.module.scss";
-import arashiyama from "../../public/img/arashiyama.jpg";
 import contact1 from "../../public/img/contact1.jpg";
 import contact2 from "../../public/img/contact2.jpg";
 import { useState } from "react";
