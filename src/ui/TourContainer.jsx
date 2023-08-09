@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import styles from "./TourContainer.module.scss";
 
-function TourContainer() {
+function TourContainer({ data, header }) {
   const settings = {
     dots: true,
     infinite: true,
@@ -18,15 +18,18 @@ function TourContainer() {
   };
   return (
     <>
-      <TourHeader text="For foodies" />
+      <TourHeader text={header} />
       <div className={styles.container}>
         <Slider {...settings}>
-          <TourCard />
-          <TourCard />
-          <TourCard />
-          <TourCard />
-          <TourCard />
-          <TourCard />
+          {data.map((el) => (
+            <TourCard
+              name={el.name}
+              amount={el.amount}
+              location={el.location}
+              img={el.img}
+              key={el.name}
+            />
+          ))}
         </Slider>
       </div>
     </>
