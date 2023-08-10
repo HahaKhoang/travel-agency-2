@@ -1,5 +1,4 @@
 import styles from "./ContactForm.module.scss";
-import contact1 from "../../public/img/contact1.jpg";
 import contact2 from "../../public/img/contact2.jpg";
 import { useState } from "react";
 
@@ -62,7 +61,7 @@ function ContactForm() {
             ></textarea>
           </div>
           <div className={styles["form-row"]}>
-            <input type="submit" value="Submit" className={styles.button} />
+            <button className={styles.button}>Submit</button>
           </div>
         </form>
       </div>

@@ -46,13 +46,18 @@
 
   input:focus,
   textArea:focus,
-  select:focus {
+  select:focus,
+  button:focus {
     border: 2px orange solid;
   }
 }
 
 .button {
   background-color: red;
-  padding: 2rem;
+  padding: 0.8rem 0.4rem;
+  border: none;
+  outline: none;
+  width: 100%;
   cursor: pointer;
+  border-radius: 7px;
 }
