@@ -28,6 +28,10 @@ function ContactForm() {
           console.log(error.text);
         }
       );
+    setName("");
+    setEmail("");
+    setSelect("");
+    setMessage("");
   }
 
   return (
