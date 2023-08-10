@@ -25,10 +25,10 @@ const food = [
     location: "Kyoto, Japan",
     img: matchaDrink,
   },
-  { name: "Seafood ", amount: "3", location: "Tokyo, Japan", img: sushi },
-  { name: "Dessert ", amount: "7", location: "Kyoto, Japan", img: wagashi },
-  { name: "Cute food", amount: "6", location: "Osaka, Japan", img: dango },
-  { name: "Ramen", amount: "5", location: "Fukuoka, Japan", img: ramen },
+  // { name: "Seafood ", amount: "3", location: "Tokyo, Japan", img: sushi },
+  // { name: "Dessert ", amount: "7", location: "Kyoto, Japan", img: wagashi },
+  // { name: "Cute food", amount: "6", location: "Osaka, Japan", img: dango },
+  // { name: "Ramen", amount: "5", location: "Fukuoka, Japan", img: ramen },
 ];
 
 const adventure = [
@@ -122,9 +122,9 @@ function Tours() {
   return (
     <div>
       <TourContainer data={food} header="For foodies" />
-      <TourContainer data={adventure} header="For adventure seekers" />
+      {/* <TourContainer data={adventure} header="For adventure seekers" />
       <TourContainer data={nature} header="Nature lovers" />
-      <TourContainer data={culture} header="Cultural connoseuir" />
+      <TourContainer data={culture} header="Cultural connoseuir" /> */}
     </div>
   );
 }
