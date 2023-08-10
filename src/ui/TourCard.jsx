@@ -1,6 +1,5 @@
 import styles from "./TourCard.module.scss";
-import japaneseFood from "../../public/img/japaneseFood.jpg";
-import { RiMapPin2Line, RiRestaurantFill } from "react-icons/ri";
+import { RiMapPin2Line, RiMap2Line } from "react-icons/ri";
 
 function TourCard({ name, amount, location, img }) {
   return (
@@ -10,7 +9,7 @@ function TourCard({ name, amount, location, img }) {
         <div className={styles.details}>
           <p className={styles.title}>{name}</p>
           <div className={styles.number}>
-            <RiRestaurantFill className={styles.icon} />
+            <RiMap2Line className={styles.icon} />
             <p> {amount} locations</p>
           </div>
           <div className={styles.location}>

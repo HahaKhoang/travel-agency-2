@@ -1,11 +1,11 @@
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import kyoto from "../../public/img/kyoto.jpg";
 import fuji from "../../public/img/fuji.jpg";
 import arashiyama from "../../public/img/arashiyama.jpg";
 import CarouselItem from "./CarouselItem";
 import styles from "./Carousel.module.scss";
+import { useState } from "react";
+import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 
 const data = [
   {
@@ -20,6 +20,8 @@ const data = [
 ];
 
 function Carousel() {
+  const [sliderRef, setSliderRef] = useState(null);
+
   const settings = {
     dots: true,
     dotsClass: `slick-dots ${styles.dots}`,
@@ -33,7 +35,7 @@ function Carousel() {
   };
   return (
     <div className={styles.container}>
-      <Slider {...settings}>
+      <Slider {...settings} ref={setSliderRef}>
         {data.map((el) => (
           <CarouselItem
             name={el.name}
@@ -43,6 +45,14 @@ function Carousel() {
           />
         ))}
       </Slider>
+      <div>
+        <button className={styles.left} onClick={sliderRef?.slickPrev}>
+          <RiArrowLeftSLine />
+        </button>
+        <button className={styles.right} onClick={sliderRef?.slickNext}>
+          <RiArrowRightSLine />
+        </button>
+      </div>
     </div>
   );
 }

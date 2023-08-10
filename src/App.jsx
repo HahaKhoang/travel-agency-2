@@ -1,5 +1,7 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import styles from "./App.module.scss";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import AppLayout from "./ui/AppLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";

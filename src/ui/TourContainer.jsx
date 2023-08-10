@@ -1,8 +1,6 @@
 import TourHeader from "./TourHeader";
 import TourCard from "./TourCard";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import styles from "./TourContainer.module.scss";
 
 function TourContainer({ data, header }) {
@@ -11,7 +9,7 @@ function TourContainer({ data, header }) {
     infinite: true,
     speed: 1000,
     slidesToShow: 3,
-    slidesToScroll: 4,
+    slidesToScroll: 1,
     autoplay: false,
     autoplaySpeed: 1000,
     accessibility: true,
