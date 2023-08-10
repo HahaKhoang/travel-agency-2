@@ -8,10 +8,10 @@ function TourCard({ name, amount, location, img }) {
         <div className={styles["image-container"]}>
           <div className={styles.info}>
             <div className={styles.content}>
-              <p className={styles.title}>Matcha Mania</p>
+              <p className={styles.title}>{name}</p>
               <div className={styles.amount}>
                 <RiMap2Line className={styles.icon} />
-                <p>5 locations</p>
+                <p>{amount} locations</p>
               </div>
               <button
                 className={styles.button}
@@ -24,7 +24,7 @@ function TourCard({ name, amount, location, img }) {
           <img src={img} className={styles.image} />
           <div className={styles.location}>
             <RiMapPin2Line className={styles.icon} />
-            <p>Kyoto, Japan</p>
+            <p>{location}</p>
           </div>
         </div>
       </div>
