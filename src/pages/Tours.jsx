@@ -25,10 +25,34 @@ const food = [
     location: "Kyoto, Japan",
     img: matchaDrink,
   },
-  // { name: "Seafood ", amount: "3", location: "Tokyo, Japan", img: sushi },
-  // { name: "Dessert ", amount: "7", location: "Kyoto, Japan", img: wagashi },
-  // { name: "Cute food", amount: "6", location: "Osaka, Japan", img: dango },
-  // { name: "Ramen", amount: "5", location: "Fukuoka, Japan", img: ramen },
+  { name: "Seafood ", amount: "3", location: "Tokyo, Japan", img: sushi },
+  { name: "Dessert ", amount: "7", location: "Kyoto, Japan", img: wagashi },
+  { name: "Cute food", amount: "6", location: "Osaka, Japan", img: dango },
+  { name: "Ramen", amount: "5", location: "Fukuoka, Japan", img: ramen },
+  {
+    name: "Lakes",
+    amount: "3",
+    location: "Helsinki, Finland",
+    img: lake,
+  },
+  {
+    name: "Tropical",
+    amount: "4",
+    location: "Aruba",
+    img: tropical,
+  },
+  {
+    name: "Mountains",
+    amount: "4",
+    location: "Patagonia",
+    img: mountain,
+  },
+  {
+    name: "Volcanos",
+    amount: "3",
+    location: "Iceland",
+    img: volcano,
+  },
 ];
 
 const adventure = [

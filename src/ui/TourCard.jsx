@@ -5,10 +5,22 @@ function TourCard({ name, amount, location, img }) {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.info}>
-          <p>Matcha Mania</p>
-        </div>
         <div className={styles["image-container"]}>
+          <div className={styles.info}>
+            <div className={styles.content}>
+              <p className={styles.title}>Matcha Mania</p>
+              <div className={styles.amount}>
+                <RiMap2Line className={styles.icon} />
+                <p>5 locations</p>
+              </div>
+              <button
+                className={styles.button}
+                onClick={() => console.log("clicked")}
+              >
+                Book now
+              </button>
+            </div>
+          </div>
           <img src={img} className={styles.image} />
           <div className={styles.location}>
             <RiMapPin2Line className={styles.icon} />
