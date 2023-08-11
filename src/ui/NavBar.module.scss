@@ -1,6 +1,12 @@
 .navBar {
   width: 100%;
-  background-color: red;
+  // background-color: red;
+  position: fixed;
+  z-index: 200;
+}
+
+.color {
+  background-color: green;
 }
 
 .name {

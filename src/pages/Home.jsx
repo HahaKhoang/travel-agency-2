@@ -14,9 +14,9 @@ function Home() {
       {/* <MainHeading /> */}
       {/* <HomePicture /> */}
       <Hero />
-      <FeaturedSection />
+      {/* <FeaturedSection />
       <Subheading />
-      <HowSection />
+      <HowSection /> */}
       <ToursSection />
       <WhySection />
       <TestimonialsSection />

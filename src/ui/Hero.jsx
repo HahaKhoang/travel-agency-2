@@ -1,10 +1,10 @@
 import styles from "./Hero.module.scss";
-import contact2 from "../../public/img/contact2.jpg";
+import hero8 from "../../public/img/hero8.jpg";
 
 function Hero() {
   return (
     <div className={styles.container}>
-      <img src={contact2} className={styles.hero} />
+      <img src={hero8} className={styles.hero} />
       <div className={styles.box}>
         <p className={styles.title}>
           Ratione eos et cumque amet eum doloremque provident accusantium{" "}
