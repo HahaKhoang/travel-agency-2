@@ -1,55 +1,48 @@
 .container {
-  //   background-color: pink;
+  background-color: pink;
   display: flex;
+  gap: 7rem;
+  padding-bottom: 4rem;
 }
 
 .left-container {
-  //   background-color: orange;
-  width: 60%;
-  border-right: 1px solid black;
-}
-
-.featured {
-  //   background-color: beige;
-  margin-bottom: 3rem;
+  background-color: green;
+  width: 50%;
+  height: 60rem;
+  margin-left: 4rem;
 }
 
 .picture {
-  opacity: 1;
-  width: 96%;
-}
-
-.header {
-  font-size: 3rem;
-  text-transform: uppercase;
-}
-
-.description {
-  font-size: 1.6rem;
-}
-
-.tiles {
-  width: 96%;
-  //   background-color: aquamarine;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 4rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .right-container {
-  //   background-color: red;
-  width: 40%;
+  //   background-color: yellow;
+  width: 50%;
+  margin-right: 4rem;
   display: flex;
   flex-direction: column;
-  align-items: end;
   gap: 3rem;
 }
 
-.popular-tour {
-  //   background-color: yellow;
-  width: 95%;
-  font-size: 4rem;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+.discover {
+  font-size: 7rem;
+}
+
+.description {
+  font-size: 3.4rem;
+}
+
+.button {
+  align-self: start;
+  font-size: 2rem;
+  text-transform: uppercase;
+  outline: none;
+  border: 1px solid white;
+  padding: 1.4rem 4rem;
+  background-color: transparent;
+  border-radius: 500px;
+  cursor: pointer;
 }
