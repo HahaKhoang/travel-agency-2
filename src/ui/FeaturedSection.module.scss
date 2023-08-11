@@ -1,0 +1,32 @@
+.container {
+  //   background-color: pink;
+  display: flex;
+}
+
+.left-container {
+  //   background-color: orange;
+  width: 60%;
+  border-right: 1px solid black;
+}
+
+.featured {
+  background-color: beige;
+}
+
+.picture {
+  opacity: 1;
+  width: 96%;
+}
+
+.header {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.description {
+  font-size: 1.6rem;
+}
+
+.tiles {
+  background-color: aquamarine;
+}

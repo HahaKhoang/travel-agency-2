@@ -5,12 +5,14 @@ import HowSection from "../ui/HowSection";
 import WhySection from "../ui/WhySection";
 import ToursSection from "../ui/ToursSection";
 import TestimonialsSection from "../ui/TestimonialsSection";
+import FeaturedSection from "../ui/FeaturedSection";
 
 function Home() {
   return (
     <>
-      <MainHeading />
-      <HomePicture />
+      {/* <MainHeading /> */}
+      {/* <HomePicture /> */}
+      <FeaturedSection />
       <Subheading />
       <HowSection />
       <ToursSection />
