@@ -6,12 +6,14 @@ import WhySection from "../ui/WhySection";
 import ToursSection from "../ui/ToursSection";
 import TestimonialsSection from "../ui/TestimonialsSection";
 import FeaturedSection from "../ui/FeaturedSection";
+import Hero from "../ui/Hero";
 
 function Home() {
   return (
     <>
       {/* <MainHeading /> */}
       {/* <HomePicture /> */}
+      <Hero />
       <FeaturedSection />
       <Subheading />
       <HowSection />

@@ -7,13 +7,16 @@ function NavBar() {
       <div className={styles.name}>Travel name</div>
       <nav className={styles.navContainer}>
         <ul>
-          <NavLink to="/home">Logo</NavLink>
+          <NavLink to="/home">About</NavLink>
         </ul>
         <ul>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/about">Tours</NavLink>
         </ul>
         <ul>
-          <NavLink to="/tours">Tours</NavLink>
+          <NavLink to="/tours">Inspiration</NavLink>
+        </ul>
+        <ul>
+          <NavLink to="/tours">FAQ</NavLink>
         </ul>
         <ul>
           <NavLink to="/contact">Contact</NavLink>
