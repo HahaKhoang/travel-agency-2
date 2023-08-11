@@ -4,6 +4,7 @@ import styles from "./NavBar.module.scss";
 function NavBar() {
   return (
     <div className={styles.navBar}>
+      <div className={styles.name}>Travel name</div>
       <nav className={styles.navContainer}>
         <ul>
           <NavLink to="/home">Logo</NavLink>
