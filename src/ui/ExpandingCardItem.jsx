@@ -8,9 +8,7 @@ function ExpandingCardItem({ curActive, onActive, img, text, num, desc }) {
   }
 
   const active = `${isOpen ? styles.active : ""}`;
-  // const textActive = `${isOpen ? styles.textActive : ""}`;
   const textActive = `${isOpen ? styles.textActive : ""}`;
-  // const boxActive = `${isOpen ? styles.boxActive : styles.box}`;
 
   return (
     <div
@@ -20,10 +18,9 @@ function ExpandingCardItem({ curActive, onActive, img, text, num, desc }) {
       }}
       onClick={handleToggle}
     >
-      {/* <h3 className={textActive}>{text}</h3> */}
       <div className={`${textActive} ${styles.box}`}>
         <p className={styles.header}> {text}</p>
-        <p>{desc}</p>
+        <p className={styles.description}>{desc}</p>
         <a className={styles.link}>&rarr; Read more</a>
       </div>
     </div>

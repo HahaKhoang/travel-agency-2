@@ -64,12 +64,28 @@
 }
 
 .header {
-  font-size: 1.8rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
+
+  @media (max-width: 1600px) {
+    font-size: 3rem;
+  }
+}
+
+.description {
+  font-size: 2rem;
+  @media (max-width: 1600px) {
+    font-size: 1.6rem;
+  }
 }
 
 .link {
   position: absolute;
   bottom: 1rem;
   right: 2rem;
+  font-size: 2rem;
+
+  @media (max-width: 1600px) {
+    font-size: 1.6rem;
+  }
 }

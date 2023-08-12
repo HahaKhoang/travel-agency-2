@@ -8,7 +8,7 @@ import TestimonialsSection from "../ui/TestimonialsSection";
 import Hero from "../ui/Hero";
 import Heading from "../ui/Heading";
 import FeaturedSection from "../ui/FeaturedSection";
-import Experience from "../ui/Experience";
+import ExperienceSection from "../ui/ExperienceSection";
 
 function Home() {
   return (
@@ -22,12 +22,12 @@ function Home() {
       />
       <FeaturedSection />
       <Heading text1="Decide what type of experience you want" />
-      <Experience />
+      <ExperienceSection />
+      {/* <ToursSection /> */}
       <Subheading />
       {/* <HowSection /> */}
-      {/* <ToursSection />
-      <WhySection />
-      <TestimonialsSection /> */}
+      {/* <WhySection /> */}
+      {/* <TestimonialsSection /> */}
     </>
   );
 }

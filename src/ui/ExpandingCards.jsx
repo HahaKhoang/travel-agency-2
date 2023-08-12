@@ -11,27 +11,27 @@ import ExpandingCardItem from "./ExpandingCardItem";
 const tours = [
   {
     img: kyoto,
-    text: "Explore Kyoto",
+    text: "Cultural",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
   },
   {
     img: tokyo,
-    text: "Explore Tokyo",
+    text: "Nature",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
   },
   {
     img: fuji,
-    text: "Explore Fuji",
+    text: "Shopping",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
   },
   {
     img: arashiyama,
-    text: "Explore nature",
+    text: "Foodie",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
   },
   {
     img: japaneseFood,
-    text: "Eat your way through Japan",
+    text: "Party",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
   },
 ];
