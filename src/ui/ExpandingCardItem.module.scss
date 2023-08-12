@@ -3,7 +3,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  border-radius: 7px;
   color: white;
   cursor: pointer;
   flex: 0.5;
@@ -38,10 +37,12 @@
   background: rgba(255, 255, 255, 0.888);
   height: 80%;
   width: 20%;
-  margin: 2rem 0 2rem 1rem;
+  // margin: 2rem 0 2rem 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2rem;
   padding: 1.4rem;
   opacity: 0;
-  border-radius: 7px;
   color: black;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
@@ -88,4 +89,20 @@
   @media (max-width: 1600px) {
     font-size: 1.6rem;
   }
+}
+
+.icon {
+  opacity: 0;
+}
+
+.iconActive {
+  font-size: 4.6rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 1;
+  transition: all 1.2s;
+  // -webkit-animation-name: fadeIn;
+  // animation-name: fadeIn;
 }

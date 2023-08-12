@@ -1,6 +1,14 @@
 import styles from "./ExpandingCardItem.module.scss";
 
-function ExpandingCardItem({ curActive, onActive, img, text, num, desc }) {
+function ExpandingCardItem({
+  curActive,
+  onActive,
+  img,
+  text,
+  num,
+  desc,
+  icon,
+}) {
   const isOpen = num === curActive;
 
   function handleToggle() {
@@ -9,6 +17,7 @@ function ExpandingCardItem({ curActive, onActive, img, text, num, desc }) {
 
   const active = `${isOpen ? styles.active : ""}`;
   const textActive = `${isOpen ? styles.textActive : ""}`;
+  const iconActive = `${isOpen ? styles.icon : styles.iconActive}`;
 
   return (
     <div
@@ -23,6 +32,7 @@ function ExpandingCardItem({ curActive, onActive, img, text, num, desc }) {
         <p className={styles.description}>{desc}</p>
         <a className={styles.link}>&rarr; Read more</a>
       </div>
+      <div className={iconActive}>{icon}</div>
     </div>
   );
 }
