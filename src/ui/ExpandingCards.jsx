@@ -1,41 +1,47 @@
 import styles from "./ExpandingCards.module.scss";
-import kyoto from "../../public/img/kyoto.jpg";
-import fuji from "../../public/img/fuji.jpg";
-import tokyo from "../../public/img/tokyo.jpg";
-import arashiyama from "../../public/img/arashiyama.jpg";
-import japaneseFood from "../../public/img/japaneseFood.jpg";
+import culture from "../../public/img/culture.jpg";
+import shopping from "../../public/img/shopping.jpg";
+import nature from "../../public/img/nature.jpg";
+import food from "../../public/img/food.jpg";
+import nightlife from "../../public/img/nightlife.jpg";
 import { useState } from "react";
 import ExpandingCardItem from "./ExpandingCardItem";
-import { RiGobletFill } from "react-icons/ri";
+import {
+  RiBankFill,
+  RiGobletFill,
+  RiLeafFill,
+  RiRestaurantFill,
+  RiShoppingBag2Fill,
+} from "react-icons/ri";
 
 const tours = [
   {
-    img: kyoto,
+    img: culture,
     text: "Cultural",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
-    icon: <RiGobletFill />,
+    icon: <RiBankFill />,
   },
   {
-    img: tokyo,
+    img: nature,
     text: "Nature",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
-    icon: <RiGobletFill />,
+    icon: <RiLeafFill />,
   },
   {
-    img: fuji,
+    img: shopping,
     text: "Shopping",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
-    icon: <RiGobletFill />,
+    icon: <RiShoppingBag2Fill />,
   },
   {
-    img: arashiyama,
+    img: food,
     text: "Foodie",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
-    icon: <RiGobletFill />,
+    icon: <RiRestaurantFill />,
   },
   {
-    img: japaneseFood,
-    text: "Party",
+    img: nightlife,
+    text: "Nightlife",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
     icon: <RiGobletFill />,
   },
