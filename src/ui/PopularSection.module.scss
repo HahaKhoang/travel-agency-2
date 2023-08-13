@@ -1,17 +1,28 @@
 .container {
-  background-color: orange;
+  //   background-color: orange;
   display: flex;
-  gap: 2rem;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   padding: 0 4rem;
 }
 
-.rank-container {
-  background-color: red;
+.rank-container-primary {
+  width: 47rem;
+  //   background-color: red;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.rank-container-secondary {
+  width: 37rem;
+  //   background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 1rem;
 }
 
@@ -20,28 +31,39 @@
 }
 
 .rank-primary {
-  width: 45rem;
-  height: 45rem;
+  width: 47rem;
+  height: 47rem;
   object-fit: cover;
 }
 
 .rank-secondary {
-  width: 35rem;
-  height: 35rem;
+  width: 37rem;
+  height: 37rem;
 }
 
 .title {
   font-size: 3rem;
 }
 
-.duration {
-  font-size: 2rem;
-}
-
 .description {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  text-align: center;
 }
 
+.extra {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  font-size: 1.4rem;
+}
+
+// .duration {
+//   font-size: 2rem;
+// }
+
+// .type {
+//   font-size: 2rem;
+// }
 .button {
   border: 1px solid white;
   outline: none;
@@ -53,4 +75,5 @@
   //   align-self: start;
   background-color: transparent;
   text-transform: uppercase;
+  margin-top: 2rem;
 }
