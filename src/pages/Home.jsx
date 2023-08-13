@@ -9,6 +9,7 @@ import Hero from "../ui/Hero";
 import Heading from "../ui/Heading";
 import FeaturedSection from "../ui/FeaturedSection";
 import ExperienceSection from "../ui/ExperienceSection";
+import PopularSection from "../ui/PopularSection";
 
 function Home() {
   return (
@@ -16,13 +17,12 @@ function Home() {
       {/* <MainHeading /> */}
       {/* <HomePicture /> */}
       <Hero />
-      <Heading
-        text1="Can't decide where to go next?"
-        text2="Check out our featured country"
-      />
+      <Heading text1="Can't decide where to go next? Check out our featured country" />
       <FeaturedSection />
       <Heading text1="Decide what type of experience you want" />
       <ExperienceSection />
+      <Heading text1="Shop our most popular tours" />
+      <PopularSection />
       {/* <ToursSection /> */}
       <Subheading />
       {/* <HowSection /> */}

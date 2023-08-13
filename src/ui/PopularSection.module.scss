@@ -1,0 +1,56 @@
+.container {
+  background-color: orange;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 0 4rem;
+}
+
+.rank-container {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rank {
+  font-size: 7rem;
+}
+
+.rank-primary {
+  width: 45rem;
+  height: 45rem;
+  object-fit: cover;
+}
+
+.rank-secondary {
+  width: 35rem;
+  height: 35rem;
+}
+
+.title {
+  font-size: 3rem;
+}
+
+.duration {
+  font-size: 2rem;
+}
+
+.description {
+  font-size: 2rem;
+}
+
+.button {
+  border: 1px solid white;
+  outline: none;
+  color: white;
+  padding: 1.4rem 4.6rem;
+  font-size: 2rem;
+  border-radius: 500px;
+  cursor: pointer;
+  //   align-self: start;
+  background-color: transparent;
+  text-transform: uppercase;
+}
