@@ -6,7 +6,7 @@ function PersonalizeSection() {
   return (
     <section className={styles.container}>
       <div className={styles["left-container"]}>
-        <p className={styles.discover}>Discover Japan 🇯🇵</p>
+        <p className={styles.discover}>How it works</p>
         <div className={styles.details}>
           <div className={styles["icon-box"]}>
             <RiNumber1 className={styles.icon} />
@@ -23,7 +23,7 @@ function PersonalizeSection() {
           <div className={styles["icon-box"]}>
             <RiNumber3 className={styles.icon} />
           </div>
-          <p>Relax while Kathy figures out the logistics</p>
+          <p>Relax while Kathy figures out the rest</p>
         </div>
         <button className={styles.button}>Set up a consultation</button>
       </div>

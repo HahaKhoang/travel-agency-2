@@ -1,5 +1,5 @@
 .container {
-  background-color: pink;
+  //   background-color: pink;
   display: flex;
   gap: 7rem;
   padding-bottom: 4rem;
@@ -11,16 +11,17 @@
   margin-left: 4rem;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 5rem;
 }
 
 .discover {
   font-size: 7rem;
+  font-family: "Playfair Display", serif;
 }
 
 .details {
   display: flex;
-  font-size: 3rem;
+  font-size: 3.4rem;
   align-items: center;
   gap: 3rem;
 }
@@ -35,8 +36,8 @@
 }
 
 .icon {
-  margin-top: 0.6rem;
-  margin-left: 0.6rem;
+  margin-top: 0.4rem;
+  margin-left: 0.4rem;
 }
 
 .button {
