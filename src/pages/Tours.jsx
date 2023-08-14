@@ -1,4 +1,5 @@
 import TourContainer from "../ui/TourContainer";
+import tour from "../../public/img/tour.jpg";
 import matchaDrink from "../../public/img/matchaDrink.jpg";
 import sushi from "../../public/img/sushi.jpg";
 import dango from "../../public/img/dango.jpg";
@@ -17,6 +18,7 @@ import streetArt from "../../public/img/streetArt.jpg";
 import classicArt from "../../public/img/classicArt.jpg";
 import castle from "../../public/img/castle.jpg";
 import architecture from "../../public/img/architecture.jpg";
+import Banner from "../ui/Banner";
 
 const food = [
   {
@@ -145,6 +147,7 @@ const culture = [
 function Tours() {
   return (
     <div>
+      <Banner img={tour} text="Find the perfect tour for you" />
       <TourContainer data={food} header="For foodies" />
       {/* <TourContainer data={adventure} header="For adventure seekers" />
       <TourContainer data={nature} header="Nature lovers" />

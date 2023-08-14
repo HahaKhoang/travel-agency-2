@@ -1,11 +1,11 @@
+import Banner from "../ui/Banner";
 import ContactForm from "../ui/ContactForm";
+import contact from "../../public/img/contact.jpg";
 
 function Contact() {
   return (
     <div>
-      <p style={{ fontSize: "4rem", marginTop: "4rem", textAlign: "center" }}>
-        Ready for your next adventure?
-      </p>
+      <Banner img={contact} text="Ready for your next adventure?" />
       <ContactForm />
     </div>
   );
