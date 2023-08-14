@@ -18,19 +18,22 @@ function Home() {
       {/* <MainHeading /> */}
       {/* <HomePicture /> */}
       <Hero />
-      <Heading text1="Can't decide where to go next? Check out our featured country" />
-      <FeaturedSection />
+
       <Heading text1="Decide what type of experience you want" />
       <ExperienceSection />
       <Heading text1="Shop our most popular tours" />
       <PopularSection />
       <Heading text1="Or personalize your own tour" />
       <PersonalizeSection />
+      <Heading text1="Can't decide where to go next? Check out our featured country" />
+      <FeaturedSection />
       {/* <ToursSection /> */}
-      <Subheading />
+
       {/* <HowSection /> */}
       {/* <WhySection /> */}
-      {/* <TestimonialsSection /> */}
+      <Heading text1="See what our travelers are saying" />
+      <TestimonialsSection />
+      <Subheading />
     </>
   );
 }

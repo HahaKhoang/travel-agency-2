@@ -1,24 +1,21 @@
 import styles from "./CarouselItem.module.scss";
 import matcha from "../../public/img/matcha.jpg";
 
-function CarouselItem({ name, tour, background }) {
+function CarouselItem({ name, tour, image }) {
   return (
-    <div
-      className={styles.container}
-      style={{ backgroundImage: `url(${background})` }}
-    >
-      <div className={styles.box}></div>
-      <div className={styles.stripe}>
+    <div className={styles.container}>
+      <div className={styles["left-container"]}>
+        <img src={image} className={styles.picture} />
+      </div>
+      <div className={styles["right-container"]}>
         <p className={styles.tour}>{tour}</p>
-        <img src={matcha} className={styles.avatar} />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, earum
-          totam? Quam unde commodi inventore eaque quaerat delectus cumque
-          quibusdam recusandae tenetur, libero harum quisquam nisi porro eum,
-          rem veniam.
+        <p className={styles.review}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet error
+          fugiat aperiam temporibus non nobis vero earum! Sint beatae facilis
+          perferendis vel voluptas optio aut molestias nostrum dolor, accusamus
+          itaque.
         </p>
         <p className={styles.name}>{name}</p>
-        {/* <p>Seoul, South Korea</p> */}
       </div>
     </div>
   );

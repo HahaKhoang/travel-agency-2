@@ -1,46 +1,44 @@
 .container {
-  //   background-color: red;
-  height: 26rem;
-  width: 85%;
+  background-color: red;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 0 auto;
+  height: 50rem;
+  width: 100rem;
 }
 
-.box {
-  background-color: white;
-  height: 90%;
-  width: 90%;
-}
-
-.stripe {
-  background-color: white;
+.left-container {
+  width: 50%;
   height: 100%;
-  width: 70%;
-  position: absolute;
+}
+
+.picture {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.right-container {
+  width: 50%;
+  height: 100%;
+  background-color: orange;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 3rem 1.4rem;
-  gap: 1.4rem;
+  justify-content: center;
+  padding: 5rem;
+  margin: auto 0;
+  gap: 3rem;
 }
 
 .tour {
-  font-size: 1.4rem;
-  font-weight: 500;
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
 }
 
-.avatar {
-  border-radius: 50%;
-  height: 4rem;
-  width: 4rem;
+.review {
+  font-size: 2.2rem;
 }
 
 .name {
-  font-weight: 500;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
