@@ -22,22 +22,34 @@ function NavBar() {
       <div className={styles.name}>Travel name</div>
       <nav className={styles.navContainer}>
         <ul>
-          <NavLink to="/home">Home</NavLink>
+          <NavLink to="/home" className={styles.link}>
+            Home
+          </NavLink>
         </ul>
         <ul>
-          <NavLink to="/about">About</NavLink>
+          <NavLink to="/about" className={styles.link}>
+            About
+          </NavLink>
         </ul>
         <ul>
-          <NavLink to="/tours">Tours</NavLink>
+          <NavLink to="/tours" className={styles.link}>
+            Tours
+          </NavLink>
         </ul>
         <ul>
-          <NavLink to="/inspiration">Inspiration</NavLink>
+          <NavLink to="/inspiration" className={styles.link}>
+            Inspiration
+          </NavLink>
         </ul>
         <ul>
-          <NavLink to="/faq">FAQ</NavLink>
+          <NavLink to="/faq" className={styles.link}>
+            FAQ
+          </NavLink>
         </ul>
         <ul>
-          <NavLink to="/contact">Contact</NavLink>
+          <NavLink to="/contact" className={styles.link}>
+            Contact
+          </NavLink>
         </ul>
       </nav>
     </div>
