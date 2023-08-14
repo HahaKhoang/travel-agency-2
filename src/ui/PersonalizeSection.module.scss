@@ -1,0 +1,65 @@
+.container {
+  background-color: pink;
+  display: flex;
+  gap: 7rem;
+  padding-bottom: 4rem;
+}
+
+.left-container {
+  //   background-color: yellow;
+  width: 50%;
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.discover {
+  font-size: 7rem;
+}
+
+.details {
+  display: flex;
+  font-size: 3rem;
+  align-items: center;
+  gap: 3rem;
+}
+
+.icon-box {
+  background-color: red;
+  width: 4rem;
+  height: 4rem;
+  padding: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  margin-top: 0.6rem;
+  margin-left: 0.6rem;
+}
+
+.button {
+  align-self: start;
+  font-size: 2rem;
+  text-transform: uppercase;
+  outline: none;
+  border: 1px solid white;
+  padding: 1.4rem 4rem;
+  background-color: transparent;
+  border-radius: 500px;
+  cursor: pointer;
+}
+
+.right-container {
+  background-color: green;
+  width: 50%;
+  height: 60rem;
+  margin-right: 4rem;
+}
+
+.picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

@@ -10,6 +10,7 @@ import Heading from "../ui/Heading";
 import FeaturedSection from "../ui/FeaturedSection";
 import ExperienceSection from "../ui/ExperienceSection";
 import PopularSection from "../ui/PopularSection";
+import PersonalizeSection from "../ui/PersonalizeSection";
 
 function Home() {
   return (
@@ -23,6 +24,8 @@ function Home() {
       <ExperienceSection />
       <Heading text1="Shop our most popular tours" />
       <PopularSection />
+      <Heading text1="Or personalize your own tour" />
+      <PersonalizeSection />
       {/* <ToursSection /> */}
       <Subheading />
       {/* <HowSection /> */}

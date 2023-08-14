@@ -3,7 +3,7 @@ import kyoto from "../../public/img/kyoto.jpg";
 
 function FeaturedSection() {
   return (
-    <div className={styles.container}>
+    <section className={styles.container}>
       <div className={styles["left-container"]}>
         <img src={kyoto} className={styles.picture} />
       </div>
@@ -17,7 +17,7 @@ function FeaturedSection() {
         </p>
         <button className={styles.button}>Browse all Japan tours</button>
       </div>
-    </div>
+    </section>
   );
 }
 
