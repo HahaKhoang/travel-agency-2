@@ -1,5 +1,3 @@
-import HomePicture from "../ui/HomePicture";
-import MainHeading from "../ui/MainHeading";
 import Subheading from "../ui/Subheading";
 import HowSection from "../ui/HowSection";
 import WhySection from "../ui/WhySection";
@@ -15,10 +13,7 @@ import PersonalizeSection from "../ui/PersonalizeSection";
 function Home() {
   return (
     <>
-      {/* <MainHeading /> */}
-      {/* <HomePicture /> */}
       <Hero />
-
       <Heading text1="Decide what type of experience you want" />
       <ExperienceSection />
       <Heading text1="Shop our most popular tours" />

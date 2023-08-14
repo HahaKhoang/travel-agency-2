@@ -6,7 +6,7 @@ import review4 from "../../public/img/review4.jpg";
 import CarouselItem from "./CarouselItem";
 import styles from "./Carousel.module.scss";
 import { useState } from "react";
-import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
+import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
 
 const data = [
   {
@@ -32,6 +32,7 @@ function Carousel() {
     autoplay: false,
     autoplaySpeed: 1000,
     accessibility: true,
+    arrows: false,
   };
   return (
     <div className={styles.container}>
@@ -47,10 +48,10 @@ function Carousel() {
       </Slider>
       <div>
         <button className={styles.left} onClick={sliderRef?.slickPrev}>
-          <RiArrowLeftSLine />
+          <RiArrowLeftLine className={styles.button} />
         </button>
         <button className={styles.right} onClick={sliderRef?.slickNext}>
-          <RiArrowRightSLine />
+          <RiArrowRightLine className={styles.button} />
         </button>
       </div>
     </div>
