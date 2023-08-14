@@ -1,5 +1,11 @@
+import Accordion from "../ui/Accordion";
+
 function FAQ() {
-  return <div>FAQ</div>;
+  return (
+    <div>
+      <Accordion />
+    </div>
+  );
 }
 
 export default FAQ;
