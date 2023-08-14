@@ -8,6 +8,7 @@ function AccordionItem({ num, title, curOpen, onOpen, children }) {
   }
 
   const itemOpen = isOpen ? `${styles.item} ${styles.open}` : `${styles.item}`;
+
   return (
     <div className={itemOpen} onClick={handleToggle}>
       <p className={styles.number}>{num < 9 ? `0${num + 1}` : num + 1}</p>
