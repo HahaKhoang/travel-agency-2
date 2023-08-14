@@ -1,7 +1,5 @@
-.accordion {
-  width: 90rem;
+.container {
+  max-width: 90rem;
   margin: 4rem auto;
-  display: flex;
-  flex-direction: column;
-  gap: 1.4rem;
+  list-style: none;
 }
