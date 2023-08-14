@@ -6,7 +6,10 @@ import AppLayout from "./ui/AppLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Tours from "./pages/Tours";
+import Inspiration from "./pages/Inspiration";
+import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
+import PageNotFound from "./pages/PageNotFound";
 
 function App() {
   return (
@@ -18,7 +21,10 @@ function App() {
           <Route path="home" element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="tours" element={<Tours />} />
+          <Route path="inspiration" element={<Inspiration />} />
+          <Route path="faq" element={<FAQ />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
