@@ -1,5 +1,6 @@
 import styles from "./TourCard.module.scss";
 import bi1 from "../../public/img/bi1.jpg";
+import { NavLink } from "react-router-dom";
 
 function TourCard({ img, title, description, duration, type }) {
   return (
@@ -11,7 +12,9 @@ function TourCard({ img, title, description, duration, type }) {
         <p>Duration: {duration} days</p>
         <p>Type: {type}</p>
       </div>
-      <button className={styles.button}>Let's go to Japan!</button>
+      <NavLink to="/tour/test1" className={styles.button}>
+        Let's go to Japan!
+      </NavLink>
     </div>
   );
 }
