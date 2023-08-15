@@ -7,9 +7,9 @@ function TourContainer({ data }) {
       {data.map((el, i) => (
         <TourCard
           key={i}
-          title={el.title}
-          img={el.img}
-          description={el.description}
+          name={el.name}
+          mainImage={el.mainImage}
+          shortDesc={el.shortDesc}
           duration={el.duration}
           type={el.type}
         />

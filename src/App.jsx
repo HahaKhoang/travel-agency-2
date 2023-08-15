@@ -12,7 +12,7 @@ import "slick-carousel/slick/slick-theme.css";
 import AppLayout from "./ui/AppLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Tours from "./pages/Tours";
+import Tours, { loader as tourLoader } from "./pages/Tours";
 import Inspiration from "./pages/Inspiration";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/about", element: <About /> },
-      { path: "/tours", element: <Tours /> },
+      { path: "/tours", element: <Tours />, loader: tourLoader },
       { path: "/tours/:tourName", element: <Tours /> },
       { path: "/inspiration", element: <Inspiration /> },
       { path: "/faq", element: <FAQ /> },
