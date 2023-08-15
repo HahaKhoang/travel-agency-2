@@ -4,10 +4,10 @@ import styles from "./AboutDetails.module.scss";
 function AboutDetails() {
   return (
     <>
-      {/* <p className={styles.header}>About me</p> */}
       <div className={styles.container}>
-        <img src={kathy} className={styles.pic} />
-
+        <div className={styles["picture-container"]}>
+          <img src={kathy} className={styles.pic} />
+        </div>
         <div className={styles.description}>
           <p className={styles.header}>About me</p>
 

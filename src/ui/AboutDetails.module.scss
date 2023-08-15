@@ -1,27 +1,42 @@
-.header {
-  font-size: 3rem;
-}
-
 .container {
-  //   background-color: orange;
+  // background-color: orange;
   display: flex;
   gap: 4rem;
   justify-content: center;
   align-items: center;
   margin-top: 4rem;
+  padding: 0 4rem;
+}
+
+.picture-container {
+  width: 50%;
+  height: 50rem;
+
+  @media (min-width: 1400px) {
+    width: 40%;
+    height: 60rem;
+  }
 }
 
 .pic {
-  width: 30rem;
-  height: 30rem;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: 7px;
+}
+
+.header {
+  font-size: 5rem;
 }
 
 .description {
-  font-size: 1.6rem;
+  width: 50%;
+  font-size: 2rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  //   background-color: red;
+  // background-color: red;
+
+  @media (min-width: 1400px) {
+    width: 60%;
+  }
 }
