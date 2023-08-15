@@ -1,14 +1,12 @@
-import TourHeader from "./TourHeader";
-import TourCard from "./TourCard";
-import styles from "./TourContainer.module.scss";
+import InspirationCard from "./InspirationCard";
+import styles from "./InspirationContainer.module.scss";
 
-function TourContainer({ data, header }) {
+function InspirationContainer({ data }) {
   return (
     <>
-      <TourHeader text={header} />
       <div className={styles.container}>
         {data.map((el) => (
-          <TourCard
+          <InspirationCard
             name={el.name}
             amount={el.amount}
             location={el.location}
@@ -21,4 +19,4 @@ function TourContainer({ data, header }) {
   );
 }
 
-export default TourContainer;
+export default InspirationContainer;

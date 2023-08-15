@@ -1,7 +1,7 @@
-import styles from "./TourCard.module.scss";
-import { RiMapPin2Line, RiMap2Line } from "react-icons/ri";
+import styles from "./InspirationCard.module.scss";
+import { RiMapPin2Line } from "react-icons/ri";
 
-function TourCard({ name, amount, location, img }) {
+function TourCard({ name, location, img }) {
   return (
     <>
       <div className={styles.container}>
@@ -9,15 +9,11 @@ function TourCard({ name, amount, location, img }) {
           <div className={styles.info}>
             <div className={styles.content}>
               <p className={styles.title}>{name}</p>
-              <div className={styles.amount}>
-                <RiMap2Line className={styles.icon} />
-                <p>{amount} locations</p>
-              </div>
               <button
                 className={styles.button}
                 onClick={() => console.log("clicked")}
               >
-                Book now
+                Read more
               </button>
             </div>
           </div>
