@@ -1,4 +1,4 @@
-import TourContainer from "../ui/InspirationContainer";
+import TourContainer from "../ui/TourContainer";
 import tour from "../../public/img/tour.jpg";
 import matchaDrink from "../../public/img/matchaDrink.jpg";
 import sushi from "../../public/img/sushi.jpg";
@@ -20,127 +20,102 @@ import castle from "../../public/img/castle.jpg";
 import architecture from "../../public/img/architecture.jpg";
 import Banner from "../ui/Banner";
 
-const food = [
+const tours = [
   {
-    name: "Matcha Mania",
-    amount: "5",
-    location: "Kyoto, Japan",
+    title: "All in one Japan",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad illum nulla repudiandae accusamus odit consequuntur consectetur hic quas et delectus, vitae esse nesciunt dolorem quod id facilis nostrum debitis!",
+    duration: "10",
+    type: "All around",
     img: matchaDrink,
   },
-  { name: "Seafood ", amount: "3", location: "Tokyo, Japan", img: sushi },
-  { name: "Dessert ", amount: "7", location: "Kyoto, Japan", img: wagashi },
-  { name: "Cute food", amount: "6", location: "Osaka, Japan", img: dango },
-  { name: "Ramen", amount: "5", location: "Fukuoka, Japan", img: ramen },
   {
-    name: "Lakes",
-    amount: "3",
-    location: "Helsinki, Finland",
-    img: lake,
+    title: "Sample Title",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad illum nulla repudiandae accusamus odit consequuntur consectetur hic quas et delectus, vitae esse nesciunt dolorem quod id facilis nostrum debitis!",
+    duration: "1",
+    type: "Food",
+    img: sushi,
   },
   {
-    name: "Tropical",
-    amount: "4",
-    location: "Aruba",
-    img: tropical,
+    title: "All in one Japan",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad illum nulla repudiandae accusamus odit consequuntur consectetur hic quas et delectus, vitae esse nesciunt dolorem quod id facilis nostrum debitis!",
+    duration: "10",
+    type: "Nature",
+    img: dango,
   },
   {
-    name: "Mountains",
-    amount: "4",
-    location: "Patagonia",
-    img: mountain,
+    title: "All in one Japan",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad illum nulla repudiandae accusamus odit consequuntur consectetur hic quas et delectus, vitae esse nesciunt dolorem quod id facilis nostrum debitis!",
+    duration: "10",
+    type: "Adventure",
+    img: wagashi,
   },
   {
-    name: "Volcanos",
-    amount: "3",
-    location: "Iceland",
-    img: volcano,
-  },
-];
-
-const adventure = [
-  {
-    name: "Underwater",
-    amount: "5",
-    location: "Palawan, Philippines",
-    img: scubadiving,
+    title: "All in one Japan",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad illum nulla repudiandae accusamus odit consequuntur consectetur hic quas et delectus, vitae esse nesciunt dolorem quod id facilis nostrum debitis!",
+    duration: "10",
+    type: "Food",
+    img: ramen,
   },
   {
-    name: "Rock Climbing",
-    amount: "3",
-    location: "Utah, America",
-    img: rockclimbing,
-  },
-  {
-    name: "Adrenaline Junkie",
-    amount: "4",
-    location: "Queenstown, New Zealand",
-    img: bungeejumping,
-  },
-  {
-    name: "Theme Park Lover",
-    amount: "3",
-    location: "Japan",
+    title: "All in one Japan",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad illum nulla repudiandae accusamus odit consequuntur consectetur hic quas et delectus, vitae esse nesciunt dolorem quod id facilis nostrum debitis!",
+    duration: "10",
+    type: "Nightlife",
     img: rollercoaster,
   },
   {
-    name: "Sky Diving",
-    amount: "3",
-    location: "Cape Town, South Africa",
+    title: "All in one Japan",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad illum nulla repudiandae accusamus odit consequuntur consectetur hic quas et delectus, vitae esse nesciunt dolorem quod id facilis nostrum debitis!",
+    duration: "10",
+    type: "Culture",
+    img: bungeejumping,
+  },
+  {
+    title: "All in one Japan",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad illum nulla repudiandae accusamus odit consequuntur consectetur hic quas et delectus, vitae esse nesciunt dolorem quod id facilis nostrum debitis!",
+    duration: "10",
+    type: "Culture",
+    img: rockclimbing,
+  },
+  {
+    title: "All in one Japan",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad illum nulla repudiandae accusamus odit consequuntur consectetur hic quas et delectus, vitae esse nesciunt dolorem quod id facilis nostrum debitis!",
+    duration: "10",
+    type: "All around",
+    img: scubadiving,
+  },
+  {
+    title: "All in one Japan",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad illum nulla repudiandae accusamus odit consequuntur consectetur hic quas et delectus, vitae esse nesciunt dolorem quod id facilis nostrum debitis!",
+    duration: "10",
+    type: "Food",
     img: skydiving,
   },
-];
-
-const nature = [
   {
-    name: "Lakes",
-    amount: "3",
-    location: "Helsinki, Finland",
-    img: lake,
-  },
-  {
-    name: "Tropical",
-    amount: "4",
-    location: "Aruba",
+    title: "All in one Japan",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad illum nulla repudiandae accusamus odit consequuntur consectetur hic quas et delectus, vitae esse nesciunt dolorem quod id facilis nostrum debitis!",
+    duration: "10",
+    type: "Nature",
     img: tropical,
   },
   {
-    name: "Mountains",
-    amount: "4",
-    location: "Patagonia",
+    title: "All in one Japan",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ad illum nulla repudiandae accusamus odit consequuntur consectetur hic quas et delectus, vitae esse nesciunt dolorem quod id facilis nostrum debitis!",
+    duration: "10",
+    type: "Nature",
     img: mountain,
-  },
-  {
-    name: "Volcanos",
-    amount: "3",
-    location: "Iceland",
-    img: volcano,
-  },
-];
-
-const culture = [
-  {
-    name: "Classical Art",
-    amount: "3",
-    location: "Paris, France",
-    img: classicArt,
-  },
-  {
-    name: "Architecture",
-    amount: "5",
-    location: "Vienna, Austria",
-    img: architecture,
-  },
-  {
-    name: "Street Art",
-    amount: "8",
-    location: "Berlin, Germany",
-    img: streetArt,
-  },
-  {
-    name: "Castles",
-    amount: "6",
-    location: "Berlin, Germany",
-    img: castle,
   },
 ];
 
@@ -148,10 +123,8 @@ function Tours() {
   return (
     <div>
       <Banner img={tour} text="Find the perfect tour for you" />
-      {/* <TourContainer data={food} header="For foodies" /> */}
-      {/* <TourContainer data={adventure} header="For adventure seekers" />
-      <TourContainer data={nature} header="Nature lovers" />
-      <TourContainer data={culture} header="Cultural connoseuir" /> */}
+
+      <TourContainer data={tours} />
     </div>
   );
 }
