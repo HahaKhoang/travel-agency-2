@@ -22,7 +22,7 @@ function NavBar() {
       <div className={styles.name}>Travel name</div>
       <nav className={styles.navContainer}>
         <ul>
-          <NavLink to="/home" className={styles.link}>
+          <NavLink to="/" className={styles.link}>
             Home
           </NavLink>
         </ul>

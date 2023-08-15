@@ -12,7 +12,7 @@ function TourCard({ img, title, description, duration, type }) {
         <p>Duration: {duration} days</p>
         <p>Type: {type}</p>
       </div>
-      <NavLink to="/tour/test1" className={styles.button}>
+      <NavLink to="/tours/test1" className={styles.button}>
         Let's go to Japan!
       </NavLink>
     </div>
