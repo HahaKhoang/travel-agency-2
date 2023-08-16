@@ -12,18 +12,26 @@ import "slick-carousel/slick/slick-theme.css";
 import AppLayout from "./ui/AppLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Tours, { loader as tourLoader } from "./pages/Tours";
+import Tours from "./pages/Tours";
 import Inspiration from "./pages/Inspiration";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
+import PageNotFound from "./pages/PageNotFound";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
+    errorElement: <PageNotFound />,
     children: [
       { path: "/", element: <Home /> },
       { path: "/about", element: <About /> },
-      { path: "/tours", element: <Tours />, loader: tourLoader },
+      {
+        path: "/tours",
+        element: <Tours />,
+        errorElement: <PageNotFound />,
+      },
       { path: "/tours/:tourName", element: <Tours /> },
       { path: "/inspiration", element: <Inspiration /> },
       { path: "/faq", element: <FAQ /> },
@@ -32,8 +40,21 @@ const router = createBrowserRouter([
   },
 ]);
 
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 0,
+    },
+  },
+});
+
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <ReactQueryDevtools initialIsOpen={false} />
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+  );
 }
 
 export default App;
