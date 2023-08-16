@@ -3,8 +3,6 @@ import supabase from "./supabase";
 export async function getAllTours() {
   let query = supabase.from("tours").select("*");
 
-  // FILTER
-  //   if (filter !== null) query = query.eq(filter.field, filter.value);
   const { data, error } = await query;
   if (error) {
     console.error(error);
@@ -27,4 +25,16 @@ export async function getTour({ tourName }) {
   }
 
   return tour;
+}
+
+export async function getAllInspiration() {
+  let query = supabase.from("inspiration").select("*");
+
+  const { data, error } = await query;
+  if (error) {
+    console.error(error);
+    throw new Error("Could not fetch inspiration data");
+  }
+
+  return data;
 }

@@ -49,6 +49,10 @@ function TourContainer() {
         ]}
         sortByOptions={[
           {
+            value: "",
+            label: "Sort by",
+          },
+          {
             value: "name-asc",
             label: "Sort by name (A-Z)",
           },
