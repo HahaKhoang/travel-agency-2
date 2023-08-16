@@ -11,12 +11,13 @@ function TourCard({ mainImage, name, shortDesc, duration, type, price }) {
     <div className={styles.container}>
       <img src={mainImage} className={styles.picture} />
       <p className={styles.title}>{name}</p>
-      <p className={styles.price}>{price}</p>
+
       <p className={styles.description}>{shortDesc}</p>
       <div className={styles.extras}>
         <p>Duration: {duration} </p>
-        <p>Type: {type}</p>
+        <p>Category: {type}</p>
       </div>
+      <p className={styles.price}>Price: ${price}</p>
       <NavLink className={styles.button} onClick={tourClicked} value={type}>
         Let's go to Japan!
       </NavLink>
