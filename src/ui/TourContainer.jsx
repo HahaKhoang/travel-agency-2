@@ -1,6 +1,5 @@
 import TourCard from "./TourCard";
-import Filter from "../ui/Filter";
-import SortBy from "../ui/SortBy";
+import Select from "./Select";
 import { useTours } from "../features/tours/useTours.js";
 import LoadingSpinner from "../ui/LoadingSpinner";
 import { useSearchParams } from "react-router-dom";
@@ -35,13 +34,12 @@ function TourContainer() {
   const sortedTours = filteredTours.sort(
     (a, b) => (a[field] - b[field]) * modifier
   );
-  console.log(sortedTours);
 
   return (
     <>
-      <Filter
+      <Select
         filterField="type"
-        options={[
+        filterOptions={[
           { value: "all", label: "All" },
           { value: "nature", label: "Nature" },
           { value: "culture", label: "Culture" },
@@ -49,9 +47,7 @@ function TourContainer() {
           { value: "shopping", label: "Shopping" },
           { value: "nightlife", label: "Nightlife" },
         ]}
-      />
-      <SortBy
-        options={[
+        sortByOptions={[
           {
             value: "name-asc",
             label: "Sort by name (A-Z)",

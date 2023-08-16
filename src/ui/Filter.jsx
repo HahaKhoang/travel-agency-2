@@ -7,7 +7,6 @@ function Filter({ filterField, options }) {
 
   function handleClick(value) {
     searchParams.set(filterField, value);
-    // if (searchParams.get("type")) searchParams.set("type", 1);
     setSearchParams(searchParams);
   }
 

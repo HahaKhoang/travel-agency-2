@@ -6,7 +6,6 @@ function Tours() {
   return (
     <div>
       <Banner img={tour} text="Find the perfect tour for you" />
-
       <TourContainer />
     </div>
   );
