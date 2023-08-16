@@ -1,7 +1,7 @@
 import styles from "./InspirationCard.module.scss";
 import { RiMapPin2Line } from "react-icons/ri";
 
-function TourCard({ name, location, img }) {
+function TourCard({ name, location, img, value }) {
   return (
     <>
       <div className={styles.container}>
