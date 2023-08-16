@@ -17,15 +17,15 @@ function TourContainer() {
   let filteredTours;
   if (filterValue === "all") filteredTours = tours;
   if (filterValue === "nature")
-    filterValue = tours.filter((tour) => tour.type === "nature");
+    filteredTours = tours.filter((tour) => tour.type === "Nature");
   if (filterValue === "shopping")
-    filterValue = tours.filter((tour) => tour.type === "shopping");
+    filteredTours = tours.filter((tour) => tour.type === "Shopping");
   if (filterValue === "nightlife")
-    filterValue = tours.filter((tour) => tour.type === "nightlife");
+    filteredTours = tours.filter((tour) => tour.type === "Nightlife");
   if (filterValue === "culture")
-    filterValue = tours.filter((tour) => tour.type === "culture");
+    filteredTours = tours.filter((tour) => tour.type === "Culture");
   if (filterValue === "food")
-    filterValue = tours.filter((tour) => tour.type === "food");
+    filteredTours = tours.filter((tour) => tour.type === "Food");
 
   return (
     <>
@@ -34,13 +34,14 @@ function TourContainer() {
         options={[
           { value: "all", label: "All" },
           { value: "nature", label: "Nature" },
+          { value: "culture", label: "Culture" },
           { value: "food", label: "Food" },
           { value: "shopping", label: "Shopping" },
           { value: "nightlife", label: "Nightlife" },
         ]}
       />
       <section className={styles.container}>
-        {tours.map((el, i) => (
+        {filteredTours.map((el, i) => (
           <TourCard
             key={i}
             name={el.name}
