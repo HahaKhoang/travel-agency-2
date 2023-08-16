@@ -12,6 +12,7 @@ function Filter({ filterField, options }) {
 
   return (
     <div className={styles.container}>
+      <p className={styles.filter}>Filter by:</p>
       {options.map((option) => (
         <button
           className={
