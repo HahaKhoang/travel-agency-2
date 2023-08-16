@@ -20,7 +20,7 @@ function NavBar() {
 
   return (
     <div className={nav}>
-      <div className={styles.name}>Travel name</div>
+      <div className={styles.name}>Tabi Tomodachi</div>
       <nav className={styles.navContainer}>
         <ul>
           <NavLink to="/" className={styles.link}>

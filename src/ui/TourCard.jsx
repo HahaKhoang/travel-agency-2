@@ -9,7 +9,7 @@ function TourCard({ mainImage, name, shortDesc, duration, type, price }) {
 
       <p className={styles.description}>{shortDesc}</p>
       <div className={styles.extras}>
-        <p>Duration: {duration} </p>
+        <p>Duration: {duration} days </p>
         <p>Category: {type}</p>
       </div>
       <p className={styles.price}>Price: ${price}</p>

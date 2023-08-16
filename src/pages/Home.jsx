@@ -1,7 +1,3 @@
-import Subheading from "../ui/Subheading";
-import HowSection from "../ui/HowSection";
-import WhySection from "../ui/WhySection";
-import ToursSection from "../ui/ToursSection";
 import TestimonialsSection from "../ui/TestimonialsSection";
 import Hero from "../ui/Hero";
 import Heading from "../ui/Heading";
@@ -22,13 +18,8 @@ function Home() {
       <PersonalizeSection />
       <Heading text1="Can't decide where to go next? Check out our featured country" />
       <FeaturedSection />
-      {/* <ToursSection /> */}
-
-      {/* <HowSection /> */}
-      {/* <WhySection /> */}
       <Heading text1="See what our travelers are saying" />
       <TestimonialsSection />
-      <Subheading />
     </>
   );
 }
