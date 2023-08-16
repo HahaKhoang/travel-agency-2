@@ -1,5 +1,6 @@
 import TourCard from "./TourCard";
 import Filter from "../ui/Filter";
+import SortBy from "../ui/SortBy";
 import { useTours } from "../features/tours/useTours.js";
 import LoadingSpinner from "../ui/LoadingSpinner";
 import { useSearchParams } from "react-router-dom";
@@ -11,8 +12,8 @@ function TourContainer() {
 
   if (isLoading) return <LoadingSpinner />;
 
+  // FILTER
   let filterValue = searchParams.get("type") || "all";
-  console.log(filterValue);
 
   let filteredTours;
   if (filterValue === "all") filteredTours = tours;
@@ -27,6 +28,15 @@ function TourContainer() {
   if (filterValue === "food")
     filteredTours = tours.filter((tour) => tour.type === "Food");
 
+  // SORT
+  const sortBy = searchParams.get("sortBy") || "name-asc";
+  const [field, direction] = sortBy.split("-");
+  const modifier = direction === "asc" ? 1 : -1;
+  const sortedTours = filteredTours.sort(
+    (a, b) => (a[field] - b[field]) * modifier
+  );
+  console.log(sortedTours);
+
   return (
     <>
       <Filter
@@ -40,8 +50,36 @@ function TourContainer() {
           { value: "nightlife", label: "Nightlife" },
         ]}
       />
+      <SortBy
+        options={[
+          {
+            value: "name-asc",
+            label: "Sort by name (A-Z)",
+          },
+          {
+            value: "name-desc",
+            label: "Sort by name (Z-A)",
+          },
+          {
+            value: "price-asc",
+            label: "Sort by price (low to high)",
+          },
+          {
+            value: "price-desc",
+            label: "Sort by price (high to low)",
+          },
+          {
+            value: "duration-asc",
+            label: "Sort by duration (low to high)",
+          },
+          {
+            value: "duration-desc",
+            label: "Sort by duration (high to low)",
+          },
+        ]}
+      />
       <section className={styles.container}>
-        {filteredTours.map((el, i) => (
+        {sortedTours.map((el, i) => (
           <TourCard
             key={i}
             name={el.name}
@@ -49,6 +87,7 @@ function TourContainer() {
             shortDesc={el.shortDesc}
             duration={el.duration}
             type={el.type}
+            price={el.price}
           />
         ))}
       </section>
