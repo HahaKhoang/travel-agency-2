@@ -24,7 +24,10 @@ function ExpandingCardItem({
     <div
       className={`${styles.panel} ${active}`}
       style={{
-        backgroundImage: `url(${img})`,
+        backgroundImage: `linear-gradient(
+      
+        rgba(255, 255, 255, 0),
+        rgba(53, 53, 53, 0.443)), url(${img})`,
       }}
       onClick={handleToggle}
     >
