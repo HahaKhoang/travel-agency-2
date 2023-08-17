@@ -1,9 +1,9 @@
-import TourBanner from "../ui/TourBanner";
+import SingleTourContainer from "../ui/SingleTourContainer";
 
 function Tour() {
   return (
     <div>
-      <TourBanner />
+      <SingleTourContainer />
     </div>
   );
 }

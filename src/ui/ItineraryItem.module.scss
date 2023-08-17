@@ -1,0 +1,34 @@
+.container {
+  //   background-color: var(--color-blue-med);
+  border: 3px solid var(--color-blue-dark);
+  width: 70rem;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.day {
+  //   background-color: white;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
+  color: white;
+}
+
+.date {
+  background-color: var(--color-red-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  height: 6rem;
+  width: 6rem;
+}
+
+.text {
+  font-size: 1.6rem;
+  color: black;
+}

@@ -1,0 +1,24 @@
+.container {
+  background-color: var(--color-blue-light);
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+}
+
+.buttons {
+  z-index: 20;
+  position: absolute;
+  top: 0;
+}
+
+.left {
+  padding: none;
+}
+
+.dots {
+  color: var(--color-red-dark) !important;
+  z-index: 40;
+  position: absolute;
+  top: 20rem;
+}
