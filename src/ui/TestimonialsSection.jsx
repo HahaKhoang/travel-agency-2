@@ -1,9 +1,8 @@
 import Carousel from "./Carousel";
-import SectionHeader from "./SectionHeader";
 
 function TestimonialsSection() {
   return (
-    <section>
+    <section style={{ paddingBottom: "8rem" }}>
       <Carousel />
     </section>
   );

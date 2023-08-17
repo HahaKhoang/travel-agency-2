@@ -1,6 +1,5 @@
 .navBar {
   width: 100%;
-  // background-color: red;
   position: fixed;
   top: 0;
   z-index: 200;
@@ -8,7 +7,7 @@
 }
 
 .color {
-  background-color: #1d3557;
+  background-color: var(--color-blue--dark);
 }
 
 .name {
@@ -29,10 +28,6 @@
   margin: 0 auto;
   font-size: 1.4rem;
   padding-bottom: 1.4rem;
-
-  ul {
-    list-style-type: none;
-  }
 }
 
 .link {

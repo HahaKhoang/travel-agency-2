@@ -1,5 +1,4 @@
 .container {
-  // background-color: red;
   display: flex;
   height: 50rem;
   width: 100rem;
@@ -19,7 +18,6 @@
 .right-container {
   width: 50%;
   height: 100%;
-  // background-color: orange;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,10 +26,6 @@
   margin: auto 0;
   gap: 3rem;
 }
-
-// .tour {
-//   font-size: 4rem;
-// }
 
 .review {
   font-size: 2.2rem;

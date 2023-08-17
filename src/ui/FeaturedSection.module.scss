@@ -1,8 +1,7 @@
 .container {
-  // background-color: pink;
   display: flex;
   gap: 7rem;
-  padding-bottom: 4rem;
+  padding-bottom: 8rem;
 }
 
 .left-container {
@@ -26,11 +25,6 @@
   flex-direction: column;
   gap: 3rem;
 }
-
-// .discover {
-//   font-size: 7rem;
-//   font-family: "DM Serif Display", serif;
-// }
 
 .description {
   font-size: 3rem;
