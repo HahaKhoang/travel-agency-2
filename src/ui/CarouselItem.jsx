@@ -8,7 +8,7 @@ function CarouselItem({ name, tour, image }) {
         <img src={image} className={styles.picture} />
       </div>
       <div className={styles["right-container"]}>
-        <p className={styles.tour}>{tour}</p>
+        <h3 className={styles.tour}>{tour}</h3>
         <p className={styles.review}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet error
           fugiat aperiam temporibus non nobis vero earum! Sint beatae facilis

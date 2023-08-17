@@ -65,13 +65,11 @@
 }
 
 .header {
-  font-size: 4rem;
   margin-bottom: 1rem;
-  font-family: "DM Serif Display", serif;
 
-  @media (max-width: 1600px) {
-    font-size: 3rem;
-  }
+  // @media (max-width: 1600px) {
+  //   font-size: 3rem;
+  // }
 }
 
 .description {

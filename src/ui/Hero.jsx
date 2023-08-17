@@ -6,9 +6,9 @@ function Hero() {
     <div className={styles.container}>
       <img src={hero8} className={styles.hero} />
       <div className={styles.box}>
-        <p className={styles.title}>
+        <h1 className={styles.title}>
           Ratione eos et cumque amet eum doloremque provident accusantium{" "}
-        </p>
+        </h1>
         <p className={styles.description}>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
           optio officia illum quibusdam. Minima, reiciendis nesciunt facilis

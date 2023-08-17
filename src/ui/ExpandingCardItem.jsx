@@ -28,7 +28,7 @@ function ExpandingCardItem({
       onClick={handleToggle}
     >
       <div className={`${textActive} ${styles.box}`}>
-        <p className={styles.header}> {text}</p>
+        <h3 className={styles.header}> {text}</h3>
         <p className={styles.description}>{desc}</p>
         <a className={styles.link}>&rarr; Read more</a>
       </div>

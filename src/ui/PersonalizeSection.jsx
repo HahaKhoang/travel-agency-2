@@ -6,7 +6,7 @@ function PersonalizeSection() {
   return (
     <section className={styles.container}>
       <div className={styles["left-container"]}>
-        <p className={styles.discover}>How it works</p>
+        <h2 className={styles.discover}>How it works</h2>
         <div className={styles.details}>
           <div className={styles["icon-box"]}>
             <RiNumber1 className={styles.icon} />

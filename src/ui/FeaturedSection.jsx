@@ -8,7 +8,7 @@ function FeaturedSection() {
         <img src={kyoto} className={styles.picture} />
       </div>
       <div className={styles["right-container"]}>
-        <p className={styles.discover}>Discover Japan 🇯🇵</p>
+        <h2 className={styles.discover}>Discover Japan 🇯🇵</h2>
         <p className={styles.description}>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
           omnis nobis sapiente odio incidunt maxime totam illum dolores ad illo
