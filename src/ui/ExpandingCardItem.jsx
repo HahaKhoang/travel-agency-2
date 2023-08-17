@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styles from "./ExpandingCardItem.module.scss";
 
 function ExpandingCardItem({
@@ -30,7 +31,7 @@ function ExpandingCardItem({
       <div className={`${textActive} ${styles.box}`}>
         <h3 className={styles.header}> {text}</h3>
         <p className={styles.description}>{desc}</p>
-        <a className={styles.link}>&rarr; Read more</a>
+        <NavLink className={styles.link}>&rarr; Read more</NavLink>
       </div>
       <div className={iconActive}>{icon}</div>
     </div>
