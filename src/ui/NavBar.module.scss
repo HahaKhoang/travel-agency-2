@@ -12,12 +12,13 @@
 }
 
 .name {
-  text-align: center;
   font-size: 4.6rem;
   color: white;
   padding: 1rem 0;
   font-family: "DM Serif Display", serif;
-  // background-color: green;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
 }
 
 .navContainer {

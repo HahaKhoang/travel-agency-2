@@ -6,7 +6,7 @@ function NavBar() {
   const [colorChange, setColorChange] = useState(false);
 
   const changeNavbarColor = () => {
-    if (window.scrollY > 150) {
+    if (window.scrollY > 175) {
       setColorChange(true);
     } else {
       setColorChange(false);
@@ -20,13 +20,10 @@ function NavBar() {
 
   return (
     <div className={nav}>
-      <div className={styles.name}>Tabi Tomodachi</div>
+      <NavLink to="/" className={styles.name}>
+        Tabi Tomodachi
+      </NavLink>
       <nav className={styles.navContainer}>
-        <ul>
-          <NavLink to="/" className={styles.link}>
-            Home
-          </NavLink>
-        </ul>
         <ul>
           <NavLink to="/about" className={styles.link}>
             About
@@ -49,7 +46,7 @@ function NavBar() {
         </ul>
         <ul>
           <NavLink to="/contact" className={styles.link}>
-            Contact
+            Book now
           </NavLink>
         </ul>
       </nav>
