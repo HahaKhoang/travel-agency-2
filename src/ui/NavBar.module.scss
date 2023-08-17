@@ -1,5 +1,5 @@
 .navBar {
-  width: 100%;
+  width: 100vw;
   position: fixed;
   top: 0;
   z-index: 200;
@@ -7,7 +7,7 @@
 }
 
 .color {
-  background-color: var(--color-blue--dark);
+  background-color: var(--color-blue-dark);
 }
 
 .name {

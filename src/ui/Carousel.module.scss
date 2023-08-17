@@ -9,6 +9,8 @@
 .dots {
   button::before {
     color: var(--color-red-dark) !important;
+    font-size: 1rem !important;
+    line-height: 3rem !important;
   }
 }
 
@@ -24,7 +26,7 @@
   color: var(--color-red-dark);
   cursor: pointer;
   position: absolute;
-  left: -5rem;
+  left: -10rem;
   top: 43%;
 }
 
@@ -34,7 +36,7 @@
   color: var(--color-red-dark);
   cursor: pointer;
   position: absolute;
-  right: -5rem;
+  right: -10rem;
   top: 43%;
 }
 

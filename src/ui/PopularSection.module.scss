@@ -65,14 +65,20 @@
 //   font-size: 2rem;
 // }
 
+// .button {
+//   font-size: 2rem;
+//   text-transform: uppercase;
+//   outline: none;
+//   border: 1px solid white;
+//   padding: 1.4rem 4rem;
+//   background-color: transparent;
+//   border-radius: 500px;
+//   cursor: pointer;
+//   margin-top: 1rem;
+// }
+
 .button {
-  font-size: 2rem;
-  text-transform: uppercase;
-  outline: none;
-  border: 1px solid white;
-  padding: 1.4rem 4rem;
-  background-color: transparent;
-  border-radius: 500px;
-  cursor: pointer;
   margin-top: 1rem;
+  background-color: var(--color-blue-dark);
+  border: none;
 }

@@ -14,11 +14,12 @@
   padding: 0.4rem 1.8rem;
   border-radius: 500px;
   border: none;
-  color: black;
+  color: white;
   font-size: 2rem;
   cursor: pointer;
+  background-color: var(--color-red-dark);
 }
 
 .active {
-  background-color: green;
+  background-color: var(--color-blue-dark);
 }

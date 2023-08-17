@@ -21,7 +21,9 @@ function TourCard({
         <p>Category: {type}</p>
       </div>
       <p className={styles.price}>Price: ${price}</p>
-      <NavLink className={styles.button}>Let's go to {country}!</NavLink>
+      <NavLink to={`/tours/:${name}`} className={styles.button}>
+        Let's go to {country}!
+      </NavLink>
     </div>
   );
 }

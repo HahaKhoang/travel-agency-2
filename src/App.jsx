@@ -13,6 +13,7 @@ import AppLayout from "./ui/AppLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Tours from "./pages/Tours";
+import Tour from "./pages/Tour";
 import Inspiration from "./pages/Inspiration";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
         element: <Tours />,
         errorElement: <PageNotFound />,
       },
-      { path: "/tours/:tourName", element: <Tours /> },
+      { path: "/tours/:tourName", element: <Tour /> },
       { path: "/inspiration", element: <Inspiration /> },
       { path: "/faq", element: <FAQ /> },
       { path: "/contact", element: <Contact /> },
