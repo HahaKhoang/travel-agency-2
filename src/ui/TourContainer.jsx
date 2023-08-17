@@ -94,6 +94,7 @@ function TourContainer() {
             duration={el.duration}
             type={el.type}
             price={el.price}
+            country={el.country}
           />
         ))}
       </section>

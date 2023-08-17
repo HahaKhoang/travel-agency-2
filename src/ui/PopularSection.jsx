@@ -17,7 +17,7 @@ function PopularSection() {
         </p>
         <div className={styles.extra}>
           <p className={styles.duration}>Duration: 5 days</p>
-          <p className={styles.type}>Type: culture</p>
+          <p className={styles.type}>Category: culture</p>
         </div>
         <button className={styles.button}>Read more</button>
       </div>
@@ -32,7 +32,7 @@ function PopularSection() {
         </p>
         <div className={styles.extra}>
           <p className={styles.duration}>Duration: 5 days</p>
-          <p className={styles.type}>Type: culture</p>
+          <p className={styles.type}>Category: culture</p>
         </div>
         <button className={styles.button}>Read more</button>
       </div>
@@ -47,7 +47,7 @@ function PopularSection() {
         </p>
         <div className={styles.extra}>
           <p className={styles.duration}>Duration: 5 days</p>
-          <p className={styles.type}>Type: culture</p>
+          <p className={styles.type}>Category: culture</p>
         </div>
         <button className={styles.button}>Read more</button>
       </div>

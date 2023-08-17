@@ -1,7 +1,15 @@
 import styles from "./TourCard.module.scss";
 import { NavLink } from "react-router-dom";
 
-function TourCard({ mainImage, name, shortDesc, duration, type, price }) {
+function TourCard({
+  mainImage,
+  name,
+  shortDesc,
+  duration,
+  type,
+  price,
+  country,
+}) {
   return (
     <div className={styles.container}>
       <img src={mainImage} className={styles.picture} />
@@ -13,7 +21,7 @@ function TourCard({ mainImage, name, shortDesc, duration, type, price }) {
         <p>Category: {type}</p>
       </div>
       <p className={styles.price}>Price: ${price}</p>
-      <NavLink className={styles.button}>Let's go to Japan!</NavLink>
+      <NavLink className={styles.button}>Let's go to {country}!</NavLink>
     </div>
   );
 }

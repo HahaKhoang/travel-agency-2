@@ -9,7 +9,11 @@ function AboutDetails() {
           <img src={kathy} className={styles.pic} />
         </div>
         <div className={styles.description}>
-          <p className={styles.header}>About me</p>
+          <p className={styles.header}>旅友達</p>
+          <p>
+            <span className={styles.travel}>Tabi Tomodachi</span> is the
+            Japanese word for a friend you make while traveling.
+          </p>
 
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit.

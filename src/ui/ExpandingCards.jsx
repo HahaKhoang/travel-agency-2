@@ -17,7 +17,7 @@ import {
 const tours = [
   {
     img: culture,
-    text: "Cultural",
+    text: "Culture",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
     icon: <RiBankFill />,
   },
@@ -35,7 +35,7 @@ const tours = [
   },
   {
     img: food,
-    text: "Foodie",
+    text: "Food",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
     icon: <RiRestaurantFill />,
   },
