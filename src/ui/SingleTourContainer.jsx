@@ -5,6 +5,7 @@ import SingleTourHeader from "./SingleTourHeader";
 import SingleTourLargePicture from "./SingleTourLargePicture";
 import ItineraryContainer from "./ItineraryContainer";
 import SingleTourBookNow from "./SingleTourBookNow";
+import SingleTourTestimonial from "./SingleTourTestimonial";
 
 function SingleTourContainer() {
   return (
@@ -21,6 +22,7 @@ function SingleTourContainer() {
       <SingleTourLargePicture />
       <ItineraryContainer />
       <SingleTourBookNow />
+      <SingleTourTestimonial />
     </div>
   );
 }
