@@ -1,9 +1,9 @@
-import Slider from "react-slick";
 import styles from "./SingleTourCarousel.module.scss";
 import VerticalSliderPicture from "./VerticalSliderPicture";
 import fuji from "../../public/img/fuji.jpg";
 import fushimi from "../../public/img/fushimi.jpg";
 import tokyo from "../../public/img/tokyo.jpg";
+import { useEffect, useState } from "react";
 
 const pictures = [
   {
@@ -27,23 +27,25 @@ const pictures = [
 ];
 
 function SingleTourPicture() {
-  const settings = {
-    dots: true,
-    dotsClass: `slick-dots ${styles.dots}`,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 1000,
-    accessibility: true,
-    vertical: true,
-  };
+  const [activeIndex, setActiveIndex] = useState(0);
+  const length = pictures.length - 1;
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex(activeIndex === length ? 0 : activeIndex + 1);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [activeIndex, length]);
 
   return (
     <div className={styles.container}>
-      <Slider {...settings}>
-        {pictures.map((el) => (
+      {pictures.map((el, i) => (
+        <div
+          key={i}
+          className={
+            activeIndex === i ? `${styles.active}` : `${styles.inactive}`
+          }
+        >
           <VerticalSliderPicture
             key={el.title}
             img={el.img}
@@ -51,8 +53,25 @@ function SingleTourPicture() {
             location={el.location}
             color={el.color}
           />
-        ))}
-      </Slider>
+        </div>
+      ))}
+      <div className={styles.dots}>
+        {pictures.map((_, i) => {
+          return (
+            <span
+              key={i}
+              className={
+                activeIndex === i
+                  ? `${styles.dot} ${styles["active-dot"]}`
+                  : `${styles.dot}`
+              }
+              onClick={() => {
+                setActiveIndex(i);
+              }}
+            ></span>
+          );
+        })}
+      </div>
     </div>
   );
 }

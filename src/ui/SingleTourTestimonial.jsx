@@ -1,7 +1,7 @@
 import styles from "./SingleTourTestimonial.module.scss";
 import culture from "../../public/img/culture.jpg";
 import SingleTourReview from "./SingleTourReview";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const reviews = [
   {
@@ -37,12 +37,10 @@ function SingleTourTestimonial() {
 
   function prevSlide() {
     setActiveIndex(activeIndex < 1 ? length : activeIndex - 1);
-    console.log(activeIndex);
   }
 
   function nextSlide() {
     setActiveIndex(activeIndex === length ? 0 : activeIndex + 1);
-    console.log(activeIndex);
   }
 
   //   const activeDot =
