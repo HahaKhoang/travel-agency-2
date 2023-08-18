@@ -7,13 +7,15 @@ import ItineraryHeader from "./ItineraryHeader";
 
 function ItineraryContainer() {
   return (
-    <div className={styles.container}>
+    <>
       <ItineraryHeader header="A glance at the itinerary" />
-      <ItineraryDay1 />
-      <ItineraryDay3 />
-      <ItineraryDay6 />
-      <ItineraryDay8 />
-    </div>
+      <div className={styles.container}>
+        <ItineraryDay1 />
+        <ItineraryDay3 />
+        <ItineraryDay6 />
+        <ItineraryDay8 />
+      </div>
+    </>
   );
 }
 
