@@ -1,13 +1,11 @@
 .container {
-  //   background-color: green;
+  background-color: pink;
   display: flex;
   justify-content: space-between;
-
-  padding: 4rem 0 4rem 0;
 }
 
 .day-container {
-  width: 50%;
+  width: 35%;
   padding: 0 8rem;
   display: flex;
   flex-direction: column;
@@ -29,8 +27,8 @@
 }
 
 .picture-container {
-  width: 50%;
-  height: 60rem;
+  width: 65%;
+  height: 100rem;
 }
 
 .picture {
