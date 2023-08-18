@@ -1,0 +1,31 @@
+.container {
+  width: 100vw;
+  height: 90rem;
+  background-color: yellow;
+  position: relative;
+}
+
+.picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header {
+  color: white;
+  position: absolute;
+  top: 14rem;
+  left: 8rem;
+  //   background-color: green;
+  width: 40%;
+}
+
+.text {
+  //   background-color: green;
+  position: absolute;
+  bottom: 14rem;
+  right: 8%;
+  width: 50%;
+  color: white;
+  font-size: 2.2rem;
+}

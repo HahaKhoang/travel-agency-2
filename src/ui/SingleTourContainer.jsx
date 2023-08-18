@@ -1,6 +1,8 @@
 import TourBanner from "./TourBanner";
 import kyoto from "../../public/img/kyoto.jpg";
-import SingleTourPicture from "./SingleTourPicture";
+import SingleTourPicture from "./SingleTourCarousel";
+import SingleTourHeader from "./SingleTourHeader";
+import SingleTourLargePicture from "./SingleTourLargePicture";
 
 function SingleTourContainer() {
   return (
@@ -13,6 +15,8 @@ function SingleTourContainer() {
           aliquid neque."
       />
       <SingleTourPicture />
+      <SingleTourHeader />
+      <SingleTourLargePicture />
     </div>
   );
 }

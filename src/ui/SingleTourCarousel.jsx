@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import styles from "./SingleTourPicture.module.scss";
+import styles from "./SingleTourCarousel.module.scss";
 import VerticalSliderPicture from "./VerticalSliderPicture";
 import fuji from "../../public/img/fuji.jpg";
 import fushimi from "../../public/img/fushimi.jpg";
@@ -16,7 +16,7 @@ const pictures = [
     img: fushimi,
     title: "Fushimi Inari Shrine",
     location: "Kyoto, Japan",
-    color: "grey",
+    color: "#e5e7eb",
   },
   {
     img: tokyo,
