@@ -3,6 +3,7 @@ import kyoto from "../../public/img/kyoto.jpg";
 import SingleTourPicture from "./SingleTourCarousel";
 import SingleTourHeader from "./SingleTourHeader";
 import SingleTourLargePicture from "./SingleTourLargePicture";
+import ItineraryContainer from "./ItineraryContainer";
 
 function SingleTourContainer() {
   return (
@@ -17,6 +18,7 @@ function SingleTourContainer() {
       <SingleTourPicture />
       <SingleTourHeader />
       <SingleTourLargePicture />
+      <ItineraryContainer />
     </div>
   );
 }
