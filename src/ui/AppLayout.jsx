@@ -2,8 +2,7 @@ import { Outlet, useNavigation } from "react-router-dom";
 import styles from "./AppLayout.module.scss";
 import Footer from "./Footer";
 import LoadingSpinner from "./LoadingSpinner";
-import NavBarContainer from "./NavBarContainer";
-import ScrollToTop from "./ScrollToTop";
+import NavBar from "./NavBar";
 
 function AppLayout() {
   const navigation = useNavigation();
@@ -12,11 +11,11 @@ function AppLayout() {
   return (
     <div className={styles.container}>
       {isLoading && <LoadingSpinner />}
-      <NavBarContainer />
+      <NavBar />
       <main className={styles.main}>
         <Outlet />
       </main>
-      <ScrollToTop />
+      {/* <ScrollToTop /> */}
       <Footer />
     </div>
   );

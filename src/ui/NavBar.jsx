@@ -1,13 +1,42 @@
 import { NavLink } from "react-router-dom";
 import styles from "./NavBar.module.scss";
+import { useEffect, useState } from "react";
 
 function NavBar() {
+  const [isScrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+  const handleScroll = () => {
+    if (window.scrollY > 2) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  const scrolledNav = isScrolled
+    ? `${styles.navBar} ${styles["navBar-scrolled"]}`
+    : `${styles.navBar}`;
+
+  const scrolledName = isScrolled
+    ? `${styles.name} ${styles["name-scrolled"]}`
+    : `${styles.name}`;
+
+  const scrolledNavContainer = isScrolled
+    ? `${styles.navContainer} ${styles["navContainer-scrolled"]}`
+    : `${styles.navContainer}`;
+
   return (
-    <div className={styles.navBar}>
-      <NavLink to="/" className={styles.name}>
+    <div className={scrolledNav}>
+      <NavLink to="/" className={scrolledName}>
         Tabi Tomodachi
       </NavLink>
-      <nav className={styles.navContainer}>
+      <nav className={scrolledNavContainer}>
         <ul>
           <NavLink to="/about" className={styles.link}>
             About
