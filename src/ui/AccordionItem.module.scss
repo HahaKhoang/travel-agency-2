@@ -1,5 +1,5 @@
 .accordion-item {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -7,23 +7,23 @@
 }
 
 .accordion-item.active .button {
-  background-color: #105057;
+  background-color: var(--color-red-dark);
 }
 
 .button {
   font-size: 2.4rem;
-  background-color: #008593;
+  background-color: var(--color-blue-med);
   color: #fff;
-  // text-align: left;
   font-weight: 700;
   display: flex;
-  // flex-wrap: wrap;
   width: 100%;
   gap: 2rem;
   align-items: center;
   padding: 2rem;
   cursor: pointer;
   border: none;
+  border-radius: 0;
+  text-transform: none;
 }
 
 .button span:last-child {
@@ -31,7 +31,6 @@
 }
 
 .text {
-  // background-color: #f7f7f7;
   padding: 3rem;
   font-size: 1.8rem;
 }
