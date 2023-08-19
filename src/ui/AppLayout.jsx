@@ -3,6 +3,7 @@ import styles from "./AppLayout.module.scss";
 import Footer from "./Footer";
 import LoadingSpinner from "./LoadingSpinner";
 import NavBarContainer from "./NavBarContainer";
+import ScrollToTop from "./ScrollToTop";
 
 function AppLayout() {
   const navigation = useNavigation();
@@ -15,6 +16,7 @@ function AppLayout() {
       <main className={styles.main}>
         <Outlet />
       </main>
+      <ScrollToTop />
       <Footer />
     </div>
   );
