@@ -1,3 +1,4 @@
+import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
 import styles from "./AccordionItem.module.scss";
 import { useRef } from "react";
 
@@ -23,7 +24,13 @@ function AccordionItem({ num, title, curOpen, onOpen, children }) {
           {num < 9 ? `0${num + 1}` : num + 1}
         </span>
         <span className={styles.title}>{title}</span>
-        <span className={styles.control}>{isOpen ? "-" : "+"}</span>
+        <span className={styles.control}>
+          {isOpen ? (
+            <RiArrowUpSLine className={styles.icon} />
+          ) : (
+            <RiArrowDownSLine className={styles.icon} />
+          )}
+        </span>
       </button>
       <div
         ref={contentEl}
