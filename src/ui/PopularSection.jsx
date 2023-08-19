@@ -6,9 +6,8 @@ import kyoto from "../../public/img/kyoto.jpg";
 function PopularSection() {
   return (
     <div className={styles.container}>
-      <div className={styles["rank-container-secondary"]}>
-        <p className={styles.rank}>#2</p>
-        <img src={dango} className={styles["rank-secondary"]} />
+      <div className={styles["rank-container"]}>
+        <img src={dango} className={styles["rank-picture"]} />
         <p className={styles.title}>Eat through Japan</p>
 
         <p className={styles.description}>
@@ -21,9 +20,8 @@ function PopularSection() {
         </div>
         <button className={styles.button}>Read more</button>
       </div>
-      <div className={styles["rank-container-primary"]}>
-        <p className={styles.rank}>#1</p>
-        <img src={kyoto} className={styles["rank-primary"]} />
+      <div className={styles["rank-container"]}>
+        <img src={kyoto} className={styles["rank-picture"]} />
         <p className={styles.title}>Cultural Kyoto</p>
 
         <p className={styles.description}>
@@ -36,9 +34,8 @@ function PopularSection() {
         </div>
         <button className={styles.button}>Read more</button>
       </div>
-      <div className={styles["rank-container-secondary"]}>
-        <p className={styles.rank}>#3</p>
-        <img src={fuji} className={styles["rank-secondary"]} />
+      <div className={styles["rank-container"]}>
+        <img src={fuji} className={styles["rank-picture"]} />
         <p className={styles.title}>Climb Mt. Fuji</p>
 
         <p className={styles.description}>

@@ -1,25 +1,9 @@
 import { NavLink } from "react-router-dom";
 import styles from "./NavBar.module.scss";
-import { useState } from "react";
 
 function NavBar() {
-  const [colorChange, setColorChange] = useState(false);
-
-  const changeNavbarColor = () => {
-    if (window.scrollY > 175) {
-      setColorChange(true);
-    } else {
-      setColorChange(false);
-    }
-  };
-  window.addEventListener("scroll", changeNavbarColor);
-
-  const nav = colorChange
-    ? `${styles.navBar} ${styles.color}`
-    : `${styles.navBar}`;
-
   return (
-    <div className={nav}>
+    <div className={styles.navBar}>
       <NavLink to="/" className={styles.name}>
         Tabi Tomodachi
       </NavLink>

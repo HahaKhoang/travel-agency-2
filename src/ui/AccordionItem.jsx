@@ -16,6 +16,9 @@ function AccordionItem({ num, title, curOpen, onOpen, children }) {
   const textOpen = isOpen
     ? `${styles["text-box"]} ${styles.open}`
     : `${styles["text-box"]}`;
+  // const rotateIcon = isOpen
+  //   ? `${styles.icon} ${styles["rotate-icon"]}`
+  //   : `${styles.icon}`;
 
   return (
     <li className={itemOpen}>

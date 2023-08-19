@@ -1,8 +1,8 @@
 import { Outlet, useNavigation } from "react-router-dom";
 import styles from "./AppLayout.module.scss";
-import NavBar from "./NavBar";
 import Footer from "./Footer";
 import LoadingSpinner from "./LoadingSpinner";
+import NavBarContainer from "./NavBarContainer";
 
 function AppLayout() {
   const navigation = useNavigation();
@@ -11,7 +11,7 @@ function AppLayout() {
   return (
     <div className={styles.container}>
       {isLoading && <LoadingSpinner />}
-      <NavBar />
+      <NavBarContainer />
       <main className={styles.main}>
         <Outlet />
       </main>

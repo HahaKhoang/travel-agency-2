@@ -1,24 +1,14 @@
 .container {
-  //   background-color: orange;
+  // background-color: orange;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
   padding-bottom: 8rem;
 }
 
-.rank-container-primary {
-  width: 47rem;
-  //   background-color: red;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.rank-container-secondary {
-  width: 37rem;
-  //   background-color: yellow;
+.rank-container {
+  width: 45rem;
+  // background-color: red;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,15 +20,10 @@
   font-size: 7rem;
 }
 
-.rank-primary {
-  width: 47rem;
-  height: 47rem;
+.rank-picture {
+  width: 45rem;
+  height: 45rem;
   object-fit: cover;
-}
-
-.rank-secondary {
-  width: 37rem;
-  height: 37rem;
 }
 
 .title {
@@ -56,26 +41,6 @@
   gap: 3rem;
   font-size: 1.4rem;
 }
-
-// .duration {
-//   font-size: 2rem;
-// }
-
-// .type {
-//   font-size: 2rem;
-// }
-
-// .button {
-//   font-size: 2rem;
-//   text-transform: uppercase;
-//   outline: none;
-//   border: 1px solid white;
-//   padding: 1.4rem 4rem;
-//   background-color: transparent;
-//   border-radius: 500px;
-//   cursor: pointer;
-//   margin-top: 1rem;
-// }
 
 .button {
   margin-top: 1rem;
