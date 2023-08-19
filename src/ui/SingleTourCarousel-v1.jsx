@@ -30,29 +30,38 @@ function SingleTourPicture() {
   const [activeIndex, setActiveIndex] = useState(0);
   const length = pictures.length - 1;
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex(activeIndex === length ? 0 : activeIndex + 1);
-    }, 7000);
-    return () => clearInterval(interval);
-  }, [activeIndex, length]);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setActiveIndex(activeIndex === length ? 0 : activeIndex + 1);
+  //   }, 5000);
+  //   return () => clearInterval(interval);
+  // }, [activeIndex, length]);
+
+  // const goToSlide = function (slide) {
+  //   slides.forEach(
+  //     (s, i) => (s.style.transform = `translateY(${100 * (i - slide)}%)`)
+  //   );
+  // };
 
   return (
     <div className={styles.container}>
       {pictures.map((el, i) => (
         <div
-          className={styles["picture-container"]}
           key={i}
-          style={{
-            transform: `translateY(${100 * (i - activeIndex)}%)`,
-            backgroundColor: `${el.color}`,
-          }}
+          className={
+            activeIndex === i
+              ? `${styles.active} ${styles.slide}`
+              : `${styles.inactive}`
+          }
+          style={{ transform: `translateY(${100 * (i - activeIndex)}%)` }}
         >
-          <div className={styles["picture-frame"]}>
-            <img src={el.img} className={styles.picture} />
-            <h1 className={styles.title}>{el.title}</h1>
-            <p className={styles.location}>{el.location}</p>
-          </div>
+          <VerticalSliderPicture
+            key={el.title}
+            img={el.img}
+            title={el.title}
+            location={el.location}
+            color={el.color}
+          />
         </div>
       ))}
       <div className={styles.dots}>
@@ -77,13 +86,3 @@ function SingleTourPicture() {
 }
 
 export default SingleTourPicture;
-
-{
-  /* <div className={styles["picture-container"]}>
-<div className={styles["picture-frame"]}>
-  <img src={fuji} className={styles.picture} />
-  <h1 className={styles.title}>Mt.Fuji</h1>
-  <p className={styles.location}>Japan</p>
-</div>
-</div> */
-}
