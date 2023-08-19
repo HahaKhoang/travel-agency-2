@@ -1,5 +1,4 @@
 import styles from "./SingleTourCarousel.module.scss";
-import VerticalSliderPicture from "./VerticalSliderPicture";
 import fuji from "../../public/img/fuji.jpg";
 import fushimi from "../../public/img/fushimi.jpg";
 import tokyo from "../../public/img/tokyo.jpg";

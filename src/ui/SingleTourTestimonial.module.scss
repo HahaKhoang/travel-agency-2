@@ -46,6 +46,7 @@
 .slider-container {
   // background-color: red;
   text-align: start;
+  // overflow: hidden;
 }
 
 .active {
@@ -56,11 +57,16 @@
   display: none;
 }
 
+.button {
+  width: 4rem;
+  height: 4rem;
+}
+
 .button-left {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: -10rem;
+  left: -11rem;
   border: none;
   padding: none;
 }
@@ -69,7 +75,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  right: -10rem;
+  right: -11rem;
   border: none;
   padding: none;
 }

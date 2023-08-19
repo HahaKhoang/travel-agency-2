@@ -2,6 +2,7 @@ import styles from "./SingleTourTestimonial.module.scss";
 import culture from "../../public/img/culture.jpg";
 import SingleTourReview from "./SingleTourReview";
 import { useState } from "react";
+import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
 
 const reviews = [
   {
@@ -43,11 +44,6 @@ function SingleTourTestimonial() {
     setActiveIndex(activeIndex === length ? 0 : activeIndex + 1);
   }
 
-  //   const activeDot =
-  //     activeIndex === index
-  //       ? `${styles.dot} ${styles["active-dot"]}`
-  //       : `${styles.dot}`;
-
   return (
     <div className={styles.container}>
       <div className={styles["picture-container"]}>
@@ -69,10 +65,10 @@ function SingleTourTestimonial() {
             ))}
           </div>
           <button className={styles["button-left"]} onClick={prevSlide}>
-            &larr;
+            <RiArrowLeftLine className={styles.button} />
           </button>
           <button className={styles["button-right"]} onClick={nextSlide}>
-            &rarr;
+            <RiArrowRightLine className={styles.button} />
           </button>
         </div>
         <div className={styles.dots}>
