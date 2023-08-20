@@ -12,7 +12,11 @@ function Home() {
       <Hero />
       <Heading text1="Decide what type of experience you want" />
       <ExperienceSection />
-      <Heading text1="Shop our most popular tours" />
+      <Heading
+        text1="Shop our most popular tours"
+        bgColor="var(--color-blue-light)"
+        fontColor="white"
+      />
       <PopularSection />
       <Heading text1="Or personalize your own tour" />
       <PersonalizeSection />

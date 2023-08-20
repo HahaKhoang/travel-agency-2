@@ -1,8 +1,11 @@
 import styles from "./Heading.module.scss";
 
-function Heading({ text1, text2 }) {
+function Heading({ text1, text2, bgColor, fontColor }) {
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{ backgroundColor: `${bgColor}`, color: `${fontColor}` }}
+    >
       <h1>{text1}</h1>
       <p>{text2}</p>
     </div>
