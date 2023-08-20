@@ -1,5 +1,5 @@
 .container {
-  height: 45rem;
+  height: 40rem;
   width: 100%;
   display: flex;
   align-items: center;
@@ -27,13 +27,16 @@
 
   // background-color: green;
 
+  textArea {
+    resize: none;
+  }
+
   input,
   textArea,
   select {
     width: 100%;
     padding: 0.4rem;
     outline: none;
-    border-radius: 3px;
     border: none;
   }
 
@@ -41,17 +44,17 @@
   textArea:focus,
   select:focus,
   button:focus {
-    border: 2px orange solid;
+    border: 2px var(--color-blue-light) solid;
   }
 }
 
 .button {
-  background-color: red;
+  background-color: var(--color-blue-dark);
   padding: 0.8rem 0.4rem;
   border: none;
   outline: none;
   width: 100%;
   cursor: pointer;
-  border-radius: 7px;
+  border-radius: 0;
   cursor: pointer;
 }
