@@ -28,6 +28,7 @@
 
 .title {
   font-size: 3rem;
+  font-family: "DM Serif Display", serif;
 }
 
 .description {
@@ -46,4 +47,9 @@
   margin-top: 1rem;
   background-color: var(--color-blue-dark);
   border: none;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  transform: scale(110%);
 }
