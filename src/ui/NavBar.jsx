@@ -53,6 +53,11 @@ function NavBar() {
           </NavLink>
         </ul>
         <ul>
+          <NavLink to="/surprise" className={styles.link}>
+            Surprise Me
+          </NavLink>
+        </ul>
+        <ul>
           <NavLink to="/faq" className={styles.link}>
             FAQ
           </NavLink>

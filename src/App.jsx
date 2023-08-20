@@ -1,11 +1,4 @@
-import {
-  BrowserRouter,
-  Navigate,
-  Route,
-  RouterProvider,
-  Routes,
-  createBrowserRouter,
-} from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import styles from "./App.module.scss";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -15,6 +8,7 @@ import About from "./pages/About";
 import Tours from "./pages/Tours";
 import Tour from "./pages/Tour";
 import Inspiration from "./pages/Inspiration";
+import Surprise from "./pages/Surprise";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import PageNotFound from "./pages/PageNotFound";
@@ -35,6 +29,7 @@ const router = createBrowserRouter([
       },
       { path: "/tours/:tourName", element: <Tour /> },
       { path: "/inspiration", element: <Inspiration /> },
+      { path: "/surprise", element: <Surprise /> },
       { path: "/faq", element: <FAQ /> },
       { path: "/contact", element: <Contact /> },
     ],
