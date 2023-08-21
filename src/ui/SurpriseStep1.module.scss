@@ -1,25 +1,24 @@
 .container {
   width: 100%;
+  height: 115rem;
   padding: 4rem 0;
-  background-color: beige;
+  //   background-color: beige;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  position: relative;
 }
 
 .step-1 {
   display: flex;
   align-items: center;
   width: 100%;
-  background-color: blue;
+  //   background-color: blue;
 }
 
 .step-1-picture-container {
   width: 60%;
   height: 60rem;
-  background-color: green;
+  //   background-color: green;
 }
 
 .picture {
@@ -31,10 +30,35 @@
 .step-1-text-container {
   width: 40%;
   padding: 6rem;
-
-  background-color: pink;
+  margin-bottom: 8rem;
+  //   background-color: pink;
 }
 
 .text {
   font-size: 2rem;
+}
+
+.step-2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50rem;
+  //   background-color: red;
+  position: relative;
+}
+
+.step-2-text-container {
+  width: 40%;
+  padding: 6rem;
+  margin-left: 4rem;
+  //   background-color: pink;
+}
+
+.step-2-picture-container {
+  width: 60rem;
+  height: 60rem;
+  //   background-color: green;
+  position: absolute;
+  left: 70rem;
+  top: -10rem;
 }
