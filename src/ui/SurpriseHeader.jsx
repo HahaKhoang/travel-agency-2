@@ -8,12 +8,15 @@ function MysteryHeader() {
         <img src={bike} className={styles.picture} />
       </div>
       <div className={styles["text-container"]}>
-        <h3 className={styles.text}>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Incidunt,
-          blanditiis natus! Voluptate, tenetur. Neque eaque id recusandae labore
-          sunt hic odit doloremque iste commodi, assumenda nulla a sequi magnam
-          voluptates!
-        </h3>
+        <h3>Lorem ipsum dolor sit amet, consectetur</h3>
+        <p className={styles.text}>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis
+          autem in quidem maiores ad delectus, ratione labore officia quos
+        </p>
+        <p className={styles.text}>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis
+          autem in quidem maiores ad delectus, ratione labore officia quos
+        </p>
       </div>
     </div>
   );

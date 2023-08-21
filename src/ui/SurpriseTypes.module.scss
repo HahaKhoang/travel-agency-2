@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  //   background-color: beige;
+}
+
+.header {
+  text-align: center;
+  padding-top: 15rem;
+  padding-bottom: 4rem;
+}
+
+.types-container {
+  //   background-color: pink;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 4rem;
+}
