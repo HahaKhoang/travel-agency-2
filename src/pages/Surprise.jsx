@@ -4,6 +4,7 @@ import balloons from "../../public/img/balloons.jpg";
 import SurpriseTypes from "../ui/SurpriseTypes";
 import SurpriseCarousel from "../ui/SurpriseCarousel";
 import SurpriseHow from "../ui/SurpriseHow";
+import SurpriseCTA from "../ui/SurpriseCTA";
 function Surprise() {
   return (
     <div>
@@ -12,6 +13,7 @@ function Surprise() {
       <SurpriseTypes />
       {/* <SurpriseCarousel /> */}
       <SurpriseHow />
+      <SurpriseCTA />
     </div>
   );
 }

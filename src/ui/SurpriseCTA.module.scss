@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+  height: 40rem;
+  padding: 4rem;
+  background-color: var(--color-blue-med);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.header {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  //   background-color: green;
+  width: 80rem;
+}
+
+.text {
+  font-size: 2rem;
+}
+
+.button {
+  transition: all 0.5s;
+}
+
+.button:hover {
+  background-color: white;
+  color: var(--color-blue-med);
+}
