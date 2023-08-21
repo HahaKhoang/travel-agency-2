@@ -1,5 +1,5 @@
 import styles from "./SurpriseHow.module.scss";
-import jk1 from "../../public/img/jk1.jpg";
+import jump from "../../public/img/jump.jpg";
 import SurpriseStep1 from "./SurpriseStep1";
 import SurpriseStep3 from "./SurpriseStep3";
 
@@ -15,7 +15,7 @@ function SurpriseHow() {
           </p>
         </div>
         <div className={styles["picture-container"]}>
-          <img src={jk1} className={styles.picture} />
+          <img src={jump} className={styles.picture} />
         </div>
       </div>
       <SurpriseStep1 />

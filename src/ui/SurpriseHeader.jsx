@@ -1,11 +1,11 @@
 import styles from "./SurpriseHeader.module.scss";
-import bike from "../../public/img/bike.jpg";
+import explore from "../../public/img/explore.jpg";
 
 function MysteryHeader() {
   return (
     <div className={styles.container}>
       <div className={styles["picture-container"]}>
-        <img src={bike} className={styles.picture} />
+        <img src={explore} className={styles.picture} />
       </div>
       <div className={styles["text-container"]}>
         <h3 className={styles.header}>
