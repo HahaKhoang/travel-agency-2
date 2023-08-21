@@ -8,7 +8,7 @@ function SurpriseHow() {
     <div className={styles.container}>
       <div className={styles.ready}>
         <div className={styles["text-container"]}>
-          <h2>Ready to get started?</h2>
+          <h2 className={styles.header}>Ready to get started?</h2>
           <p className={styles.text}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi
             commodi dolorem{" "}

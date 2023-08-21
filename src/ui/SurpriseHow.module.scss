@@ -4,6 +4,10 @@
   flex-direction: column;
 }
 
+.header {
+  color: var(--color-red-dark);
+}
+
 .ready {
   display: flex;
   align-items: center;

@@ -8,11 +8,15 @@
   align-items: center;
 }
 
+.header {
+  color: var(--color-red-dark);
+}
+
 .step-1 {
   display: flex;
   align-items: center;
   width: 100%;
-  //   background-color: blue;
+  //   background-color: var(--color-blue-light);
 }
 
 .step-1-picture-container {
@@ -31,6 +35,9 @@
   width: 40%;
   padding: 6rem;
   margin-bottom: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
   //   background-color: pink;
 }
 
@@ -51,6 +58,9 @@
   width: 40%;
   padding: 6rem;
   margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
   //   background-color: pink;
 }
 

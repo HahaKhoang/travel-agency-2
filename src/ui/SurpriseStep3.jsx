@@ -11,7 +11,7 @@ function SurpriseStep3() {
           <img src={jk4} className={styles.picture} />
         </div>
         <div className={styles["step-3-text-container"]}>
-          <h2>Step 3</h2>
+          <h2 className={styles.header}>Step 3</h2>
           <p className={styles.text}>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
             suscipit
@@ -23,7 +23,7 @@ function SurpriseStep3() {
       </div>
       <div className={styles["step-4"]}>
         <div className={styles["step-4-text-container"]}>
-          <h2>Step 4</h2>
+          <h2 className={styles.header}>Step 4</h2>
           <p className={styles.text}>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
             suscipit
@@ -41,7 +41,7 @@ function SurpriseStep3() {
           <img src={jk6} className={styles.picture} />
         </div>
         <div className={styles["step-5-text-container"]}>
-          <h2>Step 5</h2>
+          <h2 className={styles.header}>Step 5</h2>
           <p className={styles.text}>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
             suscipit

@@ -10,7 +10,7 @@ function SurpriseStep1() {
           <img src={jk2} className={styles.picture}></img>
         </div>
         <div className={styles["step-1-text-container"]}>
-          <h2>Step 1</h2>
+          <h2 className={styles.header}>Step 1</h2>
           <p className={styles.text}>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
             suscipit
@@ -29,7 +29,7 @@ function SurpriseStep1() {
       </div>
       <div className={styles["step-2"]}>
         <div className={styles["step-2-text-container"]}>
-          <h2>Step 2</h2>
+          <h2 className={styles.header}>Step 2</h2>
           <p className={styles.text}>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
             suscipit

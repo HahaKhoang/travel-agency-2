@@ -1,9 +1,14 @@
 .container {
   //   background-color: pink;
+  margin-top: 4rem;
+}
+
+.header {
+  color: var(--color-red-dark);
 }
 
 .step-3 {
-  //   background-color: green;
+  //   background-color: var(--color-blue-light);
   display: flex;
   align-items: center;
 }
@@ -23,6 +28,9 @@
   //   background-color: red;
   width: 60%;
   padding: 9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 .text {
@@ -44,10 +52,13 @@
   //   background-color: purple;
   width: 40%;
   padding: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
 .step-5 {
-  //   background-color: red;
+  //   background-color: var(--color-blue-light);
   display: flex;
   align-items: center;
 }
@@ -61,4 +72,7 @@
   //   background-color: purple;
   width: 40%;
   padding: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
