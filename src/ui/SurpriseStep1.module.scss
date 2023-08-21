@@ -1,0 +1,40 @@
+.container {
+  width: 100%;
+  padding: 4rem 0;
+  background-color: beige;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.step-1 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: blue;
+}
+
+.step-1-picture-container {
+  width: 60%;
+  height: 60rem;
+  background-color: green;
+}
+
+.picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.step-1-text-container {
+  width: 40%;
+  padding: 6rem;
+
+  background-color: pink;
+}
+
+.text {
+  font-size: 2rem;
+}

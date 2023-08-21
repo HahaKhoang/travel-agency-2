@@ -12,14 +12,14 @@ const tours = [
     icon: <RiPlaneFill />,
     title: "International trips",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellendus amet doloribus ex fuga fugiat. Perferendis laudantium doloribus cupiditate! Ducimus, aut adipisci? Perferendis quasi labore eos minus iste nesciunt modi!",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellendus fugiat. Perferendis laudantium doloribus cupiditate! Ducimus, aut adipisci? Perferendis quasi labore eos minus iste nesciunt modi!",
     budget: "1000",
   },
   {
     icon: <RiRoadsterFill />,
     title: "Road trips",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellendus amet doloribus ex fuga fugiat. Perferendis laudantium doloribus cupiditate! Ducimus, aut adipisci? Perferendis quasi labore eos minus iste nesciunt modi!",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellendus  ex fuga fugiat. Perferendis laudantium doloribus cupiditate! Ducimus, aut adipisci? Perferendis quasi labore eos minus iste nesciunt modi!",
     budget: "600",
   },
   {
@@ -33,7 +33,7 @@ const tours = [
     icon: <RiSunFill />,
     title: "Day trips",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellendus amet doloribus ex fuga fugiat. Perferendis laudantium doloribus cupiditate! Ducimus, aut adipisci? Perferendis quasi labore eos minus iste nesciunt modi!",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellendus amet doloribus ex fuga fugiat. Perferendis laudantium doloribus cupiditate! Ducimus, aut adipisci? ",
     budget: "200",
   },
 ];
@@ -41,7 +41,7 @@ const tours = [
 function SurpriseTypes() {
   return (
     <div className={styles.container}>
-      <h2 className={styles.header}>Types of trips</h2>
+      <h1 className={styles.header}>Types of trips</h1>
       <div className={styles["types-container"]}>
         {tours.map((el, i) => {
           return (

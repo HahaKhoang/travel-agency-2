@@ -1,12 +1,14 @@
 .container {
   width: 100%;
-  //   background-color: beige;
+  background-color: var(--color-blue-light);
+  padding-bottom: 8rem;
 }
 
 .header {
   text-align: center;
   padding-top: 15rem;
   padding-bottom: 4rem;
+  color: var(--color-blue-dark);
 }
 
 .types-container {
