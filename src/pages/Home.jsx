@@ -5,6 +5,7 @@ import FeaturedSection from "../ui/FeaturedSection";
 import ExperienceSection from "../ui/ExperienceSection";
 import PopularSection from "../ui/PopularSection";
 import PersonalizeSection from "../ui/PersonalizeSection";
+import SurpriseSection from "../ui/SurpriseSection";
 
 function Home() {
   return (
@@ -22,6 +23,11 @@ function Home() {
       <PersonalizeSection />
       <Heading text1="Can't decide where to go next? Check out our featured country" />
       <FeaturedSection />
+      <Heading
+        text1="Feeling adventurous? Book a surprise trip!"
+        fontColor="var(--color-blue-med)"
+      />
+      <SurpriseSection />
       <Heading text1="See what our travelers are saying" />
       <TestimonialsSection />
     </>

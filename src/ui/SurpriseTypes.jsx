@@ -24,7 +24,7 @@ const tours = [
   },
   {
     icon: <RiSuitcaseFill />,
-    title: "Weekend getaway",
+    title: "Weekend getaways",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellendus amet doloribus ex fuga fugiat. Perferendis laudantium doloribus cupiditate! Ducimus, aut adipisci? Perferendis quasi labore eos minus iste nesciunt modi!",
     budget: "900",
