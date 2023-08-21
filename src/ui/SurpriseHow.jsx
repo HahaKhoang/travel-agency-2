@@ -1,6 +1,7 @@
 import styles from "./SurpriseHow.module.scss";
 import jk1 from "../../public/img/jk1.jpg";
 import SurpriseStep1 from "./SurpriseStep1";
+import SurpriseStep3 from "./SurpriseStep3";
 
 function SurpriseHow() {
   return (
@@ -18,6 +19,7 @@ function SurpriseHow() {
         </div>
       </div>
       <SurpriseStep1 />
+      <SurpriseStep3 />
     </div>
   );
 }

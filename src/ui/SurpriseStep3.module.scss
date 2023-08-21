@@ -1,0 +1,64 @@
+.container {
+  //   background-color: pink;
+}
+
+.step-3 {
+  //   background-color: green;
+  display: flex;
+  align-items: center;
+}
+
+.step-3-picture-container {
+  width: 40%;
+  height: 60rem;
+}
+
+.picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.step-3-text-container {
+  //   background-color: red;
+  width: 60%;
+  padding: 9rem;
+}
+
+.text {
+  font-size: 2rem;
+}
+
+.step-4 {
+  //   background-color: red;
+  display: flex;
+  align-items: center;
+}
+
+.step-4-picture-container {
+  width: 60%;
+  height: 40rem;
+}
+
+.step-4-text-container {
+  //   background-color: purple;
+  width: 40%;
+  padding: 6rem;
+}
+
+.step-5 {
+  //   background-color: red;
+  display: flex;
+  align-items: center;
+}
+
+.step-5-picture-container {
+  width: 60%;
+  height: 50rem;
+}
+
+.step-5-text-container {
+  //   background-color: purple;
+  width: 40%;
+  padding: 6rem;
+}
