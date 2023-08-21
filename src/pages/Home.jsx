@@ -19,7 +19,10 @@ function Home() {
         fontColor="white"
       />
       <PopularSection />
-      <Heading text1="Or personalize your own tour" />
+      <Heading
+        text1="Or personalize your own tour"
+        fontColor="var(--color-red-dark)"
+      />
       <PersonalizeSection />
       <Heading text1="Can't decide where to go next? Check out our featured country" />
       <FeaturedSection />

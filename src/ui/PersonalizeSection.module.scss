@@ -1,24 +1,31 @@
 .container {
-  // background-color: pink;
+  background-color: var(--color-red-dark);
   display: flex;
+  align-items: center;
   gap: 7rem;
-  padding-bottom: 8rem;
+  height: 56rem;
+  margin-bottom: 8rem;
 }
 
 .left-container {
-  //   background-color: yellow;
-  width: 50%;
+  // background-color: yellow;
+  width: 40%;
   margin-left: 4rem;
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 2rem;
 }
 
 .details {
   display: flex;
-  font-size: 3.4rem;
+  font-size: 3rem;
   align-items: center;
   gap: 3rem;
+  color: white;
+}
+
+.header {
+  color: white;
 }
 
 .icon-box {
@@ -45,13 +52,18 @@
   background-color: transparent;
   border-radius: 500px;
   cursor: pointer;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  background-color: white;
+  color: var(--color-red-dark);
 }
 
 .right-container {
   background-color: green;
-  width: 50%;
-  height: 60rem;
-  margin-right: 4rem;
+  width: 60%;
+  height: 64rem;
 }
 
 .picture {
