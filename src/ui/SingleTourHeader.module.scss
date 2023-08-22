@@ -1,8 +1,14 @@
 .container {
   width: 100vw;
-  padding: 4rem 8rem;
+  padding: 6rem 8rem;
 }
 
 .header {
   width: 60%;
+  line-height: 5.6rem;
+
+  @media (max-width: 1700px) {
+    font-size: 3.6rem;
+    line-height: 4.4rem;
+  }
 }

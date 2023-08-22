@@ -2,12 +2,16 @@
   background-color: var(--color-blue-dark);
   width: 100%;
   height: 40rem;
-  padding: 8rem;
+  padding: 10rem 14rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8rem;
   margin-top: 10rem;
+
+  @media (max-width: 1700px) {
+    padding: 8rem;
+  }
 }
 
 .details-container {
@@ -60,4 +64,8 @@
 .about {
   font-size: var(--font-xl);
   color: white;
+
+  @media (max-width: 1700px) {
+    font-size: var(--font-large);
+  }
 }

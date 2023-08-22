@@ -23,12 +23,20 @@
 }
 
 .text {
-  font-size: var(--font-med);
+  font-size: var(--font-large);
+
+  @media (max-width: 1700px) {
+    font-size: var(--font-med);
+  }
 }
 
 .picture-container {
   width: 50%;
-  height: 60rem;
+  height: 80rem;
+
+  @media (max-width: 1700px) {
+    height: 60rem;
+  }
 }
 
 .picture {

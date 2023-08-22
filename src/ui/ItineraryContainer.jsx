@@ -8,7 +8,7 @@ import ItineraryHeader from "./ItineraryHeader";
 function ItineraryContainer() {
   return (
     <>
-      <ItineraryHeader header="A glance at the itinerary" />
+      <ItineraryHeader header="A look at the itinerary" />
       <div className={styles.container}>
         <ItineraryDay1 />
         <ItineraryDay3 />

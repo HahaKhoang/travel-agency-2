@@ -1,30 +1,44 @@
 .container {
   width: 100%;
-  height: 90rem;
+  height: 110rem;
   // background-color: red;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 1700px) {
+    height: 90rem;
+  }
 }
 
 .picture-container {
   width: 100%;
-  height: 90rem;
+  height: 110rem;
   // background-color: pink;
   display: flex;
   align-items: center;
   justify-content: center;
   position: absolute;
   transition: transform 1s;
+
+  @media (max-width: 1700px) {
+    height: 90rem;
+  }
 }
 
 .picture-frame {
-  width: 100%;
-  height: 90rem;
+  width: 90%;
+  height: 100rem;
   padding: 20rem 30rem;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+
+  @media (max-width: 1700px) {
+    width: 100%;
+    height: 90rem;
+    padding: 20rem 30rem;
+  }
 }
 
 .picture {
