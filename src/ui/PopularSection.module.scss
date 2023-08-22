@@ -7,23 +7,42 @@
 }
 
 .rank-container {
-  width: 45rem;
+  width: 50rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 1rem;
+
+  @media (max-width: 1700px) {
+    width: 43rem;
+  }
 }
 
 .rank-picture {
-  width: 45rem;
-  height: 45rem;
+  width: 50rem;
+  height: 50rem;
   object-fit: cover;
+
+  @media (max-width: 1700px) {
+    width: 43rem;
+    height: 43rem;
+  }
+}
+
+.title {
+  @media (max-width: 1700px) {
+    font-size: var(--font-xl);
+  }
 }
 
 .description {
   font-size: var(--font-med);
   text-align: center;
+
+  @media (max-width: 1700px) {
+    font-size: var(--font-small);
+  }
 }
 
 .extra {
@@ -31,6 +50,10 @@
   align-items: center;
   gap: 3rem;
   font-size: var(--font-med);
+
+  @media (max-width: 1700px) {
+    font-size: var(--font-small);
+  }
 }
 
 .button {

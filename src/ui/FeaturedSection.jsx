@@ -8,14 +8,16 @@ function FeaturedSection() {
         <img src={kyoto} className={styles.picture} />
       </div>
       <div className={styles["right-container"]}>
-        <h2 className={styles.discover}>Discover Japan 🇯🇵</h2>
-        <p className={styles.description}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-          omnis nobis sapiente odio incidunt maxime totam illum dolores ad illo
-          ducimus, explicabo excepturi obcaecati beatae, dolore natus!
-          Molestias, consectetur accusamus!
-        </p>
-        <button className={styles.button}>Browse all Japan tours</button>
+        <div className={styles["discover-container"]}>
+          <h2 className={styles.discover}>Discover Japan 🇯🇵</h2>
+          <p className={styles.description}>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            omnis nobis sapiente odio incidunt maxime totam illum dolores ad
+            illo ducimus, explicabo excepturi obcaecati beatae, dolore natus!
+            Molestias, consectetur accusamus!
+          </p>
+          <button className={styles.button}>Browse all Japan tours</button>
+        </div>
       </div>
     </section>
   );

@@ -1,17 +1,18 @@
 .container {
-  width: 110rem;
-  height: 55rem;
+  width: 130rem;
+  height: 65rem;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+  // background-color: orange;
 }
 
 .reviews-container {
   background-color: #e5e7eb;
-  height: 50rem;
-  width: 100rem;
+  height: 60rem;
+  width: 120rem;
   margin: 0 auto;
   position: relative;
   overflow: hidden;

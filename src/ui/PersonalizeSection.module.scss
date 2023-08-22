@@ -3,16 +3,22 @@
   display: flex;
   align-items: center;
   gap: 7rem;
-  height: 56rem;
+  height: 60rem;
   margin-bottom: 8rem;
 }
 
 .left-container {
-  width: 40%;
-  margin-left: 4rem;
+  width: 35%;
+  margin-left: 8rem;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 4rem;
+
+  @media (max-width: 1700px) {
+    width: 40%;
+    margin-left: 4rem;
+    gap: 2.4rem;
+  }
 }
 
 .details {
@@ -61,8 +67,13 @@
 
 .right-container {
   background-color: green;
-  width: 60%;
-  height: 64rem;
+  width: 65%;
+  height: 68rem;
+
+  @media (max-width: 1700px) {
+    width: 60%;
+    height: 64rem;
+  }
 }
 
 .picture {

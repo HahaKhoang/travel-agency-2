@@ -1,7 +1,6 @@
 .container {
   display: flex;
   align-items: center;
-  gap: 7rem;
   margin-bottom: 8rem;
   background-color: var(--color-blue-dark);
   color: white;
@@ -10,7 +9,11 @@
 .left-container {
   background-color: green;
   width: 60%;
-  height: 60rem;
+  height: 70rem;
+
+  @media (max-width: 1700px) {
+    height: 60rem;
+  }
 }
 
 .picture {
@@ -21,14 +24,24 @@
 
 .right-container {
   width: 40%;
-  margin-right: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.discover-container {
+  width: 80%;
   display: flex;
   flex-direction: column;
   gap: 3rem;
 }
 
 .description {
-  font-size: var(--font-large);
+  font-size: var(--font-xl);
+
+  @media (max-width: 1700px) {
+    font-size: var(--font-large);
+  }
 }
 
 .button {

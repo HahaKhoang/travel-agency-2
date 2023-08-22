@@ -1,5 +1,8 @@
 .container {
-  // background-color: pink;
-  height: 49rem;
+  height: 63rem;
   display: flex;
+
+  @media (max-width: 1700px) {
+    height: 49rem;
+  }
 }
