@@ -6,16 +6,35 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  // background-color: orange;
+
+  @media (max-width: 1400px) {
+    width: 110rem;
+    height: 55rem;
+  }
+
+  @media (max-width: 1200px) {
+    width: 90rem;
+    height: 50rem;
+  }
 }
 
 .reviews-container {
   background-color: #e5e7eb;
-  height: 60rem;
   width: 120rem;
+  height: 60rem;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 1400px) {
+    width: 100rem;
+    height: 50rem;
+  }
+
+  @media (max-width: 1200px) {
+    width: 80em;
+    height: 45rem;
+  }
 }
 
 .reviews {

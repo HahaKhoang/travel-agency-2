@@ -2,6 +2,16 @@
   display: flex;
   height: 60rem;
   width: 120rem;
+
+  @media (max-width: 1400px) {
+    width: 100rem;
+    height: 50rem;
+  }
+
+  @media (max-width: 1200px) {
+    width: 80em;
+    height: 45rem;
+  }
 }
 
 .left-container {
