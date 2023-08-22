@@ -8,7 +8,7 @@ import styles from "./Carousel.module.scss";
 import { useState } from "react";
 import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
 
-const data = [
+const reviews = [
   {
     name: "Hanbin",
     tour: "Explore Kyoto",
@@ -20,39 +20,54 @@ const data = [
 ];
 
 function Carousel() {
-  const [sliderRef, setSliderRef] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const length = reviews.length - 1;
 
-  const settings = {
-    dots: true,
-    dotsClass: `slick-dots ${styles.dots}`,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 1000,
-    accessibility: true,
-    arrows: false,
-  };
+  function prevSlide() {
+    setActiveIndex(activeIndex < 1 ? length : activeIndex - 1);
+  }
+
+  function nextSlide() {
+    setActiveIndex(activeIndex === length ? 0 : activeIndex + 1);
+  }
+
   return (
     <div className={styles.container}>
-      <Slider {...settings} ref={setSliderRef}>
-        {data.map((el) => (
-          <CarouselItem
-            name={el.name}
-            tour={el.tour}
-            key={el.name}
-            image={el.image}
-          />
+      <button className={styles["button-left"]} onClick={prevSlide}>
+        <RiArrowLeftLine className={styles.button} />
+      </button>
+      <button className={styles["button-right"]} onClick={nextSlide}>
+        <RiArrowRightLine className={styles.button} />
+      </button>
+      <div className={styles.dots}>
+        {reviews.map((_, i) => {
+          return (
+            <span
+              key={i}
+              className={
+                activeIndex === i
+                  ? `${styles.dot} ${styles["active-dot"]}`
+                  : `${styles.dot}`
+              }
+              onClick={() => {
+                setActiveIndex(i);
+              }}
+            ></span>
+          );
+        })}
+      </div>
+      <div className={styles["reviews-container"]}>
+        {reviews.map((el, i) => (
+          <div
+            className={styles.reviews}
+            key={i}
+            style={{
+              transform: `translateX(${100 * (i - activeIndex)}%)`,
+            }}
+          >
+            <CarouselItem name={el.name} tour={el.tour} image={el.image} />
+          </div>
         ))}
-      </Slider>
-      <div>
-        <button className={styles.left} onClick={sliderRef?.slickPrev}>
-          <RiArrowLeftLine className={styles.button} />
-        </button>
-        <button className={styles.right} onClick={sliderRef?.slickNext}>
-          <RiArrowRightLine className={styles.button} />
-        </button>
       </div>
     </div>
   );
