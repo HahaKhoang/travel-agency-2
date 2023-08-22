@@ -1,14 +1,19 @@
-import Slider from "react-slick";
 import review1 from "../../public/img/review1.jpg";
 import review2 from "../../public/img/review2.jpg";
 import review3 from "../../public/img/review3.jpg";
 import review4 from "../../public/img/review4.jpg";
+import jk4 from "../../public/img/jk4.jpg";
 import CarouselItem from "./CarouselItem";
 import styles from "./Carousel.module.scss";
 import { useState } from "react";
 import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
 
 const reviews = [
+  {
+    name: "Jungkook",
+    tour: "Seoul Searching",
+    image: jk4,
+  },
   {
     name: "Hanbin",
     tour: "Explore Kyoto",

@@ -27,11 +27,17 @@
   gap: 3rem;
 }
 
+.tour {
+  color: var(--color-red-dark);
+}
+
 .review {
   font-size: var(--font-med);
+  color: var(--color-blue-dark);
 }
 
 .name {
   font-size: var(--font-med);
   font-weight: 600;
+  color: var(--color-red-dark);
 }

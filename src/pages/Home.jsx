@@ -34,7 +34,10 @@ function Home() {
         fontColor="var(--color-blue-med)"
       />
       <SurpriseSection />
-      <Heading text1="See what our travelers are saying" />
+      <Heading
+        text1="See what our travelers are saying"
+        fontColor="var(--color-blue-dark)"
+      />
       <TestimonialsSection />
     </>
   );
