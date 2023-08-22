@@ -24,7 +24,10 @@ function Home() {
         fontColor="var(--color-red-dark)"
       />
       <PersonalizeSection />
-      <Heading text1="Can't decide where to go next? Check out our featured country" />
+      <Heading
+        text1="Can't decide where to go next? Check out our featured country"
+        fontColor="var(--color-blue-dark)"
+      />
       <FeaturedSection />
       <Heading
         text1="Feeling adventurous? Book a surprise trip!"

@@ -12,7 +12,7 @@ function SurpriseSection() {
           voluptas eveniet, minus et ut libero placeat magnam fugiat
           perferendis, enim dicta quaerat.
         </p>
-        <button>Surprise me!</button>
+        <button className={styles.button}>Surprise me!</button>
       </div>
       <div className={styles["picture-container"]}>
         <img src={roadtrip} className={styles.picture} />
