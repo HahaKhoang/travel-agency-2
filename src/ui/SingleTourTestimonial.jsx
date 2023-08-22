@@ -46,47 +46,48 @@ function SingleTourTestimonial() {
 
   return (
     <div className={styles.container}>
-      <div className={styles["picture-container"]}>
+      <div className={styles["left-container"]}>
         <img src={culture} className={styles.picture} />
       </div>
-      <div className={styles["review-container"]}>
-        <h2 className={styles.header}>Reviews</h2>
-        <div className={styles["review-center"]}>
-          <div className={styles["slider-container"]}>
+      <div className={styles["right-container"]}>
+        <button className={styles["button-left"]} onClick={prevSlide}>
+          <RiArrowLeftLine className={styles.button} />
+        </button>
+        <button className={styles["button-right"]} onClick={nextSlide}>
+          <RiArrowRightLine className={styles.button} />
+        </button>
+        <div className={styles["reviews-container"]}>
+          <h2 className={styles.header}>Reviews</h2>
+          <div className={styles["reviews-slider"]}>
             {reviews.map((el, i) => (
               <div
+                className={styles.reviews}
                 key={i}
-                className={
-                  activeIndex === i ? `${styles.active}` : `${styles.inactive}`
-                }
+                style={{
+                  transform: `translateX(${100 * (i - activeIndex)}%)`,
+                }}
               >
                 <SingleTourReview review={el.review} name={el.name} />
               </div>
             ))}
           </div>
-          <button className={styles["button-left"]} onClick={prevSlide}>
-            <RiArrowLeftLine className={styles.button} />
-          </button>
-          <button className={styles["button-right"]} onClick={nextSlide}>
-            <RiArrowRightLine className={styles.button} />
-          </button>
-        </div>
-        <div className={styles.dots}>
-          {reviews.map((_, i) => {
-            return (
-              <span
-                key={i}
-                className={
-                  activeIndex === i
-                    ? `${styles.dot} ${styles["active-dot"]}`
-                    : `${styles.dot}`
-                }
-                onClick={() => {
-                  setActiveIndex(i);
-                }}
-              ></span>
-            );
-          })}
+          <div className={styles.dots}>
+            {reviews.map((_, i) => {
+              return (
+                <span
+                  key={i}
+                  className={
+                    activeIndex === i
+                      ? `${styles.dot} ${styles["active-dot"]}`
+                      : `${styles.dot}`
+                  }
+                  onClick={() => {
+                    setActiveIndex(i);
+                  }}
+                ></span>
+              );
+            })}
+          </div>
         </div>
       </div>
     </div>
@@ -94,3 +95,32 @@ function SingleTourTestimonial() {
 }
 
 export default SingleTourTestimonial;
+
+{
+  /* <div className={styles.dots}>
+{reviews.map((_, i) => {
+  return (
+    <span
+      key={i}
+      className={
+        activeIndex === i
+          ? `${styles.dot} ${styles["active-dot"]}`
+          : `${styles.dot}`
+      }
+      onClick={() => {
+        setActiveIndex(i);
+      }}
+    ></span>
+  );
+})}
+</div> */
+}
+
+{
+  /* <button className={styles["button-left"]} onClick={prevSlide}>
+<RiArrowLeftLine className={styles.button} />
+</button>
+<button className={styles["button-right"]} onClick={nextSlide}>
+<RiArrowRightLine className={styles.button} />
+</button> */
+}
