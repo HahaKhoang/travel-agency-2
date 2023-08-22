@@ -1,6 +1,4 @@
 .container {
-  // padding-top: 4rem;
-  // background-color: pink;
   display: flex;
   flex-direction: column;
 }
@@ -13,18 +11,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  // background-color: orange;
 }
 
 .text-container {
   width: 40%;
-  // background-color: green;
   padding: 4rem;
   text-align: center;
 }
 
 .text {
-  font-size: 2rem;
+  font-size: var(--font-med);
 }
 
 .picture-container {

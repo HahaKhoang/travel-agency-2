@@ -1,14 +1,16 @@
 .container {
   display: flex;
+  align-items: center;
   gap: 7rem;
-  padding-bottom: 8rem;
+  margin-bottom: 8rem;
+  background-color: var(--color-blue-dark);
+  color: white;
 }
 
 .left-container {
   background-color: green;
-  width: 50%;
+  width: 60%;
   height: 60rem;
-  margin-left: 4rem;
 }
 
 .picture {
@@ -18,8 +20,7 @@
 }
 
 .right-container {
-  //   background-color: yellow;
-  width: 50%;
+  width: 40%;
   margin-right: 4rem;
   display: flex;
   flex-direction: column;
@@ -27,17 +28,15 @@
 }
 
 .description {
-  font-size: 3rem;
+  font-size: var(--font-large);
 }
 
 .button {
   align-self: start;
-  font-size: 2rem;
-  text-transform: uppercase;
-  outline: none;
-  border: 1px solid white;
-  padding: 1.4rem 4rem;
-  background-color: transparent;
-  border-radius: 500px;
-  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  background-color: white;
+  color: var(--color-blue-dark);
 }

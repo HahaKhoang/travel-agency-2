@@ -12,14 +12,14 @@
 }
 
 .title {
-  font-size: 1.8rem;
+  font-size: var(--font-med);
   text-transform: uppercase;
 }
 
 .description {
-  font-size: 1.2rem;
+  font-size: var(--font-xs);
 }
 
 .link {
-  font-size: 1.2rem;
+  font-size: var(--font-xs);
 }

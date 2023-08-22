@@ -6,7 +6,6 @@
 .picture-container {
   width: 60%;
   height: 90rem;
-  //   background-color: orange;
 }
 
 .picture {
@@ -25,16 +24,13 @@
   gap: 3rem;
   padding: 18rem 8rem;
   position: relative;
-  // background-color: pink;
 }
 
 .header {
   color: white;
-  // background-color: yellow;
 }
 
 .review-center {
-  // background-color: purple;
   width: 100%;
   height: 40rem;
   display: flex;
@@ -44,9 +40,7 @@
 }
 
 .slider-container {
-  // background-color: red;
   text-align: start;
-  // overflow: hidden;
 }
 
 .active {
@@ -87,7 +81,6 @@
   display: flex;
   justify-content: center;
   z-index: 200;
-  // background-color: orange;
 }
 
 .dot {

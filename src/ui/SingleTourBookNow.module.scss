@@ -24,7 +24,6 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  //   background-color: yellow;
 }
 
 .details {
@@ -40,13 +39,18 @@
   align-self: start;
 }
 
+.button:hover {
+  background-color: var(--color-red-dark);
+  color: white;
+}
+
 .label {
-  font-size: 2rem;
+  font-size: var(--font-med);
   color: var(--color-red-dark);
 }
 
 .text {
-  font-size: 2rem;
+  font-size: var(--font-med);
 }
 
 .about-container {
@@ -54,6 +58,6 @@
 }
 
 .about {
-  font-size: 3rem;
+  font-size: var(--font-xl);
   color: white;
 }

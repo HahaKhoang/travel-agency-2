@@ -3,12 +3,12 @@
 }
 
 .text {
-  font-size: 2rem;
+  font-size: var(--font-med);
 }
 
 .reviewer {
   margin-top: 1rem;
-  font-size: 2rem;
+  font-size: var(--font-med);
   color: white;
   text-align: center;
 }

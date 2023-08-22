@@ -30,7 +30,7 @@
 
 .description {
   width: 50%;
-  font-size: 2rem;
+  font-size: var(--font-med);
   display: flex;
   flex-direction: column;
   gap: 2rem;

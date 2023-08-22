@@ -1,8 +1,6 @@
 .container {
-  //   background-color: green;
   display: flex;
   justify-content: space-between;
-
   padding: 4rem 0 4rem 0;
 }
 
@@ -25,7 +23,7 @@
 }
 
 .text {
-  font-size: 2rem;
+  font-size: var(--font-med);
 }
 
 .picture-container {

@@ -1,5 +1,4 @@
 .container {
-  //   background-color: pink;
   display: flex;
   justify-content: space-between;
 }
@@ -23,7 +22,7 @@
 }
 
 .text {
-  font-size: 2rem;
+  font-size: var(--font-med);
 }
 
 .picture-container {

@@ -1,5 +1,4 @@
 .container {
-  //   background-color: pink;
   margin-top: 4rem;
 }
 
@@ -8,7 +7,6 @@
 }
 
 .step-3 {
-  //   background-color: var(--color-blue-light);
   display: flex;
   align-items: center;
 }
@@ -25,7 +23,6 @@
 }
 
 .step-3-text-container {
-  //   background-color: red;
   width: 60%;
   padding: 9rem;
   display: flex;
@@ -34,11 +31,10 @@
 }
 
 .text {
-  font-size: 2rem;
+  font-size: var(--font-med);
 }
 
 .step-4 {
-  //   background-color: red;
   display: flex;
   align-items: center;
 }
@@ -49,7 +45,6 @@
 }
 
 .step-4-text-container {
-  //   background-color: purple;
   width: 40%;
   padding: 6rem;
   display: flex;
@@ -58,7 +53,6 @@
 }
 
 .step-5 {
-  //   background-color: var(--color-blue-light);
   display: flex;
   align-items: center;
 }
@@ -69,7 +63,6 @@
 }
 
 .step-5-text-container {
-  //   background-color: purple;
   width: 40%;
   padding: 6rem;
   display: flex;

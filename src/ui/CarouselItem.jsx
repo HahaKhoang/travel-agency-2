@@ -1,5 +1,4 @@
 import styles from "./CarouselItem.module.scss";
-import matcha from "../../public/img/matcha.jpg";
 
 function CarouselItem({ name, tour, image }) {
   return (

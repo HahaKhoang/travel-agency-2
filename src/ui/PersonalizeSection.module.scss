@@ -8,7 +8,6 @@
 }
 
 .left-container {
-  // background-color: yellow;
   width: 40%;
   margin-left: 4rem;
   display: flex;
@@ -18,7 +17,7 @@
 
 .details {
   display: flex;
-  font-size: 3rem;
+  font-size: var(--font-xl);
   align-items: center;
   gap: 3rem;
   color: white;
@@ -29,7 +28,7 @@
 }
 
 .icon-box {
-  background-color: var(--color-blue-light);
+  background-color: var(--color-blue-dark);
   width: 6rem;
   height: 6rem;
   padding: 1rem;
@@ -44,7 +43,7 @@
 
 .button {
   align-self: start;
-  font-size: 2rem;
+  font-size: var(--font-med);
   text-transform: uppercase;
   outline: none;
   border: 1px solid white;

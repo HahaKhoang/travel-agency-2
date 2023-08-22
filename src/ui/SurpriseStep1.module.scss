@@ -2,7 +2,6 @@
   width: 100%;
   height: 115rem;
   padding: 8rem 0 4rem;
-  //   background-color: beige;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -16,13 +15,11 @@
   display: flex;
   align-items: center;
   width: 100%;
-  //   background-color: var(--color-blue-light);
 }
 
 .step-1-picture-container {
   width: 60%;
   height: 60rem;
-  //   background-color: green;
 }
 
 .picture {
@@ -38,11 +35,10 @@
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  //   background-color: pink;
 }
 
 .text {
-  font-size: 2rem;
+  font-size: var(--font-med);
 }
 
 .step-2 {
@@ -50,7 +46,6 @@
   align-items: center;
   width: 100%;
   height: 50rem;
-  //   background-color: red;
   position: relative;
 }
 
@@ -61,13 +56,11 @@
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  //   background-color: pink;
 }
 
 .step-2-picture-container {
   width: 60rem;
   height: 60rem;
-  //   background-color: green;
   position: absolute;
   left: 70rem;
   top: -10rem;

@@ -8,7 +8,7 @@ function PopularSection() {
     <div className={styles.container}>
       <div className={styles["rank-container"]}>
         <img src={dango} className={styles["rank-picture"]} />
-        <p className={styles.title}>Eat through Japan</p>
+        <h3 className={styles.title}>Eat through Japan</h3>
 
         <p className={styles.description}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo
@@ -22,7 +22,7 @@ function PopularSection() {
       </div>
       <div className={styles["rank-container"]}>
         <img src={kyoto} className={styles["rank-picture"]} />
-        <p className={styles.title}>Cultural Kyoto</p>
+        <h3 className={styles.title}>Cultural Kyoto</h3>
 
         <p className={styles.description}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo
@@ -36,7 +36,7 @@ function PopularSection() {
       </div>
       <div className={styles["rank-container"]}>
         <img src={fuji} className={styles["rank-picture"]} />
-        <p className={styles.title}>Climb Mt. Fuji</p>
+        <h3 className={styles.title}>Climb Mt. Fuji</h3>
 
         <p className={styles.description}>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo

@@ -17,12 +17,11 @@
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  //   background-color: green;
   width: 80rem;
 }
 
 .text {
-  font-size: 2rem;
+  font-size: var(--font-med);
 }
 
 .button {

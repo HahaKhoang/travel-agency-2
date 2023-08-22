@@ -1,5 +1,4 @@
 .panel {
-  background-color: orange;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -37,7 +36,6 @@
   background: rgba(255, 255, 255, 0.888);
   height: 80%;
   width: 20%;
-  // margin: 2rem 0 2rem 1rem;
   top: 50%;
   transform: translateY(-50%);
   left: 2rem;
@@ -66,14 +64,11 @@
 
 .header {
   margin-bottom: 1rem;
-
-  // @media (max-width: 1600px) {
-  //   font-size: 3rem;
-  // }
 }
 
 .description {
-  font-size: 2rem;
+  font-size: var(--font-med);
+
   @media (max-width: 1600px) {
     font-size: 1.6rem;
   }
@@ -83,7 +78,7 @@
   position: absolute;
   bottom: 1rem;
   right: 2rem;
-  font-size: 2rem;
+  font-size: var(--font-med);
 
   @media (max-width: 1600px) {
     font-size: 1.6rem;
@@ -102,6 +97,4 @@
   transform: translateX(-50%);
   opacity: 1;
   transition: all 1.2s;
-  // -webkit-animation-name: fadeIn;
-  // animation-name: fadeIn;
 }

@@ -1,7 +1,6 @@
 .container {
-  // background-color: orange;
   width: 40rem;
-  height: 49rem;
+  height: 51rem;
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
@@ -15,28 +14,28 @@
 }
 
 .title {
-  font-size: 2.4rem;
+  font-size: var(--font-xl);
 }
 
 .description {
-  font-size: 1.4rem;
+  font-size: var(--font-small);
 }
 
 .extras {
   display: flex;
-  font-size: 1.4rem;
+  font-size: var(--font-small);
   gap: 4rem;
 }
 
 .price {
-  font-size: 1.4rem;
+  font-size: var(--font-small);
 }
 
 .button {
   position: absolute;
   bottom: 0;
   align-self: start;
-  font-size: 1.4rem;
+  font-size: var(--font-med);
   text-transform: uppercase;
   outline: none;
   border: none;
