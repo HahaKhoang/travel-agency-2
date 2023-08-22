@@ -14,7 +14,6 @@ function TourCard({
     <div className={styles.container}>
       <img src={mainImage} className={styles.picture} />
       <p className={styles.title}>{name}</p>
-
       <p className={styles.description}>{shortDesc}</p>
       <div className={styles.extras}>
         <p>Duration: {duration} days </p>
