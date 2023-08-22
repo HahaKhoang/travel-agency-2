@@ -9,13 +9,8 @@
 }
 
 .picture-container {
-  width: 50%;
-  height: 50rem;
-
-  @media (min-width: 1400px) {
-    width: 40%;
-    height: 60rem;
-  }
+  width: 40%;
+  height: 60rem;
 }
 
 .pic {
@@ -28,17 +23,13 @@
   color: var(--color-red-dark);
 }
 
-.description {
-  width: 50%;
-  font-size: var(--font-med);
+.description-container {
+  width: 60%;
+  font-size: var(--font-large);
   display: flex;
   flex-direction: column;
   gap: 2rem;
   // background-color: red;
-
-  @media (min-width: 1400px) {
-    width: 60%;
-  }
 }
 
 .kanji {

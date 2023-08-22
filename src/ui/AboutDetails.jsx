@@ -8,7 +8,7 @@ function AboutDetails() {
         <div className={styles["picture-container"]}>
           <img src={kathy} className={styles.pic} />
         </div>
-        <div className={styles.description}>
+        <div className={styles["description-container"]}>
           <div className={styles.kanji}>
             <h1>旅</h1>
             <p className={styles.english}>Tabi</p>
