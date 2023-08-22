@@ -35,16 +35,10 @@
 
 .icon-box {
   background-color: var(--color-blue-dark);
-  width: 6rem;
-  height: 6rem;
-  padding: 1rem;
+  padding: 1.4rem;
+  display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.icon {
-  margin-top: 0.4rem;
-  margin-left: 0.4rem;
 }
 
 .button {
