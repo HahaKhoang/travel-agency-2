@@ -20,12 +20,21 @@
 }
 
 .text {
-  font-size: var(--font-med);
+  margin-top: 2rem;
+  font-size: var(--font-xl);
+
+  @media (max-width: 1700px) {
+    font-size: var(--font-large);
+  }
 }
 
 .picture-container {
   width: 60%;
-  height: 50rem;
+  height: 65rem;
+
+  @media (max-width: 1700px) {
+    height: 50rem;
+  }
 }
 
 .picture {

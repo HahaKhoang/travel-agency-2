@@ -1,5 +1,5 @@
 .types {
-  width: 30rem;
+  width: 40rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
@@ -12,24 +12,45 @@
   font-size: 15rem;
   margin-bottom: -3rem;
   color: var(--color-blue-med);
+
+  @media (max-width: 1700px) {
+    font-size: 13rem;
+    margin-bottom: -5rem;
+  }
 }
 
 .title {
   color: white;
   text-align: center;
   line-height: 3.6rem;
+
+  @media (max-width: 1700px) {
+    font-size: var(--font-xl);
+  }
 }
 
 .description {
   font-size: var(--font-med);
   text-align: center;
+
+  @media (max-width: 1700px) {
+    font-size: var(--font-small);
+  }
 }
 
 .budget {
   font-size: var(--font-med);
   text-align: center;
+
+  @media (max-width: 1700px) {
+    font-size: var(--font-small);
+  }
 }
 
 .link {
   font-size: var(--font-med);
+
+  @media (max-width: 1700px) {
+    font-size: var(--font-small);
+  }
 }

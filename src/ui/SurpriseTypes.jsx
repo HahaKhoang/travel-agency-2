@@ -50,7 +50,7 @@ function SurpriseTypes() {
               title={el.title}
               description={el.description}
               budget={el.budget}
-              key={el.i}
+              key={i}
             />
           );
         })}

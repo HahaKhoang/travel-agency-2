@@ -70,8 +70,8 @@
 .description {
   font-size: var(--font-med);
 
-  @media (max-width: 1600px) {
-    font-size: 1.6rem;
+  @media (max-width: 1700px) {
+    font-size: var(--font-small);
   }
 }
 
@@ -81,8 +81,8 @@
   right: 2rem;
   font-size: var(--font-med);
 
-  @media (max-width: 1600px) {
-    font-size: 1.6rem;
+  @media (max-width: 1700px) {
+    font-size: var(--font-small);
   }
 }
 

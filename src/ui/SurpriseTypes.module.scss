@@ -13,6 +13,11 @@
 
 .types-container {
   display: flex;
-  justify-content: space-between;
+  gap: 3rem;
+  justify-content: space-evenly;
   margin: 0 4rem;
+
+  @media (max-width: 1700px) {
+    justify-content: space-between;
+  }
 }

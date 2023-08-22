@@ -21,7 +21,11 @@
 }
 
 .text {
-  font-size: var(--font-med);
+  font-size: var(--font-large);
+
+  @media (max-width: 1700px) {
+    font-size: var(--font-med);
+  }
 }
 
 .button {

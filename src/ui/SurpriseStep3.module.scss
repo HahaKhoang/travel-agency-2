@@ -12,7 +12,7 @@
 }
 
 .step-3-picture-container {
-  width: 40%;
+  width: 45%;
   height: 60rem;
 }
 
@@ -23,7 +23,7 @@
 }
 
 .step-3-text-container {
-  width: 60%;
+  width: 55%;
   padding: 9rem;
   display: flex;
   flex-direction: column;
@@ -31,7 +31,11 @@
 }
 
 .text {
-  font-size: var(--font-med);
+  font-size: var(--font-large);
+
+  @media (max-width: 1700px) {
+    font-size: var(--font-med);
+  }
 }
 
 .step-4 {
@@ -41,7 +45,11 @@
 
 .step-4-picture-container {
   width: 60%;
-  height: 40rem;
+  height: 60rem;
+
+  @media (max-width: 1700px) {
+    height: 50rem;
+  }
 }
 
 .step-4-text-container {
@@ -59,7 +67,11 @@
 
 .step-5-picture-container {
   width: 60%;
-  height: 50rem;
+  height: 80rem;
+
+  @media (max-width: 1700px) {
+    height: 60rem;
+  }
 }
 
 .step-5-text-container {
