@@ -1,4 +1,9 @@
 .container {
   text-align: center;
   padding: 8rem 4rem;
+
+  @media (max-width: 1000px) {
+    padding: 6rem;
+    font-size: 4.6rem;
+  }
 }

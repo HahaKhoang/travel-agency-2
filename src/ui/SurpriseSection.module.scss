@@ -8,6 +8,10 @@
   @media (max-width: 1700px) {
     height: 50rem;
   }
+
+  @media (max-width: 1000px) {
+    height: 40rem;
+  }
 }
 
 .left-container {
@@ -31,6 +35,10 @@
 
 .header {
   color: white;
+
+  @media (max-width: 1000px) {
+    font-size: var(--font-xl);
+  }
 }
 
 .text {
@@ -38,6 +46,10 @@
 
   @media (max-width: 1700px) {
     font-size: var(--font-large);
+  }
+
+  @media (max-width: 1000px) {
+    font-size: var(--font-med);
   }
 }
 
@@ -48,6 +60,10 @@
   @media (max-width: 1700px) {
     width: 60%;
     height: 55rem;
+  }
+
+  @media (max-width: 1000px) {
+    height: 46rem;
   }
 }
 

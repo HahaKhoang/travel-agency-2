@@ -25,11 +25,18 @@
   gap: 3rem;
 }
 
+.title {
+  @media (max-width: 1000px) {
+    font-size: 4.6rem;
+    line-height: 5rem;
+  }
+}
+
 .description {
   font-size: var(--font-large);
 
-  @media (max-width: 1500px) {
-    font-size: 2.2rem;
+  @media (max-width: 1000px) {
+    font-size: var(--font-small);
   }
 }
 

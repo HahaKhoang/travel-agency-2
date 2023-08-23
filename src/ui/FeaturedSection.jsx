@@ -9,7 +9,7 @@ function FeaturedSection() {
       </div>
       <div className={styles["right-container"]}>
         <div className={styles["discover-container"]}>
-          <h2 className={styles.discover}>Discover Japan 🇯🇵</h2>
+          <h2 className={styles.header}>Discover Japan 🇯🇵</h2>
           <p className={styles.description}>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
             omnis nobis sapiente odio incidunt maxime totam illum dolores ad
