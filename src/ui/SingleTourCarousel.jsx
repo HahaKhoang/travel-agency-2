@@ -25,7 +25,7 @@ const pictures = [
   },
 ];
 
-function SingleTourPicture() {
+function SingleTourCarousel({ carouselImages }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const length = pictures.length - 1;
 
@@ -75,7 +75,7 @@ function SingleTourPicture() {
   );
 }
 
-export default SingleTourPicture;
+export default SingleTourCarousel;
 
 {
   /* <div className={styles["picture-container"]}>

@@ -88,13 +88,14 @@ function TourContainer() {
         {sortedTours.map((el, i) => (
           <TourCard
             key={i}
-            name={el.name}
-            mainImage={el.mainImage}
-            shortDesc={el.shortDesc}
+            name={el.tourName}
+            mainImage={el.imageWelcome}
+            shortDesc={el.welcomeDesc}
             duration={el.duration}
-            type={el.type}
+            category={el.category}
             price={el.price}
             country={el.country}
+            slug={el.slug}
           />
         ))}
       </section>

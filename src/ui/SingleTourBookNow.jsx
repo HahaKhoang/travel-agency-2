@@ -1,25 +1,30 @@
 import styles from "./SingleTourBookNow.module.scss";
 
-function SingleTourBookNow() {
+function SingleTourBookNow({ duration, price, cities, category }) {
   return (
     <div className={styles.container}>
       <div className={styles["details-container"]}>
         <div className={styles["details-center"]}>
           <div className={styles.details}>
             <p className={styles.label}>Duration of</p>
-            <p className={styles.text}>10 days</p>
+            <p className={styles.text}>{duration} days</p>
           </div>
           <div className={styles.details}>
             <p className={styles.label}>Prices starting from</p>
-            <p className={styles.text}>$2000</p>
+            <p className={styles.text}>${price}</p>
           </div>
           <div className={styles.details}>
             <p className={styles.label}>Cities include</p>
-            <p className={styles.text}>Tokyo, Kyoto, Osaka</p>
+            {cities.map((el, i) => (
+              <span key={i} className={styles.text}>
+                {el}
+              </span>
+            ))}
+            {/* <p className={styles.text}>Tokyo, Kyoto, Osaka</p> */}
           </div>
           <div className={styles.details}>
             <p className={styles.label}>Type of tour</p>
-            <p className={styles.text}>All around</p>
+            <p className={styles.text}>{category}</p>
           </div>
           <div className={styles.details}>
             <p className={styles.label}>*Customizations available</p>

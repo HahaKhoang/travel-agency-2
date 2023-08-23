@@ -1,27 +1,50 @@
 import TourBanner from "./TourBanner";
+import { useSingleTour } from "../features/tours/useSingleTour.js";
 import kyoto from "../../public/img/kyoto.jpg";
-import SingleTourPicture from "./SingleTourCarousel";
+import SingleTourCarousel from "./SingleTourCarousel";
 import SingleTourHeader from "./SingleTourHeader";
 import SingleTourLargePicture from "./SingleTourLargePicture";
 import ItineraryContainer from "./ItineraryContainer";
 import SingleTourBookNow from "./SingleTourBookNow";
 import SingleTourTestimonial from "./SingleTourTestimonial";
+import LoadingSpinner from "./LoadingSpinner";
 
 function SingleTourContainer() {
+  const { isLoading, tour, error } = useSingleTour();
+  if (isLoading) return <LoadingSpinner />;
+
+  const {
+    imageWelcome,
+    welcome,
+    welcomeDesc,
+    carouselImages,
+    message,
+    imageBG,
+    imageHeader,
+    imageText,
+    duration,
+    price,
+    cities,
+    category,
+  } = tour;
+
   return (
     <div>
-      <TourBanner
-        img={kyoto}
-        title="日本へようこそ"
-        text=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-          officia nisi ea porro quisquam praesentium dignissimos nam aspernatur
-          aliquid neque."
+      <TourBanner img={imageWelcome} title={welcome} text={welcomeDesc} />
+      <SingleTourCarousel carouselImages={carouselImages} />
+      <SingleTourHeader message={message} />
+      <SingleTourLargePicture
+        imageBG={imageBG}
+        imageHeader={imageHeader}
+        imageText={imageText}
       />
-      <SingleTourPicture />
-      <SingleTourHeader />
-      <SingleTourLargePicture />
       <ItineraryContainer />
-      <SingleTourBookNow />
+      <SingleTourBookNow
+        duration={duration}
+        price={price}
+        cities={cities}
+        category={category}
+      />
       <SingleTourTestimonial />
     </div>
   );

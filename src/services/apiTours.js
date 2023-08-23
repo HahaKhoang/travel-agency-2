@@ -1,7 +1,7 @@
 import supabase from "./supabase";
 
 export async function getAllTours() {
-  let query = supabase.from("tours").select("*");
+  let query = supabase.from("newTours").select("*");
 
   const { data, error } = await query;
   if (error) {
@@ -12,16 +12,16 @@ export async function getAllTours() {
   return data;
 }
 
-export async function getTour({ tourName }) {
+export async function getTour(slug) {
   const { data: tour, error } = await supabase
-    .from("tours")
-    .select("*, tourss(*)")
-    .eq("name", tourName)
+    .from("newTours")
+    .select("*")
+    .eq("slug", slug)
     .single();
 
   if (error) {
     console.error(error);
-    throw new Error("Booking not found");
+    throw new Error("Tour not found");
   }
 
   return tour;

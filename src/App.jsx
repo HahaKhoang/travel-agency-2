@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         element: <Tours />,
         errorElement: <PageNotFound />,
       },
-      { path: "/tours/:tourName", element: <Tour /> },
+      { path: "/tours/:slug", element: <Tour /> },
       { path: "/inspiration", element: <Inspiration /> },
       { path: "/surprise", element: <Surprise /> },
       { path: "/faq", element: <FAQ /> },

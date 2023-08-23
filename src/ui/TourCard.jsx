@@ -6,9 +6,10 @@ function TourCard({
   name,
   shortDesc,
   duration,
-  type,
+  category,
   price,
   country,
+  slug,
 }) {
   return (
     <div className={styles.container}>
@@ -18,10 +19,10 @@ function TourCard({
         <p className={styles.description}>{shortDesc}</p>
         <div className={styles.extras}>
           <p>Duration: {duration} days </p>
-          <p>Category: {type}</p>
+          <p>Category: {category}</p>
         </div>
         <p className={styles.price}>Price: ${price}</p>
-        <NavLink to={`/tours/:${name}`} className={styles.button}>
+        <NavLink to={`${slug}`} className={styles.button}>
           Let's go to {country}!
         </NavLink>
       </div>

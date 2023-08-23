@@ -1,12 +1,9 @@
 import styles from "./SingleTourHeader.module.scss";
 
-function SingleTourHeader() {
+function SingleTourHeader({ message }) {
   return (
     <div className={styles.container}>
-      <h2 className={styles.header}>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt eos
-        voluptates dicta sapiente, ex facilis corporis possimus cum quidem
-      </h2>
+      <h2 className={styles.header}>{message}</h2>
     </div>
   );
 }
