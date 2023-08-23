@@ -2,4 +2,12 @@
   display: flex;
   justify-content: space-between;
   margin: 4rem;
+
+  @media (max-width: 1200px) {
+    gap: 1rem;
+  }
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 }
