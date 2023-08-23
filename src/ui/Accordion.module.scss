@@ -2,4 +2,16 @@
   max-width: 90rem;
   margin: 4rem auto;
   list-style: none;
+
+  @media (max-width: 1000px) {
+    max-width: 75rem;
+  }
+
+  @media (max-width: 800px) {
+    max-width: 62rem;
+  }
+
+  @media (max-width: 650px) {
+    background-color: orange;
+  }
 }

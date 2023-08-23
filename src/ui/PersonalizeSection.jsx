@@ -25,7 +25,7 @@ function PersonalizeSection() {
           </div>
           <p>Relax while Kathy figures out the rest 💆🏼‍♀️</p>
         </div>
-        <button className={styles.button}>Set up a consultation</button>
+        <button className={styles.button}>Book now</button>
       </div>
       <div className={styles["right-container"]}>
         <img src={map} className={styles.picture} />

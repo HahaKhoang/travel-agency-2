@@ -10,6 +10,10 @@
     height: 40rem;
     margin-bottom: 2rem;
   }
+
+  @media (max-width: 800px) {
+    height: 36rem;
+  }
 }
 
 .left-container {
@@ -26,6 +30,7 @@
   }
 
   @media (max-width: 1000px) {
+    width: 35%;
     gap: 2rem;
   }
 }
@@ -41,6 +46,10 @@
     font-size: var(--font-med);
     gap: 2rem;
   }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-small);
+  }
 }
 
 .header {
@@ -48,6 +57,10 @@
 
   @media (max-width: 1000px) {
     font-size: var(--font-xl);
+  }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-large);
   }
 }
 
@@ -57,6 +70,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: 800px) {
+    padding: 1rem;
+  }
 }
 
 .button {
@@ -70,6 +87,11 @@
   border-radius: 500px;
   cursor: pointer;
   transition: all 0.5s;
+
+  @media (max-width: 800px) {
+    font-size: var(--font-small);
+    padding: 1rem 3rem;
+  }
 }
 
 .button:hover {
@@ -90,6 +112,11 @@
   @media (max-width: 1000px) {
     width: 60%;
     height: 46rem;
+  }
+
+  @media (max-width: 800px) {
+    width: 65%;
+    height: 40rem;
   }
 }
 

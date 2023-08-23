@@ -12,6 +12,10 @@
   @media (max-width: 1000px) {
     height: 40rem;
   }
+
+  @media (max-width: 800px) {
+    height: 36rem;
+  }
 }
 
 .left-container {
@@ -31,6 +35,10 @@
   flex-direction: column;
   align-items: center;
   gap: 3rem;
+
+  @media (max-width: 800px) {
+    gap: 2rem;
+  }
 }
 
 .header {
@@ -38,6 +46,10 @@
 
   @media (max-width: 1000px) {
     font-size: var(--font-xl);
+  }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-large);
   }
 }
 
@@ -50,6 +62,10 @@
 
   @media (max-width: 1000px) {
     font-size: var(--font-med);
+  }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-small);
   }
 }
 
@@ -65,6 +81,10 @@
   @media (max-width: 1000px) {
     height: 46rem;
   }
+
+  @media (max-width: 800px) {
+    height: 40rem;
+  }
 }
 
 .picture {
@@ -75,6 +95,11 @@
 
 .button {
   transition: all 0.5s;
+
+  @media (max-width: 800px) {
+    font-size: var(--font-small);
+    padding: 1rem 3rem;
+  }
 }
 
 .button:hover {

@@ -22,6 +22,10 @@
   @media (max-width: 1000px) {
     height: 50rem;
   }
+
+  @media (max-width: 800px) {
+    height: 42rem;
+  }
 }
 
 .picture {
@@ -39,6 +43,10 @@
   @media (max-width: 1000px) {
     height: 50rem;
   }
+
+  @media (max-width: 800px) {
+    height: 42rem;
+  }
 }
 
 .discover-container {
@@ -52,6 +60,10 @@
   @media (max-width: 1000px) {
     font-size: var(--font-xl);
   }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-large);
+  }
 }
 
 .description {
@@ -64,11 +76,20 @@
   @media (max-width: 1000px) {
     font-size: var(--font-med);
   }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-small);
+  }
 }
 
 .button {
   align-self: start;
   transition: all 0.5s;
+
+  @media (max-width: 800px) {
+    font-size: var(--font-small);
+    padding: 1rem 3rem;
+  }
 }
 
 .button:hover {
