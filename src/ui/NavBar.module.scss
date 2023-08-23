@@ -9,8 +9,13 @@
 .navBar-scrolled {
   background-color: var(--color-blue-dark);
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 0 4rem;
+
+  @media (max-width: 1000px) {
+    padding: 0 2rem;
+  }
 }
 
 .color {
@@ -25,10 +30,22 @@
   text-decoration: none;
   display: flex;
   justify-content: center;
+
+  // @media (max-width: 800px) {
+  //   font-size: var(--font-xl);
+  // }
 }
 
 .name-scrolled {
   font-size: var(--font-xl);
+
+  @media (max-width: 1000px) {
+    font-size: var(--font-large);
+  }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-med);
+  }
 }
 
 .navContainer {
@@ -42,6 +59,14 @@
 
   @media (max-width: 1000px) {
     gap: 8rem;
+  }
+
+  @media (max-width: 800px) {
+    gap: 4rem;
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-xs);
   }
 }
 

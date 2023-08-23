@@ -5,6 +5,10 @@
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+
+  @media (max-width: 1400px) {
+    height: 24rem;
+  }
 }
 
 .text {
@@ -12,4 +16,13 @@
   position: absolute;
   bottom: 0rem;
   left: 4rem;
+  width: 100%;
+
+  @media (max-width: 1000px) {
+    font-size: 4rem;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 3.4rem;
+  }
 }
