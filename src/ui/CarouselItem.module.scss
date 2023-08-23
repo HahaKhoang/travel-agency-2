@@ -12,11 +12,20 @@
     width: 80em;
     height: 45rem;
   }
+
+  @media (max-width: 1000px) {
+    width: 60em;
+    height: 32rem;
+  }
 }
 
 .left-container {
   width: 50%;
   height: 100%;
+
+  @media (max-width: 1000px) {
+    width: 40%;
+  }
 }
 
 .picture {
@@ -35,19 +44,38 @@
   padding: 5rem;
   margin: auto 0;
   gap: 3rem;
+
+  @media (max-width: 1000px) {
+    width: 60%;
+    padding: 2rem;
+    gap: 2rem;
+    margin: 0;
+  }
 }
 
 .tour {
   color: var(--color-red-dark);
+
+  @media (max-width: 1000px) {
+    font-size: var(--font-large);
+  }
 }
 
 .review {
   font-size: var(--font-med);
   color: var(--color-blue-dark);
+
+  @media (max-width: 1000px) {
+    font-size: var(--font-small);
+  }
 }
 
 .name {
   font-size: var(--font-med);
   font-weight: 600;
   color: var(--color-red-dark);
+
+  @media (max-width: 1000px) {
+    font-size: var(--font-small);
+  }
 }

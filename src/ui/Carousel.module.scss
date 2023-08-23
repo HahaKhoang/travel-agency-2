@@ -16,6 +16,11 @@
     width: 90rem;
     height: 48rem;
   }
+
+  @media (max-width: 1000px) {
+    width: 68em;
+    height: 32rem;
+  }
 }
 
 .reviews-container {
@@ -34,6 +39,11 @@
   @media (max-width: 1200px) {
     width: 80em;
     height: 45rem;
+  }
+
+  @media (max-width: 1000px) {
+    width: 60em;
+    height: 30rem;
   }
 }
 

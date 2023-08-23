@@ -18,8 +18,7 @@ function Home() {
       <ExperienceSection />
       <Heading
         text1="Shop our most popular tours"
-        bgColor="var(--color-blue-light)"
-        fontColor="white"
+        fontColor="var(--color-blue-med)"
       />
       <PopularSection />
       <Heading
