@@ -4,12 +4,14 @@ import shopping from "../../public/img/shopping.jpg";
 import nature from "../../public/img/nature.jpg";
 import food from "../../public/img/food.jpg";
 import nightlife from "../../public/img/nightlife.jpg";
+import everything from "../../public/img/everything.jpg";
 import { useState } from "react";
 import ExpandingCardItem from "./ExpandingCardItem";
 import {
   RiBankFill,
   RiGobletFill,
   RiLeafFill,
+  RiMagicFill,
   RiRestaurantFill,
   RiShoppingBag2Fill,
 } from "react-icons/ri";
@@ -44,6 +46,12 @@ const tours = [
     text: "Nightlife",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
     icon: <RiGobletFill />,
+  },
+  {
+    img: everything,
+    text: "Everything",
+    desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
+    icon: <RiMagicFill />,
   },
 ];
 
