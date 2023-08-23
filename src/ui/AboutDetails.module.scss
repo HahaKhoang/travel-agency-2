@@ -30,6 +30,14 @@
   flex-direction: column;
   gap: 2rem;
   // background-color: red;
+
+  @media (max-width: 1400px) {
+    font-size: var(--font-med);
+  }
+
+  @media (max-width: 1000px) {
+    font-size: var(--font-small);
+  }
 }
 
 .kanji {

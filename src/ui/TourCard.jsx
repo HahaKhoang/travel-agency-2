@@ -13,16 +13,18 @@ function TourCard({
   return (
     <div className={styles.container}>
       <img src={mainImage} className={styles.picture} />
-      <p className={styles.title}>{name}</p>
-      <p className={styles.description}>{shortDesc}</p>
-      <div className={styles.extras}>
-        <p>Duration: {duration} days </p>
-        <p>Category: {type}</p>
+      <div className={styles["detail-container"]}>
+        <p className={styles.title}>{name}</p>
+        <p className={styles.description}>{shortDesc}</p>
+        <div className={styles.extras}>
+          <p>Duration: {duration} days </p>
+          <p>Category: {type}</p>
+        </div>
+        <p className={styles.price}>Price: ${price}</p>
+        <NavLink to={`/tours/:${name}`} className={styles.button}>
+          Let's go to {country}!
+        </NavLink>
       </div>
-      <p className={styles.price}>Price: ${price}</p>
-      <NavLink to={`/tours/:${name}`} className={styles.button}>
-        Let's go to {country}!
-      </NavLink>
     </div>
   );
 }
