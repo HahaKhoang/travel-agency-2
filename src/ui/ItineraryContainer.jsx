@@ -10,9 +10,31 @@ function ItineraryContainer() {
   const { isLoading, tour, error } = useSingleTour();
 
   const { dayTitle, dayDesc, dayImages } = tour;
-  const [day1Title, day2Title] = dayTitle;
-  const [day1Desc, day2Desc] = dayDesc;
-  const [img1] = dayImages;
+  const [
+    day1Title,
+    day2Title,
+    day3Title,
+    day4Title,
+    day5Title,
+    day6Title,
+    day7Title,
+    day8Title,
+    day9Title,
+    day10Title,
+  ] = dayTitle;
+  const [
+    day1Desc,
+    day2Desc,
+    day3Desc,
+    day4Desc,
+    day5Desc,
+    day6Desc,
+    day7Desc,
+    day8Desc,
+    day9Desc,
+    day10Desc,
+  ] = dayDesc;
+  const [img1, img2, img3, img4, img5, img6, img7, img8] = dayImages;
 
   return (
     <>
@@ -25,9 +47,32 @@ function ItineraryContainer() {
           day2Title2={day2Title}
           day2Desc={day2Desc}
         />
-        <ItineraryDay3 />
-        <ItineraryDay6 />
-        <ItineraryDay8 />
+        <ItineraryDay3
+          day3Title={day3Title}
+          day3Desc={day3Desc}
+          day4Title={day4Title}
+          day4Desc={day4Desc}
+          day5Title={day5Title}
+          day5Desc={day5Desc}
+          img2={img2}
+        />
+        <ItineraryDay6
+          day6Title={day6Title}
+          day6Desc={day6Desc}
+          day7Title={day7Title}
+          day7Desc={day7Desc}
+          img3={img3}
+          img4={img4}
+        />
+        <ItineraryDay8
+          day8Title={day8Title}
+          day8Desc={day8Desc}
+          day9Title={day9Title}
+          day9Desc={day9Desc}
+          day10Title={day10Title}
+          day10Desc={day10Desc}
+          img5={img5}
+        />
       </div>
     </>
   );
