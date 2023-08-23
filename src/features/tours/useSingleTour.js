@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 
 export function useSingleTour() {
   const { slug } = useParams();
-  console.log(slug);
+
   const {
     isLoading,
     data: tour,

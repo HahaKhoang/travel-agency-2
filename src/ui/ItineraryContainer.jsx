@@ -47,32 +47,38 @@ function ItineraryContainer() {
           day2Title2={day2Title}
           day2Desc={day2Desc}
         />
-        <ItineraryDay3
-          day3Title={day3Title}
-          day3Desc={day3Desc}
-          day4Title={day4Title}
-          day4Desc={day4Desc}
-          day5Title={day5Title}
-          day5Desc={day5Desc}
-          img2={img2}
-        />
-        <ItineraryDay6
-          day6Title={day6Title}
-          day6Desc={day6Desc}
-          day7Title={day7Title}
-          day7Desc={day7Desc}
-          img3={img3}
-          img4={img4}
-        />
-        <ItineraryDay8
-          day8Title={day8Title}
-          day8Desc={day8Desc}
-          day9Title={day9Title}
-          day9Desc={day9Desc}
-          day10Title={day10Title}
-          day10Desc={day10Desc}
-          img5={img5}
-        />
+        {day3Title && (
+          <ItineraryDay3
+            day3Title={day3Title}
+            day3Desc={day3Desc}
+            day4Title={day4Title}
+            day4Desc={day4Desc}
+            day5Title={day5Title}
+            day5Desc={day5Desc}
+            img2={img2}
+          />
+        )}
+        {day6Title && (
+          <ItineraryDay6
+            day6Title={day6Title}
+            day6Desc={day6Desc}
+            day7Title={day7Title}
+            day7Desc={day7Desc}
+            img3={img3}
+            img4={img4}
+          />
+        )}
+        {day8Title && (
+          <ItineraryDay8
+            day8Title={day8Title}
+            day8Desc={day8Desc}
+            day9Title={day9Title}
+            day9Desc={day9Desc}
+            day10Title={day10Title}
+            day10Desc={day10Desc}
+            img5={img5}
+          />
+        )}
       </div>
     </>
   );
