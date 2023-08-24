@@ -44,7 +44,7 @@ function ItineraryContainer() {
           img1={img1}
           day1Title={day1Title}
           day1Desc={day1Desc}
-          day2Title2={day2Title}
+          day2Title={day2Title}
           day2Desc={day2Desc}
         />
         {day3Title && (

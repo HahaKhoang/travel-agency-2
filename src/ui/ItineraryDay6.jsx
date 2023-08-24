@@ -8,8 +8,12 @@ function ItineraryDay6({
   day7Title,
   day7Desc,
 }) {
+  const container = day7Title
+    ? `${styles.container}`
+    : `${styles["container-small"]}`;
+
   return (
-    <div className={styles.container}>
+    <div className={container}>
       <div className={styles["container-top"]}>
         <div className={styles["day-6"]}>
           <div className={styles.day}>
@@ -22,18 +26,20 @@ function ItineraryDay6({
           <img src={img3} className={styles.picture} />
         </div>
       </div>
-      <div className={styles["container-bottom"]}>
-        <div className={styles["picture-container-bottom"]}>
-          <img src={img4} className={styles.picture} />
-        </div>
-        <div className={styles["day-7"]}>
-          <div className={styles.day}>
-            <h3 className={styles["number-day"]}>Day 7</h3>
-            <p className={styles.text}>{day7Title}</p>
-            <p className={styles.text}>{day7Desc}</p>
+      {day7Title && (
+        <div className={styles["container-bottom"]}>
+          <div className={styles["picture-container-bottom"]}>
+            <img src={img4} className={styles.picture} />
+          </div>
+          <div className={styles["day-7"]}>
+            <div className={styles.day}>
+              <h3 className={styles["number-day"]}>Day 7</h3>
+              <p className={styles.text}>{day7Title}</p>
+              <p className={styles.text}>{day7Desc}</p>
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 }

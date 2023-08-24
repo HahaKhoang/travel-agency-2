@@ -17,20 +17,30 @@ function ItineraryDay8({
           <p className={styles.text}>{day8Title}</p>
           <p className={styles.text}>{day8Desc}</p>
         </div>
-        <div className={styles.day}>
-          <h3 className={styles["number-day"]}>Day 9</h3>
-          <p className={styles.text}>{day9Title}</p>
-          <p className={styles.text}>{day9Desc}</p>
-        </div>
-        <div className={styles.day}>
-          <h3 className={styles["number-day"]}>Day 10</h3>
-          <p className={styles.text}>{day10Title}</p>
-          <p className={styles.text}>{day10Desc}</p>
-        </div>
+        {day9Title && (
+          <div className={styles.day}>
+            <h3 className={styles["number-day"]}>Day 9</h3>
+            <p className={styles.text}>{day9Title}</p>
+            <p className={styles.text}>{day9Desc}</p>
+          </div>
+        )}
+        {day10Title && (
+          <div className={styles.day}>
+            <h3 className={styles["number-day"]}>Day 10</h3>
+            <p className={styles.text}>{day10Title}</p>
+            <p className={styles.text}>{day10Desc}</p>
+          </div>
+        )}
       </div>
-      <div className={styles["picture-container"]}>
-        <img src={img5} className={styles.picture} />
-      </div>
+      {!day10Title ? (
+        <div className={styles["picture-container-small"]}>
+          <img src={img5} className={styles.picture} />
+        </div>
+      ) : (
+        <div className={styles["picture-container"]}>
+          <img src={img5} className={styles.picture} />
+        </div>
+      )}
     </div>
   );
 }

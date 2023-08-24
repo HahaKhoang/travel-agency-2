@@ -9,6 +9,17 @@
   }
 }
 
+.container-small {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 80rem;
+
+  @media (max-width: 1700px) {
+    height: 60rem;
+  }
+}
+
 .container-top {
   display: flex;
 }
