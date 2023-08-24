@@ -12,6 +12,7 @@
 
   @media (max-width: 1000px) {
     width: 35rem;
+    height: 55rem;
   }
 
   @media (max-width: 800px) {
@@ -55,10 +56,11 @@
 
   @media (max-width: 650px) {
     align-items: center;
-    justify-content: start;
+    justify-content: center;
+    font-size: var(--font-xs);
+    height: 83%;
     gap: 1rem;
     padding: 2rem;
-    margin-top: 1rem;
   }
 }
 
@@ -89,6 +91,7 @@
 
   @media (max-width: 650px) {
     flex-direction: row;
+    font-size: var(--font-xs);
     gap: 3rem;
   }
 }
@@ -109,19 +112,21 @@
   text-decoration: none;
   transition: all 0.5s;
 
-  @media (max-width: 800px) {
-    font-size: var(--font-small);
+  @media (max-width: 1000px) {
     padding: 1.4rem 3rem;
   }
 
   @media (max-width: 800px) {
+    font-size: var(--font-small);
     padding: 1rem 4rem;
-    align-self: center;
   }
 
   @media (max-width: 650px) {
+    align-self: center;
     background-color: var(--color-red-dark);
+    font-size: var(--font-xs);
     bottom: 1rem;
+    padding: 1rem 5rem;
   }
 }
 
