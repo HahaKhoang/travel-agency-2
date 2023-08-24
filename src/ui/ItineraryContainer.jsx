@@ -2,6 +2,7 @@ import { useSingleTour } from "../features/tours/useSingleTour";
 import styles from "./ItineraryContainer.module.scss";
 import ItineraryDay1 from "./ItineraryDay1";
 import ItineraryDay11 from "./ItineraryDay11";
+import ItineraryDay13 from "./ItineraryDay13";
 import ItineraryDay3 from "./ItineraryDay3";
 import ItineraryDay6 from "./ItineraryDay6";
 import ItineraryDay8 from "./ItineraryDay8";
@@ -26,6 +27,7 @@ function ItineraryContainer() {
     day12Title,
     day13Title,
     day14Title,
+    day15Title,
   ] = dayTitle;
   const [
     day1Desc,
@@ -42,6 +44,7 @@ function ItineraryContainer() {
     day12Desc,
     day13Desc,
     day14Desc,
+    day15Desc,
   ] = dayDesc;
   const [img1, img2, img3, img4, img5, img6, img7, img8] = dayImages;
 
@@ -96,6 +99,17 @@ function ItineraryContainer() {
             day12Desc={day12Desc}
             img6={img6}
             img7={img7}
+          />
+        )}
+        {day13Title && (
+          <ItineraryDay13
+            day13Title={day13Title}
+            day13Desc={day13Desc}
+            day14Title={day14Title}
+            day14Desc={day14Desc}
+            day15Title={day15Title}
+            day15Desc={day15Desc}
+            img8={img8}
           />
         )}
       </div>
