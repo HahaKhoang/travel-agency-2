@@ -14,6 +14,7 @@ import Contact from "./pages/Contact";
 import PageNotFound from "./pages/PageNotFound";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+import Customized from "./pages/Customized";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,7 @@ const router = createBrowserRouter([
       { path: "/tours/:slug", element: <Tour /> },
       { path: "/inspiration", element: <Inspiration /> },
       { path: "/surprise", element: <Surprise /> },
+      { path: "/customized-tour", element: <Customized /> },
       { path: "/faq", element: <FAQ /> },
       { path: "/contact", element: <Contact /> },
     ],

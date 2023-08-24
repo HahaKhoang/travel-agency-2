@@ -58,6 +58,11 @@ function NavBar() {
           </NavLink>
         </ul>
         <ul>
+          <NavLink to="/customized-tour" className={styles.link}>
+            Customized tour
+          </NavLink>
+        </ul>
+        <ul>
           <NavLink to="/faq" className={styles.link}>
             FAQ
           </NavLink>

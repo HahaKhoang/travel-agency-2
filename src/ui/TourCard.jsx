@@ -16,7 +16,9 @@ function TourCard({
 
   return (
     <div className={styles.container}>
-      <img src={mainImage} className={styles.picture} />
+      <NavLink to={slug}>
+        <img src={mainImage} className={styles.picture} />
+      </NavLink>
       <div className={styles["detail-container"]}>
         <p className={styles.title}>{name}</p>
         <p className={styles.description}>{shortDesc}</p>
