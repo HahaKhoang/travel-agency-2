@@ -22,36 +22,42 @@ const tours = [
     text: "Culture",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
     icon: <RiBankFill />,
+    link: "tours?type=culture",
   },
   {
     img: nature,
     text: "Nature",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
     icon: <RiLeafFill />,
+    link: "tours?type=nature",
   },
   {
     img: shopping,
     text: "Shopping",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
     icon: <RiShoppingBag2Fill />,
+    link: "tours?type=shopping",
   },
   {
     img: food,
     text: "Food",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
     icon: <RiRestaurantFill />,
+    link: "tours?type=food",
   },
   {
     img: nightlife,
     text: "Nightlife",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
     icon: <RiGobletFill />,
+    link: "tours?type=nightlife",
   },
   {
     img: everything,
     text: "Everything",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
     icon: <RiMagicFill />,
+    link: "tours?type=all",
   },
 ];
 
@@ -70,6 +76,7 @@ function ExpandingCards() {
           curActive={curActive}
           onActive={setCurActive}
           icon={el.icon}
+          link={el.link}
         ></ExpandingCardItem>
       ))}
     </div>

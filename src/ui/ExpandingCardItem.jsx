@@ -9,6 +9,7 @@ function ExpandingCardItem({
   num,
   desc,
   icon,
+  link,
 }) {
   const isOpen = num === curActive;
 
@@ -34,7 +35,9 @@ function ExpandingCardItem({
       <div className={`${textActive} ${styles.box}`}>
         <h3 className={styles.header}> {text}</h3>
         <p className={styles.description}>{desc}</p>
-        <NavLink className={styles.link}>&rarr; Read more</NavLink>
+        <NavLink to={link} className={styles.link}>
+          &rarr; Read more
+        </NavLink>
       </div>
       <div className={iconActive}>{icon}</div>
     </div>
