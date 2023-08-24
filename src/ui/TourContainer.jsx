@@ -17,15 +17,17 @@ function TourContainer() {
   let filteredTours;
   if (filterValue === "all") filteredTours = tours;
   if (filterValue === "nature")
-    filteredTours = tours.filter((tour) => tour.type === "Nature");
+    filteredTours = tours.filter((tour) => tour.category === "nature");
   if (filterValue === "shopping")
-    filteredTours = tours.filter((tour) => tour.type === "Shopping");
+    filteredTours = tours.filter((tour) => tour.category === "shopping");
   if (filterValue === "nightlife")
-    filteredTours = tours.filter((tour) => tour.type === "Nightlife");
+    filteredTours = tours.filter((tour) => tour.category === "nightlife");
   if (filterValue === "culture")
-    filteredTours = tours.filter((tour) => tour.type === "Culture");
+    filteredTours = tours.filter((tour) => tour.category === "culture");
   if (filterValue === "food")
-    filteredTours = tours.filter((tour) => tour.type === "Food");
+    filteredTours = tours.filter((tour) => tour.category === "food");
+  if (filterValue === "everything")
+    filteredTours = tours.filter((tour) => tour.category === "everything");
 
   // SORT
   const sortBy = searchParams.get("sortBy") || "name-asc";
