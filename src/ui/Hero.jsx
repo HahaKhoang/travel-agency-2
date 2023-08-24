@@ -1,5 +1,6 @@
 import styles from "./Hero.module.scss";
 import hero8 from "../../public/img/japan/hero8.jpg";
+import { NavLink } from "react-router-dom";
 
 function Hero() {
   return (
@@ -13,7 +14,9 @@ function Hero() {
           assumenda, nam culpa quibusdam rerum magni facere, dolores corporis.
           Enim ratione sit doloribus.
         </p>
-        <button className={styles.button}>See all tours</button>
+        <NavLink to="tours" className={styles.button}>
+          See all tours
+        </NavLink>
       </div>
     </div>
   );

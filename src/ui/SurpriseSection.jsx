@@ -1,5 +1,6 @@
 import styles from "./SurpriseSection.module.scss";
 import roadtrip from "../../public/img/website/roadtrip.jpg";
+import { NavLink } from "react-router-dom";
 
 function SurpriseSection() {
   return (
@@ -13,7 +14,9 @@ function SurpriseSection() {
             voluptas eveniet, minus et ut libero placeat magnam fugiat
             perferendis, enim dicta quaerat.
           </p>
-          <button className={styles.button}>Surprise me!</button>
+          <NavLink to="surprise" className={styles.button}>
+            Surprise me!
+          </NavLink>
         </div>
       </div>
       <div className={styles["picture-container"]}>
