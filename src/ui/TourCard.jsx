@@ -12,6 +12,7 @@ function TourCard({
   slug,
 }) {
   const capitalized = category.charAt(0).toUpperCase() + category.slice(1);
+  const day = duration < 2 ? "day" : "days";
 
   return (
     <div className={styles.container}>
@@ -20,7 +21,9 @@ function TourCard({
         <p className={styles.title}>{name}</p>
         <p className={styles.description}>{shortDesc}</p>
         <div className={styles.extras}>
-          <p>Duration: {duration} days </p>
+          <p>
+            Duration: {duration} {day}
+          </p>
           <p>Category: {capitalized}</p>
         </div>
         <p className={styles.price}>Price: ${price}</p>
