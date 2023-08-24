@@ -1,8 +1,12 @@
 import styles from "./PopularSection.module.scss";
 import { usePopularTours } from "../features/tours/usePopularTours";
+import { NavLink } from "react-router-dom";
+import LoadingSpinner from "./LoadingSpinner";
 
 function PopularSection() {
-  const { popularTours } = usePopularTours();
+  const { popularTours, isLoading } = usePopularTours();
+
+  if (isLoading) return <LoadingSpinner />;
 
   return (
     <div className={styles.container}>
@@ -19,7 +23,9 @@ function PopularSection() {
               <p className={styles.duration}>Duration: {el.duration} days</p>
               <p className={styles.type}>Category: {el.category}</p>
             </div>
-            <button className={styles.button}>Read more</button>
+            <NavLink to={`tours/${el.slug}`} className={styles.button}>
+              Read more
+            </NavLink>
           </div>
         </div>
       ))}
