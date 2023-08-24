@@ -11,6 +11,8 @@ function TourCard({
   country,
   slug,
 }) {
+  const capitalized = category.charAt(0).toUpperCase() + category.slice(1);
+
   return (
     <div className={styles.container}>
       <img src={mainImage} className={styles.picture} />
@@ -19,7 +21,7 @@ function TourCard({
         <p className={styles.description}>{shortDesc}</p>
         <div className={styles.extras}>
           <p>Duration: {duration} days </p>
-          <p>Category: {category}</p>
+          <p>Category: {capitalized}</p>
         </div>
         <p className={styles.price}>Price: ${price}</p>
         <NavLink to={`${slug}`} className={styles.button}>

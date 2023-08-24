@@ -58,6 +58,7 @@ function TourContainer() {
           { value: "food", label: "Food" },
           { value: "shopping", label: "Shopping" },
           { value: "nightlife", label: "Nightlife" },
+          { value: "everything", label: "Everything" },
         ]}
         sortByOptions={[
           {

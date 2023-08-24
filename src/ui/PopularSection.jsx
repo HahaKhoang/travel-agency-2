@@ -21,7 +21,10 @@ function PopularSection() {
             <p className={styles.description}>{el.welcomeDesc}</p>
             <div className={styles.extra}>
               <p className={styles.duration}>Duration: {el.duration} days</p>
-              <p className={styles.type}>Category: {el.category}</p>
+              <p className={styles.type}>
+                Category:{" "}
+                {el.category.charAt(0).toUpperCase() + el.category.slice(1)}
+              </p>
             </div>
             <NavLink to={`tours/${el.slug}`} className={styles.button}>
               Read more

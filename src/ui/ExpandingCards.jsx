@@ -57,7 +57,7 @@ const tours = [
     text: "Everything",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
     icon: <RiMagicFill />,
-    link: "tours?type=all",
+    link: "tours?type=everything",
   },
 ];
 
