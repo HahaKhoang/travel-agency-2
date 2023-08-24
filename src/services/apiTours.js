@@ -27,6 +27,20 @@ export async function getTour(slug) {
   return tour;
 }
 
+export async function getPopularTours() {
+  const { data: tour, error } = await supabase
+    .from("tours")
+    .select("*")
+    .eq("popular", true);
+
+  if (error) {
+    console.error(error);
+    throw new Error("Tour not found");
+  }
+
+  return tour;
+}
+
 export async function getAllInspiration() {
   let query = supabase.from("inspiration").select("*");
 
