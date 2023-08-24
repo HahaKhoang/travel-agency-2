@@ -8,22 +8,19 @@
   position: relative;
 
   @media (max-width: 1400px) {
-    width: 110rem;
-    height: 53rem;
+    width: 90%;
+    height: 58rem;
   }
 
   @media (max-width: 1200px) {
-    width: 90rem;
     height: 48rem;
   }
 
   @media (max-width: 1000px) {
-    width: 75em;
     height: 38rem;
   }
 
   @media (max-width: 800px) {
-    width: 60em;
     height: 28rem;
   }
 }
@@ -37,22 +34,19 @@
   overflow: hidden;
 
   @media (max-width: 1400px) {
-    width: 100rem;
-    height: 50rem;
+    width: 90%;
+    height: 56rem;
   }
 
   @media (max-width: 1200px) {
-    width: 80em;
     height: 45rem;
   }
 
   @media (max-width: 1000px) {
-    width: 66em;
     height: 36rem;
   }
 
   @media (max-width: 800px) {
-    width: 54em;
     height: 26rem;
   }
 }
