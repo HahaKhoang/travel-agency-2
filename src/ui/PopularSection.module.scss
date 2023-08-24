@@ -77,6 +77,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 1rem;
 
   @media (max-width: 1000px) {
     width: 65%;
@@ -91,6 +92,8 @@
 }
 
 .title {
+  color: var(--color-blue-med);
+
   @media (max-width: 1700px) {
     font-size: var(--font-xl);
   }
@@ -118,7 +121,7 @@
 
 .button {
   margin-top: 1rem;
-  background-color: var(--color-blue-dark);
+  background-color: var(--color-blue-med);
   border: none;
   transition: all 0.5s;
 
