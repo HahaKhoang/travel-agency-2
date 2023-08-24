@@ -1,10 +1,10 @@
 import styles from "./ExpandingCards.module.scss";
-import culture from "../../public/img/culture.jpg";
-import shopping from "../../public/img/shopping.jpg";
-import nature from "../../public/img/nature.jpg";
-import food from "../../public/img/food.jpg";
-import nightlife from "../../public/img/nightlife.jpg";
-import everything from "../../public/img/everything.jpg";
+import culture from "../../public/img/website/culture.jpg";
+import shopping from "../../public/img/website/shopping.jpg";
+import nature from "../../public/img/website/nature.jpg";
+import food from "../../public/img/website/food.jpg";
+import nightlife from "../../public/img/website/nightlife.jpg";
+import everything from "../../public/img/website/everything.jpg";
 import { useState } from "react";
 import ExpandingCardItem from "./ExpandingCardItem";
 import {

@@ -1,6 +1,4 @@
 import styles from "./ItineraryDay6.module.scss";
-import kiyomizu from "../../public/img/kiyomizu.jpg";
-import dango from "../../public/img/dango.jpg";
 
 function ItineraryDay6({
   img3,

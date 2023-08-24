@@ -1,5 +1,5 @@
 import styles from "./PersonalizeSection.module.scss";
-import map from "../../public/img/map.jpg";
+import map from "../../public/img/website/map.jpg";
 import { RiNumber1, RiNumber2, RiNumber3 } from "react-icons/ri";
 
 function PersonalizeSection() {

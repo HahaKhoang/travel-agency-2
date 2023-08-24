@@ -1,7 +1,7 @@
 import styles from "./PopularSection.module.scss";
-import fuji from "../../public/img/fuji.jpg";
-import dango from "../../public/img/dango.jpg";
-import kyoto from "../../public/img/kyoto.jpg";
+import fuji from "../../public/img/japan/fuji.jpg";
+import dango from "../../public/img/japan/dango.jpg";
+import kyoto from "../../public/img/japan/kyoto.jpg";
 
 function PopularSection() {
   return (

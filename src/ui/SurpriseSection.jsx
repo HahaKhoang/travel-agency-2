@@ -1,5 +1,5 @@
 import styles from "./SurpriseSection.module.scss";
-import roadtrip from "../../public/img/roadtrip.jpg";
+import roadtrip from "../../public/img/website/roadtrip.jpg";
 
 function SurpriseSection() {
   return (

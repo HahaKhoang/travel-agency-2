@@ -1,5 +1,5 @@
 import styles from "./SurpriseHow.module.scss";
-import jump from "../../public/img/jump.jpg";
+import jump from "../../public/img/website/jump.jpg";
 import SurpriseStep1 from "./SurpriseStep1";
 import SurpriseStep3 from "./SurpriseStep3";
 

@@ -1,6 +1,6 @@
 import Accordion from "../ui/Accordion";
 import Banner from "../ui/Banner";
-import arashiyama from "../../public/img/arashiyama.jpg";
+import arashiyama from "../../public/img/japan/arashiyama.jpg";
 
 function FAQ() {
   return (

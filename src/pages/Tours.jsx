@@ -1,4 +1,4 @@
-import tour from "../../public/img/tour.jpg";
+import tour from "../../public/img/website/tour.jpg";
 import Banner from "../ui/Banner";
 import TourContainer from "../ui/TourContainer";
 

@@ -1,5 +1,5 @@
 import styles from "./SingleTourTestimonial.module.scss";
-import culture from "../../public/img/culture.jpg";
+import culture from "../../public/img/website/culture.jpg";
 import SingleTourReview from "./SingleTourReview";
 import { useState } from "react";
 import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";

@@ -1,5 +1,5 @@
 import Banner from "../ui/Banner";
-import mountain from "../../public/img/mountain.jpg";
+import mountain from "../../public/img/website/mountain.jpg";
 import InspirationContainer from "../ui/InspirationContainer";
 import bi1 from "../../public/img/bi1.jpg";
 import bi2 from "../../public/img/bi2.jpg";

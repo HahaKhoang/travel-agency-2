@@ -1,5 +1,4 @@
 import styles from "./ItineraryDay3.module.scss";
-import goldengai from "../../public/img/goldengai.jpg";
 
 function ItineraryDay3({
   day3Title,

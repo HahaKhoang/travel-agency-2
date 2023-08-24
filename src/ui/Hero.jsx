@@ -1,5 +1,5 @@
 import styles from "./Hero.module.scss";
-import hero8 from "../../public/img/hero8.jpg";
+import hero8 from "../../public/img/japan/hero8.jpg";
 
 function Hero() {
   return (

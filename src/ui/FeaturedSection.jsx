@@ -1,5 +1,5 @@
 import styles from "./FeaturedSection.module.scss";
-import kyoto from "../../public/img/kyoto.jpg";
+import kyoto from "../../public/img/japan/kyoto.jpg";
 
 function FeaturedSection() {
   return (

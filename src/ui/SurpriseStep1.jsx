@@ -1,6 +1,6 @@
 import styles from "./SurpriseStep1.module.scss";
-import tent from "../../public/img/tent.jpg";
-import bicycle from "../../public/img/bicycle.jpg";
+import tent from "../../public/img/website/tent.jpg";
+import bicycle from "../../public/img/website/bicycle.jpg";
 
 function SurpriseStep1() {
   return (

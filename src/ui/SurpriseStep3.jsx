@@ -1,7 +1,7 @@
 import styles from "./SurpriseStep3.module.scss";
-import trolley from "../../public/img/trolley.jpg";
-import kayak from "../../public/img/kayak.jpg";
-import adventure from "../../public/img/adventure.jpg";
+import trolley from "../../public/img/website/trolley.jpg";
+import kayak from "../../public/img/website/kayak.jpg";
+import adventure from "../../public/img/website/adventure.jpg";
 
 function SurpriseStep3() {
   return (

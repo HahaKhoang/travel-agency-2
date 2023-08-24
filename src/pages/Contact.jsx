@@ -1,6 +1,6 @@
 import Banner from "../ui/Banner";
 import ContactForm from "../ui/ContactForm";
-import contact from "../../public/img/contact.jpg";
+import contact from "../../public/img/website/contact.jpg";
 
 function Contact() {
   return (

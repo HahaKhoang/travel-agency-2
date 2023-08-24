@@ -1,5 +1,4 @@
 import styles from "./ItineraryDay8.module.scss";
-import wagashi from "../../public/img/wagashi.jpg";
 
 function ItineraryDay8({
   day8Title,

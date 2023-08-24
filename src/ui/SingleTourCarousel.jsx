@@ -1,7 +1,7 @@
 import styles from "./SingleTourCarousel.module.scss";
-import fuji from "../../public/img/fuji.jpg";
-import fushimi from "../../public/img/fushimi.jpg";
-import tokyo from "../../public/img/tokyo.jpg";
+import fuji from "../../public/img/japan/fuji.jpg";
+import fushimi from "../../public/img/japan/fushimi.jpg";
+import tokyo from "../../public/img/japan/tokyo.jpg";
 import { useEffect, useState } from "react";
 
 const pictures = [
