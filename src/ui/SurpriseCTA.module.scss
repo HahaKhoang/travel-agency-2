@@ -29,6 +29,15 @@
 }
 
 .button {
+  border: 1px solid white;
+  outline: none;
+  color: white;
+  padding: 1.4rem 4.6rem;
+  font-size: var(--font-med);
+  border-radius: 500px;
+  cursor: pointer;
+  background-color: transparent;
+  text-transform: uppercase;
   transition: all 0.5s;
 }
 

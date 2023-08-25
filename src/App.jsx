@@ -9,6 +9,7 @@ import Tours from "./pages/Tours";
 import Tour from "./pages/Tour";
 import Inspiration from "./pages/Inspiration";
 import Surprise from "./pages/Surprise";
+import SurpriseBooking from "./pages/SurpriseBooking";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
 import PageNotFound from "./pages/PageNotFound";
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
       { path: "/tours/:slug", element: <Tour /> },
       { path: "/inspiration", element: <Inspiration /> },
       { path: "/surprise", element: <Surprise /> },
+      { path: "/surprise/booking", element: <SurpriseBooking /> },
       { path: "/customized-tour", element: <Customized /> },
       { path: "/faq", element: <FAQ /> },
       { path: "/contact", element: <Contact /> },

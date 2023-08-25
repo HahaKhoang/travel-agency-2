@@ -1,6 +1,7 @@
 import styles from "./PersonalizeSection.module.scss";
 import map from "../../public/img/website/map.jpg";
 import { RiNumber1, RiNumber2, RiNumber3 } from "react-icons/ri";
+import { NavLink } from "react-router-dom";
 
 function PersonalizeSection() {
   return (
@@ -25,7 +26,9 @@ function PersonalizeSection() {
           </div>
           <p>Relax while Kathy figures out the rest 💆🏼‍♀️</p>
         </div>
-        <button className={styles.button}>Book now</button>
+        <NavLink to="/customized-tour" className={styles.button}>
+          Book now
+        </NavLink>
       </div>
       <div className={styles["right-container"]}>
         <img src={map} className={styles.picture} />

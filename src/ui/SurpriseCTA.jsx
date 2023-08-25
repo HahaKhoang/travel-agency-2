@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styles from "./SurpriseCTA.module.scss";
 
 function SurpriseCTA() {
@@ -10,7 +11,9 @@ function SurpriseCTA() {
           <br /> Aliquid earum aspernatur libero doloremque, dolorum,
           necessitatibus{" "}
         </p>
-        <button className={styles.button}>Book now</button>
+        <NavLink to="booking" className={styles.button}>
+          Book now
+        </NavLink>
       </div>
     </div>
   );
