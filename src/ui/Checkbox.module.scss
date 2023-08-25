@@ -1,31 +1,25 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.4rem;
+}
+
 .container input[type="checkbox"] {
-  /* removing default appearance */
   -webkit-appearance: none;
   appearance: none;
-  /* creating a custom design */
-  width: 1.6em;
-  height: 1.6em;
-  border-radius: 0.15em;
-  margin-right: 0.5em;
-  border: 0.15em solid #007a7e;
+  width: 1rem;
+  height: 1rem;
+
+  border: 0.15rem solid var(--color-blue-med);
   outline: none;
   cursor: pointer;
 }
 
 .container input[type="checkbox"]:focus {
-  outline: 1px solid red;
+  outline: 1px solid var(--color-blue-light);
 }
 
 .checked {
-  background-color: #007a7e;
-  position: relative;
+  background-color: var(--color-blue-med);
 }
-
-// .checked::before {
-//   content: "\2713";
-//   font-size: 1.5em;
-//   color: #fff;
-//   position: absolute;
-//   right: 1px;
-//   top: -5px;
-// }

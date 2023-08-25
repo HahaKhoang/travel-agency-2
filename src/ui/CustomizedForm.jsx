@@ -48,12 +48,6 @@ function CustomizedForm() {
     <div className={styles.container}>
       <form ref={form} onSubmit={sendEmail} className={styles.form}>
         <div className={styles["form-row"]}>
-          <label>Category of interest</label>
-          {categories.map((el, i) => (
-            <Checkbox label={el.label} key={i} />
-          ))}
-        </div>
-        <div className={styles["form-row"]}>
           <label htmlFor="name">Name</label>
           <input
             type="text"
@@ -79,7 +73,14 @@ function CustomizedForm() {
             }}
           />
         </div>
-
+        <div className={styles["form-row"]}>
+          <label>Category of interest</label>
+          <div className={styles["checkbox-container"]}>
+            {categories.map((el, i) => (
+              <Checkbox label={el.label} key={i} />
+            ))}
+          </div>
+        </div>
         <div className={styles["form-row"]}>
           <label htmlFor="duration">Duration</label>
           <select id="duration" name="duration">

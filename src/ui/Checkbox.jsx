@@ -4,8 +4,8 @@ import styles from "./Checkbox.module.scss";
 function Checkbox({ label }) {
   const [isChecked, setIsChecked] = useState(false);
   return (
-    <div className={styles.container}>
-      <label>
+    <div>
+      <label className={styles.container}>
         <input
           type="checkbox"
           checked={isChecked}
