@@ -1,6 +1,7 @@
 import styles from "./CustomizedForm.module.scss";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import Checkbox from "./Checkbox";
 
 function CustomizedForm() {
   const [name, setName] = useState("");
@@ -9,6 +10,16 @@ function CustomizedForm() {
   const [message, setMessage] = useState("");
 
   const form = useRef();
+
+  const categories = [
+    { label: "Everything", category: "everything" },
+    { label: "Nature", category: "nature" },
+    { label: "Culture", category: "culture" },
+    { label: "Shopping", category: "shopping" },
+    { label: "Food", category: "food" },
+    { label: "Nightlife", category: "nightlife" },
+    { label: "Undecided", category: "undecided" },
+  ];
 
   function sendEmail(e) {
     e.preventDefault();
@@ -37,6 +48,12 @@ function CustomizedForm() {
     <div className={styles.container}>
       <form ref={form} onSubmit={sendEmail} className={styles.form}>
         <div className={styles["form-row"]}>
+          <label>Category of interest</label>
+          {categories.map((el, i) => (
+            <Checkbox label={el.label} key={i} />
+          ))}
+        </div>
+        <div className={styles["form-row"]}>
           <label htmlFor="name">Name</label>
           <input
             type="text"
@@ -62,72 +79,57 @@ function CustomizedForm() {
             }}
           />
         </div>
+
         <div className={styles["form-row"]}>
-          <label htmlFor="category">
-            Category of interest (select all that apply)
-          </label>
-          <div className={styles["checkbox-container"]}>
+          <label htmlFor="duration">Duration</label>
+          <select id="duration" name="duration">
+            <option value="1">1 day</option>
+            <option value="2">2 days</option>
+            <option value="3">3 days</option>
+            <option value="4">4 days</option>
+            <option value="5">5 days</option>
+            <option value="6">6 days</option>
+            <option value="7">7 days</option>
+            <option value="8">8 days</option>
+            <option value="9">9 days</option>
+            <option value="10">10 day</option>
+            <option value="11">11 days</option>
+            <option value="12">12 days</option>
+            <option value="13">13 days</option>
+            <option value="14">14 days</option>
+            <option value="flexible">I'm flexible</option>
+          </select>
+        </div>
+        <div className={styles["form-row"]}>
+          <label htmlFor="people">How many people</label>
+          <select id="people" name="people">
+            <option value="1">1</option>
+            <option value="2">2 </option>
+            <option value="3">3 </option>
+            <option value="4">4 </option>
+            <option value="5">5 </option>
+            <option value="6">6 </option>
+            <option value="7">7 </option>
+            <option value="8">8 </option>
+            <option value="9">9 </option>
+            <option value="10">10 </option>
+          </select>
+        </div>
+        <div className={styles["form-row"]}>
+          <label htmlFor="type">Does it need to be child friendly?</label>
+          <div className={`${styles["checkbox-container"]} ${styles.children}`}>
             <div className={styles.checkbox}>
-              <input
-                type="checkbox"
-                id="everything"
-                name="category"
-                value="everything"
-              />
-              <label htmlFor="checkbox">Everything</label>
+              <input type="checkbox" id="Yes" name="type" value="Yes" />
+              <span className={styles.checkmark}></span>
+              <label htmlFor="checkbox">Yes</label>
             </div>
             <div className={styles.checkbox}>
-              <input
-                type="checkbox"
-                id="nature"
-                name="category"
-                value="nature"
-              />
-              <label htmlFor="checkbox">Nature</label>
-            </div>
-            <div className={styles.checkbox}>
-              <input
-                type="checkbox"
-                id="culture"
-                name="category"
-                value="culture"
-              />
-              <label htmlFor="checkbox">Culture</label>
-            </div>
-            <div className={styles.checkbox}>
-              <input type="checkbox" id="food" name="category" value="food" />
-              <label htmlFor="checkbox">Food</label>
-            </div>
-            <div className={styles.checkbox}>
-              <input
-                type="checkbox"
-                id="shopping"
-                name="category"
-                value="shopping"
-              />
-              <label htmlFor="checkbox">Shopping</label>
-            </div>
-            <div className={styles.checkbox}>
-              <input
-                type="checkbox"
-                id="nightlife"
-                name="category"
-                value="nightlife"
-              />
-              <label htmlFor="checkbox">Nightlife</label>
-            </div>
-            <div className={styles.checkbox}>
-              <input
-                type="checkbox"
-                id="undecided"
-                name="category"
-                value="undecided"
-              />
-              <label htmlFor="checkbox">Undecided</label>
+              <input type="checkbox" id="no" name="type" value="no" />
+              <span className={styles.checkmark}></span>
+              <label htmlFor="checkbox">No</label>
             </div>
           </div>
         </div>
-
         <div className={styles["form-row"]}>
           <label htmlFor="freeform">Countries of interest:</label>
           <textarea
@@ -141,7 +143,7 @@ function CustomizedForm() {
           ></textarea>
         </div>
         <div className={styles["form-row"]}>
-          <label htmlFor="freeform">Please list some of your hobbies:</label>
+          <label htmlFor="freeform">List of hobbies</label>
           <textarea
             id="freeform"
             rows="3"
@@ -153,7 +155,7 @@ function CustomizedForm() {
           ></textarea>
         </div>
         <div className={styles["form-row"]}>
-          <label htmlFor="freeform">Please list some of your interests:</label>
+          <label htmlFor="freeform">List of interests</label>
           <textarea
             id="freeform"
             rows="3"
@@ -165,17 +167,27 @@ function CustomizedForm() {
           ></textarea>
         </div>
         <div className={styles["form-row"]}>
-          <label htmlFor="freeform">
-            Please list things you would like to avoid:
+          <label htmlFor="freeform">Things to avoid</label>
+          <textarea
+            id="freeform"
+            rows="3"
+            cols="10"
+            required
+            name="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+          ></textarea>
+        </div>
+        <div className={styles["form-row"]}>
+          <label htmlFor="disabilities">
+            Disabilities/concerns to be aware of
           </label>
           <textarea
-            id="freeform"
-            rows="3"
+            id="disabilities"
+            rows="7"
             cols="10"
             required
-            name="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
+            name="disabilities"
           ></textarea>
         </div>
         <div className={styles["form-row"]}>

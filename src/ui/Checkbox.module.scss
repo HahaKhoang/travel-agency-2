@@ -1,0 +1,31 @@
+.container input[type="checkbox"] {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  width: 1.6em;
+  height: 1.6em;
+  border-radius: 0.15em;
+  margin-right: 0.5em;
+  border: 0.15em solid #007a7e;
+  outline: none;
+  cursor: pointer;
+}
+
+.container input[type="checkbox"]:focus {
+  outline: 1px solid red;
+}
+
+.checked {
+  background-color: #007a7e;
+  position: relative;
+}
+
+// .checked::before {
+//   content: "\2713";
+//   font-size: 1.5em;
+//   color: #fff;
+//   position: absolute;
+//   right: 1px;
+//   top: -5px;
+// }
