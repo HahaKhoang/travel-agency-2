@@ -21,6 +21,17 @@ function CustomizedForm() {
     { label: "Undecided", category: "undecided" },
   ];
 
+  const tourTypes = [
+    { label: "International trip" },
+    { label: "Domestic trip" },
+    { label: "Road trip" },
+    { label: "Weekend getaway" },
+    { label: "Day trip" },
+    { label: "Undecided" },
+  ];
+
+  const childFriendly = [{ label: "Yes" }, { label: "No" }];
+
   function sendEmail(e) {
     e.preventDefault();
     emailjs
@@ -82,6 +93,14 @@ function CustomizedForm() {
           </div>
         </div>
         <div className={styles["form-row"]}>
+          <label>Type of tour</label>
+          <div className={styles["checkbox-container"]}>
+            {tourTypes.map((el, i) => (
+              <Checkbox label={el.label} key={i} />
+            ))}
+          </div>
+        </div>
+        <div className={styles["form-row"]}>
           <label htmlFor="duration">Duration</label>
           <select id="duration" name="duration">
             <option value="1">1 day</option>
@@ -117,18 +136,11 @@ function CustomizedForm() {
           </select>
         </div>
         <div className={styles["form-row"]}>
-          <label htmlFor="type">Does it need to be child friendly?</label>
+          <label>Does it need to be child friendly?</label>
           <div className={`${styles["checkbox-container"]} ${styles.children}`}>
-            <div className={styles.checkbox}>
-              <input type="checkbox" id="Yes" name="type" value="Yes" />
-              <span className={styles.checkmark}></span>
-              <label htmlFor="checkbox">Yes</label>
-            </div>
-            <div className={styles.checkbox}>
-              <input type="checkbox" id="no" name="type" value="no" />
-              <span className={styles.checkmark}></span>
-              <label htmlFor="checkbox">No</label>
-            </div>
+            {childFriendly.map((el, i) => (
+              <Checkbox label={el.label} key={i} />
+            ))}
           </div>
         </div>
         <div className={styles["form-row"]}>
