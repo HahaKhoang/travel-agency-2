@@ -1,9 +1,9 @@
-import styles from "./CustomizedForm.module.scss";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Checkbox from "./Checkbox";
+import styles from "./SurpriseForm.module.scss";
 
-function CustomizedForm() {
+function SurpriseForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [select, setSelect] = useState("");
@@ -54,7 +54,6 @@ function CustomizedForm() {
     setSelect("");
     setMessage("");
   }
-
   return (
     <div className={styles.container}>
       <form ref={form} onSubmit={sendEmail} className={styles.form}>
@@ -121,6 +120,21 @@ function CustomizedForm() {
           </select>
         </div>
         <div className={styles["form-row"]}>
+          <label htmlFor="budget">Budget per person</label>
+          <select id="budget" name="budget">
+            <option value="1">$500 - $1000</option>
+            <option value="2">$1000 - $1500</option>
+            <option value="3">$1500 - $2000</option>
+            <option value="4">$2000 - $2500</option>
+            <option value="5">$2500 - $3000</option>
+            <option value="6">$3000 - $3500</option>
+            <option value="7">$3500 - $4000</option>
+            <option value="8">$4000 - $4500</option>
+            <option value="9">$4500 - $5000</option>
+            <option value="10">No budget</option>
+          </select>
+        </div>
+        <div className={styles["form-row"]}>
           <label htmlFor="people">How many people</label>
           <select id="people" name="people">
             <option value="1">1</option>
@@ -142,18 +156,6 @@ function CustomizedForm() {
               <Checkbox label={el.label} key={i} />
             ))}
           </div>
-        </div>
-        <div className={styles["form-row"]}>
-          <label htmlFor="freeform">Countries of interest:</label>
-          <textarea
-            id="freeform"
-            rows="3"
-            cols="10"
-            required
-            name="message"
-            value={message}
-            onChange={(e) => setMessage(e.target.value)}
-          ></textarea>
         </div>
         <div className={styles["form-row"]}>
           <label htmlFor="freeform">List of hobbies</label>
@@ -213,23 +215,4 @@ function CustomizedForm() {
   );
 }
 
-export default CustomizedForm;
-
-{
-  /* <div className={styles["form-row"]}>
-<label htmlFor="reason">What can we help you with:</label>
-<select
-  id="reason"
-  name="select"
-  value={select}
-  onChange={(e) => {
-    console.log(e.target.value);
-    setSelect(e.target.value);
-  }}
->
-  <option value="bookTour">I want to book a tour</option>
-  <option value="question">I have a question about a tour</option>
-  <option value="other">Other</option>
-</select>
-</div> */
-}
+export default SurpriseForm;
