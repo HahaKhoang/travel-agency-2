@@ -1,8 +1,9 @@
 .container {
-  background-color: pink;
-  height: 45rem;
+  background-color: var(--color-blue-med);
+  height: 55rem;
   width: 100%;
   position: relative;
+  padding: 4rem;
 }
 
 .picture-container {
@@ -14,6 +15,7 @@
   justify-content: center;
   position: absolute;
   overflow: hidden;
+  transition: transform 1s;
 }
 
 .picture-frame {

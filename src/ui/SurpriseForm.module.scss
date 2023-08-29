@@ -4,7 +4,9 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  margin: 4rem auto;
+  padding: 4rem;
+  background-color: var(--color-blue-dark);
+  color: white;
 }
 
 .form {
@@ -20,7 +22,6 @@
   gap: 0.2rem;
   padding: 0.8rem;
   width: 100%;
-  color: var(--color-blue-dark);
 
   textArea {
     resize: none;
@@ -48,7 +49,7 @@
   display: flex;
   justify-content: space-between;
   font-size: var(--font-small);
-  color: black;
+  color: white;
   gap: 2rem;
   margin-top: 0.6rem;
 }
@@ -58,15 +59,15 @@
 }
 
 .button {
-  background-color: var(--color-blue-dark);
   padding: 0.8rem 0.4rem;
   border: none;
   outline: none;
   width: 100%;
   border-radius: 0;
   transition: all 0.5s;
+  background-color: var(--color-red-dark);
 }
 
 .button:hover {
-  background-color: var(--color-red-dark);
+  background-color: var(--color-blue-light);
 }
