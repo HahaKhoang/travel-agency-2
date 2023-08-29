@@ -1,12 +1,24 @@
 .container {
+  font-family: "DM Serif Display", serif;
   box-sizing: content-box;
   display: flex;
-  font-size: var(--font-xl);
-  padding: 3rem;
+  font-size: 4rem;
+  height: 100%;
+  align-items: center;
+  margin-left: 8rem;
+}
+
+.first-part {
+  position: relative;
+  line-height: 4rem;
 }
 
 .words {
   overflow: hidden;
+  position: absolute;
+  right: -15rem;
+  top: 0;
+  height: 8rem;
 }
 
 span {
@@ -14,9 +26,9 @@ span {
   height: 100%;
   padding-left: 10px;
   color: #0e6ffc;
-  animation: spin_words 6s infinite;
-  background-color: red;
+  animation: spin_words 10s infinite;
 }
+
 @keyframes spin_words {
   10% {
     transform: translateY(-100%);

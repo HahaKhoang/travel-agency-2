@@ -2,8 +2,8 @@ import styles from "./RotatingWords.module.scss";
 
 function RotatingWords() {
   return (
-    <>
-      <div className={styles.container}>
+    <div className={styles.container}>
+      <div className={styles["first-part"]}>
         <p>We're here to help you</p>
         <div className={styles.words}>
           <span>travel</span>
@@ -15,9 +15,9 @@ function RotatingWords() {
           <span>party</span>
           <span>shop</span>
         </div>
+        <p className={styles["second-part"]}>the way you want</p>
       </div>
-      <p>the way you want</p>
-    </>
+    </div>
   );
 }
 
