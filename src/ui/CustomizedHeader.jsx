@@ -9,6 +9,7 @@ import bi2 from "../../public/img/bi2.jpg";
 import bi3 from "../../public/img/bi3.jpg";
 import bi4 from "../../public/img/bi4.jpg";
 import bi5 from "../../public/img/bi5.jpg";
+import RotatingWords from "./RotatingWords";
 
 function CustomizedHeader() {
   return (
@@ -18,7 +19,7 @@ function CustomizedHeader() {
         className={styles.picture}
         style={{ gridRow: "1/3", gridColumn: "1/3" }}
       />
-      <img src={bi1} className={styles.picture} />
+      <img src={bi5} className={styles.picture} />
       <img src={jk2} className={styles.picture} />
       <img
         src={bi2}
@@ -29,7 +30,7 @@ function CustomizedHeader() {
         className={styles.header}
         style={{ gridRow: "2/3", gridColumn: "3/5" }}
       >
-        Let us help you travel the way you want
+        <RotatingWords />
       </div>
       <img src={jk3} className={styles.picture} />
       <img src={bi3} className={styles.picture} style={{ gridColumn: "2/4" }} />
