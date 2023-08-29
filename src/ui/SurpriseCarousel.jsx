@@ -7,7 +7,8 @@ import jk5 from "../../public/img/jk5.jpg";
 import jk6 from "../../public/img/jk6.jpg";
 import jk7 from "../../public/img/jk7.jpg";
 import jk8 from "../../public/img/jk8.jpg";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
+import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
 
 const pictures = [
   { img: jk1, width: "50rem", height: "30rem" },
@@ -24,27 +25,76 @@ function SurpriseCarousel() {
   const [activeIndex, setActiveIndex] = useState(0);
   const length = pictures.length - 1;
 
+  function prevSlide() {
+    setActiveIndex(activeIndex < 1 ? length : activeIndex - 1);
+  }
+
+  function nextSlide() {
+    setActiveIndex(activeIndex === length ? 0 : activeIndex + 1);
+  }
+
   return (
     <div className={styles.container}>
       {pictures.map((el, i) => (
         <div
           className={styles["picture-container"]}
           key={i}
-          style={{
-            transform: `translateX(${100 * (i - activeIndex)}%)`,
-            width: `${el.width}`,
-            height: `${el.height}`,
-          }}
+          style={{ transform: `translateX(${100 * (i - activeIndex)}%)` }}
         >
-          <img src={el.img} className={styles.picture} />
+          <div
+            className={styles["picture-frame"]}
+            style={{
+              width: `${el.width}`,
+              height: `${el.height}`,
+            }}
+          >
+            <img src={el.img} className={styles.picture} />
+          </div>
         </div>
       ))}
-      <div className={styles.buttons}>
-        <button>next</button>
-        <button>prev</button>
-      </div>
+      <button className={styles["button-left"]} onClick={prevSlide}>
+        <RiArrowLeftLine className={styles.button} />
+      </button>
+      <button className={styles["button-right"]} onClick={nextSlide}>
+        <RiArrowRightLine className={styles.button} />
+      </button>
     </div>
   );
 }
 
 export default SurpriseCarousel;
+
+// {pictures.map((el, i) => (
+//   <div
+//     className={styles["picture-container"]}
+//     key={i}
+//     style={{
+//       transform: `translateX(${100 * (i - activeIndex)}%)`,
+//       width: `${el.width}`,
+//       height: `${el.height}`,
+//     }}
+//   >
+//     <div className={styles["pictures"]}>
+//       <img src={el.img} className={styles.picture} />
+//     </div>
+//   </div>
+// ))}
+
+{
+  /* <div className={styles["picture-container"]}>
+        <div
+          className={styles["picture-frame"]}
+          style={{ width: "30rem", height: "20rem" }}
+        >
+          <img src={jk1} className={styles.picture} />
+        </div>
+      </div>
+      <div className={styles["picture-container"]}>
+        <div
+          className={styles["picture-frame"]}
+          style={{ width: "20rem", height: "40rem" }}
+        >
+          <img src={jk2} className={styles.picture} />
+        </div>
+      </div> */
+}
