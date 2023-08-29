@@ -34,31 +34,39 @@ function SurpriseCarousel() {
   }
 
   return (
-    <div className={styles.container}>
-      {pictures.map((el, i) => (
-        <div
-          className={styles["picture-container"]}
-          key={i}
-          style={{ transform: `translateX(${100 * (i - activeIndex)}%)` }}
-        >
+    <>
+      <div className={styles.header}>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperiores,
+        modi totam? Optio sit nostrum delectus ut, recusandae accusantium eum
+        deleniti aperiam eligendi vel quisquam vero dolores ullam. Magni,
+        aperiam animi!
+      </div>
+      <div className={styles.container}>
+        {pictures.map((el, i) => (
           <div
-            className={styles["picture-frame"]}
-            style={{
-              width: `${el.width}`,
-              height: `${el.height}`,
-            }}
+            className={styles["picture-container"]}
+            key={i}
+            style={{ transform: `translateX(${100 * (i - activeIndex)}%)` }}
           >
-            <img src={el.img} className={styles.picture} />
+            <div
+              className={styles["picture-frame"]}
+              style={{
+                width: `${el.width}`,
+                height: `${el.height}`,
+              }}
+            >
+              <img src={el.img} className={styles.picture} />
+            </div>
           </div>
-        </div>
-      ))}
-      <button className={styles["button-left"]} onClick={prevSlide}>
-        <RiArrowLeftLine className={styles.button} />
-      </button>
-      <button className={styles["button-right"]} onClick={nextSlide}>
-        <RiArrowRightLine className={styles.button} />
-      </button>
-    </div>
+        ))}
+        <button className={styles["button-left"]} onClick={prevSlide}>
+          <RiArrowLeftLine className={styles.button} />
+        </button>
+        <button className={styles["button-right"]} onClick={nextSlide}>
+          <RiArrowRightLine className={styles.button} />
+        </button>
+      </div>
+    </>
   );
 }
 
