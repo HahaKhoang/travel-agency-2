@@ -16,6 +16,7 @@ import PageNotFound from "./pages/PageNotFound";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Customized from "./pages/Customized";
+import CustomizedBooking from "./pages/CustomizedBooking";
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,7 @@ const router = createBrowserRouter([
       { path: "/surprise", element: <Surprise /> },
       { path: "/surprise/booking", element: <SurpriseBooking /> },
       { path: "/customized-tour", element: <Customized /> },
+      { path: "/customized-tour/booking", element: <CustomizedBooking /> },
       { path: "/faq", element: <FAQ /> },
       { path: "/contact", element: <Contact /> },
     ],
