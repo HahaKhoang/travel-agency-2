@@ -1,28 +1,26 @@
 import styles from "./CustomizedHeader.module.scss";
-import jk1 from "../../public/img/jk1.jpg";
-import jk2 from "../../public/img/jk2.jpg";
-import jk3 from "../../public/img/jk3.jpg";
-import jk4 from "../../public/img/jk4.jpg";
-import jk5 from "../../public/img/jk5.jpg";
-import bi1 from "../../public/img/bi1.jpg";
-import bi2 from "../../public/img/bi2.jpg";
-import bi3 from "../../public/img/bi3.jpg";
-import bi4 from "../../public/img/bi4.jpg";
-import bi5 from "../../public/img/bi5.jpg";
+import contact from "../../public/img/website/contact.jpg";
+import tent from "../../public/img/website/tent.jpg";
+import mountain from "../../public/img/website/mountain.jpg";
+import shopping from "../../public/img/website/shopping.jpg";
+import road from "../../public/img/website/road.jpg";
+import food from "../../public/img/website/food.jpg";
+import culture from "../../public/img/website/culture.jpg";
+import tour from "../../public/img/website/tour.jpg";
 import RotatingWords from "./RotatingWords";
 
 function CustomizedHeader() {
   return (
     <div className={styles.container}>
       <img
-        src={jk1}
+        src={contact}
         className={styles.picture}
         style={{ gridRow: "1/3", gridColumn: "1/3" }}
       />
-      <img src={bi5} className={styles.picture} />
-      <img src={jk2} className={styles.picture} />
+      <img src={road} className={styles.picture} />
+      <img src={tent} className={styles.picture} />
       <img
-        src={bi2}
+        src={food}
         className={styles.picture}
         style={{ gridRow: "1/3", gridColumn: "5/6" }}
       />
@@ -32,10 +30,14 @@ function CustomizedHeader() {
       >
         <RotatingWords />
       </div>
-      <img src={jk3} className={styles.picture} />
-      <img src={bi3} className={styles.picture} style={{ gridColumn: "2/4" }} />
-      <img src={jk4} className={styles.picture} />
-      <img src={bi4} className={styles.picture} />
+      <img src={mountain} className={styles.picture} />
+      <img
+        src={culture}
+        className={styles.picture}
+        style={{ gridColumn: "2/4" }}
+      />
+      <img src={shopping} className={styles.picture} />
+      <img src={tour} className={styles.picture} />
     </div>
   );
 }
