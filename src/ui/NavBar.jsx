@@ -38,37 +38,72 @@ function NavBar() {
       </NavLink>
       <nav className={scrolledNavContainer}>
         <ul>
-          <NavLink to="/about" className={styles.link}>
+          <NavLink
+            to="/about"
+            className={({ isActive }) =>
+              isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
+            }
+          >
             About
           </NavLink>
         </ul>
         <ul>
-          <NavLink to="/tours" className={styles.link}>
+          <NavLink
+            to="/tours"
+            className={({ isActive }) =>
+              isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
+            }
+          >
             Tours
           </NavLink>
         </ul>
         <ul>
-          <NavLink to="/inspiration" className={styles.link}>
+          <NavLink
+            to="/inspiration"
+            className={({ isActive }) =>
+              isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
+            }
+          >
             Inspiration
           </NavLink>
         </ul>
         <ul>
-          <NavLink to="/surprise" className={styles.link}>
+          <NavLink
+            to="/surprise"
+            className={({ isActive }) =>
+              isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
+            }
+          >
             Surprise Me
           </NavLink>
         </ul>
         <ul>
-          <NavLink to="/customized-tour" className={styles.link}>
+          <NavLink
+            to="/customized-tour"
+            className={({ isActive }) =>
+              isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
+            }
+          >
             Customized tour
           </NavLink>
         </ul>
         <ul>
-          <NavLink to="/faq" className={styles.link}>
+          <NavLink
+            to="/faq"
+            className={({ isActive }) =>
+              isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
+            }
+          >
             FAQ
           </NavLink>
         </ul>
         <ul>
-          <NavLink to="/contact" className={styles.link}>
+          <NavLink
+            to="/contact"
+            className={({ isActive }) =>
+              isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
+            }
+          >
             Contact
           </NavLink>
         </ul>

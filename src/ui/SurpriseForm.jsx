@@ -206,6 +206,16 @@ function SurpriseForm() {
           ></textarea>
         </div>
         <div className={styles["form-row"]}>
+          <label htmlFor="comments">Additional comments</label>
+          <textarea
+            id="comments"
+            rows="7"
+            cols="10"
+            required
+            name="comments"
+          ></textarea>
+        </div>
+        <div className={styles["form-row"]}>
           <button type="submit" className={styles.button}>
             Submit
           </button>
