@@ -6,7 +6,7 @@ import CustomizedBookingHeader from "../ui/CustomizedBookingHeader";
 function CustomizedBooking() {
   return (
     <div>
-      <Banner img={pack} text="Let us know about you" />
+      <Banner img={pack} text="Tell us about yourself" />
       <CustomizedBookingHeader />
       <CustomizedForm />
     </div>

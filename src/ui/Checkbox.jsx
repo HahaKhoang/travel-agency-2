@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./Checkbox.module.scss";
 
-function Checkbox({ label }) {
+function Checkbox({ label, checkedColor }) {
   const [isChecked, setIsChecked] = useState(false);
   return (
     <div>
