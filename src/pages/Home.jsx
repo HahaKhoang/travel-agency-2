@@ -4,7 +4,7 @@ import Heading from "../ui/Heading";
 import FeaturedSection from "../ui/FeaturedSection";
 import ExperienceSection from "../ui/ExperienceSection";
 import PopularSection from "../ui/PopularSection";
-import PersonalizeSection from "../ui/PersonalizeSection";
+import CustomizedSection from "../ui/CustomizedSection";
 import SurpriseSection from "../ui/SurpriseSection";
 
 function Home() {
@@ -22,10 +22,10 @@ function Home() {
       />
       <PopularSection />
       <Heading
-        text1="Or personalize your own tour"
+        text1="Or customize your own tour"
         fontColor="var(--color-red-dark)"
       />
-      <PersonalizeSection />
+      <CustomizedSection />
       <Heading
         text1="Can't decide where to go next? Check out our featured country"
         fontColor="var(--color-blue-dark)"

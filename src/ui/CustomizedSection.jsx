@@ -1,9 +1,9 @@
-import styles from "./PersonalizeSection.module.scss";
+import styles from "./CustomizedSection.module.scss";
 import map from "../../public/img/website/map.jpg";
 import { RiNumber1, RiNumber2, RiNumber3 } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
 
-function PersonalizeSection() {
+function CustomizedSection() {
   return (
     <section className={styles.container}>
       <div className={styles["left-container"]}>
@@ -37,4 +37,4 @@ function PersonalizeSection() {
   );
 }
 
-export default PersonalizeSection;
+export default CustomizedSection;

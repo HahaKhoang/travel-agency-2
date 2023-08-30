@@ -8,7 +8,6 @@ function CustomizedStep1() {
     <div className={styles.container}>
       <div className={styles["step-1"]}>
         <div className={styles["step-1-text-container"]}>
-          <h1 className={styles.how}>How it works</h1>
           <h2 className={styles.header}>Step 1</h2>
           <p className={styles.text}>
             Fill out a survey so we can get to know you better
