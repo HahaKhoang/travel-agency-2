@@ -1,5 +1,5 @@
 import Banner from "../ui/Banner";
-import customized from "../../public/img/website/customized.jpg";
+import pack from "../../public/img/website/pack.jpg";
 import CustomizedForm from "../ui/CustomizedForm";
 import CustomizedHeader from "../ui/CustomizedHeader";
 import CustomizedContainer from "../ui/CustomizedContainer";
@@ -7,7 +7,7 @@ import CustomizedContainer from "../ui/CustomizedContainer";
 function Customized() {
   return (
     <div>
-      <Banner img={customized} text="Yes, live your best life!" />
+      <Banner img={pack} text="Yes, live your best life!" />
       <CustomizedContainer />
       {/* <CustomizedForm /> */}
     </div>
