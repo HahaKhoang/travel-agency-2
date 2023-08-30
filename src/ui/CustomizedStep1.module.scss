@@ -90,3 +90,22 @@
   flex-direction: column;
   gap: 1.2rem;
 }
+
+.button {
+  border: 1px solid var(--color-blue-dark);
+  outline: none;
+  color: var(--color-blue-dark);
+  padding: 1.4rem 4.6rem;
+  font-size: var(--font-med);
+  border-radius: 500px;
+  cursor: pointer;
+  background-color: transparent;
+  text-transform: uppercase;
+  transition: all 0.5s;
+  align-self: start;
+}
+
+.button:hover {
+  background-color: white;
+  color: var(--color-blue-med);
+}

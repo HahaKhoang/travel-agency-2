@@ -10,11 +10,11 @@ function CustomizedStep3() {
         <div className={styles["step-3-text-container"]}>
           <h2 className={styles.header}>Step 3</h2>
           <p className={styles.text}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-            suscipit
+            We will have one more final meeting where I will present the
+            customized tour I have designed for you
           </p>
           <p className={styles.text}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing
+            Any final changes will be made at this point
           </p>
         </div>
         <div className={styles["step-3-picture-container"]}>
@@ -27,24 +27,18 @@ function CustomizedStep3() {
         </div>
         <div className={styles["step-4-text-container"]}>
           <h2 className={styles.header}>Step 4</h2>
+          <p className={styles.text}>Now you just wait until your trip!</p>
           <p className={styles.text}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-            suscipit
-          </p>
-          <p className={styles.text}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing
+            We will be here for any necessary support needed before your trip
           </p>
         </div>
       </div>
       <div className={styles["step-5"]}>
         <div className={styles["step-5-text-container"]}>
           <h2 className={styles.header}>Step 5</h2>
+          <p className={styles.text}>Pack your bags and grab your passport</p>
           <p className={styles.text}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-            suscipit
-          </p>
-          <p className={styles.text}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing
+            Time to make some unforgettable memories!
           </p>
         </div>
         <div className={styles["step-5-picture-container"]}>

@@ -69,7 +69,7 @@ function NavBar() {
         </ul>
         <ul>
           <NavLink to="/contact" className={styles.link}>
-            Book now
+            Contact
           </NavLink>
         </ul>
       </nav>
