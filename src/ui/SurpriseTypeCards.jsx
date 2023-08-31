@@ -3,7 +3,9 @@ import styles from "./SurpriseTypeCards.module.scss";
 function SurpriseTypeCards({ icon, title, description, budget }) {
   return (
     <div className={styles.types}>
-      <div className={styles.icon}>{icon}</div>
+      <div>
+        <img src={icon} className={styles.svg} />
+      </div>
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{description}</p>
       <p className={styles.budget}>Budget starts from ${budget} per person</p>

@@ -9,14 +9,18 @@
 }
 
 .icon {
-  font-size: 15rem;
   margin-bottom: -3rem;
-  color: var(--color-blue-med);
+  background-color: red;
 
   @media (max-width: 1700px) {
     font-size: 13rem;
     margin-bottom: -5rem;
   }
+}
+
+.svg {
+  width: 25rem;
+  height: 25rem;
 }
 
 .title {

@@ -23,7 +23,8 @@
     "react-transition-group": "^4.4.5",
     "router": "^1.3.8",
     "sass": "^1.64.2",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "undraw-js": "^1.0.4"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

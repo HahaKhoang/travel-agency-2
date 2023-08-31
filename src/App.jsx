@@ -57,8 +57,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
       <RouterProvider router={router}>
-        {" "}
-        {/* <ScrollRestoration /> */}
+        <ScrollRestoration />
       </RouterProvider>
     </QueryClientProvider>
   );
