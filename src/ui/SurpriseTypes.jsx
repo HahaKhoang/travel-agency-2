@@ -3,12 +3,12 @@ import SurpriseTypeCards from "./SurpriseTypeCards";
 import plane from "../../public/img/undraw/plane.svg";
 import roadTrip from "../../public/img/undraw/roadTrip.svg";
 import weekend from "../../public/img/undraw/weekend.svg";
-import dayTrip from "../../public/img/undraw/dayTrip.svg";
+import day from "../../public/img/undraw/day.svg";
 
 const tours = [
   {
     icon: plane,
-    title: "International trips",
+    title: "Plane trips",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellendus fugiat. Perferendis laudantium doloribus cupiditate! Ducimus, aut adipisci? Perferendis quasi labore eos minus iste nesciunt modi!",
     budget: "1000",
@@ -28,7 +28,7 @@ const tours = [
     budget: "900",
   },
   {
-    icon: dayTrip,
+    icon: day,
     title: "Day trips",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit repellendus amet doloribus ex fuga fugiat. Perferendis laudantium doloribus cupiditate! Ducimus, aut adipisci? ",

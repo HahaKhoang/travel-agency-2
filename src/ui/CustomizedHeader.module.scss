@@ -17,4 +17,7 @@
 .header {
   background-color: var(--color-red-dark);
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

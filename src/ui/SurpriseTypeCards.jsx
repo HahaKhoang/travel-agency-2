@@ -3,7 +3,7 @@ import styles from "./SurpriseTypeCards.module.scss";
 function SurpriseTypeCards({ icon, title, description, budget }) {
   return (
     <div className={styles.types}>
-      <div>
+      <div className={styles.illustration}>
         <img src={icon} className={styles.svg} />
       </div>
       <h3 className={styles.title}>{title}</h3>

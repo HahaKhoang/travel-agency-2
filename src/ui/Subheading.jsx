@@ -23,26 +23,28 @@ const Subheading = () => {
       setWords([...firstElem.concat(copyWords)]);
     }, 300);
 
-    wrapperRef.current.style.transition = "0.5s";
+    wrapperRef.current.style.transition = "1s";
     wrapperRef.current.style.top = "-70px";
   };
 
   useEffect(() => {
     setTimeout(() => {
       handleAnim();
-    }, 300);
+    }, 1000);
   });
 
   return (
-    <div className={styles.subheading}>
-      <div>We're here to help you </div>
-      <div className={styles["text-container"]}>
-        <div ref={wrapperRef} className={styles["words-container"]}>
-          <span className={styles["text-word"]}>{words[0]}</span>
-          <span className={styles["text-word"]}>{words[1]}</span>
+    <div className={styles.container}>
+      <div className={styles.subheading}>
+        <h3 className={styles["text-1"]}>We're here to help you </h3>
+        <div className={styles["text-container"]}>
+          <div ref={wrapperRef} className={styles["words-container"]}>
+            <h3 className={styles["text-word"]}>{words[0]}</h3>
+            <h3 className={styles["text-word"]}>{words[1]}</h3>
+          </div>
         </div>
       </div>
-      <div> the way you want</div>
+      <h3 className={styles["text-2"]}> the way you want</h3>
     </div>
   );
 };

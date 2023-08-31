@@ -8,19 +8,9 @@
   color: var(--color-blue-dark);
 }
 
-.icon {
-  margin-bottom: -3rem;
-  background-color: red;
-
-  @media (max-width: 1700px) {
-    font-size: 13rem;
-    margin-bottom: -5rem;
-  }
-}
-
 .svg {
-  width: 25rem;
-  height: 25rem;
+  width: 30rem;
+  height: 30rem;
 }
 
 .title {

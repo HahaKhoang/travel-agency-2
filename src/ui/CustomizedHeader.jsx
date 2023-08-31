@@ -8,6 +8,7 @@ import food from "../../public/img/website/food.jpg";
 import culture from "../../public/img/website/culture.jpg";
 import tour from "../../public/img/website/tour.jpg";
 import RotatingWords from "./RotatingWords";
+import Subheading from "./Subheading";
 
 function CustomizedHeader() {
   return (
@@ -28,7 +29,8 @@ function CustomizedHeader() {
         className={styles.header}
         style={{ gridRow: "2/3", gridColumn: "3/5" }}
       >
-        <RotatingWords />
+        {/* <RotatingWords /> */}
+        <Subheading />
       </div>
       <img src={mountain} className={styles.picture} />
       <img
