@@ -3,7 +3,34 @@
 }
 
 .header {
-  background-color: green;
+  background-color: var(--color-red-dark);
+  height: 40rem;
+  display: flex;
+  gap: 10rem;
+  color: white;
+}
+
+.header-text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem;
+  gap: 1rem;
+}
+
+.header-image {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-picture {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
 }
 
 .trip-container {

@@ -7,7 +7,17 @@ import day from "../../public/img/undraw/day.svg";
 function SurpriseTripTypesContainer() {
   return (
     <div className={styles.container}>
-      <div className={styles.header}>Trip types header</div>
+      <div className={styles.header}>
+        <div className={styles["header-text"]}>
+          <h2>Itching to go somewhere different?</h2>
+          <p className={styles.text}>
+            Sometimes changing your scenery is just what you need
+          </p>
+          <p className={styles.text}>
+            Check out the different types of trips we plan
+          </p>
+        </div>
+      </div>
       <div className={styles["trip-container"]}>
         <div className={styles["picture-container"]}>
           <img src={plane} className={styles.picture} />
