@@ -1,9 +1,9 @@
 import { NavLink } from "react-router-dom";
 import styles from "./SurpriseCTA.module.scss";
 
-function SurpriseCTA() {
+function SurpriseCTA({ bgColor }) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{ backgroundColor: `${bgColor}` }}>
       <div className={styles.header}>
         <h1>So what are you waiting for?</h1>
         <p className={styles.text}>

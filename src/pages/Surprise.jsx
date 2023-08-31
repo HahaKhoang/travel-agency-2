@@ -13,7 +13,7 @@ function Surprise() {
       <SurpriseTypes />
       {/* <SurpriseCarousel /> */}
       <SurpriseHow />
-      <SurpriseCTA />
+      <SurpriseCTA bgColor="var(--color-blue-med)" />
     </div>
   );
 }
