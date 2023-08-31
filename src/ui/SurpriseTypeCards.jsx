@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styles from "./SurpriseTypeCards.module.scss";
 
 function SurpriseTypeCards({ icon, title, description, budget }) {
@@ -9,7 +10,9 @@ function SurpriseTypeCards({ icon, title, description, budget }) {
       <h3 className={styles.title}>{title}</h3>
       <p className={styles.description}>{description}</p>
       <p className={styles.budget}>Budget starts from ${budget} per person</p>
-      <a className={styles.link}>&rarr; Learn more</a>
+      <NavLink to="trip-types" className={styles.link}>
+        &rarr; Learn more
+      </NavLink>
     </div>
   );
 }
