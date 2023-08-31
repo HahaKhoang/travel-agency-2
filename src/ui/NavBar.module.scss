@@ -89,7 +89,7 @@
     width: 100%;
     height: 2px;
     background-color: white;
-    bottom: 0;
+    bottom: -2px;
     left: 0;
     transform-origin: right;
     transform: scaleX(0);
@@ -103,5 +103,5 @@
 }
 
 .active {
-  color: var(--color-red-dark);
+  border-bottom: 2px solid white;
 }
