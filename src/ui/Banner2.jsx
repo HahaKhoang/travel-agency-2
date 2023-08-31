@@ -1,18 +1,15 @@
 import styles from "./Banner2.module.scss";
-import tour from "../../public/img/undraw/tours.svg";
 
-function Banner2() {
+function Banner2({ h1, text1, text2, svg }) {
   return (
     <div className={styles.container}>
       <div className={styles["text-container"]}>
-        <h1>Find the perfect tour for you</h1>
-        <h4>Browse through our selection of tours</h4>
-        <h4>
-          If you can't find one to your liking, we also do customized tours!
-        </h4>
+        <h1 className={styles.header}>{h1}</h1>
+        <h4 className={styles.text}>{text1}</h4>
+        <h4 className={styles.text}>{text2}</h4>
       </div>
       <div className={styles["image-container"]}>
-        <img src={tour} className={styles.picture} />
+        <img src={svg} className={styles.picture} />
       </div>
     </div>
   );

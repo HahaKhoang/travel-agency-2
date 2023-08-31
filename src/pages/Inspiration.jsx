@@ -11,6 +11,8 @@ import bi7 from "../../public/img/bi7.jpg";
 import bi8 from "../../public/img/bi8.jpg";
 import bi9 from "../../public/img/bi9.jpg";
 import bi10 from "../../public/img/bi10.jpg";
+import Banner2 from "../ui/Banner2";
+import inspiration from "../../public/img/undraw/inspiration.svg";
 
 const bi = [
   { name: "Matcha Mania", location: "Kyoto, Japan", img: bi1 },
@@ -28,7 +30,12 @@ const bi = [
 function Inspiration() {
   return (
     <div>
-      <Banner img={mountain} text="Looking for some inspiration?" />
+      {/* <Banner img={mountain} text="Looking for some inspiration?" /> */}
+      <Banner2
+        h1="Looking for some inspiration?"
+        text1="Check out some of the photos from our tours"
+        svg={inspiration}
+      />
       <InspirationContainer data={bi} />
     </div>
   );
