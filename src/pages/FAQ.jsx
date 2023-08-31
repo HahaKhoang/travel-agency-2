@@ -13,6 +13,7 @@ function FAQ() {
         text1="Still have an unanswered question?"
         text2="Feel free to contact us"
         svg={faq}
+        bgColor="var(--color-blue-dark)"
       />
       <Accordion />
     </div>

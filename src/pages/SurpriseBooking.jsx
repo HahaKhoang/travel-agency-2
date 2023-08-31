@@ -16,6 +16,7 @@ function SurpriseBooking() {
         text1="Provide us with some basic details"
         text2="And let us handle the rest"
         svg={surpriseBooking}
+        bgColor="var(--color-red-dark)"
       />
       <SurpriseBookingHeader />
       <SurpriseForm />

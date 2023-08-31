@@ -1,8 +1,8 @@
 import styles from "./Banner2.module.scss";
 
-function Banner2({ h1, text1, text2, svg }) {
+function Banner2({ h1, text1, text2, svg, bgColor }) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{ backgroundColor: `${bgColor}` }}>
       <div className={styles["text-container"]}>
         <h1 className={styles.header}>{h1}</h1>
         <h4 className={styles.text}>{text1}</h4>

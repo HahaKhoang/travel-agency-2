@@ -10,6 +10,7 @@ function About() {
         h1="Hi! It's nice to meet you!"
         text1="Let's get to know each other better"
         svg={about}
+        bgColor="var(--color-blue-light)"
       />
       <AboutDetails />
     </div>

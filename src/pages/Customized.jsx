@@ -15,6 +15,7 @@ function Customized() {
         text1="We're here to make your dreams come true"
         text2="You can travel the way you want"
         svg={customize}
+        bgColor="var(--color-blue-light)"
       />
       <CustomizedContainer />
       {/* <CustomizedForm /> */}

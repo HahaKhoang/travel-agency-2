@@ -12,6 +12,7 @@ function Contact() {
         h1="How can we help you?"
         text1="Just fill out the form and we will respond as soon as possible"
         svg={contact}
+        bgColor="var(--color-blue-med)"
       />
       <ContactForm />
     </div>
