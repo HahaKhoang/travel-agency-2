@@ -1,4 +1,4 @@
-import { RiArrowDownSLine, RiArrowUpSLine } from "react-icons/ri";
+import { RiArrowDownSLine } from "react-icons/ri";
 import styles from "./AccordionItem.module.scss";
 import { useRef } from "react";
 
@@ -16,9 +16,6 @@ function AccordionItem({ num, title, curOpen, onOpen, children }) {
   const textOpen = isOpen
     ? `${styles["text-box"]} ${styles.open}`
     : `${styles["text-box"]}`;
-  // const rotateIcon = isOpen
-  //   ? `${styles.icon} ${styles["rotate-icon"]}`
-  //   : `${styles.icon}`;
 
   return (
     <li className={itemOpen}>
@@ -28,11 +25,13 @@ function AccordionItem({ num, title, curOpen, onOpen, children }) {
         </span>
         <span className={styles.title}>{title}</span>
         <span className={styles.control}>
-          {isOpen ? (
-            <RiArrowUpSLine className={styles.icon} />
-          ) : (
-            <RiArrowDownSLine className={styles.icon} />
-          )}
+          <RiArrowDownSLine
+            className={
+              isOpen
+                ? `${styles.icon} ${styles["rotate-icon"]}`
+                : `${styles.icon}`
+            }
+          />
         </span>
       </button>
       <div
