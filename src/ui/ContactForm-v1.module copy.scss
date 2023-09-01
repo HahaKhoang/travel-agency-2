@@ -1,0 +1,61 @@
+.container {
+  height: 46rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin: 4rem auto;
+}
+
+.form {
+  width: 75rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.form-row {
+  font-size: var(--font-med);
+  gap: 0.2rem;
+  padding: 0.8rem;
+  width: 100%;
+  color: var(--color-blue-dark);
+
+  textArea {
+    resize: none;
+  }
+
+  input,
+  textArea,
+  select {
+    width: 100%;
+    padding: 0.6rem;
+    outline: none;
+    border: none;
+    font-family: inherit;
+  }
+
+  input:focus,
+  textArea:focus,
+  select:focus,
+  button:focus {
+    border: 2px var(--color-blue-light) solid;
+  }
+}
+
+.button {
+  background-color: var(--color-blue-dark);
+  padding: 0.8rem 0.4rem;
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 0;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  background-color: var(--color-red-dark);
+}

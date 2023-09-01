@@ -1,9 +1,10 @@
 import styles from "./Modal.module.scss";
 import contactModal from "../../public/img/undraw/contactModal.svg";
 import { RiCloseFill } from "react-icons/ri";
+import { createPortal } from "react-dom";
 
 function Modal({ onClose }) {
-  return (
+  return createPortal(
     <div className={styles.container}>
       <div className={styles.box}>
         <button onClick={onClose} className={styles.icon}>
@@ -18,7 +19,8 @@ function Modal({ onClose }) {
           <button onClick={onClose}>Close</button>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 }
 
