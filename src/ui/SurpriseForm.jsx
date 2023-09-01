@@ -18,13 +18,13 @@ function SurpriseForm() {
   const form = useRef();
 
   const categories = [
-    { label: "Everything", category: "everything" },
-    { label: "Nature", category: "nature" },
-    { label: "Culture", category: "culture" },
-    { label: "Shopping", category: "shopping" },
-    { label: "Food", category: "food" },
-    { label: "Nightlife", category: "nightlife" },
-    { label: "Undecided", category: "undecided" },
+    { label: "Everything", category: "everything", id: "category" },
+    { label: "Nature", category: "nature", id: "category" },
+    { label: "Culture", category: "culture", id: "category" },
+    { label: "Shopping", category: "shopping", id: "category" },
+    { label: "Food", category: "food", id: "category" },
+    { label: "Nightlife", category: "nightlife", id: "category" },
+    { label: "Undecided", category: "undecided", id: "category" },
   ];
 
   const tourTypes = [
@@ -99,7 +99,11 @@ function SurpriseForm() {
           <label>Category of interest (select all that apply)</label>
           <div className={styles["checkbox-container"]}>
             {categories.map((el, i) => (
-              <Checkbox label={el.label} key={i} />
+              <Checkbox
+                label={el.label}
+                key={i}
+                checkedColor="var(--color-red-dark)"
+              />
             ))}
           </div>
         </div>
@@ -107,7 +111,14 @@ function SurpriseForm() {
           <label>Type of tour (select all that apply)</label>
           <div className={styles["checkbox-container"]}>
             {tourTypes.map((el, i) => (
-              <Checkbox label={el.label} key={i} />
+              <Checkbox
+                label={el.label}
+                key={i}
+                id={el.id}
+                name={el.id}
+                value={el.label}
+                checkedColor="var(--color-red-dark)"
+              />
             ))}
           </div>
         </div>
