@@ -40,14 +40,20 @@ function CustomizedForm() {
       <FormRow label="Category of Interest (select all that apply)">
         <div className={styles["checkbox-container"]}>
           {categories.map((el, i) => (
-            <Checkbox label={el.label} key={i} checkedColor="white" />
+            <Checkbox
+              label={el.label}
+              key={i}
+              checkedColor="white"
+              id="category"
+              name="category"
+            />
           ))}
         </div>
       </FormRow>
       <FormRow label="Type of tour (select all that apply)">
         <div className={styles["checkbox-container"]}>
           {tourTypes.map((el, i) => (
-            <Checkbox label={el.label} key={i} />
+            <Checkbox label={el.label} key={i} id="trip" name="trip" />
           ))}
         </div>
       </FormRow>
@@ -87,7 +93,7 @@ function CustomizedForm() {
       <FormRow label="Does it need to be child friendly?">
         <div className={`${styles["checkbox-container"]} ${styles.children}`}>
           {childFriendly.map((el, i) => (
-            <Checkbox label={el.label} key={i} />
+            <Checkbox label={el.label} key={i} id="child" name="child" />
           ))}
         </div>
       </FormRow>
