@@ -1,7 +1,7 @@
 import styles from "./CustomizedForm.module.scss";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import Checkbox from "./Checkbox";
+import Checkbox from "./FormCheckbox";
 
 function CustomizedForm() {
   const [name, setName] = useState("");

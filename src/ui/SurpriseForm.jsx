@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
-import Checkbox from "./Checkbox";
+import Checkbox from "./FormCheckbox";
 import styles from "./SurpriseForm.module.scss";
 import Modal from "./Modal";
 

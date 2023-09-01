@@ -1,5 +1,5 @@
 import styles from "./CustomizedForm.module.scss";
-import Checkbox from "./Checkbox";
+import Checkbox from "./FormCheckbox";
 import Form from "./Form";
 import FormLabel from "./FormLabel";
 import FormInput from "./FormInput";
@@ -30,12 +30,81 @@ function CustomizedForm() {
   const childFriendly = [{ label: "Yes" }, { label: "No" }];
 
   return (
-    <Form bgColor="var(--color-blue-med)">
+    <Form bgColor="var(--color-blue-med)" fontColor="white">
       <FormRow label="Name" htmlFor="name">
-        <FormInput />
+        <FormInput id="name" name="name" type="text" />
       </FormRow>
       <FormRow label="Email address" htmlFor="email">
-        <FormInput />
+        <FormInput id="email" name="email" type="text" />
+      </FormRow>
+      <FormRow label="Category of Interest (select all that apply)">
+        <div className={styles["checkbox-container"]}>
+          {categories.map((el, i) => (
+            <Checkbox label={el.label} key={i} checkedColor="white" />
+          ))}
+        </div>
+      </FormRow>
+      <FormRow label="Type of tour (select all that apply)">
+        <div className={styles["checkbox-container"]}>
+          {tourTypes.map((el, i) => (
+            <Checkbox label={el.label} key={i} />
+          ))}
+        </div>
+      </FormRow>
+      <FormRow label="Duration" htmlFor="duration">
+        <FormSelect id="duration" name="duration">
+          <option value="1">1 day</option>
+          <option value="2">2 days</option>
+          <option value="3">3 days</option>
+          <option value="4">4 days</option>
+          <option value="5">5 days</option>
+          <option value="6">6 days</option>
+          <option value="7">7 days</option>
+          <option value="8">8 days</option>
+          <option value="9">9 days</option>
+          <option value="10">10 day</option>
+          <option value="11">11 days</option>
+          <option value="12">12 days</option>
+          <option value="13">13 days</option>
+          <option value="14">14 days</option>
+          <option value="flexible">I'm flexible</option>
+        </FormSelect>
+      </FormRow>
+      <FormRow label="How many people" htmlFor="people">
+        <FormSelect id="people" name="people">
+          <option value="1">1</option>
+          <option value="2">2 </option>
+          <option value="3">3 </option>
+          <option value="4">4 </option>
+          <option value="5">5 </option>
+          <option value="6">6 </option>
+          <option value="7">7 </option>
+          <option value="8">8 </option>
+          <option value="9">9 </option>
+          <option value="10">10 </option>
+        </FormSelect>
+      </FormRow>
+      <FormRow label="Does it need to be child friendly?">
+        <div className={`${styles["checkbox-container"]} ${styles.children}`}>
+          {childFriendly.map((el, i) => (
+            <Checkbox label={el.label} key={i} />
+          ))}
+        </div>
+      </FormRow>
+      <FormRow label="Countries of interest:">
+        <FormTextarea rows="5" id="country" name="country" />
+      </FormRow>
+      <FormRow label="List of hobbies:">
+        <FormTextarea rows="5" id="hobbies" name="hobbies" />
+      </FormRow>
+      <FormRow label="Things to avoid:">
+        <FormTextarea rows="5" id="avoid" name="avoid" />
+      </FormRow>
+      <FormRow label="Disabilities/concerns to be aware of:">
+        <FormTextarea rows="7" id="disabilities" name="disabilities" />
+      </FormRow>
+      <FormRow label="Additional comments:">
+        <FormTextarea rows="7" id="comments" name="comments" />
       </FormRow>
     </Form>
   );

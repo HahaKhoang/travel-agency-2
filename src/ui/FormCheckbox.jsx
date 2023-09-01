@@ -1,11 +1,11 @@
 import { useState } from "react";
-import styles from "./Checkbox.module.scss";
+import styles from "./FormCheckbox.module.scss";
 
 function Checkbox({ label, id, name, checkedColor }) {
   const [isChecked, setIsChecked] = useState(false);
 
   return (
-    <div>
+    <div className={styles.box}>
       <label className={styles.container}>
         <input
           type="checkbox"
@@ -16,7 +16,7 @@ function Checkbox({ label, id, name, checkedColor }) {
           onChange={() => setIsChecked((prev) => !prev)}
           style={{ backgroundColor: isChecked ? checkedColor : "" }}
         />
-        <span>{label}</span>
+        <span className={styles.label}>{label}</span>
       </label>
     </div>
   );
