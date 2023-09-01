@@ -1,50 +1,41 @@
-import styles from "./ContactForm.module.scss";
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
-import Modal from "./Modal";
-import { useForm } from "react-hook-form";
 import { Form } from "react-router-dom";
+import styles from "./Form.module.scss";
+import FormInput from "./FormInput";
+import FormLabel from "./FormLabel";
+import FormSelect from "./FormSelect";
+import FormTextarea from "./FormTextarea";
 
 function ContactForm() {
-  const { register, formState, getValues, handleSubmit, reset } = useForm();
-  const { errors } = formState;
-
   return (
-    <div className={styles.container}>
-      <Form className={styles.form}>
-        <div className={styles["form-row"]}>
-          <label htmlFor="name">Name</label>
-          <input type="text" id="name" name="name" />
+    <Form>
+      <div className={styles.container}>
+        <div className={styles["form-container"]}>
+          <div className={styles["form-row"]}>
+            <FormLabel label="Name" htmlFor="name" />
+            <FormInput type="text" />
+          </div>
+          <div className={styles["form-row"]}>
+            <FormLabel label="Email" htmlFor="email" />
+            <FormInput type="text" />
+          </div>
+          <div className={styles["form-row"]}>
+            <FormLabel label="What can we help you with" htmlFor="help" />
+            <FormSelect id="help" name="help">
+              <option value="bookTour">I want to book a tour</option>
+              <option value="question">I have a question about a tour</option>
+              <option value="other">Other</option>
+            </FormSelect>
+          </div>
+          <div className={styles["form-row"]}>
+            <FormLabel label="Enter your question here" htmlFor="question" />
+            <FormTextarea id="question" rows="7" name="question" />
+          </div>
+          <div className={styles["form-row"]}>
+            <button>Submit</button>
+          </div>
         </div>
-        <div className={styles["form-row"]}>
-          <label htmlFor="email">Email address</label>
-          <input type="text" id="email" name="email" />
-        </div>
-        <div className={styles["form-row"]}>
-          <label htmlFor="reason">What can we help you with:</label>
-          <select id="reason" name="select">
-            <option value="bookTour">I want to book a tour</option>
-            <option value="question">I have a question about a tour</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-        <div className={styles["form-row"]}>
-          <label htmlFor="freeform">Enter your question here:</label>
-          <textarea
-            id="freeform"
-            rows="7"
-            cols="30"
-            required
-            name="message"
-          ></textarea>
-        </div>
-        <div className={styles["form-row"]}>
-          <button type="submit" className={styles.button}>
-            Submit
-          </button>
-        </div>
-      </Form>
-    </div>
+      </div>
+    </Form>
   );
 }
 
