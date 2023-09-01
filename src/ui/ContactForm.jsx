@@ -1,8 +1,10 @@
 import styles from "./ContactForm.module.scss";
 import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
+import Modal from "./Modal";
 
 function ContactForm() {
+  const [isOpenModal, setIsOpenModal] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [select, setSelect] = useState("");
@@ -91,10 +93,15 @@ function ContactForm() {
           ></textarea>
         </div>
         <div className={styles["form-row"]}>
-          <button type="submit" className={styles.button}>
+          <button
+            type="submit"
+            className={styles.button}
+            onClick={() => setIsOpenModal((show) => !show)}
+          >
             Submit
           </button>
         </div>
+        {isOpenModal && <Modal onClose={() => setIsOpenModal(false)} />}
       </form>
     </div>
   );

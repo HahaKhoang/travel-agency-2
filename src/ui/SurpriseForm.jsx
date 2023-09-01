@@ -2,8 +2,10 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Checkbox from "./Checkbox";
 import styles from "./SurpriseForm.module.scss";
+import Modal from "./Modal";
 
 function SurpriseForm() {
+  const [showModal, setShowModal] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [duration, setDuration] = useState("");
