@@ -1,7 +1,6 @@
 .container {
   border: none;
-}
-
-.legend {
-  font-size: var(--font-med);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }

@@ -3,24 +3,25 @@
   flex-direction: column;
   width: 100%;
 
-  input,
-  textarea {
-    border: none;
-    padding: 1rem 0.4rem;
-    font-size: var(--font-small);
-    font-family: inherit;
-    border-radius: 0;
-    outline: none;
-  }
-
-  textarea {
+  textArea {
     resize: none;
   }
 
+  input,
+  textArea,
+  select {
+    width: 100%;
+    padding: 0.6rem;
+    outline: none;
+    border: none;
+    font-family: inherit;
+  }
+
   input:focus,
-  textarea:focus,
-  select:focus {
-    border: 2px solid brown;
+  textArea:focus,
+  select:focus,
+  button:focus {
+    border: 2px var(--color-blue-light) solid;
   }
 }
 

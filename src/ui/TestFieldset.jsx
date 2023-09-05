@@ -1,12 +1,7 @@
 import styles from "./TestFieldset.module.scss";
 
-function TestFormRow({ label, children }) {
-  return (
-    <fieldset className={styles.container}>
-      {label && <legend className={styles.legend}>{label}</legend>}
-      <div className={styles.wrapper}>{children}</div>
-    </fieldset>
-  );
+function TestFieldset({ children }) {
+  return <fieldset className={styles.container}>{children}</fieldset>;
 }
 
-export default TestFormRow;
+export default TestFieldset;

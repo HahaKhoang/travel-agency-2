@@ -20,12 +20,19 @@ function ContactForm() {
           <TestField label="Email address">
             <input type="text" name="email" id="email" {...register("email")} />
           </TestField>
-          <TestField label="Comments:">
+          <TestField label="How can we help?">
+            <select id="reason" name="reason" {...register("reason")}>
+              <option value="bookTour">I want to book a tour</option>
+              <option value="question">I have a question about a tour</option>
+              <option value="other">Other</option>
+            </select>
+          </TestField>
+          <TestField label="Enter your question here:">
             <textarea
-              name="comment"
-              id="comment"
+              name="question"
+              id="question"
               rows="8"
-              {...register("comment")}
+              {...register("question")}
             />
           </TestField>
         </TestFieldset>
