@@ -15,7 +15,6 @@ function AppLayout() {
       <main className={styles.main}>
         <Outlet />
       </main>
-      {/* <ScrollToTop /> */}
       <Footer />
     </div>
   );

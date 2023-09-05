@@ -1,0 +1,33 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  input,
+  textarea {
+    border: none;
+    padding: 1rem 0.4rem;
+    font-size: var(--font-small);
+    font-family: inherit;
+    border-radius: 0;
+    outline: none;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    border: 2px solid brown;
+  }
+}
+
+.label {
+  font-size: var(--font-med);
+}
+
+.error {
+  color: red;
+}

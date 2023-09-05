@@ -1,9 +1,9 @@
 import styles from "./FormRow.module.scss";
 
-function FormRow({ label, children }) {
+function FormRow({ label, htmlFor, children }) {
   return (
     <div className={styles.row}>
-      <label>{label}</label>
+      <label htmlFor={htmlFor}>{label}</label>
       {children}
     </div>
   );

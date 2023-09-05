@@ -11,20 +11,6 @@ import FormSelect from "./FormSelect";
 import FormTextarea from "./FormTextarea";
 
 function SurpriseForm() {
-  const [showModal, setShowModal] = useState(false);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [duration, setDuration] = useState("");
-  const [budget, setBudget] = useState("");
-  const [people, setPeople] = useState("");
-  const [hobbies, setHobbies] = useState("");
-  const [interests, setInterests] = useState("");
-  const [avoid, setAvoid] = useState("");
-  const [disabilities, setDisabilities] = useState("");
-  const [comments, setComments] = useState("");
-
-  const form = useRef();
-
   const categories = [
     { label: "Everything", category: "everything", id: "category" },
     { label: "Nature", category: "nature", id: "category" },
@@ -46,34 +32,6 @@ function SurpriseForm() {
 
   const childFriendly = [{ label: "Yes" }, { label: "No" }];
 
-  function sendEmail(e) {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_c07knsu",
-        "template_3zhbdye",
-        form.current,
-        "M-heCyvRsVkznWfwP"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    setName("");
-    setEmail("");
-    setDuration("");
-    setBudget("");
-    setPeople("");
-    setHobbies("");
-    setInterests("");
-    setAvoid("");
-    setDisabilities("");
-    setComments("");
-  }
   return (
     <Form bgColor="var(--color-blue-med)" fontColor="white">
       <FormRow label="Name" htmlFor="name">
@@ -100,7 +58,7 @@ function SurpriseForm() {
       </FormRow>
       <FormRow label="Type of tour (Select all that apply)" htmlFor="trip">
         <div className={styles["checkbox-container"]}>
-          {categories.map((el, i) => (
+          {tourTypes.map((el, i) => (
             <FormCheckbox
               label={el.label}
               key={i}

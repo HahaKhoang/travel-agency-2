@@ -6,53 +6,49 @@ import { useForm } from "react-hook-form";
 import { Form } from "react-router-dom";
 
 function ContactForm() {
-  const [isOpenModal, setIsOpenModal] = useState(false);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [select, setSelect] = useState("");
-  const [message, setMessage] = useState("");
+  // const [isOpenModal, setIsOpenModal] = useState(false);
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [select, setSelect] = useState("");
+  // const [message, setMessage] = useState("");
 
-  const { register, formState, getValues, handleSubmit, reset } = useForm();
-  const { errors } = formState;
+  // const { register, formState, getValues, handleSubmit, reset } = useForm();
+  // const { errors } = formState;
 
-  const form = useRef();
+  // const form = useRef();
 
-  function sendEmail(e) {
-    e.preventDefault();
+  // function sendEmail(e) {
+  //   e.preventDefault();
 
-    emailjs
-      .sendForm(
-        "service_nnxnl4p",
-        "template_wrnr298",
-        form.current,
-        "M-heCyvRsVkznWfwP"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+  //   emailjs
+  //     .sendForm(
+  //       "service_nnxnl4p",
+  //       "template_wrnr298",
+  //       form.current,
+  //       "M-heCyvRsVkznWfwP"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
 
-    setName("");
-    setEmail("");
-    setSelect("");
-    setMessage("");
-  }
+  //   setName("");
+  //   setEmail("");
+  //   setSelect("");
+  //   setMessage("");
+  // }
 
-  function onSubmit(data) {
-    console.log(data);
-  }
+  // function onSubmit(data) {
+  //   console.log(data);
+  // }
 
   return (
     <div className={styles.container}>
-      <Form
-        ref={form}
-        onSubmit={handleSubmit(onSubmit)}
-        className={styles.form}
-      >
+      <Form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
         <div className={styles["form-row"]}>
           <label htmlFor="name">Name</label>
           <input

@@ -4,60 +4,60 @@ import emailjs from "@emailjs/browser";
 import Checkbox from "./FormCheckbox";
 
 function CustomizedForm() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [select, setSelect] = useState("");
-  const [message, setMessage] = useState("");
+  // const [name, setName] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [select, setSelect] = useState("");
+  // const [message, setMessage] = useState("");
 
-  const form = useRef();
+  // const form = useRef();
 
-  const categories = [
-    { label: "Everything", category: "everything" },
-    { label: "Nature", category: "nature" },
-    { label: "Culture", category: "culture" },
-    { label: "Shopping", category: "shopping" },
-    { label: "Food", category: "food" },
-    { label: "Nightlife", category: "nightlife" },
-    { label: "Undecided", category: "undecided" },
-  ];
+  // const categories = [
+  //   { label: "Everything", category: "everything" },
+  //   { label: "Nature", category: "nature" },
+  //   { label: "Culture", category: "culture" },
+  //   { label: "Shopping", category: "shopping" },
+  //   { label: "Food", category: "food" },
+  //   { label: "Nightlife", category: "nightlife" },
+  //   { label: "Undecided", category: "undecided" },
+  // ];
 
-  const tourTypes = [
-    { label: "International trip" },
-    { label: "Domestic trip" },
-    { label: "Road trip" },
-    { label: "Weekend getaway" },
-    { label: "Day trip" },
-    { label: "Undecided" },
-  ];
+  // const tourTypes = [
+  //   { label: "International trip" },
+  //   { label: "Domestic trip" },
+  //   { label: "Road trip" },
+  //   { label: "Weekend getaway" },
+  //   { label: "Day trip" },
+  //   { label: "Undecided" },
+  // ];
 
-  const childFriendly = [{ label: "Yes" }, { label: "No" }];
+  // const childFriendly = [{ label: "Yes" }, { label: "No" }];
 
-  function sendEmail(e) {
-    e.preventDefault();
-    emailjs
-      .sendForm(
-        "service_nnxnl4p",
-        "template_wrnr298",
-        form.current,
-        "M-heCyvRsVkznWfwP"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
-    setName("");
-    setEmail("");
-    setSelect("");
-    setMessage("");
-  }
+  // function sendEmail(e) {
+  //   e.preventDefault();
+  //   emailjs
+  //     .sendForm(
+  //       "service_nnxnl4p",
+  //       "template_wrnr298",
+  //       form.current,
+  //       "M-heCyvRsVkznWfwP"
+  //     )
+  //     .then(
+  //       (result) => {
+  //         console.log(result.text);
+  //       },
+  //       (error) => {
+  //         console.log(error.text);
+  //       }
+  //     );
+  //   setName("");
+  //   setEmail("");
+  //   setSelect("");
+  //   setMessage("");
+  // }
 
   return (
     <div className={styles.container}>
-      <form ref={form} onSubmit={sendEmail} className={styles.form}>
+      <form onSubmit={sendEmail} className={styles.form}>
         <div className={styles["form-row"]}>
           <label htmlFor="name">Name</label>
           <input

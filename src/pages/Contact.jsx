@@ -3,6 +3,7 @@ import ContactForm from "../ui/ContactForm";
 // import contact from "../../public/img/website/contact.jpg";
 import Banner2 from "../ui/Banner2";
 import contact from "../../public/img/undraw/contact.svg";
+import TestForm from "../ui/TestForm";
 
 function Contact() {
   return (
@@ -15,6 +16,7 @@ function Contact() {
         bgColor="var(--color-blue-med)"
       />
       <ContactForm />
+      {/* <TestForm /> */}
     </div>
   );
 }

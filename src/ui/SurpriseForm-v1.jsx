@@ -4,7 +4,7 @@ import Checkbox from "./FormCheckbox";
 import styles from "./SurpriseForm.module.scss";
 import Modal from "./Modal";
 
-function SurpriseForm() {
+function SurpriseForm1() {
   const [showModal, setShowModal] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -277,4 +277,4 @@ function SurpriseForm() {
   );
 }
 
-export default SurpriseForm;
+export default SurpriseForm1;

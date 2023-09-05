@@ -1,29 +1,39 @@
-import Form from "./Form";
-import FormInput from "./FormInput";
-import FormSelect from "./FormSelect";
-import FormTextarea from "./FormTextarea";
-import FormRow from "./FormRow";
+import TestFieldset from "./TestFieldset";
+import TestField from "./TestField";
+import styles from "./ContactForm.module.scss";
+import { useForm } from "react-hook-form";
 
 function ContactForm() {
+  const { register, handleSubmit } = useForm();
+
+  const submitForm = (data) => {
+    console.log(data);
+  };
+
   return (
-    <Form bgColor="var(--color-blue-dark)" fontColor="white">
-      <FormRow label="Name" htmlFor="name">
-        <FormInput type="text" id="name" name="name" />
-      </FormRow>
-      <FormRow label="Email address" htmlFor="email">
-        <FormInput type="text" id="email" name="email" />
-      </FormRow>
-      <FormRow label="What can we help you with?" htmlFor="selectQuestion">
-        <FormSelect id="selectQuestion" name="selectQuestion">
-          <option value="bookTour">I want to book a tour</option>
-          <option value="question">I have a question about a tour</option>
-          <option value="other">Other</option>
-        </FormSelect>
-      </FormRow>
-      <FormRow label="Enter your question here:" htmlFor="question">
-        <FormTextarea rows="10" id="question" name="question" />
-      </FormRow>
-    </Form>
+    <div className={styles.container}>
+      <form className={styles.form} onSubmit={handleSubmit(submitForm)}>
+        <TestFieldset>
+          <TestField label="Name">
+            <input type="text" name="name" id="name" {...register("name")} />
+          </TestField>
+          <TestField label="Email address">
+            <input type="text" name="email" id="email" {...register("email")} />
+          </TestField>
+          <TestField label="Comments:">
+            <textarea
+              name="comment"
+              id="comment"
+              rows="8"
+              {...register("comment")}
+            />
+          </TestField>
+        </TestFieldset>
+        <TestField>
+          <button className={styles.button}>Submit</button>
+        </TestField>
+      </form>
+    </div>
   );
 }
 

@@ -6,10 +6,7 @@ function Form({ children, bgColor, fontColor }) {
       className={styles.container}
       style={{ backgroundColor: `${bgColor}`, color: `${fontColor}` }}
     >
-      <div className={styles["form-container"]}>
-        {children}
-        <button>Submit</button>
-      </div>
+      <div className={styles["form-container"]}>{children}</div>
     </div>
   );
 }
