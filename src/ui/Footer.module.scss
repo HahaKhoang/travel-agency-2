@@ -14,13 +14,21 @@
 
 .social {
   display: flex;
+  gap: 0.2rem;
   margin-top: 1rem;
 }
 
 .social-button {
   padding: 0.4rem 2rem;
   border-radius: 500px;
-  border: 1px solid#f8fafc;
+  background-color: var(--color-blue-dark);
+  color: white;
+  transition: all 0.5s;
+}
+
+.social-button:hover {
+  background-color: var(--color-blue-light);
+  color: black;
 }
 
 .right-container {

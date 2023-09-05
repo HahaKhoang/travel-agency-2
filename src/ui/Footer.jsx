@@ -6,9 +6,20 @@ function Footer() {
       <div className={styles["left-container"]}>
         <p className={styles.header}> You can also find me on</p>
         <div className={styles.social}>
-          <a className={styles["social-button"]}>Tiktok</a>
-          <a className={styles["social-button"]}>Instagram</a>
-          <a className={styles["social-button"]}>Twitter</a>
+          <a
+            href="https://www.tiktok.com/@tabitomodachi"
+            target="_blank"
+            className={styles["social-button"]}
+          >
+            Tiktok
+          </a>
+          <a
+            href="https://www.instagram.com/tabitomodachi"
+            target="_blank"
+            className={styles["social-button"]}
+          >
+            Instagram
+          </a>
         </div>
       </div>
       <div className={styles["right-container"]}>
