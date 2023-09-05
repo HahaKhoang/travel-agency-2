@@ -18,7 +18,6 @@ function Customized() {
         bgColor="var(--color-blue-light)"
       />
       <CustomizedContainer />
-      {/* <CustomizedForm /> */}
     </div>
   );
 }
