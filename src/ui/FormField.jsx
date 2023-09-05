@@ -1,6 +1,6 @@
-import styles from "./TestField.module.scss";
+import styles from "./FormField.module.scss";
 
-function TestField({ label, children, htmlFor, error }) {
+function FormField({ label, children, htmlFor, error }) {
   return (
     <div className={styles.container}>
       {label && (
@@ -18,4 +18,4 @@ function TestField({ label, children, htmlFor, error }) {
   );
 }
 
-export default TestField;
+export default FormField;

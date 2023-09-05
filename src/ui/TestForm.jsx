@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
-import TestField from "./TestField";
-import TestFieldset from "./TestFieldset";
+import TestField from "./FormField";
+import TestFieldset from "./FormFieldset";
 
 function TestForm() {
   const { register, handleSubmit } = useForm();
