@@ -28,19 +28,33 @@ const childFriendly = [{ label: "Yes" }, { label: "No" }];
 function CustomizedForm() {
   const { register, handleSubmit } = useForm();
 
-  const submitForm = (data) => {
+  function onSubmit(data) {
     console.log(data);
-  };
+  }
+
+  function onError(errors) {
+    console.log(errors);
+  }
 
   return (
     <div className={styles.container}>
-      <form className={styles.form} onSubmit={handleSubmit(submitForm)}>
+      <form className={styles.form} onSubmit={handleSubmit(onSubmit, onError)}>
         <FormFieldset>
           <FormField label="Name">
-            <input type="text" name="name" id="name" {...register("name")} />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              {...register("name", { required: "This field is required" })}
+            />
           </FormField>
           <FormField label="Email address">
-            <input type="text" name="email" id="email" {...register("email")} />
+            <input
+              type="text"
+              name="email"
+              id="email"
+              {...register("email", { required: "This field is required" })}
+            />
           </FormField>
           <FormField label="Category of interest:">
             <div className={styles["checkbox-container"]}>
@@ -58,7 +72,11 @@ function CustomizedForm() {
           </FormField>
           {/* TYPE OF TOUR CHECKBOX HERE */}
           <FormField label="Duration">
-            <select id="duration" name="duration" {...register("duration")}>
+            <select
+              id="duration"
+              name="duration"
+              {...register("duration", { required: "This field is required" })}
+            >
               <option value="1">1 day</option>
               <option value="2">2 days</option>
               <option value="3">3 days</option>
@@ -77,7 +95,11 @@ function CustomizedForm() {
             </select>
           </FormField>
           <FormField label="How many people?">
-            <select id="people" name="people" {...register("people")}>
+            <select
+              id="people"
+              name="people"
+              {...register("people", { required: "This field is required" })}
+            >
               <option value="1">1</option>
               <option value="2">2 </option>
               <option value="3">3 </option>
@@ -128,7 +150,9 @@ function CustomizedForm() {
           </FormField>
         </FormFieldset>
         <FormField>
-          <button className={styles.button}>Submit</button>
+          <button className={styles.button} onClick={() => reset()}>
+            Submit
+          </button>
         </FormField>
       </form>
     </div>

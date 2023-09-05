@@ -4,21 +4,36 @@ import styles from "./ContactForm.module.scss";
 import { useForm } from "react-hook-form";
 
 function ContactForm() {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, formState } = useForm();
+  const { errors } = formState;
 
-  const submitForm = (data) => {
+  function onSubmit(data) {
     console.log(data);
-  };
+  }
+
+  function onError(errors) {
+    console.log(errors);
+  }
 
   return (
     <div className={styles.container}>
-      <form className={styles.form} onSubmit={handleSubmit(submitForm)}>
+      <form className={styles.form} onSubmit={handleSubmit(onSubmit, onError)}>
         <TestFieldset>
           <FormField label="Name">
-            <input type="text" name="name" id="name" {...register("name")} />
+            <input
+              type="text"
+              name="name"
+              id="name"
+              {...register("name", { required: "This field is required" })}
+            />
           </FormField>
           <FormField label="Email address">
-            <input type="text" name="email" id="email" {...register("email")} />
+            <input
+              type="text"
+              name="email"
+              id="email"
+              {...register("email", { required: "This field is required" })}
+            />
           </FormField>
           <FormField label="How can we help?">
             <select id="reason" name="reason" {...register("reason")}>
