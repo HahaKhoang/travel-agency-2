@@ -35,18 +35,18 @@ function Footer() {
         </div>
         <div className={styles.column}>
           <p className={styles.header}>Booking</p>
-          <p>All tours</p>
-          <p>Customized tour</p>
-          <p>Surprise tour</p>
+          <a href="/tours">All tours</a>
+          <a href="/customized-tour">Customized tour</a>
+          <a href="/surprise">Surprise tour</a>
         </div>
         <div className={styles.column}>
           <p className={styles.header}>Help</p>
-          <p>FAQ</p>
+          <a href="/faq">FAQ</a>
           <p>Reviews</p>
         </div>
         <div className={styles.column}>
           <p className={styles.header}>Get in touch</p>
-          <p>Contact</p>
+          <a href="/contact">Contact</a>
         </div>
       </div>
     </div>
