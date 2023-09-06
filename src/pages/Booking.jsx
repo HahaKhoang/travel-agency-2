@@ -13,7 +13,7 @@ function Booking() {
       <Banner2
         h1={tour.tourName}
         text1={`${tour.welcome} | Welcome to ${tour.country}!`}
-        bgColor="var(--color-blue-light)"
+        bgImg={tour.imageWelcome}
       />
     </div>
   );
