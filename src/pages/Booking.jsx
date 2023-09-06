@@ -1,6 +1,7 @@
 import Banner2 from "../ui/Banner2";
 
-function Booking() {
+function Booking({ slug }) {
+  console.log(slug);
   return (
     <div>
       <Banner2
