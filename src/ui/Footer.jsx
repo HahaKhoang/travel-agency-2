@@ -4,7 +4,9 @@ function Footer() {
   return (
     <div className={styles.container}>
       <div className={styles["left-container"]}>
-        <p className={styles.header}> You can also find me on</p>
+        <a href="/">
+          <h4 className={styles.logo}>Tabi tomodachi</h4>
+        </a>
         <div className={styles.social}>
           <a
             href="https://www.tiktok.com/@tabitomodachi"
@@ -24,22 +26,27 @@ function Footer() {
       </div>
       <div className={styles["right-container"]}>
         <div className={styles.column}>
-          <p className={styles.header}>Menu</p>
-          <p>Services</p>
-          <p>Terms of use</p>
-          <p>Privacy policy</p>
-          <p>How it works</p>
+          <p className={styles.header}>Continents</p>
+          <p>Asia</p>
+          <p>Europe</p>
+          <p>Oceania</p>
+          <p>North America</p>
+          <p>South America</p>
         </div>
         <div className={styles.column}>
-          <p className={styles.header}>Get help</p>
-          <p>Support</p>
-          <p>Quick chat</p>
+          <p className={styles.header}>Booking</p>
+          <p>All tours</p>
+          <p>Customized tour</p>
+          <p>Surprise tour</p>
         </div>
         <div className={styles.column}>
-          <p className={styles.header}>Support</p>
+          <p className={styles.header}>Help</p>
           <p>FAQ</p>
-          <p>Policy</p>
-          <p>Business</p>
+          <p>Reviews</p>
+        </div>
+        <div className={styles.column}>
+          <p className={styles.header}>Get in touch</p>
+          <p>Contact</p>
         </div>
       </div>
     </div>
