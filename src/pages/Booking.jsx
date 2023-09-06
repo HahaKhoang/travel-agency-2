@@ -12,7 +12,8 @@ function Booking() {
     <div>
       <Banner2
         h1={tour.tourName}
-        text1={`${tour.welcome} | Welcome to ${tour.country}!`}
+        text1={`${tour.welcome}!`}
+        text2={`Welcome to ${tour.country}!`}
         bgImg={tour.imageWelcome}
       />
     </div>
