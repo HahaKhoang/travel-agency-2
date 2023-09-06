@@ -1,6 +1,5 @@
 import TourBanner from "./TourBanner";
 import { useSingleTour } from "../features/tours/useSingleTour.js";
-import kyoto from "../../public/img/japan/kyoto.jpg";
 import SingleTourCarousel from "./SingleTourCarousel";
 import SingleTourHeader from "./SingleTourHeader";
 import SingleTourLargePicture from "./SingleTourLargePicture";

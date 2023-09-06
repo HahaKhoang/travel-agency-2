@@ -1,12 +1,18 @@
 import Banner2 from "../ui/Banner2";
+import LoadingSpinner from "../ui/LoadingSpinner";
+import { useSingleTour } from "../features/tours/useSingleTour.js";
 
-function Booking({ slug }) {
-  console.log(slug);
+function Booking() {
+  const { isLoading, tour, error } = useSingleTour();
+  console.log(tour);
+
+  if (isLoading) return <LoadingSpinner />;
+
   return (
     <div>
       <Banner2
-        h1="Hi! It's nice to meet you!"
-        text1="Let's get to know each other better"
+        h1={tour.tourName}
+        text1={`${tour.welcome} | Welcome to ${tour.country}!`}
         bgColor="var(--color-blue-light)"
       />
     </div>
