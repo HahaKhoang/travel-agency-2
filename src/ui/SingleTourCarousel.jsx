@@ -1,33 +1,9 @@
 import styles from "./SingleTourCarousel.module.scss";
-import fuji from "../../public/img/japan/fuji.jpg";
-import fushimi from "../../public/img/japan/fushimi.jpg";
-import tokyo from "../../public/img/japan/tokyo.jpg";
 import { useEffect, useState } from "react";
 
-const pictures = [
-  {
-    img: fuji,
-    title: "Mt. Fuji",
-    location: "Shizuoka, Japan",
-    color: "var(--color-blue-light)",
-  },
-  {
-    img: fushimi,
-    title: "Fushimi Inari Shrine",
-    location: "Kyoto, Japan",
-    color: "#e5e7eb",
-  },
-  {
-    img: tokyo,
-    title: "Shinjuku Crosswalk",
-    location: "Tokyo, Japan",
-    color: "var(--color-blue-light)",
-  },
-];
-
-function SingleTourCarousel({ carouselImages }) {
+function SingleTourCarousel({ carousel }) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const length = pictures.length - 1;
+  const length = carousel.length - 1;
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -38,7 +14,7 @@ function SingleTourCarousel({ carouselImages }) {
 
   return (
     <div className={styles.container}>
-      {pictures.map((el, i) => (
+      {carousel.map((el, i) => (
         <div
           className={styles["picture-container"]}
           key={i}
@@ -55,7 +31,7 @@ function SingleTourCarousel({ carouselImages }) {
         </div>
       ))}
       <div className={styles.dots}>
-        {pictures.map((_, i) => {
+        {carousel.map((_, i) => {
           return (
             <span
               key={i}

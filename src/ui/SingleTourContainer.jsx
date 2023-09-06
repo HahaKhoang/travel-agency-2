@@ -18,6 +18,8 @@ function SingleTourContainer() {
     welcome,
     welcomeDesc,
     carouselImages,
+    carouselTitles,
+    carouselLocations,
     message,
     imageBG,
     imageHeader,
@@ -28,10 +30,26 @@ function SingleTourContainer() {
     category,
   } = tour;
 
+  const bgColors = [
+    "var(--color-blue-light)",
+    "#e5e7eb",
+    "var(--color-blue-light)",
+  ];
+
+  const carousel = carouselImages.map(function (x, i) {
+    return {
+      img: x,
+      title: carouselTitles[i],
+      location: carouselLocations[i],
+      color: bgColors[i],
+    };
+  });
+  console.log(carousel);
+
   return (
     <div>
       <TourBanner img={imageWelcome} title={welcome} text={welcomeDesc} />
-      <SingleTourCarousel carouselImages={carouselImages} />
+      <SingleTourCarousel carousel={carousel} />
       <SingleTourHeader message={message} />
       <SingleTourLargePicture
         imageBG={imageBG}
