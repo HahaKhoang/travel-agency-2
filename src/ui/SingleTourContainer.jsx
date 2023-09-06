@@ -32,7 +32,7 @@ function SingleTourContainer() {
 
   const bgColors = [
     "var(--color-blue-light)",
-    "#e5e7eb",
+    "var(--color-grey-dark)",
     "var(--color-blue-light)",
   ];
 
