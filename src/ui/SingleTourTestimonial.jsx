@@ -32,7 +32,7 @@ const reviews = [
   },
 ];
 
-function SingleTourTestimonial() {
+function SingleTourTestimonial({ reviewImg }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const length = reviews.length - 1;
 
@@ -47,7 +47,7 @@ function SingleTourTestimonial() {
   return (
     <div className={styles.container}>
       <div className={styles["left-container"]}>
-        <img src={culture} className={styles.picture} />
+        <img src={reviewImg} className={styles.picture} />
       </div>
       <div className={styles["right-container"]}>
         <button className={styles["button-left"]} onClick={prevSlide}>

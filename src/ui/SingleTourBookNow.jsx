@@ -1,6 +1,7 @@
+import { NavLink } from "react-router-dom";
 import styles from "./SingleTourBookNow.module.scss";
 
-function SingleTourBookNow({ duration, price, cities, category }) {
+function SingleTourBookNow({ duration, price, cities, category, slug }) {
   return (
     <div className={styles.container}>
       <div className={styles["details-container"]}>
@@ -20,7 +21,6 @@ function SingleTourBookNow({ duration, price, cities, category }) {
                 {el}
               </span>
             ))}
-            {/* <p className={styles.text}>Tokyo, Kyoto, Osaka</p> */}
           </div>
           <div className={styles.details}>
             <p className={styles.label}>Type of tour</p>
@@ -38,7 +38,9 @@ function SingleTourBookNow({ duration, price, cities, category }) {
           distinctio adipisci tempore inventore non? Excepturi omnis praesentium
           ratione laborum.
         </p>
-        <button className={styles.button}>Book now</button>
+        <a href={`/booking/${slug}`} className={styles.button}>
+          Book now
+        </a>
       </div>
     </div>
   );

@@ -28,6 +28,8 @@ function SingleTourContainer() {
     price,
     cities,
     category,
+    reviewImg,
+    slug,
   } = tour;
 
   const bgColors = [
@@ -44,7 +46,6 @@ function SingleTourContainer() {
       color: bgColors[i],
     };
   });
-  console.log(carousel);
 
   return (
     <div>
@@ -62,8 +63,9 @@ function SingleTourContainer() {
         price={price}
         cities={cities}
         category={category}
+        slug={slug}
       />
-      <SingleTourTestimonial />
+      <SingleTourTestimonial reviewImg={reviewImg} />
     </div>
   );
 }

@@ -19,7 +19,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 import Customized from "./pages/Customized";
 import CustomizedBooking from "./pages/CustomizedBooking";
-import ScrollToTop from "./ui/ScrollToTop";
+import Booking from "./pages/Booking";
 
 const router = createBrowserRouter([
   {
@@ -40,6 +40,7 @@ const router = createBrowserRouter([
       { path: "/surprise/booking", element: <SurpriseBooking /> },
       { path: "/customized-tour", element: <Customized /> },
       { path: "/customized-tour/booking", element: <CustomizedBooking /> },
+      { path: "/booking/:slug", element: <Booking /> },
       { path: "/faq", element: <FAQ /> },
       { path: "/contact", element: <Contact /> },
     ],
