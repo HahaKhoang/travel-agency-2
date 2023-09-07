@@ -4,11 +4,28 @@
   display: flex;
   gap: 1rem;
   color: #f8fafc;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+  }
 }
 
 .left-container {
-  width: 50%;
+  width: 40%;
   padding: 6rem 8rem;
+  // background-color: green;
+
+  @media (max-width: 1000px) {
+    padding: 6rem 4rem;
+  }
+
+  @media (max-width: 650px) {
+    width: 100%;
+    padding: 2rem 2rem 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
 .logo {
@@ -20,6 +37,10 @@
   gap: 0.2rem;
   margin-top: 1rem;
   font-size: var(--font-xs);
+
+  @media (max-width: 650px) {
+    margin-top: 0;
+  }
 }
 
 .social-button {
@@ -36,18 +57,29 @@
 }
 
 .right-container {
-  width: 50%;
+  width: 60%;
   padding: 6rem 8rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 1rem;
   font-size: var(--font-xs);
+  // background-color: pink;
+
+  @media (max-width: 1000px) {
+    padding: 6rem 4rem 6rem 0;
+  }
+
+  @media (max-width: 650px) {
+    width: 100%;
+    padding: 2rem;
+  }
 }
 
 .column {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  // background-color: purple;
 
   a {
     color: white;
