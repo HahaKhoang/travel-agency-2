@@ -1,10 +1,10 @@
 import Banner2 from "../ui/Banner2";
 import LoadingSpinner from "../ui/LoadingSpinner";
 import { useSingleTour } from "../features/tours/useSingleTour.js";
+import BookingForm from "../ui/BookingForm";
 
 function Booking() {
   const { isLoading, tour, error } = useSingleTour();
-  console.log(tour);
 
   if (isLoading) return <LoadingSpinner />;
 
@@ -16,6 +16,7 @@ function Booking() {
         text2={`Welcome to ${tour.country}!`}
         bgImg={tour.imageWelcome}
       />
+      <BookingForm />
     </div>
   );
 }

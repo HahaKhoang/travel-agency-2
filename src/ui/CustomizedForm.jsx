@@ -26,7 +26,7 @@ const tourTypes = [
 const childFriendly = [{ label: "Yes" }, { label: "No" }];
 
 function CustomizedForm() {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   function onSubmit(data) {
     console.log(data);
@@ -150,9 +150,7 @@ function CustomizedForm() {
           </FormField>
         </FormFieldset>
         <FormField>
-          <button className={styles.button} onClick={() => reset()}>
-            Submit
-          </button>
+          <button className={styles.button}>Submit</button>
         </FormField>
       </form>
     </div>
