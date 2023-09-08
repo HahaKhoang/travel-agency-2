@@ -1,7 +1,14 @@
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "./SingleTourBookNow.module.scss";
 
 function SingleTourBookNow({ duration, price, cities, category, slug }) {
+  const navigate = useNavigate();
+
+  function onClick(e) {
+    e.preventDefault();
+    navigate(`/booking/${slug}`);
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles["details-container"]}>
@@ -38,9 +45,12 @@ function SingleTourBookNow({ duration, price, cities, category, slug }) {
           distinctio adipisci tempore inventore non? Excepturi omnis praesentium
           ratione laborum.
         </p>
-        <a href={`/booking/${slug}`} className={styles.button}>
+        {/* <a href={`/booking/${slug}`} className={styles.button}>
           Book now
-        </a>
+        </a> */}
+        <button onClick={onClick} className={styles.button}>
+          Book now
+        </button>
       </div>
     </div>
   );

@@ -2,14 +2,17 @@ import styles from "./BookingSummary.module.scss";
 import jk2 from "../../public/img/jk2.jpg";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
-import { useSingleTour } from "../features/tours/useSingleTour";
 
-function BookingSummary({ tourName, price, duration, image, cities }) {
+function BookingSummary({ image, cities }) {
   // const tourName = useSelector((state) => state.tour.tour.name);
-  const tourPrice = useSelector((state) => state.tour.tour.price);
-  const x = useSelector((state) => state.tour);
-  console.log(x);
+  // const tourPrice = useSelector((state) => state.tour.tour.price);
+  // const x = useSelector((state) => state.tour);
+  // console.log(x);
   //   const tourName = useSelector((state) => state.tour.tourName);
+  const tourName = useSelector((state) => state.tour.name);
+  const duration = useSelector((state) => state.tour.duration);
+  const price = useSelector((state) => state.tour.price);
+  // console.log(tour);
 
   const slug = useParams();
   // console.log(slug);

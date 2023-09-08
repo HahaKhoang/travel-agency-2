@@ -19,16 +19,17 @@ function TourCard({
   const day = duration < 2 ? "day" : "days";
 
   function onClick() {
-    console.log(slug);
     const currentTour = {
       id,
       slug,
       name,
+      duration,
       quantity: 1,
       price,
       totalPrice: price * 1,
     };
     dispatch(addTour(currentTour));
+    console.log(currentTour);
   }
 
   return (

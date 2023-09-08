@@ -5,6 +5,7 @@ const initialState = {
     id: 2,
     name: "Essential Japan",
     slug: "japan-test",
+    duration: 6,
     quantity: 2,
     price: 80,
     totalPrice: 100,
@@ -21,8 +22,12 @@ const tourSlice = createSlice({
         name: action.payload.name,
         slug: action.payload.slug,
         price: action.payload.price,
+        duration: action.payload.duration,
       };
     },
+    // addTour(state, action) {
+    //   state.tour.push(action.payload);
+    // },
 
     increaseTourQuantity(state, action) {
       const tour = state.tour.find((tour) => tour.id === action.payload);
