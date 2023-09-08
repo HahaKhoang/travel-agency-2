@@ -1,9 +1,18 @@
 import styles from "./BookingSummary.module.scss";
 import jk2 from "../../public/img/jk2.jpg";
 import { useDispatch, useSelector } from "react-redux";
+import { useParams } from "react-router-dom";
+import { useSingleTour } from "../features/tours/useSingleTour";
 
-function BookingSummary() {
-  const tourName = useSelector((state) => state.tour.tourName);
+function BookingSummary({ tourName, price, duration, image, cities }) {
+  // const tourName = useSelector((state) => state.tour.tour.name);
+  const tourPrice = useSelector((state) => state.tour.tour.price);
+  const x = useSelector((state) => state.tour);
+  console.log(x);
+  //   const tourName = useSelector((state) => state.tour.tourName);
+
+  const slug = useParams();
+  // console.log(slug);
 
   return (
     <div className={styles.container}>
@@ -11,16 +20,16 @@ function BookingSummary() {
         <div className={styles["info-container"]}>
           <h3>Trip summary</h3>
           <div className={styles["picture-container"]}>
-            <img src={jk2} className={styles.picture} />
+            <img src={image} className={styles.picture} />
           </div>
           <h3>{tourName}</h3>
           <div className={styles["content-container"]}>
             <p className={styles.label}>Duration</p>
-            <p className={styles.content}>10 days</p>
+            <p className={styles.content}>{duration} days</p>
           </div>
           <div className={styles["content-container"]}>
             <p className={styles.label}>Price per person</p>
-            <p className={styles.content}>$50</p>
+            <p className={styles.content}>${price}</p>
           </div>
           <div className={styles["content-container"]}>
             <p className={styles.label}>Number of people</p>
@@ -28,7 +37,7 @@ function BookingSummary() {
           </div>
           <div className={styles["content-container"]}>
             <p className={styles.label}>Number of cities</p>
-            <p className={styles.content}>3</p>
+            <p className={styles.content}>{cities.length}</p>
           </div>
           <div className={styles["extras-container"]}>
             <p className={styles.label}>Extras</p>

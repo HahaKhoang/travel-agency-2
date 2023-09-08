@@ -99,6 +99,7 @@ function TourContainer() {
             price={el.price}
             country={el.country}
             slug={el.slug}
+            id={el.id}
           />
         ))}
       </section>
