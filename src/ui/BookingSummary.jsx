@@ -1,6 +1,6 @@
 import styles from "./BookingSummary.module.scss";
 import jk2 from "../../public/img/jk2.jpg";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 function BookingSummary() {
   const tourName = useSelector((state) => state.tour.tourName);
