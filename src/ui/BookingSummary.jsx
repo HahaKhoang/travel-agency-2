@@ -1,7 +1,10 @@
 import styles from "./BookingSummary.module.scss";
 import jk2 from "../../public/img/jk2.jpg";
+import { useSelector } from "react-redux";
 
 function BookingSummary() {
+  const tourName = useSelector((state) => state.tour.tourName);
+
   return (
     <div className={styles.container}>
       <div className={styles.box}>
@@ -10,7 +13,7 @@ function BookingSummary() {
           <div className={styles["picture-container"]}>
             <img src={jk2} className={styles.picture} />
           </div>
-          <h3>Essential Japan</h3>
+          <h3>{tourName}</h3>
           <div className={styles["content-container"]}>
             <p className={styles.label}>Duration</p>
             <p className={styles.content}>10 days</p>
