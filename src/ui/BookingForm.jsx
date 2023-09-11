@@ -4,7 +4,11 @@ import styles from "./BookingForm.module.scss";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateAccommodation, updateFlight } from "../features/tours/tourSlice";
+import {
+  updateAccommodation,
+  updateFlight,
+  updateReservations,
+} from "../features/tours/tourSlice";
 
 function BookingForm() {
   const { register, handleSubmit } = useForm();
@@ -159,6 +163,7 @@ function BookingForm() {
                   value="yes"
                   id="reservation-yes"
                   name="reservation"
+                  onClick={() => dispatch(updateReservations(true))}
                 />
                 Yes
               </label>
@@ -169,6 +174,7 @@ function BookingForm() {
                   value="no"
                   id="reservation-no"
                   name="reservation"
+                  onClick={() => dispatch(updateReservations(false))}
                 />
                 No
               </label>
