@@ -44,14 +44,29 @@ function BookingSummary({ image, cities }) {
           </div>
           <div className={styles["extras-container"]}>
             <p className={styles.label}>Extras</p>
-            <div className={styles.extras}>
-              <p>Accommodation booking service</p>
-              <p>{accommodationFee ? "$90" : "N/A"}</p>
-            </div>
-            <div className={styles.extras}>
-              <p>Flight booking service</p>
-              <p>$90</p>
-            </div>
+            {!accommodationFee && !flightFee && (
+              <div className={styles.extras}>
+                <p>None</p>
+              </div>
+            )}
+            {accommodationFee && (
+              <div className={styles.extras}>
+                <p>Accommodation booking service</p>
+                <p>$90</p>
+              </div>
+            )}
+            {flightFee && (
+              <div className={styles.extras}>
+                <p>Flight booking service</p>
+                <p>$140</p>
+              </div>
+            )}
+            {reservationFee && (
+              <div className={styles.extras}>
+                <p>Reservation booking service</p>
+                <p>$130</p>
+              </div>
+            )}
           </div>
           <div className={styles["total-container"]}>
             <p className={styles.label}>Cost breakdown</p>
