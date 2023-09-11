@@ -1,21 +1,16 @@
 import styles from "./BookingSummary.module.scss";
-import jk2 from "../../public/img/jk2.jpg";
-import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 function BookingSummary({ image, cities }) {
-  // const tourName = useSelector((state) => state.tour.tour.name);
-  // const tourPrice = useSelector((state) => state.tour.tour.price);
-  // const x = useSelector((state) => state.tour);
-  // console.log(x);
-  //   const tourName = useSelector((state) => state.tour.tourName);
   const tourName = useSelector((state) => state.tour.name);
   const duration = useSelector((state) => state.tour.duration);
   const price = useSelector((state) => state.tour.price);
-  // console.log(tour);
+  const day = duration < 2 ? "day" : "days";
+  const accommodationFee = useSelector((state) => state.tour.accommodationFee);
+  const total = useSelector((state) => state.tour.totalPrice);
+  console.log(accommodationFee);
 
-  const slug = useParams();
-  // console.log(slug);
+  const totalPrice = accommodationFee ? total + 90 : total;
 
   return (
     <div className={styles.container}>
@@ -28,7 +23,9 @@ function BookingSummary({ image, cities }) {
           <h3>{tourName}</h3>
           <div className={styles["content-container"]}>
             <p className={styles.label}>Duration</p>
-            <p className={styles.content}>{duration} days</p>
+            <p className={styles.content}>
+              {duration} {day}
+            </p>
           </div>
           <div className={styles["content-container"]}>
             <p className={styles.label}>Price per person</p>
@@ -46,7 +43,7 @@ function BookingSummary({ image, cities }) {
             <p className={styles.label}>Extras</p>
             <div className={styles.extras}>
               <p>Accommodation booking service</p>
-              <p>$30</p>
+              <p>{accommodationFee ? "$90" : "N/A"}</p>
             </div>
             <div className={styles.extras}>
               <p>Flight booking service</p>
@@ -61,7 +58,7 @@ function BookingSummary({ image, cities }) {
             </div>
             <div className={styles.extras}>
               <p>Accommodation booking service</p>
-              <p>$30</p>
+              <p>{accommodationFee ? "$90" : "N/A"}</p>
             </div>
             <div className={styles.extras}>
               <p>Flight booking service</p>
@@ -70,7 +67,7 @@ function BookingSummary({ image, cities }) {
           </div>
           <div className={styles.extras}>
             <p className={styles.total}>Total</p>
-            <p className={styles.price}>$300</p>
+            <p className={styles.price}>${totalPrice}</p>
           </div>
           <p>
             *Price does not include flight, accommodation, or additional costs.

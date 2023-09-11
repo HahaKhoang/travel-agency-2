@@ -3,12 +3,29 @@ import FormField from "./FormField";
 import styles from "./BookingForm.module.scss";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addAccommodation } from "../features/tours/tourSlice";
 
 function BookingForm() {
   const { register, handleSubmit } = useForm();
   const [isChecked, setIsChecked] = useState(false);
+  const [accommodation, setAccommodation] = useState(false);
+  console.log(accommodation);
+
+  const quantity = useSelector((state) => state.tour.quantity);
+  const accommodationFee = useSelector((state) => state.tour.accommodationFee);
+  console.log(accommodationFee);
   const dispatch = useDispatch();
+
+  function accommodationYes() {
+    setAccommodation(true);
+    dispatch(addAccommodation(true));
+  }
+
+  function accommodationNo() {
+    setAccommodation(false);
+    dispatch(addAccommodation(false));
+  }
 
   function onSubmit(data) {
     console.log(data);
@@ -59,6 +76,8 @@ function BookingForm() {
               id="people"
               name="people"
               {...register("people", { required: "This field is required" })}
+              defaultValue={quantity}
+              onChange={() => dispatch(increaseTourQuantity(1))}
             >
               <option value="1">1</option>
               <option value="2">2 </option>
@@ -84,6 +103,7 @@ function BookingForm() {
                   value="yes"
                   id="accommodation-yes"
                   name="accommodation"
+                  onClick={accommodationYes}
                 />
                 Yes
               </label>
@@ -97,6 +117,7 @@ function BookingForm() {
                   value="no"
                   id="accommodation-no"
                   name="accommodation"
+                  onClick={accommodationNo}
                 />
                 No
               </label>

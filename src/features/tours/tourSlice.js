@@ -1,21 +1,34 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  tour: {
-    id: 2,
-    name: "Essential Japan",
-    slug: "japan-test",
-    duration: 6,
-    quantity: 2,
-    price: 80,
-    totalPrice: 100,
-  },
+  id: 2,
+  name: "Japan Test",
+  slug: "japan-test",
+  duration: 6,
+  quantity: 1,
+  price: 80,
+  totalPrice: 100,
+  accommodationFee: false,
+  flightFee: false,
+  reservationFee: false,
 };
 
 const tourSlice = createSlice({
   name: "tour",
   initialState,
   reducers: {
+    // addTour(state, action) {
+    //   state.tour.id = action.payload;
+    //   state.tour.name = action.payload;
+    //   state.tour.slug = action.payload;
+    //   state.tour.duration = action.payload;
+    //   state.tour.quantity = action.payload;
+    //   state.tour.price = action.payload;
+    //   state.tour.totalPrice = action.payload;
+    // },
+    updateName(state, action) {
+      state.name = action.payload;
+    },
     addTour(state, action) {
       return {
         id: action.payload.id,
@@ -23,26 +36,51 @@ const tourSlice = createSlice({
         slug: action.payload.slug,
         price: action.payload.price,
         duration: action.payload.duration,
+        totalPrice: action.payload.price,
+        quantity: 1,
+        accommodationFee: false,
+        flightFee: false,
+        reservationFee: false,
       };
+    },
+    addAccommodation(state, action) {
+      state.accommodationFee = action.payload;
     },
     // addTour(state, action) {
     //   state.tour.push(action.payload);
     // },
-
-    increaseTourQuantity(state, action) {
-      const tour = state.tour.find((tour) => tour.id === action.payload);
-      tour.quantity++;
-      tour.totalPrice = tour.quantity * tour.price;
-    },
-    decreaseTourQuantity(state, action) {
-      const tour = state.tour.find((tour) => tour.id === action.payload);
-      tour.quantity--;
-      tour.totalPrice = tour.quantity * tour.price;
-    },
+    // increaseTourQuantity(state, action) {
+    //   const tour = state.tour.find((tour) => tour.id === action.payload);
+    //   tour.quantity++;
+    //   tour.totalPrice = tour.quantity * tour.price;
+    // },
+    // increaseTourQuantity(state, action) {
+    //   state.tour.quantity = action.payload;
+    //   state.tour.totalPrice = state.tour.quantity * state.tour.price;
+    // },
+    // decreaseTourQuantity(state, action) {
+    //   const tour = state.tour.find((tour) => tour.id === action.payload);
+    //   tour.quantity--;
+    //   tour.totalPrice = tour.quantity * tour.price;
+    // },
+    // addAccommodation(state, action) {
+    //   state.tour.accommodationFee = true;
+    // },
+    // getTotalPrice(state, action) {
+    //   state.tour.totalPrice = action.payload;
+    // },
   },
 });
 
-export const { addTour, increaseTourQuantity, decreaseTourQuantity } =
-  tourSlice.actions;
+export const {
+  updateName,
+  addTour,
+  addAccommodation,
+  // addTour,
+  // increaseTourQuantity,
+  // decreaseTourQuantity,
+  // addAccommodation,
+  // getTotalPrice,
+} = tourSlice.actions;
 
 export default tourSlice.reducer;

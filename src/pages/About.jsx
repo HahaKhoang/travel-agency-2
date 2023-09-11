@@ -1,8 +1,11 @@
 import AboutDetails from "../ui/AboutDetails";
 import Banner2 from "../ui/Banner2";
 import about from "../../public/img/undraw/about.svg";
+import { useSelector } from "react-redux";
 
 function About() {
+  const name = useSelector((state) => state.tour.name);
+  console.log(name);
   return (
     <div>
       {/* <Banner img={lofoten} text="Get to know me" /> */}

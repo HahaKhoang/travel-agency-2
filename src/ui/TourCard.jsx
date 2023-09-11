@@ -18,19 +18,31 @@ function TourCard({
   const capitalized = category.charAt(0).toUpperCase() + category.slice(1);
   const day = duration < 2 ? "day" : "days";
 
-  function onClick() {
-    const currentTour = {
+  function updateTour() {
+    const tour = {
       id,
-      slug,
       name,
+      slug,
       duration,
       quantity: 1,
       price,
-      totalPrice: price * 1,
+      totalPrice: price,
     };
-    dispatch(addTour(currentTour));
-    console.log(currentTour);
+    dispatch(addTour(tour));
   }
+
+  // function onClick() {
+  //   const currentTour = {
+  //     id,
+  //     slug,
+  //     name,
+  //     duration,
+  //     price,
+  //     quantity: 1,
+  //   };
+  //   dispatch(addTour(currentTour));
+  //   console.log(currentTour);
+  // }
 
   return (
     <div className={styles.container}>
@@ -47,7 +59,7 @@ function TourCard({
           <p>Category: {capitalized}</p>
         </div>
         <p className={styles.price}>Price: ${price}</p>
-        <NavLink to={`${slug}`} className={styles.button} onClick={onClick}>
+        <NavLink to={`${slug}`} className={styles.button} onClick={updateTour}>
           Let's go to {country}!
         </NavLink>
       </div>
