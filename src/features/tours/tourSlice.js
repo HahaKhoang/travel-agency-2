@@ -31,6 +31,9 @@ const tourSlice = createSlice({
         reservationFee: false,
       };
     },
+    updateQuantity(state, action) {
+      state.quantity = action.payload;
+    },
     updateAccommodation(state, action) {
       state.accommodationFee = action.payload;
     },
@@ -40,6 +43,7 @@ const tourSlice = createSlice({
     updateReservations(state, action) {
       state.reservationFee = action.payload;
     },
+
     // addTour(state, action) {
     //   state.tour.push(action.payload);
     // },
@@ -67,8 +71,8 @@ const tourSlice = createSlice({
 });
 
 export const {
-  updateName,
   addTour,
+  updateQuantity,
   updateAccommodation,
   updateFlight,
   updateReservations,

@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
+  updateQuantity,
   updateAccommodation,
   updateFlight,
   updateReservations,
@@ -12,11 +13,13 @@ import {
 
 function BookingForm() {
   const { register, handleSubmit } = useForm();
+  const [quantity, setQuantity] = useState(1);
   const [isChecked, setIsChecked] = useState(false);
   const [accommodation, setAccommodation] = useState(false);
 
-  const quantity = useSelector((state) => state.tour.quantity);
+  const initialQuantity = useSelector((state) => state.tour.quantity);
 
+  console.log(quantity);
   const dispatch = useDispatch();
 
   function accommodationYes() {
@@ -79,7 +82,10 @@ function BookingForm() {
               name="people"
               {...register("people", { required: "This field is required" })}
               defaultValue={quantity}
-              onChange={() => dispatch(increaseTourQuantity(1))}
+              onChange={(e) => {
+                setQuantity(e.target.value);
+                dispatch(updateQuantity(e.target.value));
+              }}
             >
               <option value="1">1</option>
               <option value="2">2 </option>
