@@ -7,10 +7,11 @@ function BookingSummary({ image, cities }) {
   const price = useSelector((state) => state.tour.price);
   const day = duration < 2 ? "day" : "days";
   const accommodationFee = useSelector((state) => state.tour.accommodationFee);
+  const flightFee = useSelector((state) => state.tour.flightFee);
   const total = useSelector((state) => state.tour.totalPrice);
-  console.log(accommodationFee);
 
   const totalPrice = accommodationFee ? total + 90 : total;
+  const totalPrice2 = flightFee ? totalPrice + 140 : totalPrice;
 
   return (
     <div className={styles.container}>
@@ -67,7 +68,7 @@ function BookingSummary({ image, cities }) {
           </div>
           <div className={styles.extras}>
             <p className={styles.total}>Total</p>
-            <p className={styles.price}>${totalPrice}</p>
+            <p className={styles.price}>${totalPrice2}</p>
           </div>
           <p>
             *Price does not include flight, accommodation, or additional costs.

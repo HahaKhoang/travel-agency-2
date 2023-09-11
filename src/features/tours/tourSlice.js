@@ -17,18 +17,6 @@ const tourSlice = createSlice({
   name: "tour",
   initialState,
   reducers: {
-    // addTour(state, action) {
-    //   state.tour.id = action.payload;
-    //   state.tour.name = action.payload;
-    //   state.tour.slug = action.payload;
-    //   state.tour.duration = action.payload;
-    //   state.tour.quantity = action.payload;
-    //   state.tour.price = action.payload;
-    //   state.tour.totalPrice = action.payload;
-    // },
-    updateName(state, action) {
-      state.name = action.payload;
-    },
     addTour(state, action) {
       return {
         id: action.payload.id,
@@ -43,8 +31,11 @@ const tourSlice = createSlice({
         reservationFee: false,
       };
     },
-    addAccommodation(state, action) {
+    updateAccommodation(state, action) {
       state.accommodationFee = action.payload;
+    },
+    updateFlight(state, action) {
+      state.flightFee = action.payload;
     },
     // addTour(state, action) {
     //   state.tour.push(action.payload);
@@ -75,7 +66,8 @@ const tourSlice = createSlice({
 export const {
   updateName,
   addTour,
-  addAccommodation,
+  updateAccommodation,
+  updateFlight,
   // addTour,
   // increaseTourQuantity,
   // decreaseTourQuantity,

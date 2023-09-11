@@ -4,27 +4,25 @@ import styles from "./BookingForm.module.scss";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { addAccommodation } from "../features/tours/tourSlice";
+import { updateAccommodation, updateFlight } from "../features/tours/tourSlice";
 
 function BookingForm() {
   const { register, handleSubmit } = useForm();
   const [isChecked, setIsChecked] = useState(false);
   const [accommodation, setAccommodation] = useState(false);
-  console.log(accommodation);
 
   const quantity = useSelector((state) => state.tour.quantity);
-  const accommodationFee = useSelector((state) => state.tour.accommodationFee);
-  console.log(accommodationFee);
+
   const dispatch = useDispatch();
 
   function accommodationYes() {
     setAccommodation(true);
-    dispatch(addAccommodation(true));
+    dispatch(updateAccommodation(true));
   }
 
   function accommodationNo() {
     setAccommodation(false);
-    dispatch(addAccommodation(false));
+    dispatch(updateAccommodation(false));
   }
 
   function onSubmit(data) {
@@ -132,6 +130,7 @@ function BookingForm() {
                   value="yes"
                   id="flight-yes"
                   name="flight"
+                  onClick={() => dispatch(updateFlight(true))}
                 />
                 Yes
               </label>
@@ -142,6 +141,7 @@ function BookingForm() {
                   value="no"
                   id="flight-no"
                   name="flight"
+                  onClick={() => dispatch(updateFlight(false))}
                 />
                 No
               </label>
