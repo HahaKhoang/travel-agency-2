@@ -31,7 +31,11 @@ function BookingForm() {
 
   return (
     <div className={styles.container}>
-      <form className={styles.form} onSubmit={handleSubmit(onSubmit, onError)}>
+      <form
+        className={styles.form}
+        onSubmit={handleSubmit(onSubmit, onError)}
+        id="booking-form"
+      >
         <FormFieldset>
           <FormField label="Name">
             <input
@@ -183,6 +187,9 @@ function BookingForm() {
             />
           </FormField>
         </FormFieldset>
+        {/* <FormField>
+          <button className={styles.button}>Book</button>
+        </FormField> */}
       </form>
     </div>
   );

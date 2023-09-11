@@ -104,7 +104,9 @@ function BookingSummary({ image, cities }) {
             The total cost only covers the itinerary and any additional
             features.
           </p>
-          <button className={styles.button}>Book</button>
+          <button className={styles.button} form="booking-form" type="submit">
+            Book
+          </button>
         </div>
       </div>
     </div>
