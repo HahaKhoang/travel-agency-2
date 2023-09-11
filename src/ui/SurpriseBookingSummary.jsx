@@ -48,7 +48,9 @@ function SurpriseBookingSummary() {
             *For tours $5000+, we will charge $5000 per person first and will
             invoice the rest of the costs before sending you the itinerary
           </p>
-          <button className={styles.button}>Book</button>
+          <button className={styles.button} type="submit" form="surprise-form">
+            Book
+          </button>
         </div>
       </div>
     </div>

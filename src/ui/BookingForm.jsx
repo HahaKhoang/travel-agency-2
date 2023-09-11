@@ -10,10 +10,17 @@ import {
   updateFlight,
   updateReservations,
 } from "../features/tours/tourSlice";
+import Modal from "./Modal";
 
 function BookingForm() {
-  const { register, handleSubmit } = useForm();
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
   const [isChecked, setIsChecked] = useState(false);
+  const [showModal, setShowModal] = useState(false);
   // const [quantity, setQuantity] = useState(1);
   // const [accommodation, setAccommodation] = useState(false);
 
@@ -23,6 +30,8 @@ function BookingForm() {
 
   function onSubmit(data) {
     console.log(data);
+    reset();
+    setShowModal(true);
   }
 
   function onError(errors) {
@@ -31,21 +40,25 @@ function BookingForm() {
 
   return (
     <div className={styles.container}>
+      {showModal && <Modal onClose={() => setShowModal(false)} />}
       <form
         className={styles.form}
         onSubmit={handleSubmit(onSubmit, onError)}
         id="booking-form"
       >
         <FormFieldset>
-          <FormField label="Name">
+          <FormField label="Full name" error={errors?.name}>
             <input
               type="text"
               name="name"
               id="name"
               {...register("name", { required: "This field is required" })}
             />
+            {/* {errors?.name?.message && (
+              <p className={styles.error}>{errors.name.message}</p>
+            )} */}
           </FormField>
-          <FormField label="Email address">
+          <FormField label="Email address" error={errors?.email}>
             <input
               type="text"
               name="email"
@@ -53,7 +66,7 @@ function BookingForm() {
               {...register("email", { required: "This field is required" })}
             />
           </FormField>
-          <FormField label="Confirm email address">
+          <FormField label="Confirm email address" error={errors?.email}>
             <input
               type="text"
               name="email"
@@ -61,7 +74,7 @@ function BookingForm() {
               {...register("email", { required: "This field is required" })}
             />
           </FormField>
-          <FormField label="Phone number">
+          <FormField label="Phone number" error={errors?.phone}>
             <input
               type="tel"
               name="phone"
@@ -91,14 +104,19 @@ function BookingForm() {
               <option value="10">10 </option>
             </select>
           </FormField>
-          <FormField label="Do you need help finding and booking accommodation for an additional fee of $90?">
+          <FormField
+            label="Do you need help finding and booking accommodation for an additional fee of $90?"
+            error={errors?.accommodation}
+          >
             <div className={styles["radio-container"]}>
               <label
                 htmlFor="accommodation-yes"
                 className={styles["radio-label"]}
               >
                 <input
-                  {...register("accommodation", { required: true })}
+                  {...register("accommodation", {
+                    required: "Please check one",
+                  })}
                   type="radio"
                   value="yes"
                   id="accommodation-yes"
@@ -112,7 +130,9 @@ function BookingForm() {
                 className={styles["radio-label"]}
               >
                 <input
-                  {...register("accommodation", { required: true })}
+                  {...register("accommodation", {
+                    required: "Please check one",
+                  })}
                   type="radio"
                   value="no"
                   id="accommodation-no"
@@ -123,11 +143,14 @@ function BookingForm() {
               </label>
             </div>
           </FormField>
-          <FormField label="Do you need help finding and booking flight(s) for an additional fee of $140?">
+          <FormField
+            label="Do you need help finding and booking flight(s) for an additional fee of $140?"
+            error={errors?.flight}
+          >
             <div className={styles["radio-container"]}>
               <label htmlFor="flight-yes" className={styles["radio-label"]}>
                 <input
-                  {...register("flight", { required: true })}
+                  {...register("flight", { required: "Please check one" })}
                   type="radio"
                   value="yes"
                   id="flight-yes"
@@ -138,7 +161,7 @@ function BookingForm() {
               </label>
               <label htmlFor="flight-no" className={styles["radio-label"]}>
                 <input
-                  {...register("flight", { required: true })}
+                  {...register("flight", { required: "Please check one" })}
                   type="radio"
                   value="no"
                   id="flight-no"
@@ -149,14 +172,17 @@ function BookingForm() {
               </label>
             </div>
           </FormField>
-          <FormField label="Do you need help booking necessary reservations for an additional fee of $130?">
+          <FormField
+            label="Do you need help booking necessary reservations for an additional fee of $130?"
+            error={errors?.reservation}
+          >
             <div className={styles["radio-container"]}>
               <label
                 htmlFor="reservation-yes"
                 className={styles["radio-label"]}
               >
                 <input
-                  {...register("reservation", { required: true })}
+                  {...register("reservation", { required: "Please check one" })}
                   type="radio"
                   value="yes"
                   id="reservation-yes"
@@ -167,7 +193,7 @@ function BookingForm() {
               </label>
               <label htmlFor="reservation-no" className={styles["radio-label"]}>
                 <input
-                  {...register("reservation", { required: true })}
+                  {...register("reservation", { required: "Please check one" })}
                   type="radio"
                   value="no"
                   id="reservation-no"

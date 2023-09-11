@@ -34,12 +34,13 @@ const tourTypes = [
 const childFriendly = [{ label: "Yes" }, { label: "No" }];
 
 function SurpriseForm() {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, reset } = useForm();
 
   const dispatch = useDispatch();
 
   function onSubmit(data) {
     console.log(data);
+    reset();
   }
 
   function onError(errors) {
@@ -48,7 +49,11 @@ function SurpriseForm() {
 
   return (
     <div className={styles.container}>
-      <form className={styles.form} onSubmit={handleSubmit(onSubmit, onError)}>
+      <form
+        className={styles.form}
+        onSubmit={handleSubmit(onSubmit, onError)}
+        id="surprise-form"
+      >
         <FormFieldset>
           <FormField label="Name">
             <input
