@@ -13,24 +13,13 @@ import {
 
 function BookingForm() {
   const { register, handleSubmit } = useForm();
-  const [quantity, setQuantity] = useState(1);
   const [isChecked, setIsChecked] = useState(false);
-  const [accommodation, setAccommodation] = useState(false);
+  // const [quantity, setQuantity] = useState(1);
+  // const [accommodation, setAccommodation] = useState(false);
 
   const initialQuantity = useSelector((state) => state.tour.quantity);
 
-  console.log(quantity);
   const dispatch = useDispatch();
-
-  function accommodationYes() {
-    setAccommodation(true);
-    dispatch(updateAccommodation(true));
-  }
-
-  function accommodationNo() {
-    setAccommodation(false);
-    dispatch(updateAccommodation(false));
-  }
 
   function onSubmit(data) {
     console.log(data);
@@ -81,9 +70,8 @@ function BookingForm() {
               id="people"
               name="people"
               {...register("people", { required: "This field is required" })}
-              defaultValue={quantity}
+              defaultValue={initialQuantity}
               onChange={(e) => {
-                setQuantity(e.target.value);
                 dispatch(updateQuantity(e.target.value));
               }}
             >
@@ -111,7 +99,7 @@ function BookingForm() {
                   value="yes"
                   id="accommodation-yes"
                   name="accommodation"
-                  onClick={accommodationYes}
+                  onClick={() => dispatch(updateAccommodation(true))}
                 />
                 Yes
               </label>
@@ -125,7 +113,7 @@ function BookingForm() {
                   value="no"
                   id="accommodation-no"
                   name="accommodation"
-                  onClick={accommodationNo}
+                  onClick={() => dispatch(updateAccommodation(false))}
                 />
                 No
               </label>
@@ -195,9 +183,6 @@ function BookingForm() {
             />
           </FormField>
         </FormFieldset>
-        <FormField>
-          <button className={styles.button}>Book</button>
-        </FormField>
       </form>
     </div>
   );

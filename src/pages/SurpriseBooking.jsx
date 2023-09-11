@@ -5,6 +5,7 @@ import SurpriseCarousel from "../ui/SurpriseCarousel";
 import SurpriseBookingHeader from "../ui/SurpriseBookingHeader";
 import Banner2 from "../ui/Banner2";
 import surpriseBooking from "../../public/img/undraw/surpriseBooking.svg";
+import SurpriseBookingContainer from "../ui/SurpriseBookingContainer";
 
 function SurpriseBooking() {
   return (
@@ -19,7 +20,7 @@ function SurpriseBooking() {
         bgColor="var(--color-red-dark)"
       />
       <SurpriseBookingHeader />
-      <SurpriseForm />
+      <SurpriseBookingContainer />
     </div>
   );
 }

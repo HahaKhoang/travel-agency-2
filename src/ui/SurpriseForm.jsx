@@ -5,6 +5,12 @@ import styles from "./SurpriseForm.module.scss";
 import { useForm } from "react-hook-form";
 import FormFieldset from "./FormFieldset";
 import FormField from "./FormField";
+import { useDispatch } from "react-redux";
+import {
+  updateDuration,
+  updatePrice,
+  updateQuantity,
+} from "../features/tours/surpriseSlice";
 
 const categories = [
   { label: "Everything", category: "everything", id: "everything" },
@@ -29,6 +35,8 @@ const childFriendly = [{ label: "Yes" }, { label: "No" }];
 
 function SurpriseForm() {
   const { register, handleSubmit } = useForm();
+
+  const dispatch = useDispatch();
 
   function onSubmit(data) {
     console.log(data);
@@ -78,6 +86,7 @@ function SurpriseForm() {
               id="duration"
               name="duration"
               {...register("duration", { required: "This field is required" })}
+              onChange={(e) => dispatch(updateDuration(e.target.value))}
             >
               <option value="1">1 day</option>
               <option value="2">2 days</option>
@@ -101,17 +110,18 @@ function SurpriseForm() {
               id="budget"
               name="budget"
               {...register("budget", { required: "This field is required" })}
+              onChange={(e) => dispatch(updatePrice(e.target.value))}
             >
-              <option value="$500 - $1000">$500 - $1000</option>
-              <option value="$1000 - $1500">$1000 - $1500</option>
-              <option value="$1500 - $2000">$1500 - $2000</option>
-              <option value="$2000 - $2500">$2000 - $2500</option>
-              <option value="$2500 - $3000">$2500 - $3000</option>
-              <option value="$3000 - $3500">$3000 - $3500</option>
-              <option value="$3500 - $4000">$3500 - $4000</option>
-              <option value="$4000 - $4500">$4000 - $4500</option>
-              <option value="$4500 - $5000">$4500 - $5000</option>
-              <option value="No budget">No budget</option>
+              <option value={500}>$500</option>
+              <option value={1000}>$1000</option>
+              <option value={1500}>$1500</option>
+              <option value={2000}>$2000</option>
+              <option value={2500}>$2500</option>
+              <option value={3000}>$3000</option>
+              <option value={3500}>$3500</option>
+              <option value={4000}>$4000</option>
+              <option value={4500}>$4500</option>
+              <option value={5000}>$5000+</option>
             </select>
           </FormField>
           <FormField label="How many people?">
@@ -119,6 +129,7 @@ function SurpriseForm() {
               id="people"
               name="people"
               {...register("people", { required: "This field is required" })}
+              onChange={(e) => dispatch(updateQuantity(e.target.value))}
             >
               <option value="1">1</option>
               <option value="2">2 </option>
@@ -161,11 +172,6 @@ function SurpriseForm() {
             />
           </FormField>
         </FormFieldset>
-        <FormField>
-          <button className={styles.button} onClick={() => reset()}>
-            Submit
-          </button>
-        </FormField>
       </form>
     </div>
   );
