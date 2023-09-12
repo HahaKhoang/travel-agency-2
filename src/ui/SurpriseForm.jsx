@@ -11,6 +11,8 @@ import {
   updatePrice,
   updateQuantity,
 } from "../features/tours/surpriseSlice";
+import Modal from "./Modal";
+import map from "../../public/img/website/map.jpg";
 
 const categories = [
   { label: "Everything", category: "everything", id: "everything" },
@@ -34,12 +36,20 @@ const tourTypes = [
 const childFriendly = [{ label: "Yes" }, { label: "No" }];
 
 function SurpriseForm() {
-  const { register, handleSubmit, reset } = useForm();
+  const [showModal, setShowModal] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+    getValues,
+  } = useForm();
 
   const dispatch = useDispatch();
 
   function onSubmit(data) {
     console.log(data);
+    setShowModal(true);
     reset();
   }
 
@@ -49,13 +59,21 @@ function SurpriseForm() {
 
   return (
     <div className={styles.container}>
+      {showModal && (
+        <Modal
+          onClose={() => setShowModal(false)}
+          header="Thank you for booking a surprise trip with us!"
+          text="We will send you a confirmation email with all your details shortly"
+          img={map}
+        />
+      )}
       <form
         className={styles.form}
         onSubmit={handleSubmit(onSubmit, onError)}
         id="surprise-form"
       >
         <FormFieldset>
-          <FormField label="Name">
+          <FormField label="Full name" error={errors?.name}>
             <input
               type="text"
               name="name"
@@ -63,12 +81,24 @@ function SurpriseForm() {
               {...register("name", { required: "This field is required" })}
             />
           </FormField>
-          <FormField label="Email address">
+          <FormField label="Email address" error={errors?.email}>
             <input
               type="text"
               name="email"
               id="email"
               {...register("email", { required: "This field is required" })}
+            />
+          </FormField>
+          <FormField label="Confirm email address" error={errors?.confirmEmail}>
+            <input
+              type="text"
+              name="confirmEmail"
+              id="confirmEmail"
+              {...register("confirmEmail", {
+                required: "This field is required",
+                validate: (value) =>
+                  value === getValues().email || "Emails need to match",
+              })}
             />
           </FormField>
           <FormField label="Category of interest:">

@@ -100,4 +100,8 @@
   border: none;
   border-radius: 0;
   background-color: var(--color-red-dark);
+
+  &:hover {
+    background-color: var(--color-blue-dark);
+  }
 }
