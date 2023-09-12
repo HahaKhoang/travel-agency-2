@@ -7,12 +7,14 @@ import Modal from "./Modal";
 import contactModal from "../../public/img/website/contactModal.jpg";
 
 function ContactForm() {
-  const [showModal, setShowModal] = useState(true);
-  const { register, handleSubmit, formState } = useForm();
+  const [showModal, setShowModal] = useState(false);
+  const { register, handleSubmit, formState, reset } = useForm();
   const { errors } = formState;
 
   function onSubmit(data) {
     console.log(data);
+    setShowModal(true);
+    reset();
   }
 
   function onError(errors) {
@@ -31,7 +33,7 @@ function ContactForm() {
       )}
       <form className={styles.form} onSubmit={handleSubmit(onSubmit, onError)}>
         <TestFieldset>
-          <FormField label="Name">
+          <FormField label="Full name" error={errors?.name}>
             <input
               type="text"
               name="name"
@@ -39,7 +41,7 @@ function ContactForm() {
               {...register("name", { required: "This field is required" })}
             />
           </FormField>
-          <FormField label="Email address">
+          <FormField label="Email address" error={errors?.email}>
             <input
               type="text"
               name="email"
