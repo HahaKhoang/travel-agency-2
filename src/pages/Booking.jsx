@@ -4,7 +4,7 @@ import { useSingleTour } from "../features/tours/useSingleTour.js";
 import TourBookingContainer from "../ui/TourBookingContainer";
 
 function Booking() {
-  const { isLoading, tour, error } = useSingleTour();
+  const { isLoading, tour } = useSingleTour();
 
   if (isLoading) return <LoadingSpinner />;
 

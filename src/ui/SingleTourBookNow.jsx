@@ -45,9 +45,6 @@ function SingleTourBookNow({ duration, price, cities, category, slug }) {
           distinctio adipisci tempore inventore non? Excepturi omnis praesentium
           ratione laborum.
         </p>
-        {/* <a href={`/booking/${slug}`} className={styles.button}>
-          Book now
-        </a> */}
         <button onClick={onClick} className={styles.button}>
           Book now
         </button>

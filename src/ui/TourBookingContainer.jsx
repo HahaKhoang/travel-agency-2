@@ -8,7 +8,7 @@ function TourBookingContainer() {
   const { tourName, price, duration, cities, imageWelcome } = tour;
 
   return (
-    <div style={{ backgroundColor: "var(--color-blue-med" }}>
+    <div style={{ backgroundColor: "var(--color-blue-light" }}>
       <div className={styles.container}>
         <BookingSummary
           tourName={tourName}

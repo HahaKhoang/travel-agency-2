@@ -1,5 +1,5 @@
 .container {
-  background-color: var(--color-blue-med);
+  background-color: var(--color-blue-light);
   width: 70%;
   padding: 0 4rem;
 
@@ -18,17 +18,6 @@
   width: 100%;
   margin: 0 auto;
   padding: 4rem 0;
-}
-
-.button {
-  border-radius: 0;
-  border: none;
-  background-color: var(--color-red-dark);
-  margin-top: 2rem;
-
-  &:hover {
-    background-color: var(--color-blue-light);
-  }
 }
 
 .radio-container {

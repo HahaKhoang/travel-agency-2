@@ -4,7 +4,7 @@ import CustomizedBookingSummary from "./CustomizedBookingSummary";
 
 function CustomizedBookingContainer() {
   return (
-    <div style={{ backgroundColor: "var(--color-blue-med" }}>
+    <div style={{ backgroundColor: "var(--color-blue-light" }}>
       <div className={styles.container}>
         <CustomizedBookingSummary />
         <CustomizedForm />
