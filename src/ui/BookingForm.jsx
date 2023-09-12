@@ -18,6 +18,7 @@ function BookingForm() {
     handleSubmit,
     reset,
     formState: { errors },
+    getValues,
   } = useForm();
   const [isChecked, setIsChecked] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -54,9 +55,6 @@ function BookingForm() {
               id="name"
               {...register("name", { required: "This field is required" })}
             />
-            {/* {errors?.name?.message && (
-              <p className={styles.error}>{errors.name.message}</p>
-            )} */}
           </FormField>
           <FormField label="Email address" error={errors?.email}>
             <input
@@ -66,12 +64,16 @@ function BookingForm() {
               {...register("email", { required: "This field is required" })}
             />
           </FormField>
-          <FormField label="Confirm email address" error={errors?.email}>
+          <FormField label="Confirm email address" error={errors?.confirmEmail}>
             <input
               type="text"
-              name="email"
-              id="email"
-              {...register("email", { required: "This field is required" })}
+              name="confirmEmail"
+              id="confirmEmail"
+              {...register("confirmEmail", {
+                required: "This field is required",
+                validate: (value) =>
+                  value === getValues().email || "Emails need to match",
+              })}
             />
           </FormField>
           <FormField label="Phone number" error={errors?.phone}>
