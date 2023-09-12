@@ -15,7 +15,7 @@ function Checkbox({ label, id, name, checkedColor }) {
           name={name}
           value={label}
           checked={isChecked}
-          {...register(`${name}`)}
+          {...register(`${name}`, { required: "Please select all that apply" })}
           onChange={() => setIsChecked((prev) => !prev)}
           style={{ backgroundColor: isChecked ? checkedColor : "" }}
         />

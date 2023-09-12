@@ -106,7 +106,18 @@ function SurpriseForm() {
                 })}
               />
             </FormField>
-            <FormField label="Category of interest (select all that apply):">
+            <FormField label="Phone number" error={errors?.phone}>
+              <input
+                type="tel"
+                name="phone"
+                id="phone"
+                {...register("phone", { required: "This field is required" })}
+              />
+            </FormField>
+            <FormField
+              label="Category of interest (select all that apply):"
+              error={errors?.category}
+            >
               <div className={styles["checkbox-container"]}>
                 {categories.map((el, i) => (
                   <Checkbox
@@ -119,19 +130,6 @@ function SurpriseForm() {
                 ))}
               </div>
             </FormField>
-            {/* <FormField label="Category of tour:">
-              <div className={styles["checkbox-container"]}>
-                {tourTypes.map((el, i) => (
-                  <Checkbox
-                    label={el.label}
-                    key={i}
-                    checkedColor="var(--color-red-dark)"
-                    id="tourType"
-                    name="tourType"
-                  />
-                ))}
-              </div>
-            </FormField> */}
             <FormField
               label="Type of tour (select one):"
               error={errors?.tourType}
@@ -150,7 +148,9 @@ function SurpriseForm() {
                           value={el.label}
                           name="tourType"
                           id={el.label}
-                          {...register("tourType")}
+                          {...register("tourType", {
+                            required: "Please select one",
+                          })}
                         />
                         {el.label}
                       </label>
@@ -159,7 +159,6 @@ function SurpriseForm() {
                 })}
               </div>
             </FormField>
-            {/* TYPE OF TOUR CHECKBOX HERE */}
             <FormField label="Duration">
               <select
                 id="duration"
@@ -224,7 +223,35 @@ function SurpriseForm() {
                 <option value="10">10 </option>
               </select>
             </FormField>
-            {/* INSERT CHILD-FRIENDLY CHECKBOX HERE */}
+            <FormField
+              label="Does it have to be child friendly?"
+              error={errors?.child}
+            >
+              <div className={styles["radio-container"]}>
+                {childFriendly.map((el) => {
+                  return (
+                    <>
+                      <label
+                        htmlFor={el.label}
+                        className={styles["radio-label"]}
+                      >
+                        <input
+                          key={el.label}
+                          type="radio"
+                          value={el.label}
+                          name="child"
+                          id={el.label}
+                          {...register("child", {
+                            required: "Please select one",
+                          })}
+                        />
+                        {el.label}
+                      </label>
+                    </>
+                  );
+                })}
+              </div>
+            </FormField>
             <FormField label="List of interests:">
               <textarea
                 name="interests"
@@ -265,112 +292,3 @@ function SurpriseForm() {
 }
 
 export default SurpriseForm;
-
-{
-  /* <Form bgColor="var(--color-blue-med)" fontColor="white">
-<FormRow label="Name" htmlFor="name">
-  <FormInput type="text" id="name" name="name" />
-</FormRow>
-<FormRow label="Email address" htmlFor="email">
-  <FormInput type="text" id="email" name="email" />
-</FormRow>
-<FormRow
-  label="Category of interest (Select all that apply)"
-  htmlFor="category"
->
-  <div className={styles["checkbox-container"]}>
-    {categories.map((el, i) => (
-      <FormCheckbox
-        label={el.label}
-        key={i}
-        id={el.id}
-        name={el.id}
-        checkedColor="var(--color-red-dark)"
-      />
-    ))}
-  </div>
-</FormRow>
-<FormRow label="Type of tour (Select all that apply)" htmlFor="trip">
-  <div className={styles["checkbox-container"]}>
-    {tourTypes.map((el, i) => (
-      <FormCheckbox
-        label={el.label}
-        key={i}
-        id={el.id}
-        name={el.id}
-        checkedColor="var(--color-red-dark)"
-      />
-    ))}
-  </div>
-</FormRow>
-<FormRow label="Duration" htmlFor="duration">
-  <FormSelect id="duration" name="duration">
-    <option value="1">1 day</option>
-    <option value="2">2 days</option>
-    <option value="3">3 days</option>
-    <option value="4">4 days</option>
-    <option value="5">5 days</option>
-    <option value="6">6 days</option>
-    <option value="7">7 days</option>
-    <option value="8">8 days</option>
-    <option value="9">9 days</option>
-    <option value="10">10 day</option>
-    <option value="11">11 days</option>
-    <option value="12">12 days</option>
-    <option value="13">13 days</option>
-    <option value="14">14 days</option>
-    <option value="flexible">I'm flexible</option>
-  </FormSelect>
-</FormRow>
-<FormRow label="Budget" htmlFor="budget">
-  <FormSelect id="budget" name="budget">
-    <option value="$500 - $1000">$500 - $1000</option>
-    <option value="$1000 - $1500">$1000 - $1500</option>
-    <option value="$1500 - $2000">$1500 - $2000</option>
-    <option value="$2000 - $2500">$2000 - $2500</option>
-    <option value="$2500 - $3000">$2500 - $3000</option>
-    <option value="$3000 - $3500">$3000 - $3500</option>
-    <option value="$3500 - $4000">$3500 - $4000</option>
-    <option value="$4000 - $4500">$4000 - $4500</option>
-    <option value="$4500 - $5000">$4500 - $5000</option>
-    <option value="No budget">No budget</option>
-  </FormSelect>
-</FormRow>
-<FormRow label="How many people" htmlFor="people">
-  <FormSelect id="people" name="people">
-    <option value="1">1</option>
-    <option value="2">2 </option>
-    <option value="3">3 </option>
-    <option value="4">4 </option>
-    <option value="5">5 </option>
-    <option value="6">6 </option>
-    <option value="7">7 </option>
-    <option value="8">8 </option>
-    <option value="9">9 </option>
-    <option value="10">10 </option>
-  </FormSelect>
-</FormRow>
-<FormRow label="Does it need to be child friendly?">
-  <div className={`${styles["checkbox-container"]} ${styles.children}`}>
-    {childFriendly.map((el, i) => (
-      <Checkbox label={el.label} key={i} id="child" name="child" />
-    ))}
-  </div>
-</FormRow>
-<FormRow label="List of interests:">
-  <FormTextarea rows="5" id="interests" name="interests" />
-</FormRow>
-<FormRow label="List of hobbies:">
-  <FormTextarea rows="5" id="hobbies" name="hobbies" />
-</FormRow>
-<FormRow label="Things to avoid:">
-  <FormTextarea rows="5" id="avoid" name="avoid" />
-</FormRow>
-<FormRow label="Disabilities/concerns to be aware of:">
-  <FormTextarea rows="7" id="disabilities" name="disabilities" />
-</FormRow>
-<FormRow label="Additional comments:">
-  <FormTextarea rows="7" id="comments" name="comments" />
-</FormRow>
-</Form> */
-}

@@ -38,26 +38,30 @@
 
 .radio-container {
   display: flex;
-  gap: 5rem;
+  gap: 4rem;
 }
 
 .radio-label {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 1rem;
   font-size: var(--font-small);
   cursor: pointer;
+  line-height: 1.6rem;
 }
 
 input[type="radio"] {
   box-sizing: border-box;
   appearance: none;
   background: white;
-  outline: 1px solid white;
-  border: 1px solid white;
-  width: 1rem;
-  height: 1rem;
+  border: 0.15rem solid white;
+  width: 1.4rem;
+  height: 1.4rem;
   cursor: pointer;
+
+  &:focus {
+    outline: 1px solid var(--color-blue-light);
+  }
 }
 
 input[type="radio"]:checked {
