@@ -2,9 +2,12 @@ import styles from "./PopularSection.module.scss";
 import { usePopularTours } from "../features/tours/usePopularTours";
 import { NavLink } from "react-router-dom";
 import LoadingSpinner from "./LoadingSpinner";
+import { useDispatch } from "react-redux";
+import { addTour } from "../features/tours/tourSlice";
 
 function PopularSection() {
   const { popularTours, isLoading } = usePopularTours();
+  const dispatch = useDispatch();
 
   if (isLoading) return <LoadingSpinner />;
 
@@ -29,7 +32,21 @@ function PopularSection() {
               </p>
             </div>
           </div>
-          <NavLink to={`tours/${el.slug}`} className={styles.button}>
+          <NavLink
+            to={`tours/${el.slug}`}
+            className={styles.button}
+            onClick={() => {
+              const tour = {
+                id: el.id,
+                name: el.tourName,
+                slug: el.slug,
+                price: el.price,
+                duration: el.duration,
+                totalPrice: el.price,
+              };
+              dispatch(addTour(tour));
+            }}
+          >
             Read more
           </NavLink>
         </div>
