@@ -1,4 +1,4 @@
-import { Outlet, useNavigation } from "react-router-dom";
+import { Outlet, ScrollRestoration, useNavigation } from "react-router-dom";
 import styles from "./AppLayout.module.scss";
 import Footer from "./Footer";
 import LoadingSpinner from "./LoadingSpinner";
@@ -10,6 +10,7 @@ function AppLayout() {
 
   return (
     <div className={styles.container}>
+      <ScrollRestoration />
       {isLoading && <LoadingSpinner />}
       <NavBar />
       <main className={styles.main}>

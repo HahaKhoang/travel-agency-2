@@ -23,7 +23,7 @@ function BookingForm() {
     getValues,
   } = useForm();
   const [isChecked, setIsChecked] = useState(false);
-  const [showModal, setShowModal] = useState(true);
+  const [showModal, setShowModal] = useState(false);
   const { tour } = useSingleTour();
 
   const img = tour.imageWelcome;

@@ -1,5 +1,5 @@
 import styles from "./CustomizedBookingSummary.module.scss";
-import jk4 from "../../public/img/jk4.jpg";
+import customized from "../../public/img/website/customized.jpg";
 import { useSelector } from "react-redux";
 
 function CustomizedBookingSummary() {
@@ -29,7 +29,7 @@ function CustomizedBookingSummary() {
         <div className={styles["info-container"]}>
           <h3>Trip summary</h3>
           <div className={styles["picture-container"]}>
-            <img src={jk4} className={styles.picture} />
+            <img src={customized} className={styles.picture} />
           </div>
           <h3>Customized tour</h3>
           <div className={styles["content-container"]}>

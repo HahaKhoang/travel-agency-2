@@ -1,8 +1,5 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import { ScrollRestoration } from "react-router-dom";
 import styles from "./App.module.scss";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import AppLayout from "./ui/AppLayout";
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -59,29 +56,9 @@ function App() {
   return (
     <QueryClientProvider client={queryClient}>
       <ReactQueryDevtools initialIsOpen={false} />
-      <RouterProvider router={router}>
-        <ScrollRestoration />
-      </RouterProvider>
+      <RouterProvider router={router} />
     </QueryClientProvider>
   );
 }
 
 export default App;
-
-{
-  /* <BrowserRouter>
-<Routes>
-  <Route element={<AppLayout />}>
-    <Route index element={<Navigate replace to="home" />} />
-
-    <Route path="home" element={<Home />} />
-    <Route path="about" element={<About />} />
-    <Route path="tours" element={<Tours />} />
-    <Route path="inspiration" element={<Inspiration />} />
-    <Route path="faq" element={<FAQ />} />
-    <Route path="contact" element={<Contact />} />
-    <Route path="*" element={<PageNotFound />} />
-  </Route>
-</Routes>
-</BrowserRouter> */
-}
