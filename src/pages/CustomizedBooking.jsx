@@ -1,9 +1,9 @@
 import Banner from "../ui/Banner";
-import CustomizedForm from "../ui/CustomizedForm";
 import pack from "../../public/img/website/pack.jpg";
 import CustomizedBookingHeader from "../ui/CustomizedBookingHeader";
 import Banner2 from "../ui/Banner2";
 import customizedBooking from "../../public/img/undraw/customizedBooking.svg";
+import CustomizedBookingContainer from "../ui/CustomizedBookingContainer";
 
 function CustomizedBooking() {
   return (
@@ -16,7 +16,7 @@ function CustomizedBooking() {
         bgColor="var(--color-blue-light)"
       />
       <CustomizedBookingHeader />
-      <CustomizedForm />
+      <CustomizedBookingContainer />
     </div>
   );
 }

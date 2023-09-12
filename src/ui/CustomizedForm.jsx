@@ -3,6 +3,17 @@ import Checkbox from "./FormCheckbox";
 import { useForm } from "react-hook-form";
 import FormFieldset from "./FormFieldset";
 import FormField from "./FormField";
+import { useDispatch } from "react-redux";
+import {
+  updateAccommodation,
+  updateFlight,
+  updateReservations,
+  updateQuantity,
+  updateDuration,
+} from "../features/tours/customizedSlice";
+import { useState } from "react";
+import Modal from "./Modal";
+import customized from "../../public/img/website/customized.jpg";
 
 const categories = [
   { label: "Everything", category: "everything", id: "everything" },
@@ -26,10 +37,21 @@ const tourTypes = [
 const childFriendly = [{ label: "Yes" }, { label: "No" }];
 
 function CustomizedForm() {
-  const { register, handleSubmit, reset } = useForm();
+  const [showModal, setShowModal] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+    getValues,
+  } = useForm();
+
+  const dispatch = useDispatch();
 
   function onSubmit(data) {
     console.log(data);
+    setShowModal(true);
+    reset();
   }
 
   function onError(errors) {
@@ -38,9 +60,21 @@ function CustomizedForm() {
 
   return (
     <div className={styles.container}>
-      <form className={styles.form} onSubmit={handleSubmit(onSubmit, onError)}>
+      {showModal && (
+        <Modal
+          img={customized}
+          header="Thank you for booking a customized tour!"
+          text="We will send you a confirmation email shortly!"
+          onClose={() => setShowModal(false)}
+        />
+      )}
+      <form
+        className={styles.form}
+        onSubmit={handleSubmit(onSubmit, onError)}
+        id="customized-form"
+      >
         <FormFieldset>
-          <FormField label="Name">
+          <FormField label="Full name" error={errors?.name}>
             <input
               type="text"
               name="name"
@@ -48,12 +82,24 @@ function CustomizedForm() {
               {...register("name", { required: "This field is required" })}
             />
           </FormField>
-          <FormField label="Email address">
+          <FormField label="Email address" error={errors?.email}>
             <input
               type="text"
               name="email"
               id="email"
               {...register("email", { required: "This field is required" })}
+            />
+          </FormField>
+          <FormField label="Confirm email address" error={errors?.confirmEmail}>
+            <input
+              type="text"
+              name="confirmEmail"
+              id="confirmEmail"
+              {...register("confirmEmail", {
+                required: "This field is required",
+                validate: (value) =>
+                  value === getValues().email || "Emails need to match",
+              })}
             />
           </FormField>
           <FormField label="Category of interest:">
@@ -76,6 +122,7 @@ function CustomizedForm() {
               id="duration"
               name="duration"
               {...register("duration", { required: "This field is required" })}
+              onChange={(e) => dispatch(updateDuration(e.target.value))}
             >
               <option value="1">1 day</option>
               <option value="2">2 days</option>
@@ -99,6 +146,7 @@ function CustomizedForm() {
               id="people"
               name="people"
               {...register("people", { required: "This field is required" })}
+              onChange={(e) => dispatch(updateQuantity(e.target.value))}
             >
               <option value="1">1</option>
               <option value="2">2 </option>
@@ -113,20 +161,24 @@ function CustomizedForm() {
             </select>
           </FormField>
           {/* INSERT CHILD-FRIENDLY CHECKBOX HERE */}
-          <FormField label="Countries of interest:">
+          <FormField label="Countries of interest:" error={errors?.countries}>
             <textarea
               name="countries"
               id="countries"
               rows="5"
-              {...register("countries")}
+              {...register("countries", {
+                required: "Please provide requested information",
+              })}
             />
           </FormField>
-          <FormField label="List of hobbies:">
+          <FormField label="List of hobbies:" error={errors?.hobbies}>
             <textarea
               name="hobbies"
               id="hobbies"
               rows="5"
-              {...register("hobbies")}
+              {...register("hobbies", {
+                required: "Please provide requested information",
+              })}
             />
           </FormField>
           <FormField label="Things to avoid:">
@@ -140,6 +192,106 @@ function CustomizedForm() {
               {...register("disabilities")}
             />
           </FormField>
+          <FormField
+            label="Do you need help finding and booking accommodation for an additional fee of $90?"
+            error={errors?.accommodation}
+          >
+            <div className={styles["radio-container"]}>
+              <label
+                htmlFor="accommodation-yes"
+                className={styles["radio-label"]}
+              >
+                <input
+                  {...register("accommodation", {
+                    required: "Please check one",
+                  })}
+                  type="radio"
+                  value="yes"
+                  id="accommodation-yes"
+                  name="accommodation"
+                  onClick={() => dispatch(updateAccommodation(true))}
+                />
+                Yes
+              </label>
+              <label
+                htmlFor="accommodation-no"
+                className={styles["radio-label"]}
+              >
+                <input
+                  {...register("accommodation", {
+                    required: "Please check one",
+                  })}
+                  type="radio"
+                  value="no"
+                  id="accommodation-no"
+                  name="accommodation"
+                  onClick={() => dispatch(updateAccommodation(false))}
+                />
+                No
+              </label>
+            </div>
+          </FormField>
+          <FormField
+            label="Do you need help finding and booking flight(s) for an additional fee of $140?"
+            error={errors?.flight}
+          >
+            <div className={styles["radio-container"]}>
+              <label htmlFor="flight-yes" className={styles["radio-label"]}>
+                <input
+                  {...register("flight", { required: "Please check one" })}
+                  type="radio"
+                  value="yes"
+                  id="flight-yes"
+                  name="flight"
+                  onClick={() => dispatch(updateFlight(true))}
+                />
+                Yes
+              </label>
+              <label htmlFor="flight-no" className={styles["radio-label"]}>
+                <input
+                  {...register("flight", { required: "Please check one" })}
+                  type="radio"
+                  value="no"
+                  id="flight-no"
+                  name="flight"
+                  onClick={() => dispatch(updateFlight(false))}
+                />
+                No
+              </label>
+            </div>
+          </FormField>
+          <FormField
+            label="Do you need help booking necessary reservations for an additional fee of $130?"
+            error={errors?.reservation}
+          >
+            <div className={styles["radio-container"]}>
+              <label
+                htmlFor="reservation-yes"
+                className={styles["radio-label"]}
+              >
+                <input
+                  {...register("reservation", { required: "Please check one" })}
+                  type="radio"
+                  value="yes"
+                  id="reservation-yes"
+                  name="reservation"
+                  onClick={() => dispatch(updateReservations(true))}
+                />
+                Yes
+              </label>
+              <label htmlFor="reservation-no" className={styles["radio-label"]}>
+                <input
+                  {...register("reservation", { required: "Please check one" })}
+                  type="radio"
+                  value="no"
+                  id="reservation-no"
+                  name="reservation"
+                  onClick={() => dispatch(updateReservations(false))}
+                />
+                No
+              </label>
+            </div>
+          </FormField>
           <FormField label="Additional comments:">
             <textarea
               name="comments"
@@ -149,98 +301,9 @@ function CustomizedForm() {
             />
           </FormField>
         </FormFieldset>
-        <FormField>
-          <button className={styles.button}>Submit</button>
-        </FormField>
       </form>
     </div>
   );
 }
 
 export default CustomizedForm;
-
-{
-  /* <Form bgColor="var(--color-blue-med)" fontColor="white">
-<FormRow label="Name" htmlFor="name">
-  <FormInput id="name" name="name" type="text" />
-</FormRow>
-<FormRow label="Email address" htmlFor="email">
-  <FormInput id="email" name="email" type="text" />
-</FormRow>
-<FormRow label="Category of Interest (select all that apply)">
-  <div className={styles["checkbox-container"]}>
-    {categories.map((el, i) => (
-      <Checkbox
-        label={el.label}
-        key={i}
-        checkedColor="white"
-        id="category"
-        name="category"
-      />
-    ))}
-  </div>
-</FormRow>
-<FormRow label="Type of tour (select all that apply)">
-  <div className={styles["checkbox-container"]}>
-    {tourTypes.map((el, i) => (
-      <Checkbox label={el.label} key={i} id="trip" name="trip" />
-    ))}
-  </div>
-</FormRow>
-<FormRow label="Duration" htmlFor="duration">
-  <FormSelect id="duration" name="duration">
-    <option value="1">1 day</option>
-    <option value="2">2 days</option>
-    <option value="3">3 days</option>
-    <option value="4">4 days</option>
-    <option value="5">5 days</option>
-    <option value="6">6 days</option>
-    <option value="7">7 days</option>
-    <option value="8">8 days</option>
-    <option value="9">9 days</option>
-    <option value="10">10 day</option>
-    <option value="11">11 days</option>
-    <option value="12">12 days</option>
-    <option value="13">13 days</option>
-    <option value="14">14 days</option>
-    <option value="flexible">I'm flexible</option>
-  </FormSelect>
-</FormRow>
-<FormRow label="How many people" htmlFor="people">
-  <FormSelect id="people" name="people">
-    <option value="1">1</option>
-    <option value="2">2 </option>
-    <option value="3">3 </option>
-    <option value="4">4 </option>
-    <option value="5">5 </option>
-    <option value="6">6 </option>
-    <option value="7">7 </option>
-    <option value="8">8 </option>
-    <option value="9">9 </option>
-    <option value="10">10 </option>
-  </FormSelect>
-</FormRow>
-<FormRow label="Does it need to be child friendly?">
-  <div className={`${styles["checkbox-container"]} ${styles.children}`}>
-    {childFriendly.map((el, i) => (
-      <Checkbox label={el.label} key={i} id="child" name="child" />
-    ))}
-  </div>
-</FormRow>
-<FormRow label="Countries of interest:">
-  <FormTextarea rows="5" id="country" name="country" />
-</FormRow>
-<FormRow label="List of hobbies:">
-  <FormTextarea rows="5" id="hobbies" name="hobbies" />
-</FormRow>
-<FormRow label="Things to avoid:">
-  <FormTextarea rows="5" id="avoid" name="avoid" />
-</FormRow>
-<FormRow label="Disabilities/concerns to be aware of:">
-  <FormTextarea rows="7" id="disabilities" name="disabilities" />
-</FormRow>
-<FormRow label="Additional comments:">
-  <FormTextarea rows="7" id="comments" name="comments" />
-</FormRow>
-</Form> */
-}
