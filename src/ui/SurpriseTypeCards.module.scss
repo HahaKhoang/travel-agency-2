@@ -43,8 +43,13 @@
 
 .link {
   font-size: var(--font-med);
+  color: var(--color-blue-dark);
 
   @media (max-width: 1700px) {
     font-size: var(--font-small);
+  }
+
+  &:hover {
+    color: var(--color-red-dark);
   }
 }

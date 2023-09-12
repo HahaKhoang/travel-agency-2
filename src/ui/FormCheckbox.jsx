@@ -1,8 +1,10 @@
 import { useState } from "react";
 import styles from "./FormCheckbox.module.scss";
+import { useFormContext } from "react-hook-form";
 
 function Checkbox({ label, id, name, checkedColor }) {
   const [isChecked, setIsChecked] = useState(false);
+  const { register } = useFormContext();
 
   return (
     <div className={styles.box}>
@@ -13,6 +15,7 @@ function Checkbox({ label, id, name, checkedColor }) {
           name={name}
           value={label}
           checked={isChecked}
+          {...register(`${name}`)}
           onChange={() => setIsChecked((prev) => !prev)}
           style={{ backgroundColor: isChecked ? checkedColor : "" }}
         />
