@@ -7,7 +7,7 @@ import Modal from "./Modal";
 import contactModal from "../../public/img/website/contactModal.jpg";
 
 function ContactForm() {
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(true);
   const { register, handleSubmit, formState } = useForm();
   const { errors } = formState;
 

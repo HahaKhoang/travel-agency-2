@@ -22,7 +22,7 @@ function BookingForm() {
     formState: { errors },
     getValues,
   } = useForm();
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState(true);
   const [showModal, setShowModal] = useState(true);
   const { isLoading, tour, error } = useSingleTour();
   // const [quantity, setQuantity] = useState(1);

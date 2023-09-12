@@ -1,12 +1,29 @@
 import styles from "./Modal.module.scss";
-import contactModal from "../../public/img/undraw/contactModal.svg";
 import { RiCloseFill } from "react-icons/ri";
 import { createPortal } from "react-dom";
+import { useEffect, useRef } from "react";
 
 function Modal({ onClose, img, header, text }) {
+  const ref = useRef();
+
+  useEffect(
+    function () {
+      function handleClick(e) {
+        if (ref.current && !ref.current.contains(e.target)) {
+          onClose();
+        }
+      }
+
+      document.addEventListener("click", handleClick, true);
+
+      return () => document.removeEventListener("click", handleClick, true);
+    },
+    [onClose]
+  );
+
   return createPortal(
     <div className={styles.container}>
-      <div className={styles.box}>
+      <div className={styles.box} ref={ref}>
         <button onClick={onClose} className={styles.icon}>
           <RiCloseFill />
         </button>
