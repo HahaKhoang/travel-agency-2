@@ -2,8 +2,12 @@ import TestFieldset from "./FormFieldset";
 import FormField from "./FormField";
 import styles from "./ContactForm.module.scss";
 import { useForm } from "react-hook-form";
+import { useState } from "react";
+import Modal from "./Modal";
+import contactModal from "../../public/img/website/contactModal.jpg";
 
 function ContactForm() {
+  const [showModal, setShowModal] = useState(false);
   const { register, handleSubmit, formState } = useForm();
   const { errors } = formState;
 
@@ -17,6 +21,14 @@ function ContactForm() {
 
   return (
     <div className={styles.container}>
+      {showModal && (
+        <Modal
+          img={contactModal}
+          header="Thank you for contacting us!"
+          text="We will reply as soon as we can (usually within 48 hours)"
+          onClose={() => setShowModal(false)}
+        />
+      )}
       <form className={styles.form} onSubmit={handleSubmit(onSubmit, onError)}>
         <TestFieldset>
           <FormField label="Name">

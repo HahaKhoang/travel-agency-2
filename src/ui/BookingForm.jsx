@@ -1,5 +1,6 @@
 import FormFieldset from "./FormFieldset";
 import FormField from "./FormField";
+
 import styles from "./BookingForm.module.scss";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
@@ -11,6 +12,7 @@ import {
   updateReservations,
 } from "../features/tours/tourSlice";
 import Modal from "./Modal";
+import { useSingleTour } from "../features/tours/useSingleTour";
 
 function BookingForm() {
   const {
@@ -21,10 +23,12 @@ function BookingForm() {
     getValues,
   } = useForm();
   const [isChecked, setIsChecked] = useState(false);
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(true);
+  const { isLoading, tour, error } = useSingleTour();
   // const [quantity, setQuantity] = useState(1);
   // const [accommodation, setAccommodation] = useState(false);
-
+  const img = tour.imageWelcome;
+  const tourName = useSelector((state) => state.tour.name);
   const initialQuantity = useSelector((state) => state.tour.quantity);
 
   const dispatch = useDispatch();
@@ -41,7 +45,14 @@ function BookingForm() {
 
   return (
     <div className={styles.container}>
-      {showModal && <Modal onClose={() => setShowModal(false)} />}
+      {showModal && (
+        <Modal
+          onClose={() => setShowModal(false)}
+          header={`Thank you for booking ${tourName} with us!`}
+          text="We will send you a confirmation email with all your details shortly"
+          img={img}
+        />
+      )}
       <form
         className={styles.form}
         onSubmit={handleSubmit(onSubmit, onError)}
