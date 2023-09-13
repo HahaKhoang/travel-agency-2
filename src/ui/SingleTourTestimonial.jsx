@@ -95,32 +95,3 @@ function SingleTourTestimonial({ reviewImg }) {
 }
 
 export default SingleTourTestimonial;
-
-{
-  /* <div className={styles.dots}>
-{reviews.map((_, i) => {
-  return (
-    <span
-      key={i}
-      className={
-        activeIndex === i
-          ? `${styles.dot} ${styles["active-dot"]}`
-          : `${styles.dot}`
-      }
-      onClick={() => {
-        setActiveIndex(i);
-      }}
-    ></span>
-  );
-})}
-</div> */
-}
-
-{
-  /* <button className={styles["button-left"]} onClick={prevSlide}>
-<RiArrowLeftLine className={styles.button} />
-</button>
-<button className={styles["button-right"]} onClick={nextSlide}>
-<RiArrowRightLine className={styles.button} />
-</button> */
-}
