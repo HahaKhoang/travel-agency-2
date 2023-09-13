@@ -3,6 +3,7 @@ import styles from "./SingleTourBookNow.module.scss";
 
 function SingleTourBookNow({ duration, price, cities, category, slug }) {
   const navigate = useNavigate();
+  const formattedCities = cities.join(", ");
 
   function onClick(e) {
     e.preventDefault();
@@ -13,25 +14,17 @@ function SingleTourBookNow({ duration, price, cities, category, slug }) {
     <div className={styles.container}>
       <div className={styles["details-container"]}>
         <div className={styles["details-center"]}>
-          <div className={styles.details}>
-            <p className={styles.label}>Duration of</p>
-            <p className={styles.text}>{duration} days</p>
+          <h3 className={styles.header}>
+            {duration} days from ${price}~
+          </h3>
+          <div className={styles.tour}>
+            <p className={styles.label}>
+              Category: {category.charAt(0).toUpperCase() + category.slice(1)}
+            </p>
           </div>
           <div className={styles.details}>
-            <p className={styles.label}>Prices starting from</p>
-            <p className={styles.text}>${price}</p>
-          </div>
-          <div className={styles.details}>
-            <p className={styles.label}>Cities include</p>
-            {cities.map((el, i) => (
-              <span key={i} className={styles.text}>
-                {el}
-              </span>
-            ))}
-          </div>
-          <div className={styles.details}>
-            <p className={styles.label}>Type of tour</p>
-            <p className={styles.text}>{category}</p>
+            <p className={styles.label}>Cities include:</p>
+            <span className={styles.text}>{formattedCities}</span>
           </div>
           <div className={styles.details}>
             <p className={styles.label}>*Customizations available</p>

@@ -2,25 +2,18 @@
   background-color: var(--color-blue-dark);
   width: 100%;
   height: 40rem;
-  padding: 10rem 14rem;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8rem;
   margin-top: 10rem;
-
-  @media (max-width: 1700px) {
-    padding: 14rem 8rem;
-    height: 44rem;
-  }
 }
 
 .details-container {
   background-color: var(--color-blue-light);
   width: 40%;
-  padding: 3rem;
+  height: 100%;
   display: flex;
-
   align-items: center;
   justify-content: center;
 }
@@ -28,15 +21,30 @@
 .details-center {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
+  gap: 2rem;
+}
+
+.header {
+  color: var(--color-blue-dark);
+}
+
+.tour {
+  display: flex;
+  background-color: var(--color-blue-med);
+  border-radius: 20px;
+  padding: 0.6rem 1rem;
+  align-self: start;
+
+  p {
+    font-size: var(--font-small);
+    color: white;
+  }
 }
 
 .details {
   display: flex;
   flex-wrap: wrap;
   column-gap: 0.8rem;
-  text-transform: uppercase;
 }
 
 .button {
@@ -61,11 +69,12 @@
 
 .label {
   font-size: var(--font-med);
-  color: var(--color-red-dark);
+  color: var(--color-blue-dark);
 }
 
 .text {
   font-size: var(--font-med);
+  color: var(--color-blue-dark);
 }
 
 .about-container {
