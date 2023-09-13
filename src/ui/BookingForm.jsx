@@ -1,6 +1,5 @@
 import FormFieldset from "./FormFieldset";
 import FormField from "./FormField";
-
 import styles from "./BookingForm.module.scss";
 import { useForm } from "react-hook-form";
 import { useState } from "react";
