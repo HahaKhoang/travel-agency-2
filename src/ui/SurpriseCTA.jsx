@@ -11,7 +11,7 @@ function SurpriseCTA({ bgColor }) {
           <br /> Aliquid earum aspernatur libero doloremque, dolorum,
           necessitatibus{" "}
         </p>
-        <NavLink to="booking" className={styles.button}>
+        <NavLink to="/surprise/booking" className={styles.button}>
           Book now
         </NavLink>
       </div>

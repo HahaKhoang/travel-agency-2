@@ -6,11 +6,22 @@
   align-items: center;
   gap: 1.6rem;
   color: var(--color-blue-dark);
+  // background-color: pink;
+
+  @media (max-width: 1700px) {
+    // background-color: green;
+    width: 30rem;
+  }
 }
 
 .svg {
   width: 30rem;
   height: 30rem;
+
+  @media (max-width: 1700px) {
+    width: 20rem;
+    height: 20rem;
+  }
 }
 
 .title {
@@ -25,7 +36,6 @@
 
 .description {
   font-size: var(--font-med);
-  text-align: center;
 
   @media (max-width: 1700px) {
     font-size: var(--font-small);

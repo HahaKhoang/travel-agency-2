@@ -4,7 +4,7 @@ import styles from "./SingleTourBookNow.module.scss";
 function SingleTourBookNow({ duration, price, cities, category, slug }) {
   const navigate = useNavigate();
   const formattedCities = cities.join(", ");
-
+  const day = duration < 2 ? "day" : "days";
   function onClick(e) {
     e.preventDefault();
     navigate(`/booking/${slug}`);
@@ -15,7 +15,7 @@ function SingleTourBookNow({ duration, price, cities, category, slug }) {
       <div className={styles["details-container"]}>
         <div className={styles["details-center"]}>
           <h3 className={styles.header}>
-            {duration} days from ${price}~
+            {duration} {day} from ${price}~
           </h3>
           <div className={styles.tour}>
             <p className={styles.label}>
