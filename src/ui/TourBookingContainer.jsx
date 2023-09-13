@@ -1,6 +1,5 @@
 import { useSingleTour } from "../features/tours/useSingleTour";
 import BookingForm from "./BookingForm";
-import BookingSummary from "./BookingSummary";
 import styles from "./TourBookingContainer.module.scss";
 import TripSummary from "./TripSummary";
 
@@ -12,13 +11,6 @@ function TourBookingContainer() {
     <div style={{ backgroundColor: "var(--color-blue-dark" }}>
       <div className={styles.container}>
         <BookingForm />
-        {/* <BookingSummary
-          tourName={tourName}
-          price={price}
-          duration={duration}
-          cities={cities}
-          image={imageWelcome}
-        /> */}
         <TripSummary
           image={imageWelcome}
           slice="tour"

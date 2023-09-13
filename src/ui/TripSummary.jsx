@@ -17,6 +17,8 @@ function TripSummary({ image, header, slice, disclaimer }) {
   const totalPrice = accommodationFee ? tourTotal + 90 : tourTotal;
   const totalPrice2 = flightFee ? totalPrice + 140 : totalPrice;
   const totalPrice3 = reservationFee ? totalPrice2 + 130 : totalPrice2;
+  const deposit = Math.floor(totalPrice3 / 3);
+  const finalPayment = Math.ceil(totalPrice3 - deposit);
 
   return (
     <div className={styles.container}>
@@ -66,9 +68,24 @@ function TripSummary({ image, header, slice, disclaimer }) {
               <p className={styles.content}>$130</p>
             </div>
           )}
-          <div className={styles.total}>
-            <p>Total</p>
-            <p>${totalPrice3}</p>
+
+          <div className={styles["total-container"]}>
+            {slice === "surprise" && (
+              <>
+                <div className={styles.breakdown}>
+                  <p>Deposit</p>
+                  <p className={styles.content}>${deposit}</p>
+                </div>
+                <div className={styles.breakdown}>
+                  <p>Final Payment</p>
+                  <p className={styles.content}>${finalPayment}</p>
+                </div>
+              </>
+            )}
+            <div className={styles.total}>
+              <p>Total</p>
+              <p>${totalPrice3}</p>
+            </div>
           </div>
         </div>
         <p className={styles.disclaimer}>{disclaimer}</p>

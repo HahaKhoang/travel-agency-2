@@ -74,13 +74,20 @@
   padding: 0 2rem;
 }
 
+.total-container {
+  border-top: 1px solid white;
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
 .total {
   background-color: var(--color-grey-light);
   font-size: var(--font-xl);
   display: flex;
   justify-content: space-between;
-  padding: 2rem;
-  border-top: 1px solid white;
+  padding: 0 2rem;
   color: var(--color-red-dark);
 }
 
