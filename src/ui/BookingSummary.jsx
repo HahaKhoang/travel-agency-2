@@ -21,7 +21,6 @@ function BookingSummary({ image, cities }) {
     <div className={styles.container}>
       <div className={styles.box}>
         <div className={styles["info-container"]}>
-          <h3>Trip summary</h3>
           <div className={styles["picture-container"]}>
             <img src={image} className={styles.picture} />
           </div>
@@ -104,9 +103,6 @@ function BookingSummary({ image, cities }) {
             The total cost only covers the itinerary and any additional
             features.
           </p>
-          <button className={styles.button} form="booking-form" type="submit">
-            Book
-          </button>
         </div>
       </div>
     </div>
