@@ -15,6 +15,7 @@
     outline: none;
     border: none;
     font-family: inherit;
+    border-radius: 3px;
   }
 
   input:focus,
@@ -26,7 +27,8 @@
 }
 
 .label {
-  font-size: var(--font-med);
+  font-size: var(--font-small);
+  line-height: 2rem;
 }
 
 .error {

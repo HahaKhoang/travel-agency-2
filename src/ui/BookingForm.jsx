@@ -58,7 +58,7 @@ function BookingForm() {
         id="booking-form"
       >
         <FormFieldset>
-          <FormField label="Full name" error={errors?.name}>
+          <FormField label="*Full name" error={errors?.name}>
             <input
               type="text"
               name="name"
@@ -66,7 +66,7 @@ function BookingForm() {
               {...register("name", { required: "This field is required" })}
             />
           </FormField>
-          <FormField label="Email address" error={errors?.email}>
+          <FormField label="*Email address" error={errors?.email}>
             <input
               type="text"
               name="email"
@@ -74,19 +74,8 @@ function BookingForm() {
               {...register("email", { required: "This field is required" })}
             />
           </FormField>
-          <FormField label="Confirm email address" error={errors?.confirmEmail}>
-            <input
-              type="text"
-              name="confirmEmail"
-              id="confirmEmail"
-              {...register("confirmEmail", {
-                required: "This field is required",
-                validate: (value) =>
-                  value === getValues().email || "Emails need to match",
-              })}
-            />
-          </FormField>
-          <FormField label="Phone number" error={errors?.phone}>
+
+          <FormField label="*Phone number" error={errors?.phone}>
             <input
               type="tel"
               name="phone"
@@ -117,7 +106,7 @@ function BookingForm() {
             </select>
           </FormField>
           <FormField
-            label="Do you need help finding and booking accommodation for an additional fee of $90?"
+            label="*Do you need help finding and booking accommodation for an additional fee of $90?"
             error={errors?.accommodation}
           >
             <div className={styles["radio-container"]}>
@@ -156,7 +145,7 @@ function BookingForm() {
             </div>
           </FormField>
           <FormField
-            label="Do you need help finding and booking flight(s) for an additional fee of $140?"
+            label="*Do you need help finding and booking flight(s) for an additional fee of $140?"
             error={errors?.flight}
           >
             <div className={styles["radio-container"]}>
@@ -185,7 +174,7 @@ function BookingForm() {
             </div>
           </FormField>
           <FormField
-            label="Do you need help booking necessary reservations for an additional fee of $130?"
+            label="*Do you need help booking necessary reservations for an additional fee of $130?"
             error={errors?.reservation}
           >
             <div className={styles["radio-container"]}>
@@ -216,18 +205,10 @@ function BookingForm() {
               </label>
             </div>
           </FormField>
-          <FormField label="Additional comments:">
-            <textarea
-              name="comments"
-              id="comments"
-              rows="8"
-              {...register("comments")}
-            />
-          </FormField>
         </FormFieldset>
-        {/* <FormField>
+        <FormField>
           <button className={styles.button}>Book</button>
-        </FormField> */}
+        </FormField>
       </form>
     </div>
   );

@@ -1,6 +1,6 @@
 .container {
   background-color: var(--color-blue-light);
-  width: 70%;
+  width: 60%;
   padding: 0 4rem;
 
   @media (max-width: 1500px) {
@@ -14,7 +14,7 @@
 }
 
 .form {
-  color: white;
+  color: var(--color-blue-dark);
   width: 100%;
   margin: 0 auto;
   padding: 4rem 0;
@@ -23,6 +23,7 @@
 .radio-container {
   display: flex;
   gap: 5rem;
+  margin-top: 0.6rem;
 }
 
 .radio-label {
@@ -41,8 +42,21 @@ input[type="radio"] {
   border: 1px solid white;
   width: 1rem;
   height: 1rem;
+  border-radius: 50%;
 }
 
 input[type="radio"]:checked {
   background: var(--color-red-dark);
+}
+
+.button {
+  margin-top: 3rem;
+  align-self: start;
+  border-radius: 0;
+  background-color: var(--color-blue-dark);
+  border: none;
+
+  &:hover {
+    background-color: var(--color-red-dark);
+  }
 }

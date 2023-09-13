@@ -1,12 +1,13 @@
 .container {
   background-color: var(--color-blue-light);
   display: flex;
-  width: 70%;
+  width: 50%;
   margin: 0 auto;
+  gap: 5rem;
 
   @media (max-width: 1800px) {
-    width: 90%;
-    gap: 10rem;
+    width: 70%;
+    gap: 5rem;
   }
 
   @media (max-width: 1000px) {
