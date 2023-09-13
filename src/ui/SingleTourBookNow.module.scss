@@ -10,12 +10,13 @@
   margin-top: 10rem;
 
   @media (max-width: 1700px) {
-    padding: 8rem;
+    padding: 14rem 8rem;
+    height: 44rem;
   }
 }
 
 .details-container {
-  background-color: white;
+  background-color: var(--color-blue-light);
   width: 40%;
   padding: 3rem;
   display: flex;

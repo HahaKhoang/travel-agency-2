@@ -10,6 +10,7 @@ function TourBookingContainer() {
   return (
     <div style={{ backgroundColor: "var(--color-blue-light" }}>
       <div className={styles.container}>
+        <BookingForm />
         <BookingSummary
           tourName={tourName}
           price={price}
@@ -17,7 +18,6 @@ function TourBookingContainer() {
           cities={cities}
           image={imageWelcome}
         />
-        <BookingForm />
       </div>
     </div>
   );

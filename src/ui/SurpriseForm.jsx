@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { Fragment, useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import Checkbox from "./FormCheckbox";
 import styles from "./SurpriseForm.module.scss";
@@ -137,13 +137,12 @@ function SurpriseForm() {
               <div className={styles["radio-container"]}>
                 {tourTypes.map((el) => {
                   return (
-                    <>
+                    <Fragment key={el.label}>
                       <label
                         htmlFor={el.label}
                         className={styles["radio-label"]}
                       >
                         <input
-                          key={el.label}
                           type="radio"
                           value={el.label}
                           name="tourType"
@@ -154,7 +153,7 @@ function SurpriseForm() {
                         />
                         {el.label}
                       </label>
-                    </>
+                    </Fragment>
                   );
                 })}
               </div>
@@ -230,13 +229,12 @@ function SurpriseForm() {
               <div className={styles["radio-container"]}>
                 {childFriendly.map((el) => {
                   return (
-                    <>
+                    <Fragment key={el.label}>
                       <label
                         htmlFor={el.label}
                         className={styles["radio-label"]}
                       >
                         <input
-                          key={el.label}
                           type="radio"
                           value={el.label}
                           name="child"
@@ -247,7 +245,7 @@ function SurpriseForm() {
                         />
                         {el.label}
                       </label>
-                    </>
+                    </Fragment>
                   );
                 })}
               </div>
