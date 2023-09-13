@@ -42,7 +42,6 @@ function SurpriseForm() {
     register,
     handleSubmit,
     reset,
-    getValues,
     formState: { errors },
   } = methods;
 
@@ -74,46 +73,7 @@ function SurpriseForm() {
           onSubmit={handleSubmit(onSubmit, onError)}
           id="surprise-form"
         >
-          <FormFieldset>
-            <FormField label="Full name" error={errors?.name}>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                {...register("name", { required: "This field is required" })}
-              />
-            </FormField>
-            <FormField label="Email address" error={errors?.email}>
-              <input
-                type="text"
-                name="email"
-                id="email"
-                {...register("email", { required: "This field is required" })}
-              />
-            </FormField>
-            <FormField
-              label="Confirm email address"
-              error={errors?.confirmEmail}
-            >
-              <input
-                type="text"
-                name="confirmEmail"
-                id="confirmEmail"
-                {...register("confirmEmail", {
-                  required: "This field is required",
-                  validate: (value) =>
-                    value === getValues().email || "Emails need to match",
-                })}
-              />
-            </FormField>
-            <FormField label="Phone number" error={errors?.phone}>
-              <input
-                type="tel"
-                name="phone"
-                id="phone"
-                {...register("phone", { required: "This field is required" })}
-              />
-            </FormField>
+          <FormFieldset form="surprise-form">
             <FormField
               label="Category of interest (select all that apply):"
               error={errors?.category}
@@ -281,6 +241,9 @@ function SurpriseForm() {
                 rows="8"
                 {...register("comments")}
               />
+            </FormField>
+            <FormField>
+              <button className={styles.button}>Book</button>
             </FormField>
           </FormFieldset>
         </form>

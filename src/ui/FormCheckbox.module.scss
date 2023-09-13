@@ -15,8 +15,9 @@
   background-color: white;
   outline: none;
   cursor: pointer;
+  border-radius: 0;
 }
 
-.container input[type="checkbox"]:focus {
-  outline: 1px solid var(--color-blue-light);
-}
+// .container input[type="checkbox"]:focus {
+//   outline: 1px solid var(--color-blue-light);
+// }

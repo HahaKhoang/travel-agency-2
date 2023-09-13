@@ -19,8 +19,7 @@ function BookingForm() {
     handleSubmit,
     reset,
     formState: { errors },
-    getValues,
-  } = useForm();
+  } = useForm({ mode: "onBlur" });
   const [isChecked, setIsChecked] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const { tour } = useSingleTour();

@@ -5,11 +5,11 @@ import styles from "./TourBookingContainer.module.scss";
 import TripSummary from "./TripSummary";
 
 function TourBookingContainer() {
-  const { isLoading, tour, error } = useSingleTour();
-  const { tourName, price, duration, cities, imageWelcome } = tour;
+  const { tour } = useSingleTour();
+  const { imageWelcome } = tour;
 
   return (
-    <div style={{ backgroundColor: "var(--color-blue-med" }}>
+    <div style={{ backgroundColor: "var(--color-blue-dark" }}>
       <div className={styles.container}>
         <BookingForm />
         {/* <BookingSummary
@@ -20,11 +20,10 @@ function TourBookingContainer() {
           image={imageWelcome}
         /> */}
         <TripSummary
-          tourName={tourName}
-          price={price}
-          duration={duration}
-          cities={cities}
           image={imageWelcome}
+          slice="tour"
+          disclaimer="   *Price does not include flight, accommodation, or additional costs.
+          The total cost only covers the itinerary and any additional features."
         />
       </div>
     </div>

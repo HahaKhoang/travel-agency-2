@@ -43,7 +43,6 @@ function CustomizedForm() {
     register,
     handleSubmit,
     reset,
-    getValues,
     formState: { errors },
   } = methods;
 
@@ -73,50 +72,10 @@ function CustomizedForm() {
         <form
           className={styles.form}
           onSubmit={handleSubmit(onSubmit, onError)}
-          id="customized-form"
         >
           <FormFieldset>
-            <FormField label="Full name" error={errors?.name}>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                {...register("name", { required: "This field is required" })}
-              />
-            </FormField>
-            <FormField label="Email address" error={errors?.email}>
-              <input
-                type="text"
-                name="email"
-                id="email"
-                {...register("email", { required: "This field is required" })}
-              />
-            </FormField>
             <FormField
-              label="Confirm email address"
-              error={errors?.confirmEmail}
-            >
-              <input
-                type="text"
-                name="confirmEmail"
-                id="confirmEmail"
-                {...register("confirmEmail", {
-                  required: "This field is required",
-                  validate: (value) =>
-                    value === getValues().email || "Emails need to match",
-                })}
-              />
-            </FormField>
-            <FormField label="Phone number" error={errors?.phone}>
-              <input
-                type="tel"
-                name="phone"
-                id="phone"
-                {...register("phone", { required: "This field is required" })}
-              />
-            </FormField>
-            <FormField
-              label="Category of interest (select all that apply):"
+              label="*Category of interest (select all that apply):"
               error={errors?.category}
             >
               <div className={styles["checkbox-container"]}>
@@ -132,7 +91,7 @@ function CustomizedForm() {
               </div>
             </FormField>
             <FormField
-              label="Type of tour (select one):"
+              label="*Type of tour (select one):"
               error={errors?.tourType}
             >
               <div className={styles["radio-container"]}>
@@ -205,7 +164,7 @@ function CustomizedForm() {
               </select>
             </FormField>
             <FormField
-              label="Does it have to be child friendly?"
+              label="*Does it have to be child friendly?"
               error={errors?.child}
             >
               <div className={styles["radio-container"]}>
@@ -232,44 +191,22 @@ function CustomizedForm() {
                 })}
               </div>
             </FormField>
-            <FormField label="Countries of interest:" error={errors?.countries}>
+            <FormField
+              label="*Countries of interest:"
+              error={errors?.countries}
+            >
               <textarea
                 name="countries"
                 id="countries"
-                rows="5"
+                rows="3"
                 {...register("countries", {
                   required: "Please provide requested information",
                 })}
               />
             </FormField>
-            <FormField label="List of hobbies:" error={errors?.hobbies}>
-              <textarea
-                name="hobbies"
-                id="hobbies"
-                rows="5"
-                {...register("hobbies", {
-                  required: "Please provide requested information",
-                })}
-              />
-            </FormField>
-            <FormField label="Things to avoid:">
-              <textarea
-                name="avoid"
-                id="avoid"
-                rows="5"
-                {...register("avoid")}
-              />
-            </FormField>
-            <FormField label="Disabilities/concerns to be aware of:">
-              <textarea
-                name="disabilities"
-                id="disabilities"
-                rows="8"
-                {...register("disabilities")}
-              />
-            </FormField>
+
             <FormField
-              label="Do you need help finding and booking accommodation for an additional fee of $90?"
+              label="*Do you need help finding and booking accommodation for an additional fee of $90?"
               error={errors?.accommodation}
             >
               <div className={styles["radio-container"]}>
@@ -308,7 +245,7 @@ function CustomizedForm() {
               </div>
             </FormField>
             <FormField
-              label="Do you need help finding and booking flight(s) for an additional fee of $140?"
+              label="*Do you need help finding and booking flight(s) for an additional fee of $140?"
               error={errors?.flight}
             >
               <div className={styles["radio-container"]}>
@@ -337,7 +274,7 @@ function CustomizedForm() {
               </div>
             </FormField>
             <FormField
-              label="Do you need help booking necessary reservations for an additional fee of $130?"
+              label="*Do you need help booking necessary reservations for an additional fee of $130?"
               error={errors?.reservation}
             >
               <div className={styles["radio-container"]}>
@@ -379,11 +316,14 @@ function CustomizedForm() {
               <textarea
                 name="comments"
                 id="comments"
-                rows="8"
+                rows="5"
                 {...register("comments")}
               />
             </FormField>
           </FormFieldset>
+          <FormField>
+            <button className={styles.button}>Book</button>
+          </FormField>
         </form>
       </FormProvider>
     </div>
@@ -391,3 +331,32 @@ function CustomizedForm() {
 }
 
 export default CustomizedForm;
+
+{
+  /* <FormField label="List of hobbies:" error={errors?.hobbies}>
+<textarea
+  name="hobbies"
+  id="hobbies"
+  rows="5"
+  {...register("hobbies", {
+    required: "Please provide requested information",
+  })}
+/>
+</FormField>
+<FormField label="Things to avoid:">
+<textarea
+  name="avoid"
+  id="avoid"
+  rows="5"
+  {...register("avoid")}
+/>
+</FormField>
+<FormField label="Disabilities/concerns to be aware of:">
+<textarea
+  name="disabilities"
+  id="disabilities"
+  rows="8"
+  {...register("disabilities")}
+/>
+</FormField> */
+}

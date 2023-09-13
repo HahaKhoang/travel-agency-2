@@ -9,7 +9,6 @@ function BookingSummary({ image, cities }) {
   const accommodationFee = useSelector((state) => state.tour.accommodationFee);
   const flightFee = useSelector((state) => state.tour.flightFee);
   const reservationFee = useSelector((state) => state.tour.reservationFee);
-  const total = useSelector((state) => state.tour.totalPrice);
   const day = duration < 2 ? "day" : "days";
 
   const tourTotal = price * quantity;

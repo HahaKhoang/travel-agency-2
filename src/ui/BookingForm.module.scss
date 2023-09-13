@@ -1,5 +1,5 @@
 .container {
-  background-color: var(--color-blue-med);
+  background-color: var(--color-blue-dark);
   width: 60%;
   padding: 0 4rem;
 
@@ -14,7 +14,7 @@
 }
 
 .form {
-  color: var(--color-blue-dark);
+  color: white;
   width: 100%;
   margin: 0 auto;
   padding: 4rem 0;
@@ -53,10 +53,10 @@ input[type="radio"]:checked {
   margin-top: 3rem;
   align-self: start;
   border-radius: 0;
-  background-color: var(--color-blue-dark);
+  background-color: var(--color-red-dark);
   border: none;
 
   &:hover {
-    background-color: var(--color-red-dark);
+    background-color: var(--color-blue-light);
   }
 }

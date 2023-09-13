@@ -1,15 +1,16 @@
 import { useSelector } from "react-redux";
 import styles from "./TripSummary.module.scss";
 
-function TripSummary({ image }) {
-  const tourName = useSelector((state) => state.tour.name);
-  const duration = useSelector((state) => state.tour.duration);
-  const quantity = useSelector((state) => state.tour.quantity);
-  const price = useSelector((state) => state.tour.price);
-  const accommodationFee = useSelector((state) => state.tour.accommodationFee);
-  const flightFee = useSelector((state) => state.tour.flightFee);
-  const reservationFee = useSelector((state) => state.tour.reservationFee);
-  const total = useSelector((state) => state.tour.totalPrice);
+function TripSummary({ image, header, slice, disclaimer }) {
+  const {
+    name,
+    duration,
+    quantity,
+    price,
+    accommodationFee,
+    flightFee,
+    reservationFee,
+  } = useSelector((state) => state[slice]);
   const day = duration < 2 ? "day" : "days";
 
   const tourTotal = price * quantity;
@@ -24,7 +25,7 @@ function TripSummary({ image }) {
           <img src={image} className={styles.picture} />
         </div>
 
-        <h3>{tourName}</h3>
+        <h3>{header ? `${header}` : `${name}`}</h3>
         <div className={styles["details-container"]}>
           <div className={styles.details}>
             <p>Price</p>
@@ -45,7 +46,7 @@ function TripSummary({ image }) {
           <p className={styles.price}>Price details</p>
           <div className={styles.breakdown}>
             <p>Tour x{quantity}</p>
-            <p className={styles.content}>$30</p>
+            <p className={styles.content}>${tourTotal}</p>
           </div>
           {accommodationFee && (
             <div className={styles.breakdown}>
@@ -70,10 +71,7 @@ function TripSummary({ image }) {
             <p>${totalPrice3}</p>
           </div>
         </div>
-        <p className={styles.disclaimer}>
-          *Price does not include flight, accommodation, or additional costs.
-          The total cost only covers the itinerary and any additional features.
-        </p>
+        <p className={styles.disclaimer}>{disclaimer}</p>
       </div>
     </div>
   );
