@@ -9,7 +9,7 @@ import SingleTourTestimonial from "./SingleTourTestimonial";
 import LoadingSpinner from "./LoadingSpinner";
 
 function SingleTourContainer() {
-  const { isLoading, tour, error } = useSingleTour();
+  const { isLoading, tour } = useSingleTour();
   if (isLoading) return <LoadingSpinner />;
 
   const {

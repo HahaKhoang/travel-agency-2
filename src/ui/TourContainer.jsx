@@ -6,7 +6,7 @@ import { useSearchParams } from "react-router-dom";
 import styles from "./TourContainer.module.scss";
 
 function TourContainer() {
-  const { isLoading, tours, error } = useTours();
+  const { isLoading, tours } = useTours();
   const [searchParams] = useSearchParams();
 
   if (isLoading) return <LoadingSpinner />;
