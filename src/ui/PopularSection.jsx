@@ -16,7 +16,22 @@ function PopularSection() {
       {popularTours.map((el, i) => (
         <div className={styles["rank-container"]} key={i}>
           <div className={styles["picture-container"]}>
-            <img src={el.imageWelcome} className={styles.picture} />
+            <NavLink
+              to={`tours/${el.slug}`}
+              onClick={() => {
+                const tour = {
+                  id: el.id,
+                  name: el.tourName,
+                  slug: el.slug,
+                  price: el.price,
+                  duration: el.duration,
+                  totalPrice: el.price,
+                };
+                dispatch(addTour(tour));
+              }}
+            >
+              <img src={el.imageWelcome} className={styles.picture} />
+            </NavLink>
           </div>
           <div className={styles["text-container"]}>
             <h3 className={styles.title}>{el.tourName}</h3>

@@ -31,19 +31,6 @@ function TourCard({
     dispatch(addTour(tour));
   }
 
-  // function onClick() {
-  //   const currentTour = {
-  //     id,
-  //     slug,
-  //     name,
-  //     duration,
-  //     price,
-  //     quantity: 1,
-  //   };
-  //   dispatch(addTour(currentTour));
-  //   console.log(currentTour);
-  // }
-
   return (
     <div className={styles.container}>
       <NavLink to={slug}>
