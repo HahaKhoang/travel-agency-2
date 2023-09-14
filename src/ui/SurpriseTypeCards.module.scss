@@ -1,9 +1,8 @@
 .types {
-  width: 40rem;
+  width: 35rem;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 1.6rem;
   color: var(--color-blue-dark);
   // background-color: pink;
@@ -15,8 +14,8 @@
 }
 
 .svg {
-  width: 30rem;
-  height: 30rem;
+  width: 28rem;
+  height: 28rem;
 
   @media (max-width: 1700px) {
     width: 20rem;
@@ -26,9 +25,8 @@
 
 .title {
   color: white;
-  text-align: center;
   line-height: 3.6rem;
-
+  text-align: center;
   @media (max-width: 1700px) {
     font-size: var(--font-xl);
   }
@@ -44,8 +42,6 @@
 
 .budget {
   font-size: var(--font-med);
-  text-align: center;
-
   @media (max-width: 1700px) {
     font-size: var(--font-small);
   }
