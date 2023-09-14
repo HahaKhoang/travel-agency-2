@@ -2,7 +2,7 @@ import { useFormContext } from "react-hook-form";
 import FormField from "./FormField";
 import styles from "./FormFieldset.module.scss";
 
-function FormFieldset({ children, form }) {
+function FormFieldset({ children, form, phone }) {
   const {
     register,
     formState: { errors },
@@ -27,14 +27,16 @@ function FormFieldset({ children, form }) {
           {...register("email", { required: "This field is required" })}
         />
       </FormField>
-      <FormField label="*Phone number" error={errors?.phone}>
-        <input
-          type="tel"
-          name="phone"
-          id="phone"
-          {...register("phone", { required: "This field is required" })}
-        />
-      </FormField>
+      {!phone && (
+        <FormField label="*Phone number" error={errors?.phone}>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            {...register("phone", { required: "This field is required" })}
+          />
+        </FormField>
+      )}
       {children}
     </fieldset>
   );
