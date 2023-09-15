@@ -1,6 +1,7 @@
 .container {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   margin: 4rem;
 
   @media (max-width: 1200px) {

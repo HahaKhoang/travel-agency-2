@@ -1,13 +1,12 @@
 .select {
   font-size: var(--font-small);
-  padding: 0.4rem 2rem;
+  padding: 0.4rem 1.6rem;
   border: 1px solid var(--color-blue-dark);
   font-weight: 500;
   border-radius: 500px;
 
   @media (max-width: 1200px) {
-    padding: 0.4rem 1rem;
-    width: 22rem;
+    width: 25rem;
   }
 
   @media (max-width: 1000px) {
