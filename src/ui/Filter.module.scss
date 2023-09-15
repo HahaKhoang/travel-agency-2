@@ -9,11 +9,7 @@
 }
 
 .filter {
-  font-size: var(--font-med);
-
-  @media (max-width: 1200px) {
-    font-size: var(--font-small);
-  }
+  font-size: var(--font-small);
 }
 
 .button {
@@ -21,13 +17,12 @@
   border-radius: 500px;
   border: none;
   color: white;
-  font-size: var(--font-med);
+  font-size: var(--font-small);
   cursor: pointer;
   background-color: var(--color-red-dark);
   transition: all 0.5s;
 
   @media (max-width: 1200px) {
-    font-size: var(--font-small);
     padding: 0.4rem 1.4rem;
   }
 

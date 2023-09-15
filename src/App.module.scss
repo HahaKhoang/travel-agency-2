@@ -76,3 +76,12 @@ button {
   text-transform: uppercase;
   transition: all 0.5s;
 }
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("../../public/svg/selectArrow.svg");
+  background-size: 2.2rem;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 4px) center;
+}
