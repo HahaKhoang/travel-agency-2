@@ -19,29 +19,29 @@
     width: 40rem;
   }
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1420px) {
     width: 37rem;
   }
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1330px) {
     width: 34rem;
     height: 67rem;
   }
 
-  @media (max-width: 1160px) {
+  @media (max-width: 1200px) {
     width: 30rem;
     height: 55rem;
   }
 
-  @media (max-width: 1050px) {
+  @media (max-width: 1080px) {
     width: 39rem;
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 930px) {
     width: 34rem;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     flex-direction: row;
     height: 32rem;
     width: 100%;
@@ -65,7 +65,7 @@
   height: 25rem;
   transition: all 0.5s;
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     width: 40%;
     height: 100%;
   }
@@ -102,15 +102,15 @@
     height: 39rem;
   }
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1330px) {
     height: 40rem;
   }
 
-  @media (max-width: 1160px) {
+  @media (max-width: 1200px) {
     height: 30rem;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     width: 60%;
     height: 100%;
     align-items: center;
@@ -141,11 +141,11 @@
   height: 100%;
   width: 100%;
 
-  @media (max-width: 1160px) {
+  @media (max-width: 1200px) {
     gap: 1.2rem;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     width: 100%;
     height: 100%;
     justify-content: space-between;
@@ -159,11 +159,11 @@
   color: var(--color-red-dark);
   text-align: center;
 
-  @media (max-width: 1160px) {
+  @media (max-width: 1200px) {
     font-size: var(--font-xl);
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     font-size: var(--font-xl);
     text-align: center;
     color: white;
@@ -184,7 +184,7 @@
 .price {
   font-size: var(--font-med);
 
-  @media (max-width: 1160px) {
+  @media (max-width: 1200px) {
     font-size: var(--font-small);
   }
 
@@ -198,11 +198,11 @@
   justify-content: space-between;
   font-size: var(--font-med);
 
-  @media (max-width: 1160px) {
+  @media (max-width: 1200px) {
     font-size: var(--font-small);
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     flex-direction: row;
     font-size: var(--font-small);
 
@@ -227,24 +227,24 @@
   text-decoration: none;
   transition: all 0.5s;
 
-  @media (max-width: 1300px) {
+  @media (max-width: 1330px) {
     font-size: var(--font-small);
   }
 
-  @media (max-width: 1160px) {
+  @media (max-width: 1200px) {
     font-size: var(--font-small);
   }
 
-  @media (max-width: 1050px) {
+  @media (max-width: 1080px) {
     font-size: var(--font-med);
   }
 
-  @media (max-width: 900px) {
+  @media (max-width: 930px) {
     font-size: var(--font-small);
     // padding: 1rem 4rem;
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 830px) {
     align-self: center;
     background-color: var(--color-red-dark);
     font-size: var(--font-small);
