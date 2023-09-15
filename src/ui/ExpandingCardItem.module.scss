@@ -109,6 +109,10 @@
   &:hover {
     color: var(--color-red-dark);
   }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-red-light);
+  }
 }
 
 .icon {

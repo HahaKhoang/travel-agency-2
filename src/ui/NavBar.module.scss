@@ -31,12 +31,17 @@
   display: flex;
   justify-content: center;
 
+  width: 35rem;
+  margin: 0 auto;
+
   // @media (max-width: 800px) {
   //   font-size: var(--font-xl);
   // }
 }
 
 .name-scrolled {
+  margin: 0;
+  width: auto;
   font-size: var(--font-xl);
 
   @media (max-width: 1000px) {
@@ -46,6 +51,10 @@
   @media (max-width: 800px) {
     font-size: var(--font-med);
   }
+}
+
+.title {
+  background-color: pink;
 }
 
 .navContainer {

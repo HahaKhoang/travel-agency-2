@@ -18,11 +18,12 @@
     border-radius: 3px;
   }
 
+  a:focus,
   input:focus,
   textArea:focus,
   select:focus,
   button:focus {
-    border: 2px var(--color-red-dark) solid;
+    outline: 2px var(--color-red-dark) solid;
   }
 }
 

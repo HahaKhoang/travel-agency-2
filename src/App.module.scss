@@ -20,6 +20,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-red-light);
+  }
 }
 
 html {
@@ -85,3 +93,11 @@ select {
   background-repeat: no-repeat;
   background-position: calc(100% - 4px) center;
 }
+
+// a:focus,
+// input:focus,
+// textArea:focus,
+// select:focus,
+// button:focus {
+//   outline: 2px var(--color-grey-light) solid;
+// }
