@@ -2,8 +2,6 @@
   width: 100vw;
   position: fixed;
   top: 0;
-  z-index: 300;
-  transition: padding 0.3s ease;
 
   @media (max-width: 650px) {
     height: 7rem;
@@ -11,7 +9,7 @@
     justify-content: space-between;
     padding: 0 2rem;
     background-color: var(--color-blue-dark);
-    z-index: 250;
+
     position: relative;
   }
 }
@@ -40,9 +38,12 @@
   text-decoration: none;
   display: flex;
   justify-content: center;
-
   width: 35rem;
   margin: 0 auto;
+
+  @media (max-width: 1700px) {
+    font-size: 4rem;
+  }
 
   @media (max-width: 650px) {
     align-items: center;
@@ -67,32 +68,25 @@
   }
 }
 
-.title {
-  background-color: pink;
-}
-
 .navContainer {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  gap: 12rem;
   margin: 0 auto;
-  font-size: var(--font-small);
+  font-size: var(--font-med);
   padding-bottom: 1.4rem;
   transition: all 0.3s;
-  z-index: 260;
+  width: 70%;
 
-  @media (max-width: 1000px) {
-    gap: 8rem;
+  @media (max-width: 1700px) {
+    width: 80%;
   }
 
-  // @media (max-width: 800px) {
-  //   gap: 4rem;
-  // }
-
-  // @media (max-width: 650px) {
-  //   font-size: var(--font-xs);
-  // }
+  @media (max-width: 1200px) {
+    width: 90%;
+    font-size: var(--font-small);
+    padding-bottom: 0.6rem;
+  }
 
   @media (max-width: 650px) {
     position: absolute;
@@ -108,18 +102,20 @@
 }
 
 .navContainer-scrolled {
-  width: 70%;
+  width: 73%;
   padding-bottom: 0;
   gap: 0;
   margin: 0;
-  justify-content: space-between;
 }
 
 .nav-list {
-  padding: 0 6rem;
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 1200px) {
+    padding: 0;
+  }
 
   @media (max-width: 650px) {
     flex-direction: column;

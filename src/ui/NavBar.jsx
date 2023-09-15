@@ -5,7 +5,9 @@ import { RiCloseFill, RiMenuFill } from "react-icons/ri";
 
 function NavBar() {
   const [isScrolled, setScrolled] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 650);
   const [hamburgerOpen, setHamburgerOpen] = useState(true);
+  console.log(isMobile);
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
 
@@ -13,6 +15,7 @@ function NavBar() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   const handleScroll = () => {
     if (window.scrollY > 2) {
       setScrolled(true);
@@ -21,17 +24,29 @@ function NavBar() {
     }
   };
 
-  const scrolledNav = isScrolled
-    ? `${styles.navBar} ${styles["navBar-scrolled"]}`
-    : `${styles.navBar}`;
+  useEffect(() => {
+    window.addEventListener("resize", updateMedia);
+    return () => window.removeEventListener("resize", updateMedia);
+  }, []);
 
-  const scrolledName = isScrolled
-    ? `${styles.name} ${styles["name-scrolled"]}`
-    : `${styles.name}`;
+  const updateMedia = () => {
+    setIsMobile(window.innerWidth < 650);
+  };
 
-  const scrolledNavContainer = isScrolled
-    ? `${styles.navContainer} ${styles["navContainer-scrolled"]}`
-    : `${styles.navContainer}`;
+  const scrolledNav =
+    isScrolled && !isMobile
+      ? `${styles.navBar} ${styles["navBar-scrolled"]}`
+      : `${styles.navBar}`;
+
+  const scrolledName =
+    isScrolled && !isMobile
+      ? `${styles.name} ${styles["name-scrolled"]}`
+      : `${styles.name}`;
+
+  const scrolledNavContainer =
+    isScrolled && !isMobile
+      ? `${styles.navContainer} ${styles["navContainer-scrolled"]}`
+      : `${styles.navContainer}`;
 
   return (
     <div className={scrolledNav}>
