@@ -6,8 +6,8 @@ import { RiCloseFill, RiMenuFill } from "react-icons/ri";
 function NavBar() {
   const [isScrolled, setScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 650);
-  const [hamburgerOpen, setHamburgerOpen] = useState(true);
-  console.log(isMobile);
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
+
   useEffect(() => {
     window.addEventListener("scroll", handleScroll, { passive: true });
 
@@ -56,7 +56,7 @@ function NavBar() {
       <nav
         className={scrolledNavContainer}
         style={
-          !hamburgerOpen ? { opacity: "1", transform: "translateX(0%)" } : {}
+          hamburgerOpen ? { opacity: "1", transform: "translateX(0%)" } : {}
         }
       >
         <ul className={styles["nav-list"]}>
@@ -66,6 +66,7 @@ function NavBar() {
               className={({ isActive }) =>
                 isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
               }
+              onClick={() => setHamburgerOpen(false)}
             >
               About
             </NavLink>
@@ -76,6 +77,7 @@ function NavBar() {
               className={({ isActive }) =>
                 isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
               }
+              onClick={() => setHamburgerOpen(false)}
             >
               Tours
             </NavLink>
@@ -86,6 +88,7 @@ function NavBar() {
               className={({ isActive }) =>
                 isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
               }
+              onClick={() => setHamburgerOpen(false)}
             >
               Surprise Me
             </NavLink>
@@ -96,6 +99,7 @@ function NavBar() {
               className={({ isActive }) =>
                 isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
               }
+              onClick={() => setHamburgerOpen(false)}
             >
               Customized tour
             </NavLink>
@@ -106,6 +110,7 @@ function NavBar() {
               className={({ isActive }) =>
                 isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
               }
+              onClick={() => setHamburgerOpen(false)}
             >
               FAQ
             </NavLink>
@@ -116,6 +121,7 @@ function NavBar() {
               className={({ isActive }) =>
                 isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
               }
+              onClick={() => setHamburgerOpen(false)}
             >
               Contact
             </NavLink>
@@ -128,8 +134,8 @@ function NavBar() {
           setHamburgerOpen((cur) => !cur);
         }}
       >
-        {hamburgerOpen && <RiMenuFill className={styles.icon} />}
-        {!hamburgerOpen && <RiCloseFill className={styles.icon} />}
+        {!hamburgerOpen && <RiMenuFill className={styles.icon} />}
+        {hamburgerOpen && <RiCloseFill className={styles.icon} />}
       </button>
     </div>
   );
