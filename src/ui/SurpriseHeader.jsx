@@ -17,11 +17,6 @@ function MysteryHeader() {
             Perferendis autem in quidem maiores ad delectus, ratione labore
             officia quos
           </p>
-          <p className={styles.text}>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Perferendis autem in quidem maiores ad delectus, ratione labore
-            officia quos
-          </p>
         </div>
       </div>
     </div>
