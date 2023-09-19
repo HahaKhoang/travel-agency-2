@@ -73,24 +73,24 @@ function NavBar() {
           </li>
           <li>
             <NavLink
-              to="/tours"
+              to="/all-tours"
               className={({ isActive }) =>
                 isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
               }
               onClick={() => setHamburgerOpen(false)}
             >
-              Tours
+              All Tours
             </NavLink>
           </li>
           <li>
             <NavLink
-              to="/surprise"
+              to="/surprise-tour"
               className={({ isActive }) =>
                 isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
               }
               onClick={() => setHamburgerOpen(false)}
             >
-              Surprise Me
+              Surprise Tour
             </NavLink>
           </li>
           <li>
@@ -102,6 +102,17 @@ function NavBar() {
               onClick={() => setHamburgerOpen(false)}
             >
               Customized tour
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
+              to="/inspiration"
+              className={({ isActive }) =>
+                isActive ? `${styles.active} ${styles.link}` : `${styles.link}`
+              }
+              onClick={() => setHamburgerOpen(false)}
+            >
+              Inspiration
             </NavLink>
           </li>
           <li>
