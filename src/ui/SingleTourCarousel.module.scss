@@ -1,19 +1,21 @@
 .container {
   width: 100%;
   height: 110rem;
-  // background-color: red;
   position: relative;
   overflow: hidden;
 
   @media (max-width: 1700px) {
     height: 90rem;
   }
+
+  @media (max-width: 1400px) {
+    height: 80rem;
+  }
 }
 
 .picture-container {
   width: 100%;
   height: 110rem;
-  // background-color: pink;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -22,6 +24,10 @@
 
   @media (max-width: 1700px) {
     height: 90rem;
+  }
+
+  @media (max-width: 1400px) {
+    height: 80rem;
   }
 }
 
@@ -39,6 +45,20 @@
     height: 90rem;
     padding: 20rem 30rem;
   }
+
+  @media (max-width: 1400px) {
+    width: 100%;
+    height: 80rem;
+    padding: 15rem 20rem;
+  }
+
+  @media (max-width: 1200px) {
+    padding: 15rem 15rem;
+  }
+
+  @media (max-width: 800px) {
+    padding: 13rem 10rem;
+  }
 }
 
 .picture {
@@ -53,6 +73,31 @@
   bottom: 18rem;
   color: white;
   font-family: "DM Serif Display", serif;
+
+  @media (max-width: 1400px) {
+    font-size: 9rem;
+    bottom: 13rem;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 8rem;
+    bottom: 12.4rem;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 7rem;
+    bottom: 11rem;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 6rem;
+    bottom: 11rem;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 5rem;
+    bottom: 10.6rem;
+  }
 }
 
 .location {
@@ -60,6 +105,14 @@
   color: white;
   position: absolute;
   bottom: 11rem;
+
+  @media (max-width: 1400px) {
+    bottom: 8rem;
+  }
+
+  @media (max-width: 800px) {
+    bottom: 7rem;
+  }
 }
 
 .bottom {
