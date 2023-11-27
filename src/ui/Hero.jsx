@@ -14,7 +14,7 @@ function Hero() {
           assumenda, nam culpa quibusdam rerum magni facere, dolores corporis.
           Enim ratione sit doloribus.
         </p>
-        <NavLink to="tours" className={styles.button}>
+        <NavLink to="all-tours" className={styles.button}>
           See all tours
         </NavLink>
       </div>

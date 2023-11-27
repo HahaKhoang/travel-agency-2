@@ -17,7 +17,7 @@ function PopularSection() {
         <div className={styles["rank-container"]} key={i}>
           <div className={styles["picture-container"]}>
             <NavLink
-              to={`tours/${el.slug}`}
+              to={`all-tours/${el.slug}`}
               onClick={() => {
                 const tour = {
                   id: el.id,
@@ -48,7 +48,7 @@ function PopularSection() {
             </div>
           </div>
           <NavLink
-            to={`tours/${el.slug}`}
+            to={`all-tours/${el.slug}`}
             className={styles.button}
             onClick={() => {
               const tour = {

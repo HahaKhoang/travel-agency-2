@@ -14,7 +14,7 @@ function SurpriseSection() {
             voluptas eveniet, minus et ut libero placeat magnam fugiat
             perferendis, enim dicta quaerat.
           </p>
-          <NavLink to="surprise" className={styles.button}>
+          <NavLink to="surprise-tour" className={styles.button}>
             Surprise me!
           </NavLink>
         </div>
