@@ -23,7 +23,7 @@ const Subheading = () => {
       setWords([...firstElem.concat(copyWords)]);
     }, 300);
 
-    wrapperRef.current.style.transition = "1s";
+    // wrapperRef.current.style.transition = "1s";
     wrapperRef.current.style.top = "-70px";
   };
 
