@@ -72,6 +72,12 @@
   background-color: var(--color-blue-light);
   border: none;
   transition: all 0.5s;
+  outline: none;
+  color: white;
+  padding: 1.4rem 4.6rem;
+  border-radius: 500px;
+  cursor: pointer;
+  text-transform: uppercase;
 }
 
 .button:hover {

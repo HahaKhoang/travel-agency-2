@@ -1,7 +1,8 @@
+import { NavLink } from "react-router-dom";
 import styles from "./InspirationCard.module.scss";
 import { RiMapPin2Line } from "react-icons/ri";
 
-function TourCard({ name, location, img, value }) {
+function TourCard({ name, location, img, continent, slug }) {
   return (
     <>
       <div className={styles.container}>
@@ -9,12 +10,15 @@ function TourCard({ name, location, img, value }) {
           <div className={styles.info}>
             <div className={styles.content}>
               <p className={styles.title}>{name}</p>
-              <button
+              {/* <button
                 className={styles.button}
-                onClick={() => console.log("clicked")}
+                onClick={() => console.log(slug)}
               >
                 Read more
-              </button>
+              </button> */}
+              <NavLink to={`/all-tours/${slug}`} className={styles.button}>
+                Read more
+              </NavLink>
             </div>
           </div>
           <img src={img} className={styles.image} />

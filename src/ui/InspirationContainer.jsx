@@ -59,11 +59,11 @@ function InspirationContainer() {
         {filteredInspiration.map((el) => (
           <InspirationCard
             name={el.name}
-            amount={el.amount}
             location={el.location}
             img={el.image}
-            key={el.name}
-            value={el.continent}
+            key={el.id}
+            continent={el.continent}
+            slug={el.slug}
           />
         ))}
       </div>
