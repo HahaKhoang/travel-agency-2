@@ -1,5 +1,6 @@
 import styles from "./FeaturedSection.module.scss";
 import kyoto from "../../public/img/japan/kyoto.jpg";
+import { NavLink } from "react-router-dom";
 
 function FeaturedSection() {
   return (
@@ -16,7 +17,10 @@ function FeaturedSection() {
             illo ducimus, explicabo excepturi obcaecati beatae, dolore natus!
             Molestias, consectetur accusamus!
           </p>
-          <button className={styles.button}>Browse all Japan tours</button>
+          {/* <button className={styles.button}>Browse all Japan tours</button> */}
+          <NavLink to="/all-tours/essential-japan" className={styles.button}>
+            Read more
+          </NavLink>
         </div>
       </div>
     </section>

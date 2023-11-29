@@ -18,13 +18,13 @@ const Subheading = () => {
     setTimeout(() => {
       const copyWords = [...words];
       const firstElem = copyWords.splice(1);
-      wrapperRef.current.style.transition = "none";
-      wrapperRef.current.style.top = "0px";
+      // wrapperRef.current.style.transition = "none";
+      // wrapperRef.current.style.top = "0px";
       setWords([...firstElem.concat(copyWords)]);
     }, 300);
 
     // wrapperRef.current.style.transition = "1s";
-    wrapperRef.current.style.top = "-70px";
+    // wrapperRef.current.style.top = "-70px";
   };
 
   useEffect(() => {
