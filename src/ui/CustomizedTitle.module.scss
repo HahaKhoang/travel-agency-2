@@ -1,14 +1,15 @@
 .container {
-  background-color: var(--color-blue-light);
+  background-color: var(--color-blue-med);
   padding: 8rem 10rem;
 }
 
 .header {
-  color: var(--color-blue-dark);
+  color: white;
   line-height: 5rem;
 }
 
 .text {
   margin-top: 3rem;
-  color: var(--color-red-dark);
+  color: white;
+  // color: var(--color-red-dark);
 }

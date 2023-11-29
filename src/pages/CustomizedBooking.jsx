@@ -13,7 +13,7 @@ function CustomizedBooking() {
         h1="Tell us about yourself"
         text1="In order to perfect your customized tour, we'll need some details about your dream trip"
         svg={customizedBooking}
-        bgColor="var(--color-blue-light)"
+        bgColor="var(--color-red-dark)"
       />
       <CustomizedBookingHeader />
       <CustomizedBookingContainer />
