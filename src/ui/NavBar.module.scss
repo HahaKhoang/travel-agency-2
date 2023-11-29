@@ -87,6 +87,11 @@
     padding-bottom: 0.6rem;
   }
 
+  @media (max-width: 800px) {
+    font-size: var(--font-xs);
+    padding-bottom: 0.6rem;
+  }
+
   @media (max-width: 650px) {
     position: absolute;
     background-color: var(--color-blue-med);
@@ -122,7 +127,6 @@
     align-items: center;
     gap: 5rem;
     font-size: var(--font-med);
-
     height: 100%;
   }
 }
