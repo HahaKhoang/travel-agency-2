@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import styles from "./Footer.module.scss";
 
 function Footer() {
@@ -27,11 +28,15 @@ function Footer() {
       <div className={styles["right-container"]}>
         <div className={styles.column}>
           <p className={styles.header}>Continents</p>
-          <p>Asia</p>
-          <p>Europe</p>
-          <p>Oceania</p>
-          <p>North America</p>
-          <p>South America</p>
+          <NavLink to="/inspiration?destination=asia">Asia</NavLink>
+          <NavLink to="/inspiration?destination=europe">Europe</NavLink>
+          <NavLink to="/inspiration?destination=oceania">Oceania</NavLink>
+          <NavLink to="/inspiration?destination=north-america">
+            North America
+          </NavLink>
+          <NavLink to="/inspiration?destination=south-america">
+            South America
+          </NavLink>
         </div>
         <div className={styles.column}>
           <p className={styles.header}>Booking</p>

@@ -10,7 +10,7 @@ function Tours() {
         text1="Browse through our selection of tours"
         text2="  If you can't find one to your liking, we also do customized tours!"
         svg={tour}
-        bgColor="var(--color-blue-dark)"
+        bgColor="var(--color-red-dark)"
       />
       <TourContainer />
     </div>

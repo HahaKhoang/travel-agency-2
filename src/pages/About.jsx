@@ -5,13 +5,11 @@ import about from "../../public/img/undraw/about.svg";
 function About() {
   return (
     <div>
-      {/* <Banner img={lofoten} text="Get to know me" /> */}
-
       <Banner2
         h1="Hi! It's nice to meet you!"
         text1="Let's get to know each other better"
         svg={about}
-        bgColor="var(--color-blue-light)"
+        bgColor="var(--color-red-dark)"
       />
       <AboutDetails />
     </div>
