@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./Footer.module.scss";
 
 function Footer() {
@@ -28,30 +28,26 @@ function Footer() {
       <div className={styles["right-container"]}>
         <div className={styles.column}>
           <p className={styles.header}>Continents</p>
-          <NavLink to="/inspiration?destination=asia">Asia</NavLink>
-          <NavLink to="/inspiration?destination=europe">Europe</NavLink>
-          <NavLink to="/inspiration?destination=oceania">Oceania</NavLink>
-          <NavLink to="/inspiration?destination=north-america">
-            North America
-          </NavLink>
-          <NavLink to="/inspiration?destination=south-america">
-            South America
-          </NavLink>
+          <Link to="/inspiration?destination=asia">Asia</Link>
+          <Link to="/inspiration?destination=europe">Europe</Link>
+          <Link to="/inspiration?destination=oceania">Oceania</Link>
+          <Link to="/inspiration?destination=north-america">North America</Link>
+          <Link to="/inspiration?destination=south-america">South America</Link>
         </div>
         <div className={styles.column}>
           <p className={styles.header}>Booking</p>
-          <a href="/tours">All tours</a>
-          <a href="/customized-tour">Customized tour</a>
-          <a href="/surprise">Surprise tour</a>
+          <Link to="/all-tours">All tours</Link>
+          <Link to="/customized-tour">Customized tour</Link>
+          <Link to="/surprise-tour">Surprise tour</Link>
         </div>
         <div className={styles.column}>
           <p className={styles.header}>Help</p>
-          <a href="/faq">FAQ</a>
-          <p>Reviews</p>
+          <Link to="/faq">FAQ</Link>
+          <Link to="/reviews">Reviews</Link>
         </div>
         <div className={styles.column}>
           <p className={styles.header}>Get in touch</p>
-          <a href="/contact">Contact</a>
+          <Link to="/contact">Contact</Link>
         </div>
       </div>
     </div>
