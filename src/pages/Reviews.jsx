@@ -1,5 +1,6 @@
 import Banner2 from "../ui/Banner2";
 import reviews from "../../public/img/undraw/reviews.svg";
+import ReviewsContainer from "../ui/ReviewsContainer";
 
 function Reviews() {
   return (
@@ -10,6 +11,7 @@ function Reviews() {
         svg={reviews}
         bgColor="var(--color-red-dark)"
       />
+      <ReviewsContainer />
     </>
   );
 }

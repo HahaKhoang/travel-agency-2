@@ -1,0 +1,22 @@
+.container {
+  //   background-color: green;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 6rem;
+  row-gap: 10rem;
+  padding: 6rem;
+  color: var(--color-blue-dark);
+}
+
+.review-container {
+}
+
+.review {
+  font-size: var(--font-xl);
+}
+
+.name {
+  font-size: var(--font-med);
+  text-align: center;
+  color: var(--color-red-dark);
+}
