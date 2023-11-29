@@ -1,5 +1,3 @@
-import Banner from "../ui/Banner";
-
 import InspirationContainer from "../ui/InspirationContainer";
 import Banner2 from "../ui/Banner2";
 import inspiration from "../../public/img/undraw/inspiration.svg";

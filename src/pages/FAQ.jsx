@@ -1,13 +1,10 @@
 import Accordion from "../ui/Accordion";
-import Banner from "../ui/Banner";
-import arashiyama from "../../public/img/japan/arashiyama.jpg";
 import Banner2 from "../ui/Banner2";
 import faq from "../../public/img/undraw/faq.svg";
 
 function FAQ() {
   return (
     <div>
-      {/* <Banner img={arashiyama} text="Frequently asked questions" /> */}
       <Banner2
         h1="Frequently asked questions"
         text1="Still have an unanswered question?"

@@ -11,6 +11,7 @@ import SurpriseTripTypes from "./pages/SurpriseTripTypes.jsx";
 import SurpriseBooking from "./pages/SurpriseBooking";
 import FAQ from "./pages/FAQ";
 import Contact from "./pages/Contact";
+import Reviews from "./pages/Reviews";
 import PageNotFound from "./pages/PageNotFound";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
@@ -40,6 +41,7 @@ const router = createBrowserRouter([
       { path: "/booking/:slug", element: <Booking /> },
       { path: "/faq", element: <FAQ /> },
       { path: "/contact", element: <Contact /> },
+      { path: "/reviews", element: <Reviews /> },
     ],
   },
 ]);
