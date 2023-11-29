@@ -28,26 +28,54 @@ function Footer() {
       <div className={styles["right-container"]}>
         <div className={styles.column}>
           <p className={styles.header}>Continents</p>
-          <Link to="/inspiration?destination=asia">Asia</Link>
-          <Link to="/inspiration?destination=europe">Europe</Link>
-          <Link to="/inspiration?destination=oceania">Oceania</Link>
-          <Link to="/inspiration?destination=north-america">North America</Link>
-          <Link to="/inspiration?destination=south-america">South America</Link>
+          <Link to="/inspiration?destination=asia" className={styles.link}>
+            Asia
+          </Link>
+          <Link to="/inspiration?destination=europe" className={styles.link}>
+            Europe
+          </Link>
+          <Link to="/inspiration?destination=oceania" className={styles.link}>
+            Oceania
+          </Link>
+          <Link
+            to="/inspiration?destination=north-america"
+            className={styles.link}
+          >
+            North America
+          </Link>
+          <Link
+            to="/inspiration?destination=south-america"
+            className={styles.link}
+          >
+            South America
+          </Link>
         </div>
         <div className={styles.column}>
           <p className={styles.header}>Booking</p>
-          <Link to="/all-tours">All tours</Link>
-          <Link to="/customized-tour">Customized tour</Link>
-          <Link to="/surprise-tour">Surprise tour</Link>
+          <Link to="/all-tours" className={styles.link}>
+            All tours
+          </Link>
+          <Link to="/customized-tour" className={styles.link}>
+            Customized tour
+          </Link>
+          <Link to="/surprise-tour" className={styles.link}>
+            Surprise tour
+          </Link>
         </div>
         <div className={styles.column}>
           <p className={styles.header}>Help</p>
-          <Link to="/faq">FAQ</Link>
-          <Link to="/reviews">Reviews</Link>
+          <Link to="/faq" className={styles.link}>
+            FAQ
+          </Link>
+          <Link to="/reviews" className={styles.link}>
+            Reviews
+          </Link>
         </div>
         <div className={styles.column}>
           <p className={styles.header}>Get in touch</p>
-          <Link to="/contact">Contact</Link>
+          <Link to="/contact" className={styles.link}>
+            Contact
+          </Link>
         </div>
       </div>
     </div>
