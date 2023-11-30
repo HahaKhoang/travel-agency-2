@@ -2,9 +2,14 @@
   width: 100%;
   height: 50rem;
   position: relative;
+  background-color: orange;
 
   @media (max-width: 1700px) {
     height: 40rem;
+  }
+
+  @media (max-width: 1000px) {
+    height: 35rem;
   }
 }
 
@@ -15,10 +20,42 @@
   bottom: -10rem;
   left: 6rem;
   z-index: 5;
+  padding: 1rem;
+
+  @media (max-width: 1850px) {
+    width: 80rem;
+    height: 50rem;
+    bottom: -6rem;
+  }
 
   @media (max-width: 1700px) {
-    width: 70rem;
+    width: 73rem;
     height: 46rem;
+    bottom: -10rem;
+  }
+
+  @media (max-width: 1500px) {
+    width: 65rem;
+    height: 42rem;
+    bottom: -6rem;
+  }
+
+  @media (max-width: 1400px) {
+    width: 62rem;
+    height: 44rem;
+    bottom: -8rem;
+  }
+
+  @media (max-width: 1300px) {
+    width: 50rem;
+    height: 44rem;
+    bottom: -8rem;
+  }
+
+  @media (max-width: 1000px) {
+    width: 45rem;
+    height: 35rem;
+    bottom: -2rem;
   }
 }
 
@@ -35,6 +72,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: red;
+
+  @media (max-width: 1100px) {
+    width: 45%;
+  }
 }
 
 .text-container {
@@ -42,13 +84,55 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  background-color: green;
+
+  @media (max-width: 1600px) {
+    width: 75%;
+  }
+
+  @media (max-width: 1100px) {
+    width: 80%;
+  }
 }
 
 .header {
+  font-family: "DM Serif Display", serif;
+  font-size: 6rem;
+  line-height: 6rem;
   color: var(--color-red-dark);
-  line-height: 4rem;
+
+  @media (max-width: 1850px) {
+    font-size: 5.6rem;
+  }
+
+  @media (max-width: 1700px) {
+    font-size: 4.8rem;
+    line-height: 5rem;
+  }
+
+  @media (max-width: 1400px) {
+    font-size: 4rem;
+    line-height: 4.4rem;
+  }
+
+  @media (max-width: 1100px) {
+    font-size: 3.4rem;
+    line-height: 4rem;
+  }
 }
 
 .text {
-  font-size: var(--font-large);
+  font-size: var(--font-xl);
+
+  @media (max-width: 1850px) {
+    font-size: 2.8rem;
+  }
+
+  @media (max-width: 1700px) {
+    font-size: var(--font-large);
+  }
+
+  @media (max-width: 1400px) {
+    font-size: var(--font-med);
+  }
 }

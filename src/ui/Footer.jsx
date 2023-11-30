@@ -12,6 +12,7 @@ function Footer() {
           <a
             href="https://www.tiktok.com/@tabitomodachi"
             target="_blank"
+            rel="noopener noreferrer"
             className={styles["social-button"]}
           >
             Tiktok
@@ -19,6 +20,7 @@ function Footer() {
           <a
             href="https://www.instagram.com/tabitomodachi"
             target="_blank"
+            rel="noopener noreferrer"
             className={styles["social-button"]}
           >
             Instagram

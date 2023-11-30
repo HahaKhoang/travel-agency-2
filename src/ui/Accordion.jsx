@@ -16,19 +16,19 @@ const data = [
     text: "Excepturi velit laborum, perspiciatis nemo perferendis reiciendis aliquam possimus dolor sed! Dolore laborum ducimus veritatis facere molestias!",
   },
   {
-    title: "Do you ship to countries outside the EU?",
+    title: "Is it safe to travel alone?",
     text: "Excepturi velit laborum, perspiciatis nemo perferendis reiciendis aliquam possimus dolor sed! Dolore laborum ducimus veritatis facere molestias! Excepturi velit laborum, perspiciatis nemo perferendis reiciendis aliquam possimus dolor sed! Dolore laborum ducimus veritatis facere molestias!",
   },
   {
-    title: "Do you ship to countries outside the EU?",
+    title: "Do I need vaccinations?",
     text: "Excepturi velit laborum, perspiciatis nemo perferendis reiciendis aliquam possimus dolor sed! Dolore laborum ducimus veritatis facere molestias!",
   },
   {
-    title: "Do you ship to countries outside the EU?",
+    title: "Is there a discount for large groups?",
     text: "Excepturi velit laborum, perspiciatis nemo perferendis reiciendis aliquam possimus dolor sed! Dolore laborum ducimus veritatis facere molestias!",
   },
   {
-    title: "Do you ship to countries outside the EU?",
+    title: "Can we hire a tour guide?",
     text: "Excepturi velit laborum, perspiciatis nemo perferendis reiciendis aliquam possimus dolor sed! Dolore laborum ducimus veritatis facere molestias!",
   },
 ];

@@ -10,7 +10,6 @@ import surprise from "../../public/img/undraw/surprise.svg";
 function Surprise() {
   return (
     <div>
-      {/* <Banner img={night} text="Take a leap of faith" /> */}
       <Banner2
         h1="Take a leap of faith"
         text1="Let us plan a surprise trip for you"
@@ -20,7 +19,6 @@ function Surprise() {
       />
       <SurpriseHeader />
       <SurpriseTypes />
-      {/* <SurpriseCarousel /> */}
       <SurpriseHow />
       <SurpriseCTA bgColor="var(--color-blue-med)" />
     </div>

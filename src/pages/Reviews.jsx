@@ -6,8 +6,7 @@ function Reviews() {
   return (
     <>
       <Banner2
-        h1="Reviews"
-        text1="See what our travelers love most about us!"
+        h1="See what our travelers love most about us!"
         svg={reviews}
         bgColor="var(--color-red-dark)"
       />

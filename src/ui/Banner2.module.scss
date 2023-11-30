@@ -13,6 +13,12 @@
   @media (max-width: 1000px) {
     height: 40rem;
   }
+
+  @media (max-width: 650px) {
+    height: 32rem;
+    padding: 0 0 4rem 2rem;
+    gap: 4rem;
+  }
 }
 
 .text-container {
@@ -50,6 +56,11 @@
   @media (max-width: 1000px) {
     height: 25rem;
   }
+
+  @media (max-width: 650px) {
+    height: 18rem;
+    margin-bottom: 0;
+  }
 }
 
 .picture {
@@ -75,6 +86,11 @@
     font-size: var(--font-xl);
     line-height: 3.4rem;
   }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-large);
+    line-height: 3rem;
+  }
 }
 
 .text {
@@ -93,5 +109,10 @@
   @media (max-width: 1000px) {
     font-size: var(--font-small);
     line-height: 2rem;
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-xs);
+    line-height: 1.6rem;
   }
 }
