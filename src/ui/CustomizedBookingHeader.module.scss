@@ -3,9 +3,26 @@
   padding: 6rem 10rem;
   text-align: center;
   color: white;
+
+  @media (max-width: 800px) {
+    padding: 4rem;
+  }
+}
+
+.header {
+  font-family: "DM Serif Display", serif;
+  font-size: 3.6rem;
+
+  @media (max-width: 800px) {
+    font-size: var(--font-xl);
+  }
 }
 
 .text {
   margin-top: 3rem;
   font-size: var(--font-large);
+
+  @media (max-width: 800px) {
+    font-size: var(--font-med);
+  }
 }

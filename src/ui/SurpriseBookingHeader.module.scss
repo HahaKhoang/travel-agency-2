@@ -1,11 +1,19 @@
 .container {
   background-color: var(--color-blue-dark);
-  padding: 4rem 10rem;
+  padding: 6rem 10rem;
   text-align: center;
   color: white;
+
+  @media (max-width: 800px) {
+    padding: 4rem;
+  }
 }
 
 .text {
   margin-top: 3rem;
   font-size: var(--font-large);
+
+  @media (max-width: 800px) {
+    font-size: var(--font-med);
+  }
 }
