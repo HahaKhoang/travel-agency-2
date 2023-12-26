@@ -8,9 +8,10 @@
     gap: 1rem;
   }
 
-  @media (max-width: 1000px) {
-    flex-direction: column;
-  }
+  // @media (max-width: 1000px) {
+  //   flex-direction: column;
+  //   margin: 4rem 2rem;
+  // }
 
   @media (max-width: 650px) {
     margin: 4rem 2rem;
