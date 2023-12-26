@@ -1,4 +1,6 @@
 .container {
+  background-color: pink;
+  height: 100%;
 }
 
 .text {
@@ -7,15 +9,22 @@
   @media (max-width: 1700px) {
     font-size: var(--font-med);
   }
+
+  @media (max-width: 1400px) {
+    font-size: var(--font-small);
+  }
 }
 
 .reviewer {
-  margin-top: 2rem;
   font-size: var(--font-large);
   color: white;
   text-align: center;
 
   @media (max-width: 1700px) {
     font-size: var(--font-med);
+  }
+
+  @media (max-width: 1400px) {
+    font-size: var(--font-small);
   }
 }
