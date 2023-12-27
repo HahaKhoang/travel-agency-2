@@ -5,10 +5,26 @@
   flex-direction: column;
   gap: 1.6rem;
   color: var(--color-blue-dark);
+  // background-color: pink;
 
   @media (max-width: 1700px) {
-    // background-color: green;
     width: 30rem;
+  }
+
+  @media (max-width: 1400px) {
+    width: 50rem;
+  }
+
+  @media (max-width: 1200px) {
+    width: 40rem;
+  }
+
+  @media (max-width: 1000px) {
+    width: 35rem;
+  }
+
+  @media (max-width: 800px) {
+    width: 45rem;
   }
 }
 
