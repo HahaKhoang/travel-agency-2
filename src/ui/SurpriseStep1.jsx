@@ -15,9 +15,9 @@ function SurpriseStep1() {
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
             suscipit
           </p>
-          <p className={styles.text}>
+          {/* <p className={styles.text}>
             Lorem, ipsum dolor sit amet consectetur adipisicing
-          </p>
+          </p> */}
           <ul className={styles.text}>
             <li>Lorem ipsum dolor sit amet </li>
             <li>Lorem ipsum dolor sit amet </li>

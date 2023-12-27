@@ -1,10 +1,11 @@
 .container {
   margin-top: 4rem;
-  padding: 4rem;
+  padding: 6rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(28rem, 1fr));
-  gap: 3.4rem;
-  // background-color: orange;
+  grid-template-columns: repeat(auto-fill, 28rem);
+  justify-content: space-between;
+  row-gap: 4rem;
+  column-gap: 2rem;
 
   @media (max-width: 673px) {
     grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
