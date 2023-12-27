@@ -9,7 +9,7 @@ function SurpriseTripTypesContainer() {
     <div className={styles.container}>
       <div className={styles.header}>
         <div className={styles["header-text"]}>
-          <h2>Itching to go somewhere different?</h2>
+          <p className={styles.main}>Itching to go somewhere different?</p>
           <p className={styles.text}>
             Sometimes changing your scenery is just what you need
           </p>
@@ -23,7 +23,7 @@ function SurpriseTripTypesContainer() {
           <img src={plane} className={styles.picture} />
         </div>
         <div className={styles["text-container"]}>
-          <h2>Plane trips</h2>
+          <p className={styles.main}>Plane trips</p>
           <p className={styles.text}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem
             ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos,
@@ -40,7 +40,7 @@ function SurpriseTripTypesContainer() {
       </div>
       <div className={styles["trip-container-2"]}>
         <div className={styles["text-container-2"]}>
-          <h2>Road trips</h2>
+          <p className={styles.main}>Road trips</p>
           <p className={styles.text}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem
             ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos,
@@ -63,7 +63,7 @@ function SurpriseTripTypesContainer() {
           <img src={weekend} className={styles.picture} />
         </div>
         <div className={styles["text-container"]}>
-          <h2>Weekend Getaways</h2>
+          <p className={styles.main}>Weekend Getaways</p>
           <p className={styles.text}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem
             ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos,
@@ -80,7 +80,7 @@ function SurpriseTripTypesContainer() {
       </div>
       <div className={styles["trip-container-2"]}>
         <div className={styles["text-container-2"]}>
-          <h2>Day trips</h2>
+          <p className={styles.main}>Day trips</p>
           <p className={styles.text}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem
             ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos,
