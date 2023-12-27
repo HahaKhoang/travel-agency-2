@@ -1,9 +1,26 @@
 .container {
   margin-top: 4rem;
+  // background-color: pink;
+
+  // @media (max-width: 800px) {
+  //   margin-top: 2rem;
+  // }
 }
 
 .header {
   color: var(--color-red-dark);
+
+  @media (max-width: 1000px) {
+    font-size: 4rem;
+  }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-xl);
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-large);
+  }
 }
 
 .step-3 {
@@ -14,6 +31,20 @@
 .step-3-picture-container {
   width: 45%;
   height: 60rem;
+
+  @media (max-width: 1400px) {
+    width: 60%;
+    height: 50rem;
+  }
+
+  @media (max-width: 1000px) {
+    height: 45rem;
+  }
+
+  @media (max-width: 800px) {
+    height: 37rem;
+    width: 65%;
+  }
 }
 
 .picture {
@@ -28,6 +59,15 @@
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  // background-color: green;
+
+  @media (max-width: 1400px) {
+    padding: 3rem;
+  }
+
+  @media (max-width: 800px) {
+    width: 35%;
+  }
 }
 
 .text {
@@ -35,6 +75,10 @@
 
   @media (max-width: 1700px) {
     font-size: var(--font-med);
+  }
+
+  @media (max-width: 1000px) {
+    font-size: var(--font-small);
   }
 }
 
@@ -50,6 +94,14 @@
   @media (max-width: 1700px) {
     height: 50rem;
   }
+
+  @media (max-width: 1400px) {
+    height: 45rem;
+  }
+
+  @media (max-width: 1000px) {
+    height: 35rem;
+  }
 }
 
 .step-4-text-container {
@@ -58,6 +110,11 @@
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  // background-color: azure;
+
+  @media (max-width: 1000px) {
+    padding: 3rem;
+  }
 }
 
 .step-5 {
@@ -72,6 +129,19 @@
   @media (max-width: 1700px) {
     height: 60rem;
   }
+
+  @media (max-width: 1400px) {
+    height: 50rem;
+  }
+
+  @media (max-width: 1000px) {
+    width: 65%;
+    height: 45rem;
+  }
+
+  @media (max-width: 800px) {
+    height: 37rem;
+  }
 }
 
 .step-5-text-container {
@@ -80,4 +150,10 @@
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
+  // background-color: moccasin;
+
+  @media (max-width: 1000px) {
+    width: 35%;
+    padding: 3rem;
+  }
 }

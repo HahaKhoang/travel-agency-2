@@ -11,6 +11,10 @@
     height: 115rem;
   }
 
+  @media (max-width: 1000px) {
+    height: 100rem;
+  }
+
   @media (max-width: 800px) {
     height: 90rem;
     padding: 4rem 0;
