@@ -5,6 +5,21 @@
 
 .header {
   color: var(--color-red-dark);
+
+  @media (max-width: 1000px) {
+    font-size: 4rem;
+    line-height: 4rem;
+  }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-xl);
+    line-height: 3.4rem;
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-large);
+    line-height: 3rem;
+  }
 }
 
 .ready {
@@ -17,6 +32,10 @@
   width: 40%;
   padding: 4rem;
   text-align: center;
+
+  @media (max-width: 650px) {
+    padding: 2rem;
+  }
 }
 
 .text {
@@ -26,6 +45,14 @@
   @media (max-width: 1700px) {
     font-size: var(--font-large);
   }
+
+  @media (max-width: 1000px) {
+    font-size: var(--font-med);
+  }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-small);
+  }
 }
 
 .picture-container {
@@ -34,6 +61,14 @@
 
   @media (max-width: 1700px) {
     height: 50rem;
+  }
+
+  @media (max-width: 1000px) {
+    height: 35rem;
+  }
+
+  @media (max-width: 650px) {
+    height: 30rem;
   }
 }
 
