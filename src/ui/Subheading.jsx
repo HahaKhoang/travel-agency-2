@@ -18,13 +18,9 @@ const Subheading = () => {
     setTimeout(() => {
       const copyWords = [...words];
       const firstElem = copyWords.splice(1);
-      // wrapperRef.current.style.transition = "none";
-      // wrapperRef.current.style.top = "0px";
+
       setWords([...firstElem.concat(copyWords)]);
     }, 300);
-
-    // wrapperRef.current.style.transition = "1s";
-    // wrapperRef.current.style.top = "-70px";
   };
 
   useEffect(() => {
@@ -36,15 +32,15 @@ const Subheading = () => {
   return (
     <div className={styles.container}>
       <div className={styles.subheading}>
-        <h3 className={styles["text-1"]}>We're here to help you </h3>
+        <p className={styles["static-text"]}>We're here to help you </p>
         <div className={styles["text-container"]}>
           <div ref={wrapperRef} className={styles["words-container"]}>
-            <h3 className={styles["text-word"]}>{words[0]}</h3>
-            <h3 className={styles["text-word"]}>{words[1]}</h3>
+            <p className={styles["text-word"]}>{words[0]}</p>
+            <p className={styles["text-word"]}>{words[1]}</p>
           </div>
         </div>
       </div>
-      <h3 className={styles["text-2"]}> the way you want</h3>
+      <p className={styles["text-2"]}> the way you want</p>
     </div>
   );
 };

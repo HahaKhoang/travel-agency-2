@@ -1,5 +1,10 @@
 .container {
   width: 84%;
+  // background-color: pink;
+
+  // @media (max-width: 800px) {
+  //   width: 90%;
+  // }
 }
 
 .subheading {
@@ -7,11 +12,6 @@
   display: flex;
   align-items: center;
   justify-content: start;
-  // background-color: pink;
-
-  @media (max-width: 800px) {
-    font-size: 3rem;
-  }
 }
 
 .text-container {
@@ -20,6 +20,10 @@
   display: inline;
   overflow: hidden;
   // background-color: green;
+
+  @media (max-width: 800px) {
+    height: 4rem;
+  }
 }
 
 .words-container {
@@ -31,6 +35,37 @@
   margin-top: -0.5rem;
   padding-left: 1rem;
   color: var(--color-blue-dark);
+
+  @media (max-width: 1200px) {
+    width: 13rem;
+  }
+
+  @media (max-width: 1000px) {
+    width: 9rem;
+  }
+
+  @media (max-width: 800px) {
+    width: 8rem;
+    margin-top: -1.6rem;
+    padding-left: 0.8rem;
+  }
+}
+
+.static-text {
+  font-size: 3.6rem;
+  font-family: "DM Serif Display", serif;
+
+  @media (max-width: 1200px) {
+    font-size: var(--font-xl);
+  }
+
+  @media (max-width: 1000px) {
+    font-size: var(--font-large);
+  }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-med);
+  }
 }
 
 .text-word {
@@ -40,8 +75,38 @@
   display: block;
   transition: 0.5s;
   line-height: 70px;
+  font-size: 3.6rem;
+  font-family: "DM Serif Display", serif;
+
+  @media (max-width: 1200px) {
+    font-size: var(--font-xl);
+  }
+
+  @media (max-width: 1000px) {
+    font-size: var(--font-large);
+  }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-med);
+  }
 }
 
 .text-2 {
   margin-top: -1rem;
+  font-size: 3.6rem;
+  font-family: "DM Serif Display", serif;
+
+  @media (max-width: 1200px) {
+    font-size: var(--font-xl);
+    margin-top: -1.4rem;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: var(--font-large);
+  }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-med);
+    margin-top: -0.6rem;
+  }
 }
