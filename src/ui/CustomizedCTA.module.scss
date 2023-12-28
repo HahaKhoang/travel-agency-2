@@ -8,6 +8,14 @@
   align-items: center;
   justify-content: center;
   color: white;
+
+  @media (max-width: 1000px) {
+    height: 35rem;
+  }
+
+  @media (max-width: 800px) {
+    height: 30rem;
+  }
 }
 
 .header {
@@ -17,7 +25,30 @@
   align-items: center;
   justify-content: center;
   gap: 3rem;
-  width: 80rem;
+
+  @media (max-width: 1000px) {
+    gap: 2.6rem;
+  }
+
+  @media (max-width: 800px) {
+    gap: 2rem;
+  }
+}
+
+.main {
+  font-size: 5.6rem;
+  line-height: 6rem;
+  font-family: "DM Serif Display", serif;
+
+  @media (max-width: 1000px) {
+    font-size: 4.8rem;
+    line-height: 5rem;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 4rem;
+    line-height: 4.2rem;
+  }
 }
 
 .text {
@@ -25,6 +56,10 @@
 
   @media (max-width: 1700px) {
     font-size: var(--font-med);
+  }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-small);
   }
 }
 

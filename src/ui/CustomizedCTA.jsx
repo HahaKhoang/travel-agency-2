@@ -5,7 +5,7 @@ function CustomizedCTA() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>So what are you waiting for?</h1>
+        <p className={styles.main}>So what are you waiting for?</p>
         <p className={styles.text}>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit.
           <br /> Aliquid earum aspernatur libero doloremque, dolorum,
