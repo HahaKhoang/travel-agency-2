@@ -1,9 +1,9 @@
 .container {
   background-color: var(--color-blue-med);
-  padding: 8rem 10rem;
+  padding: 12rem 10rem;
 
   @media (max-width: 1200px) {
-    padding: 6rem;
+    padding: 8rem 6rem;
   }
 }
 
