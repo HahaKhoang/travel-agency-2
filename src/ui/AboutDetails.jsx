@@ -10,11 +10,11 @@ function AboutDetails() {
         </div>
         <div className={styles["description-container"]}>
           <div className={styles.kanji}>
-            <h1>旅</h1>
+            <p className={styles.japanese}>旅</p>
             <p className={styles.english}>Tabi</p>
           </div>
           <div className={styles.kanji}>
-            <h1>友達</h1>
+            <p className={styles.japanese}>友達</p>
             <p className={styles.english}>Tomodachi</p>
           </div>
           <p>
