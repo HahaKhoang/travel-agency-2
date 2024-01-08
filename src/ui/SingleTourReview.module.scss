@@ -1,6 +1,6 @@
 .container {
-  background-color: pink;
-  height: 100%;
+  // background-color: pink;
+  // height: 100%;
 }
 
 .text {
@@ -10,8 +10,12 @@
     font-size: var(--font-med);
   }
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1000px) {
     font-size: var(--font-small);
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-xs);
   }
 }
 
@@ -19,12 +23,22 @@
   font-size: var(--font-large);
   color: white;
   text-align: center;
+  margin-top: 2rem;
 
   @media (max-width: 1700px) {
     font-size: var(--font-med);
   }
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1000px) {
     font-size: var(--font-small);
+  }
+
+  @media (max-width: 800px) {
+    margin-top: 0;
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-xs);
+    margin-top: 2rem;
   }
 }

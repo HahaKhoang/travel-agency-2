@@ -1,5 +1,4 @@
 import styles from "./SingleTourTestimonial.module.scss";
-import culture from "../../public/img/website/culture.jpg";
 import SingleTourReview from "./SingleTourReview";
 import { useState } from "react";
 import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
@@ -7,7 +6,7 @@ import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
 const reviews = [
   {
     review:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi repellat ipsa saepe hic cupiditate laboriosam autem accusantium ducimus tempore, odio soluta amet. Asperiores dicta dolores rerum quisquam iure, aperiam maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia numquam, culpa assumenda est nulla recusandae? Animi error nulla atque possimus tempore eos veritatis, numquam voluptate incidunt enim fugit veniam omnis.",
+      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Excepturi repellat ipsa saepe hic cupiditate laboriosam autem accusantium ducimus tempore, odio soluta amet. Asperiores dicta dolores rerum quisquam iure, aperiam maiores! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia numquam, culpa assumenda est nulla recusandae? Animi error tempore eos veritatis, numquam voluptate incidunt enim fugit veniam omnis.",
     name: "Hanbin",
   },
   {
@@ -57,7 +56,7 @@ function SingleTourTestimonial({ reviewImg }) {
           <RiArrowRightLine className={styles.button} />
         </button>
         <div className={styles["reviews-container"]}>
-          <h2 className={styles.header}>Reviews</h2>
+          <p className={styles.header}>Reviews</p>
           <div className={styles["reviews-slider"]}>
             {reviews.map((el, i) => (
               <div
