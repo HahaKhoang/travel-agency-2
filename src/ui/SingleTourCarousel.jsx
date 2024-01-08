@@ -52,13 +52,3 @@ function SingleTourCarousel({ carousel }) {
 }
 
 export default SingleTourCarousel;
-
-{
-  /* <div className={styles["picture-container"]}>
-<div className={styles["picture-frame"]}>
-  <img src={fuji} className={styles.picture} />
-  <h1 className={styles.title}>Mt.Fuji</h1>
-  <p className={styles.location}>Japan</p>
-</div>
-</div> */
-}
