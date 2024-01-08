@@ -2,6 +2,18 @@
   width: 100vw;
   height: 90rem;
   position: relative;
+
+  @media (max-width: 1400px) {
+    height: 80rem;
+  }
+
+  @media (max-width: 1200px) {
+    height: 70rem;
+  }
+
+  @media (max-width: 1000px) {
+    height: 60rem;
+  }
 }
 
 .picture {
@@ -16,6 +28,29 @@
   top: 14rem;
   left: 8rem;
   width: 40%;
+
+  @media (max-width: 1400px) {
+    font-size: 4.8rem;
+    line-height: 5.2rem;
+    top: 10rem;
+  }
+
+  @media (max-width: 1200px) {
+    font-size: 3.6rem;
+    line-height: 4rem;
+    top: 10rem;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: 3rem;
+    line-height: 3.6rem;
+    top: 6rem;
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-large);
+    line-height: 3rem;
+  }
 }
 
 .text {
@@ -25,4 +60,22 @@
   width: 50%;
   color: white;
   font-size: var(--font-xl);
+
+  @media (max-width: 1400px) {
+    font-size: var(--font-large);
+    bottom: 10rem;
+  }
+
+  @media (max-width: 1200px) {
+    bottom: 6rem;
+    right: 3%;
+  }
+
+  @media (max-width: 1000px) {
+    font-size: var(--font-med);
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-small);
+  }
 }
