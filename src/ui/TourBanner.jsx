@@ -1,4 +1,3 @@
-import { RiArrowDownDoubleLine } from "react-icons/ri";
 import styles from "./TourBanner.module.scss";
 
 function TourBanner({ img, title, text }) {
@@ -13,9 +12,8 @@ function TourBanner({ img, title, text }) {
     >
       <div className={styles.box}>
         <h1 className={styles.title}>{title}</h1>
-        <h4>{text}</h4>
+        <h4 className={styles.text}>{text}</h4>
       </div>
-      <RiArrowDownDoubleLine className={styles.icon} />
     </div>
   );
 }
