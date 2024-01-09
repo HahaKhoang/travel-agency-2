@@ -38,7 +38,7 @@ function TourCard({
       </NavLink>
       <div className={styles["detail-container"]}>
         <div className={styles.details}>
-          <p className={styles.title}>{name}</p>
+          <h3 className={styles.title}>{name}</h3>
           <p className={styles.description}>{shortDesc}</p>
           <div className={styles.extras}>
             <p>
@@ -47,14 +47,10 @@ function TourCard({
             <p>Category: {capitalized}</p>
           </div>
           <p className={styles.price}>Price: ${price}</p>
-          <NavLink
-            to={`${slug}`}
-            className={styles.button}
-            onClick={updateTour}
-          >
-            Let's go to {country}!
-          </NavLink>
         </div>
+        <NavLink to={`${slug}`} className={styles.button} onClick={updateTour}>
+          Let's go to {country}!
+        </NavLink>
       </div>
     </div>
   );
