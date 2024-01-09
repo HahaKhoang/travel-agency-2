@@ -12,4 +12,8 @@
   @media (max-width: 1000px) {
     width: 100%;
   }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-xs);
+  }
 }

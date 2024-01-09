@@ -7,6 +7,10 @@
 
 .filter {
   font-size: var(--font-small);
+
+  @media (max-width: 800px) {
+    font-size: var(--font-xs);
+  }
 }
 
 .button {
@@ -25,6 +29,10 @@
 
   @media (max-width: 1000px) {
     padding: 0.4rem 1.8rem;
+  }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-xs);
   }
 }
 
