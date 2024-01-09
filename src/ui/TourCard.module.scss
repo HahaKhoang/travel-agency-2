@@ -142,7 +142,7 @@
 }
 
 .button {
-  align-self: start;
+  align-self: center;
   margin-top: auto;
   font-size: var(--font-med);
   text-transform: uppercase;
@@ -162,14 +162,13 @@
   }
 
   @media (max-width: 800px) {
-    align-self: center;
     background-color: var(--color-red-dark);
     font-size: var(--font-small);
   }
 
   @media (max-width: 650px) {
     font-size: var(--font-med);
-    align-self: start;
+
     background-color: var(--color-blue-med);
   }
 }
