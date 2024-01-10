@@ -4,9 +4,19 @@
   cursor: pointer;
   margin: 0 auto;
 
-  @media (max-width: 673px) {
-    width: 26rem;
-    height: 26rem;
+  @media (max-width: 1000px) {
+    width: 32rem;
+    height: 32rem;
+  }
+
+  @media (max-width: 800px) {
+    width: 28rem;
+    height: 28rem;
+  }
+
+  @media (max-width: 650px) {
+    width: 36rem;
+    height: 36rem;
   }
 }
 
@@ -25,10 +35,20 @@
   z-index: 5;
   display: none;
 
-  // @media (max-width: 673px) {
-  //   width: 40rem;
-  //   height: 40rem;
-  // }
+  @media (max-width: 1000px) {
+    width: 32rem;
+    height: 32rem;
+  }
+
+  @media (max-width: 800px) {
+    width: 28rem;
+    height: 28rem;
+  }
+
+  @media (max-width: 650px) {
+    width: 36rem;
+    height: 36rem;
+  }
 }
 
 .image-container:hover .info {

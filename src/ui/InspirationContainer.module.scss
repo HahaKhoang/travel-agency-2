@@ -1,20 +1,24 @@
 .container {
-  margin-top: 4rem;
-  padding: 6rem;
+  padding: 0 6rem 6rem 6rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, 28rem);
   justify-content: space-between;
   row-gap: 4rem;
   column-gap: 2rem;
+  // background-color: pink;
 
-  @media (max-width: 673px) {
-    grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));
-    gap: 3.4rem;
+  @media (max-width: 1000px) {
+    grid-template-columns: repeat(auto-fill, 32rem);
+  }
+
+  @media (max-width: 800px) {
+    grid-template-columns: repeat(auto-fill, 28rem);
+    padding: 2rem;
   }
 
   @media (max-width: 650px) {
-    padding: 0 2rem 4rem;
-    margin-top: 0;
-    // background-color: pink;
+    justify-content: center;
+    row-gap: 6rem;
+    grid-template-columns: repeat(auto-fill, 36rem);
   }
 }
