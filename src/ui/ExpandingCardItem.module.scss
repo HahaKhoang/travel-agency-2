@@ -8,6 +8,10 @@
   margin: 0.4rem;
   position: relative;
   transition: flex 0.7s ease-in;
+
+  @media (max-width: 800px) {
+    margin: 0.2rem;
+  }
 }
 
 @-webkit-keyframes fadeIn {
