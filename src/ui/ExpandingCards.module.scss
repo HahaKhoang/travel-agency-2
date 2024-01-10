@@ -5,4 +5,9 @@
   @media (max-width: 1700px) {
     height: 49rem;
   }
+
+  @media (max-width: 800px) {
+    height: 70rem;
+    flex-direction: column;
+  }
 }

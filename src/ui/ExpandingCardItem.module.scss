@@ -52,7 +52,7 @@
   }
 
   @media (max-width: 1200px) {
-    width: 30%;
+    width: 35%;
   }
 
   @media (max-width: 1000px) {
@@ -127,4 +127,19 @@
   transform: translateX(-50%);
   opacity: 1;
   transition: all 1.2s;
+
+  @media (max-width: 1000px) {
+    font-size: 4rem;
+  }
+
+  @media (max-width: 800px) {
+    font-size: 3rem;
+    bottom: 0;
+    transform: initial;
+    left: 93%;
+  }
+
+  @media (max-width: 650px) {
+    font-size: 2.6rem;
+  }
 }
