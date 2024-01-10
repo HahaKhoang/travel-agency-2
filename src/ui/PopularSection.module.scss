@@ -14,11 +14,13 @@
 
   @media (max-width: 650px) {
     margin: 0 2rem;
+    padding-bottom: 4rem;
   }
 
   @media (max-width: 500px) {
     justify-content: initial;
     gap: 10rem;
+    padding-bottom: 8rem;
   }
 }
 
@@ -29,11 +31,10 @@
   align-items: center;
   gap: 1rem;
   position: relative;
-  // background-color: pink;
+  // background-color: orange;
 
   @media (max-width: 1700px) {
     width: 43rem;
-    // height: 68rem;
   }
 
   @media (max-width: 1400px) {
@@ -79,11 +80,7 @@
 
   @media (max-width: 1000px) {
     width: 35%;
-    height: 35rem;
-  }
-
-  @media (max-width: 800px) {
-    height: 32rem;
+    height: 30rem;
   }
 
   @media (max-width: 650px) {
@@ -125,22 +122,14 @@
 
   @media (max-width: 1000px) {
     width: 65%;
-    height: 35rem;
+    height: 30rem;
     align-items: center;
     justify-content: center;
   }
 
-  @media (max-width: 800px) {
-    height: 32rem;
-  }
-
   @media (max-width: 650px) {
     width: 100%;
-    height: 35rem;
-  }
-
-  @media (max-width: 500px) {
-    height: 30rem;
+    justify-content: initial;
   }
 }
 
@@ -189,20 +178,12 @@
 
   @media (max-width: 1000px) {
     color: white;
-  }
-
-  @media (max-width: 800px) {
     font-size: var(--font-small);
   }
 
   @media (max-width: 650px) {
     font-size: var(--font-med);
     color: #020617;
-  }
-
-  @media (max-width: 500px) {
-    color: var(--color-blue-small);
-    font-size: 2rem;
   }
 }
 
@@ -215,9 +196,6 @@
 
   @media (max-width: 1000px) {
     color: white;
-  }
-
-  @media (max-width: 800px) {
     font-size: var(--font-small);
   }
 
@@ -226,10 +204,10 @@
     color: #020617;
   }
 
-  @media (max-width: 500px) {
-    color: var(--color-blue-small);
-    font-size: 2rem;
-  }
+  // @media (max-width: 500px) {
+  //   color: var(--color-blue-small);
+  //   font-size: 2rem;
+  // }
 }
 
 .type {
@@ -253,9 +231,6 @@
 
   @media (max-width: 1000px) {
     background-color: var(--color-red-dark);
-  }
-
-  @media (max-width: 800px) {
     padding: 1rem 4rem;
     font-size: var(--font-small);
   }
