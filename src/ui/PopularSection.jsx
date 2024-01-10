@@ -34,36 +34,38 @@ function PopularSection() {
             </NavLink>
           </div>
           <div className={styles["text-container"]}>
-            <h3 className={styles.title}>{el.tourName}</h3>
+            <div className={styles["text-detail"]}>
+              <h3 className={styles.title}>{el.tourName}</h3>
 
-            <p className={styles.description}>{el.welcomeDesc}</p>
-            <div className={styles.extra}>
-              <p className={styles.duration}>
-                Duration: {el.duration} {el.duration < 2 ? "day" : "days"}
-              </p>
-              <p className={styles.type}>
-                Category:{" "}
-                {el.category.charAt(0).toUpperCase() + el.category.slice(1)}
-              </p>
+              <p className={styles.description}>{el.welcomeDesc}</p>
+              <div className={styles.extra}>
+                <p className={styles.duration}>
+                  Duration: {el.duration} {el.duration < 2 ? "day" : "days"}
+                </p>
+                <p className={styles.type}>
+                  Category:{" "}
+                  {el.category.charAt(0).toUpperCase() + el.category.slice(1)}
+                </p>
+              </div>
+              <NavLink
+                to={`all-tours/${el.slug}`}
+                className={styles.button}
+                onClick={() => {
+                  const tour = {
+                    id: el.id,
+                    name: el.tourName,
+                    slug: el.slug,
+                    price: el.price,
+                    duration: el.duration,
+                    totalPrice: el.price,
+                  };
+                  dispatch(addTour(tour));
+                }}
+              >
+                Read more
+              </NavLink>
             </div>
           </div>
-          <NavLink
-            to={`all-tours/${el.slug}`}
-            className={styles.button}
-            onClick={() => {
-              const tour = {
-                id: el.id,
-                name: el.tourName,
-                slug: el.slug,
-                price: el.price,
-                duration: el.duration,
-                totalPrice: el.price,
-              };
-              dispatch(addTour(tour));
-            }}
-          >
-            Read more
-          </NavLink>
         </div>
       ))}
     </div>

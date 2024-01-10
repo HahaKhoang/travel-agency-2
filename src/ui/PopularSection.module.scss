@@ -1,5 +1,4 @@
 .container {
-  // background-color: var(--color-blue-light);
   display: flex;
   justify-content: space-evenly;
   align-items: start;
@@ -9,40 +8,52 @@
     flex-direction: column;
     align-items: center;
     gap: 3rem;
-    background-color: var(--color-bg);
+    margin: 0 4rem;
+    // background-color: var(--color-bg);
+  }
+
+  @media (max-width: 650px) {
+    margin: 0 2rem;
+  }
+
+  @media (max-width: 500px) {
+    justify-content: initial;
+    gap: 10rem;
   }
 }
 
 .rank-container {
   width: 50rem;
-  height: 78rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   position: relative;
+  // background-color: pink;
 
   @media (max-width: 1700px) {
     width: 43rem;
-    height: 68rem;
+    // height: 68rem;
   }
 
   @media (max-width: 1400px) {
     width: 37rem;
-    height: 62rem;
   }
 
   @media (max-width: 1200px) {
     width: 31rem;
-    height: 57rem;
   }
 
   @media (max-width: 1000px) {
     flex-direction: row;
-    width: 90%;
-    height: 30rem;
-    gap: 0;
+    width: 100%;
     background-color: var(--color-blue-med);
+  }
+
+  @media (max-width: 650px) {
+    background-color: var(--color-bg);
+    flex-direction: column;
+    width: 100%;
   }
 }
 
@@ -68,7 +79,20 @@
 
   @media (max-width: 1000px) {
     width: 35%;
+    height: 35rem;
+  }
+
+  @media (max-width: 800px) {
+    height: 32rem;
+  }
+
+  @media (max-width: 650px) {
     height: 30rem;
+    width: 100%;
+  }
+
+  @media (max-width: 500px) {
+    height: 40rem;
   }
 }
 
@@ -87,16 +111,56 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   gap: 1rem;
+  height: 30rem;
+  // background-color: pink;
+
+  @media (max-width: 1400px) {
+    height: 35rem;
+  }
+
+  @media (max-width: 1200px) {
+    height: 40rem;
+  }
 
   @media (max-width: 1000px) {
     width: 65%;
-    gap: 2rem;
-    margin-bottom: 5rem;
-    padding: 0 2rem;
-    color: white;
-    // background-color: red;
+    height: 35rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  @media (max-width: 800px) {
+    height: 32rem;
+  }
+
+  @media (max-width: 650px) {
+    width: 100%;
+    height: 35rem;
+  }
+
+  @media (max-width: 500px) {
+    height: 30rem;
+  }
+}
+
+.text-detail {
+  display: flex;
+  flex-direction: column;
+  // background-color: azure;
+  gap: 2rem;
+  height: 100%;
+  padding: 0 2rem;
+
+  @media (max-width: 1000px) {
+    height: 80%;
+    width: 90%;
+    padding: 0;
+  }
+
+  @media (max-width: 500px) {
+    height: 100%;
+    width: 100%;
   }
 }
 
@@ -104,16 +168,18 @@
   color: var(--color-blue-med);
   text-align: center;
 
-  @media (max-width: 1700px) {
-    font-size: var(--font-xl);
-  }
-
-  @media (max-width: 1200px) {
-    line-height: 3rem;
-  }
-
   @media (max-width: 1000px) {
+    font-size: var(--font-xl);
     color: white;
+  }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-large);
+  }
+
+  @media (max-width: 650px) {
+    color: var(--color-blue-med);
+    font-size: 3.6rem;
   }
 }
 
@@ -121,25 +187,56 @@
   font-size: var(--font-med);
   text-align: center;
 
-  @media (max-width: 1700px) {
+  @media (max-width: 1000px) {
+    color: white;
+  }
+
+  @media (max-width: 800px) {
     font-size: var(--font-small);
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-med);
+    color: #020617;
+  }
+
+  @media (max-width: 500px) {
+    color: var(--color-blue-small);
+    font-size: 2rem;
   }
 }
 
 .extra {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 3rem;
   font-size: var(--font-med);
 
-  @media (max-width: 1700px) {
+  @media (max-width: 1000px) {
+    color: white;
+  }
+
+  @media (max-width: 800px) {
     font-size: var(--font-small);
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-med);
+    color: #020617;
+  }
+
+  @media (max-width: 500px) {
+    color: var(--color-blue-small);
+    font-size: 2rem;
   }
 }
 
+.type {
+  text-align: right;
+}
+
 .button {
-  position: absolute;
-  bottom: 0;
   outline: none;
   color: white;
   padding: 1.4rem 4.6rem;
@@ -151,17 +248,22 @@
   background-color: var(--color-blue-med);
   border: none;
   transition: all 0.5s;
+  align-self: center;
+  margin-top: auto;
 
   @media (max-width: 1000px) {
     background-color: var(--color-red-dark);
-    left: 57%;
-    bottom: 2rem;
-    padding: 1rem 3rem;
   }
 
   @media (max-width: 800px) {
+    padding: 1rem 4rem;
     font-size: var(--font-small);
-    padding: 1rem 3rem;
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-med);
+    width: 100%;
+    text-align: center;
   }
 }
 
