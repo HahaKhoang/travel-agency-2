@@ -2,28 +2,38 @@
   display: flex;
   height: 60rem;
   width: 120rem;
+  // background-color: green;
 
   @media (max-width: 1400px) {
     width: 100%;
-    height: 58rem;
   }
 
-  @media (max-width: 1200px) {
-    height: 45rem;
+  @media (max-width: 1400px) {
+    height: 52rem;
   }
 
   @media (max-width: 1000px) {
+    height: 42rem;
+  }
+
+  @media (max-width: 650px) {
+    flex-direction: column;
     height: 36rem;
   }
 
-  @media (max-width: 800px) {
-    height: 26rem;
+  @media (max-width: 500px) {
+    height: 43rem;
   }
 }
 
 .left-container {
   width: 50%;
   height: 100%;
+
+  @media (max-width: 650px) {
+    width: 0%;
+    height: 0%;
+  }
 }
 
 .picture {
@@ -36,15 +46,26 @@
   width: 50%;
   height: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @media (max-width: 650px) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.text-container {
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5rem;
-  margin: auto 0;
   gap: 3rem;
+  // background-color: azure;
+  height: 100%;
+  margin: 2rem;
 
-  @media (max-width: 1000px) {
-    padding: 3rem;
+  @media (max-width: 650px) {
     gap: 2rem;
   }
 }
@@ -52,12 +73,8 @@
 .tour {
   color: var(--color-red-dark);
 
-  @media (max-width: 1000px) {
-    font-size: var(--font-large);
-  }
-
   @media (max-width: 800px) {
-    font-size: var(--font-med);
+    font-size: var(--font-xl);
   }
 }
 
@@ -65,12 +82,12 @@
   font-size: var(--font-med);
   color: var(--color-blue-dark);
 
-  @media (max-width: 1000px) {
+  @media (max-width: 800px) {
     font-size: var(--font-small);
   }
 
-  @media (max-width: 800px) {
-    font-size: var(--font-xs);
+  @media (max-width: 650px) {
+    font-size: var(--font-med);
   }
 }
 
@@ -79,11 +96,11 @@
   font-weight: 600;
   color: var(--color-red-dark);
 
-  @media (max-width: 1000px) {
+  @media (max-width: 800px) {
     font-size: var(--font-small);
   }
 
-  @media (max-width: 800px) {
-    font-size: var(--font-xs);
+  @media (max-width: 650px) {
+    font-size: var(--font-med);
   }
 }
