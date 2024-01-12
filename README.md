@@ -1,5 +1,7 @@
 # Tabi Tomodachi
 
+https://tabi-tomodachi.netlify.app/
+
 Tabi Tomodachi is a travel consultancy website.
 
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh

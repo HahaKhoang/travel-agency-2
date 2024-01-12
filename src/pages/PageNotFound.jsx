@@ -5,9 +5,22 @@ function PageNotFound() {
   const error = useRouteError();
   console.log(error);
   return (
-    <div>
-      <h1>Something went wrong</h1>
-      <p>{error.data || error.message}</p>
+    <div
+      style={{
+        backgroundColor: "#e63946",
+        height: "100vh",
+        width: "100vw",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+        gap: "4rem",
+        color: "white",
+        padding: "4rem",
+      }}
+    >
+      <h1 style={{ textAlign: "center" }}>Something went wrong</h1>
+      <p style={{ fontSize: "2rem" }}>{error.data || error.message}</p>
       <button onClick={() => navigate(-1)}>Go back</button>
     </div>
   );
