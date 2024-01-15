@@ -112,20 +112,17 @@
   }
 
   @media (max-width: 1000px) {
-    width: 80%;
-    padding: 6rem 4rem;
+    width: 100%;
+    margin: 6rem;
+  }
+
+  @media (max-width: 800px) {
+    margin: 4rem 2rem;
   }
 }
 
 .header {
-  font-family: "DM Serif Display", serif;
-  font-size: 6rem;
-  line-height: 6rem;
   color: var(--color-red-dark);
-
-  @media (max-width: 1850px) {
-    font-size: 5.6rem;
-  }
 
   @media (max-width: 1700px) {
     font-size: 4.8rem;
@@ -151,10 +148,6 @@
 
 .text {
   font-size: var(--font-xl);
-
-  @media (max-width: 1850px) {
-    font-size: 2.8rem;
-  }
 
   @media (max-width: 1700px) {
     font-size: var(--font-large);

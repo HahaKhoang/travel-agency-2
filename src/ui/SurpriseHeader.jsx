@@ -9,9 +9,9 @@ function MysteryHeader() {
       </div>
       <div className={styles["right-container"]}>
         <div className={styles["text-container"]}>
-          <p className={styles.header}>
+          <h1 className={styles.header}>
             It's not about the destination, it's about the journey
-          </p>
+          </h1>
           <p className={styles.text}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit.
             Perferendis autem in quidem maiores ad delectus, ratione
