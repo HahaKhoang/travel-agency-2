@@ -3,6 +3,10 @@
   background-color: var(--color-blue-light);
   // padding-bottom: 8rem;
   padding: 8rem 0 12rem 0;
+
+  @media (max-width: 650px) {
+    padding: 6rem 0;
+  }
 }
 
 .header {
@@ -10,6 +14,10 @@
   padding-top: 15rem;
   padding-bottom: 4rem;
   color: white;
+
+  @media (max-width: 650px) {
+    padding: 0;
+  }
 }
 
 .types-container {
@@ -23,6 +31,7 @@
   justify-items: center;
   align-content: space-evenly;
   align-items: center;
+  // background-color: orange;
 
   @media (max-width: 1400px) {
     grid-template-columns: repeat(2, 1fr);
@@ -37,5 +46,9 @@
   @media (max-width: 800px) {
     grid-template-columns: repeat(1, 1fr);
     row-gap: 10rem;
+  }
+
+  @media (max-width: 650px) {
+    margin: 4rem 2rem;
   }
 }
