@@ -15,26 +15,28 @@
     font-size: var(--font-xl);
     line-height: 3.4rem;
   }
-
-  @media (max-width: 650px) {
-    font-size: var(--font-large);
-    line-height: 3rem;
-  }
 }
 
 .ready {
   display: flex;
   align-items: center;
   justify-content: center;
+  // background-color: peachpuff;
+
+  @media (max-width: 650px) {
+    flex-direction: column;
+  }
 }
 
 .text-container {
   width: 40%;
   padding: 4rem;
   text-align: center;
+  // background-color: darkseagreen;
 
   @media (max-width: 650px) {
-    padding: 2rem;
+    width: 100%;
+    padding: 4rem 2rem;
   }
 }
 
@@ -50,9 +52,9 @@
     font-size: var(--font-med);
   }
 
-  @media (max-width: 800px) {
-    font-size: var(--font-small);
-  }
+  // @media (max-width: 800px) {
+  //   font-size: var(--font-small);
+  // }
 }
 
 .picture-container {
@@ -69,6 +71,7 @@
 
   @media (max-width: 650px) {
     height: 30rem;
+    width: 100%;
   }
 }
 
