@@ -16,6 +16,11 @@
   @media (max-width: 800px) {
     height: 30rem;
   }
+
+  @media (max-width: 650px) {
+    height: 100%;
+    padding: 8rem 0;
+  }
 }
 
 .header {
@@ -33,13 +38,15 @@
   @media (max-width: 800px) {
     gap: 2rem;
   }
+
+  @media (max-width: 650px) {
+    margin: 0 2rem;
+    gap: 4rem;
+    // width: 100%;
+  }
 }
 
 .main {
-  font-size: 5.6rem;
-  line-height: 6rem;
-  font-family: "DM Serif Display", serif;
-
   @media (max-width: 1000px) {
     font-size: 4.8rem;
     line-height: 5rem;
@@ -56,10 +63,6 @@
 
   @media (max-width: 1700px) {
     font-size: var(--font-med);
-  }
-
-  @media (max-width: 800px) {
-    font-size: var(--font-small);
   }
 }
 
