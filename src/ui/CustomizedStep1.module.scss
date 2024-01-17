@@ -27,8 +27,8 @@
 
   @media (max-width: 500px) {
     height: 100%;
-    gap: 4rem;
-    padding: 4rem 0;
+    gap: 2rem;
+    padding: 4rem 0 2rem;
   }
 }
 
@@ -48,7 +48,6 @@
   display: flex;
   align-items: center;
   width: 100%;
-  // background-color: darkseagreen;
 
   @media (max-width: 650px) {
     align-items: start;
@@ -156,7 +155,6 @@
     height: 100%;
     gap: 2rem;
     position: initial;
-    // background-color: orange;
   }
 }
 
