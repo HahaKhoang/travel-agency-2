@@ -5,6 +5,11 @@
   // @media (max-width: 800px) {
   //   width: 90%;
   // }
+
+  @media (max-width: 650px) {
+    margin: 0 2rem;
+    width: 100%;
+  }
 }
 
 .subheading {
@@ -49,12 +54,15 @@
     margin-top: -1.6rem;
     padding-left: 0.8rem;
   }
+
+  @media (max-width: 650px) {
+    width: 10rem;
+    margin-top: -1.4rem;
+    padding-left: 1rem;
+  }
 }
 
 .static-text {
-  font-size: 3.6rem;
-  font-family: "DM Serif Display", serif;
-
   @media (max-width: 1200px) {
     font-size: var(--font-xl);
   }
@@ -65,6 +73,10 @@
 
   @media (max-width: 800px) {
     font-size: var(--font-med);
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-large);
   }
 }
 
@@ -89,6 +101,10 @@
   @media (max-width: 800px) {
     font-size: var(--font-med);
   }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-large);
+  }
 }
 
 .text-2 {
@@ -108,5 +124,9 @@
   @media (max-width: 800px) {
     font-size: var(--font-med);
     margin-top: -0.6rem;
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-large);
   }
 }

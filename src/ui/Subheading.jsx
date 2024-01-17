@@ -32,7 +32,7 @@ const Subheading = () => {
   return (
     <div className={styles.container}>
       <div className={styles.subheading}>
-        <p className={styles["static-text"]}>We're here to help you </p>
+        <h3 className={styles["static-text"]}>We're here to help you </h3>
         <div className={styles["text-container"]}>
           <div ref={wrapperRef} className={styles["words-container"]}>
             <p className={styles["text-word"]}>{words[0]}</p>
