@@ -13,14 +13,21 @@
   }
 
   @media (max-width: 1000px) {
-    grid-template-columns: repeat(5, minmax(17rem, 1fr));
+    // grid-template-columns: repeat(5, minmax(17rem, 1fr));
+    grid-template-columns: 15rem 15rem 18rem 18rem 1fr;
     grid-template-rows: repeat(3, minmax(10rem, 14rem));
   }
 
   @media (max-width: 800px) {
-    grid-template-columns: repeat(5, minmax(14rem, 1fr));
+    // grid-template-columns: repeat(5, minmax(17rem, 1fr));
+    grid-template-columns: 10rem 10rem 17rem 17rem 1fr;
     grid-template-rows: repeat(3, minmax(8rem, 12rem));
   }
+
+  // @media (max-width: 800px) {
+  //   grid-template-columns: repeat(5, minmax(14rem, 1fr));
+  //   grid-template-rows: repeat(3, minmax(8rem, 12rem));
+  // }
 }
 
 .container-mobile {

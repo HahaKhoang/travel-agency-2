@@ -1,10 +1,11 @@
 .container {
-  width: 84%;
+  width: 100%;
   // background-color: pink;
+  margin: 0 2rem;
 
-  // @media (max-width: 800px) {
-  //   width: 90%;
-  // }
+  @media (max-width: 1200px) {
+    margin: 0 1rem;
+  }
 
   @media (max-width: 650px) {
     margin: 0 2rem;
@@ -42,7 +43,7 @@
   color: var(--color-blue-dark);
 
   @media (max-width: 1200px) {
-    width: 13rem;
+    width: 12rem;
   }
 
   @media (max-width: 1000px) {
@@ -63,11 +64,11 @@
 }
 
 .static-text {
-  @media (max-width: 1200px) {
+  @media (max-width: 1400px) {
     font-size: var(--font-xl);
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     font-size: var(--font-large);
   }
 
@@ -90,11 +91,11 @@
   font-size: 3.6rem;
   font-family: "DM Serif Display", serif;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1400px) {
     font-size: var(--font-xl);
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     font-size: var(--font-large);
   }
 
@@ -112,12 +113,12 @@
   font-size: 3.6rem;
   font-family: "DM Serif Display", serif;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1400px) {
     font-size: var(--font-xl);
     margin-top: -1.4rem;
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: 1200px) {
     font-size: var(--font-large);
   }
 
