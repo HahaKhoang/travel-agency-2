@@ -1,6 +1,6 @@
 .container {
   width: 100%;
-  // background-color: var(--color-blue-light);
+  background-color: var(--color-blue-light);
   display: grid;
   grid-template-columns: repeat(5, minmax(25, 1fr));
   grid-template-rows: repeat(3, minmax(15rem, 20rem));
@@ -20,6 +20,11 @@
   @media (max-width: 800px) {
     grid-template-columns: repeat(5, minmax(14, 1fr));
     grid-template-rows: repeat(3, minmax(8rem, 12rem));
+  }
+
+  @media (max-width: 650px) {
+    grid-template-columns: repeat(3, minmax(14, 1fr));
+    // grid-template-rows: repeat(3, minmax(8rem, 12rem));
   }
 }
 
