@@ -40,7 +40,7 @@ const Subheading = () => {
           </div>
         </div>
       </div>
-      <p className={styles["text-2"]}> the way you want</p>
+      <h3 className={styles["text-2"]}> the way you want</h3>
     </div>
   );
 };

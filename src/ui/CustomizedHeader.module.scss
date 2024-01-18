@@ -35,7 +35,8 @@
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 10rem 15rem 10rem 15rem 70rem;
-  gap: 1rem;
+  gap: 2rem;
+  padding: 2rem 0;
 }
 
 .picture {
