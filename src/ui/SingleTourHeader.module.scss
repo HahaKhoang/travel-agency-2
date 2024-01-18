@@ -9,6 +9,10 @@
   @media (max-width: 1000px) {
     padding: 4rem;
   }
+
+  @media (max-width: 650px) {
+    padding: 4rem 2rem;
+  }
 }
 
 .header {
@@ -32,5 +36,13 @@
 
   @media (max-width: 800px) {
     width: 75%;
+  }
+
+  @media (max-width: 650px) {
+    width: 80%;
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
   }
 }
