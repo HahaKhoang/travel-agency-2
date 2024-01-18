@@ -11,6 +11,10 @@
   @media (max-width: 1400px) {
     height: 80rem;
   }
+
+  @media (max-width: 650px) {
+    height: 55rem;
+  }
 }
 
 .picture-container {
@@ -28,6 +32,10 @@
 
   @media (max-width: 1400px) {
     height: 80rem;
+  }
+
+  @media (max-width: 650px) {
+    height: 55rem;
   }
 }
 
@@ -58,6 +66,11 @@
 
   @media (max-width: 800px) {
     padding: 13rem 10rem;
+  }
+
+  @media (max-width: 650px) {
+    height: 55rem;
+    padding: 10rem 4rem;
   }
 }
 
@@ -90,13 +103,8 @@
   }
 
   @media (max-width: 650px) {
-    font-size: 6rem;
-    bottom: 11rem;
-  }
-
-  @media (max-width: 550px) {
-    font-size: 5rem;
-    bottom: 10.6rem;
+    font-size: 3.6rem;
+    bottom: 7.4rem;
   }
 }
 
@@ -112,6 +120,11 @@
 
   @media (max-width: 800px) {
     bottom: 7rem;
+  }
+
+  @media (max-width: 650px) {
+    bottom: 5rem;
+    font-size: var(--font-small);
   }
 }
 
@@ -131,6 +144,20 @@
   top: 50%;
   transform: translateY(-50%);
   left: 2rem;
+  // background-color: pink;
+
+  @media (max-width: 650px) {
+    flex-direction: row;
+    height: 2rem;
+    width: 7rem;
+    padding: 0;
+    gap: 2rem;
+    top: initial;
+    transform: translateY(0);
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .dot {
