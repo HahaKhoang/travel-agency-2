@@ -32,12 +32,12 @@
 .number-day {
   color: var(--color-red-dark);
 
-  @media (max-width: 1400px) {
-    font-size: var(--font-xl);
+  @media (max-width: 1000px) {
+    font-size: 4rem;
   }
 
   @media (max-width: 800px) {
-    font-size: var(--font-large);
+    font-size: var(--font-xl);
   }
 }
 
@@ -48,8 +48,12 @@
     font-size: var(--font-med);
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     font-size: var(--font-small);
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-med);
   }
 }
 

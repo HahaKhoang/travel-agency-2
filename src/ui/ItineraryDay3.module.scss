@@ -1,6 +1,7 @@
 .container {
   display: flex;
   justify-content: space-between;
+  // background-color: bisque;
 }
 
 .day-container {
@@ -17,6 +18,15 @@
   @media (max-width: 1000px) {
     padding: 0 4rem;
   }
+
+  @media (max-width: 650px) {
+    padding: 0 2rem;
+    width: 60%;
+  }
+
+  @media (max-width: 500px) {
+    width: 70%;
+  }
 }
 
 .day {
@@ -32,12 +42,12 @@
 .number-day {
   color: var(--color-red-dark);
 
-  @media (max-width: 1400px) {
-    font-size: var(--font-xl);
+  @media (max-width: 1000px) {
+    font-size: 4rem;
   }
 
   @media (max-width: 800px) {
-    font-size: var(--font-large);
+    font-size: var(--font-xl);
   }
 }
 
@@ -48,8 +58,12 @@
     font-size: var(--font-med);
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
     font-size: var(--font-small);
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-med);
   }
 }
 
@@ -63,6 +77,16 @@
 
   @media (max-width: 1200px) {
     width: 55%;
+  }
+
+  @media (max-width: 650px) {
+    height: 130rem;
+    width: 40%;
+  }
+
+  @media (max-width: 500px) {
+    // height: 100rem;
+    width: 30%;
   }
 }
 
