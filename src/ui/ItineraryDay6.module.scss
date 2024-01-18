@@ -3,7 +3,7 @@
   flex-direction: column;
   position: relative;
   height: 140rem;
-  background-color: azure;
+  // background-color: cadetblue;
 
   @media (max-width: 1700px) {
     height: 110rem;
@@ -17,8 +17,12 @@
     height: 70rem;
   }
 
-  @media (max-width: 550px) {
-    height: 76rem;
+  @media (max-width: 650px) {
+    height: 105rem;
+  }
+
+  @media (max-width: 500px) {
+    height: 115rem;
   }
 }
 
@@ -43,6 +47,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  // background-color: pink;
 
   @media (max-width: 1700px) {
     padding: 0 8rem 12rem;
@@ -56,8 +61,12 @@
     width: 50%;
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: 650px) {
     padding: 0 2rem 6rem;
+  }
+
+  @media (max-width: 500px) {
+    width: 70%;
   }
 }
 
@@ -102,6 +111,7 @@
 .picture-container-top {
   width: 60%;
   height: 80rem;
+  // background-color: olive;
 
   @media (max-width: 1700px) {
     height: 60rem;
@@ -115,6 +125,15 @@
     height: 40rem;
     width: 50%;
   }
+
+  @media (max-width: 650px) {
+    height: 50rem;
+  }
+
+  @media (max-width: 500px) {
+    width: 30%;
+    height: 60rem;
+  }
 }
 
 .picture {
@@ -127,6 +146,13 @@
   display: flex;
   position: absolute;
   bottom: 0;
+  // background-color: olive;
+
+  @media (max-width: 650px) {
+    bottom: 3rem;
+    width: 100%;
+    padding-right: 2rem;
+  }
 }
 
 .day-7 {
@@ -135,6 +161,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  // background-color: green;
 
   @media (max-width: 1000px) {
     padding: 6rem 4rem 0;
@@ -144,8 +171,13 @@
     padding: 10rem 4rem 0;
   }
 
-  @media (max-width: 550px) {
-    padding: 4rem 2rem 0;
+  @media (max-width: 650px) {
+    padding: 8rem 0 0 2rem;
+  }
+
+  @media (max-width: 500px) {
+    width: 70%;
+    padding: 2rem;
   }
 }
 
@@ -170,7 +202,12 @@
     width: 40rem;
   }
 
-  @media (max-width: 550px) {
-    padding-left: 2rem;
+  @media (max-width: 650px) {
+    height: 58rem;
+    padding-left: 0;
+  }
+
+  @media (max-width: 500px) {
+    width: 30%;
   }
 }
