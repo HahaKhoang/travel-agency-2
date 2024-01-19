@@ -1,6 +1,6 @@
 import styles from "./SingleTourTestimonial.module.scss";
 import SingleTourReview from "./SingleTourReview";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
 
 const reviews = [
@@ -35,6 +35,13 @@ function SingleTourTestimonial({ reviewImg }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const length = reviews.length - 1;
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex(activeIndex === length ? 0 : activeIndex + 1);
+    }, 10000);
+    return () => clearInterval(interval);
+  }, [activeIndex, length]);
+
   function prevSlide() {
     setActiveIndex(activeIndex < 1 ? length : activeIndex - 1);
   }
@@ -56,7 +63,7 @@ function SingleTourTestimonial({ reviewImg }) {
           <RiArrowRightLine className={styles.button} />
         </button>
         <div className={styles["reviews-container"]}>
-          <p className={styles.header}>Reviews</p>
+          <h2 className={styles.header}>Reviews</h2>
           <div className={styles["reviews-slider"]}>
             {reviews.map((el, i) => (
               <div
