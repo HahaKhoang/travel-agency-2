@@ -14,9 +14,9 @@ function SingleTourBookNow({ duration, price, cities, category, slug }) {
     <div className={styles.container}>
       <div className={styles["details-container"]}>
         <div className={styles["details-center"]}>
-          <p className={styles.header}>
+          <h3 className={styles.header}>
             {duration} {day} from ${price}~
-          </p>
+          </h3>
           <div className={styles.tour}>
             <p className={styles.label}>
               Category: {category.charAt(0).toUpperCase() + category.slice(1)}
