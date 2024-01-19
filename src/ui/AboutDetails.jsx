@@ -10,31 +10,32 @@ function AboutDetails() {
         </div>
         <div className={styles["description-container"]}>
           <div className={styles.kanji}>
-            <p className={styles.japanese}>旅</p>
+            <h1 className={styles.japanese}>旅</h1>
             <p className={styles.english}>Tabi</p>
           </div>
           <div className={styles.kanji}>
-            <p className={styles.japanese}>友達</p>
+            <h1 className={styles.japanese}>友達</h1>
             <p className={styles.english}>Tomodachi</p>
           </div>
-          <p>
-            <span className={styles.travel}>Tabi Tomodachi</span> is the
-            Japanese word for a friend you make while traveling.
-          </p>
+          <div className={styles.description}>
+            <p>
+              <span className={styles.travel}>Tabi Tomodachi</span> is the
+              Japanese word for a friend you make while traveling.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Doloremque, iste mollitia accusamus itaque laborum nobis
+              distinctio consequatur, suscipit at maiores, numquam laboriosam
+              qui. At dolores id, incidunt ad voluptate hic?
+            </p>
 
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Doloremque, iste mollitia accusamus itaque laborum nobis distinctio
-            consequatur, suscipit at maiores, numquam laboriosam qui. At dolores
-            id, incidunt ad voluptate hic?
-          </p>
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia
-            dolore iure eius nihil pariatur dolor aliquam, accusantium odit
-            laborum magni fugit at enim modi quas voluptas atque sequi
-            recusandae quod!
-          </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia
+              dolore iure eius nihil pariatur dolor aliquam, accusantium odit
+              laborum magni fugit at enim modi quas voluptas atque sequi
+              recusandae quod!
+            </p>
+          </div>
         </div>
       </div>
     </>

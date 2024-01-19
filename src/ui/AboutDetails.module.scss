@@ -11,7 +11,9 @@
   }
 
   @media (max-width: 650px) {
-    gap: 2rem;
+    gap: 4rem;
+    flex-direction: column;
+    margin: 2rem 0 6rem;
   }
 }
 
@@ -20,11 +22,12 @@
   height: 60rem;
 
   @media (max-width: 1000px) {
-    height: 40rem;
+    height: 45rem;
   }
 
   @media (max-width: 650px) {
-    height: 30rem;
+    height: 50rem;
+    width: 100%;
   }
 }
 
@@ -44,19 +47,21 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  // background-color: red;
+  // background-color: chocolate;
 
-  @media (max-width: 1400px) {
+  @media (max-width: 1700px) {
     font-size: var(--font-med);
   }
 
   @media (max-width: 1000px) {
     font-size: var(--font-small);
-    gap: 1rem;
+    gap: 0rem;
   }
 
   @media (max-width: 650px) {
-    font-size: var(--font-xs);
+    font-size: var(--font-med);
+    width: 100%;
+    gap: 2rem;
   }
 }
 
@@ -68,13 +73,15 @@
   line-height: 3.6rem;
 
   @media (max-width: 1000px) {
-    gap: 1.6rem;
+    gap: 1.2rem;
+  }
+
+  @media (max-width: 650px) {
+    gap: 2rem;
   }
 }
 
 .japanese {
-  font-family: "DM Serif Display", serif;
-  font-size: 5.6rem;
   font-weight: 500;
 
   @media (max-width: 1000px) {
@@ -82,10 +89,30 @@
   }
 
   @media (max-width: 650px) {
-    font-size: 3rem;
+    font-size: 5.6rem;
   }
 }
 
 .english {
   color: var(--color-red-dark);
+}
+
+.description {
+  // background-color: gold;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  margin-top: 4rem;
+
+  @media (max-width: 1200px) {
+    margin-top: 2rem;
+  }
+
+  @media (max-width: 1000px) {
+    margin-top: 1rem;
+  }
+
+  @media (max-width: 650px) {
+    margin-top: 3rem;
+  }
 }
