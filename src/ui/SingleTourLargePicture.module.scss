@@ -14,6 +14,14 @@
   @media (max-width: 1000px) {
     height: 60rem;
   }
+
+  @media (max-width: 650px) {
+    height: 75rem;
+  }
+
+  @media (max-width: 500px) {
+    height: 85rem;
+  }
 }
 
 .picture {
@@ -28,6 +36,7 @@
   top: 14rem;
   left: 8rem;
   width: 40%;
+  background-color: paleturquoise;
 
   @media (max-width: 1400px) {
     font-size: 4.8rem;
@@ -45,11 +54,19 @@
     font-size: 3rem;
     line-height: 3.6rem;
     top: 6rem;
+    left: 4rem;
   }
 
   @media (max-width: 650px) {
     font-size: var(--font-large);
     line-height: 3rem;
+    left: 2rem;
+    top: 8rem;
+    width: 50%;
+  }
+
+  @media (max-width: 500px) {
+    width: 70%;
   }
 }
 
@@ -76,6 +93,10 @@
   }
 
   @media (max-width: 650px) {
-    font-size: var(--font-small);
+    right: 2rem;
+  }
+
+  @media (max-width: 500px) {
+    width: 70%;
   }
 }
