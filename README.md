@@ -7,4 +7,6 @@ Tabi Tomodachi is a travel consultancy website.
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+Photos used in this project come from Unsplash and Pexel.
+
 # travel-agency-2
