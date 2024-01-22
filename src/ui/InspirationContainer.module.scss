@@ -1,24 +1,32 @@
 .container {
-  padding: 0 6rem 6rem 6rem;
+  margin: 0 6rem 6rem;
   display: grid;
-  grid-template-columns: repeat(auto-fill, 28rem);
   justify-content: space-between;
-  row-gap: 4rem;
-  column-gap: 2rem;
-  // background-color: pink;
+  gap: 4rem;
+  grid-template-columns: repeat(auto-fit, 30rem);
+  grid-template-rows: auto;
+
+  @media (max-width: 1500px) {
+    grid-template-columns: repeat(auto-fit, 26rem);
+  }
 
   @media (max-width: 1000px) {
-    grid-template-columns: repeat(auto-fill, 32rem);
+    grid-template-columns: repeat(auto-fit, 31%);
+    gap: 2rem;
   }
 
   @media (max-width: 800px) {
-    grid-template-columns: repeat(auto-fill, 28rem);
-    padding: 2rem;
+    margin: 0 2rem 6rem;
+    grid-template-columns: repeat(auto-fit, 46%);
   }
 
   @media (max-width: 650px) {
-    justify-content: center;
-    row-gap: 6rem;
-    grid-template-columns: repeat(auto-fill, 36rem);
+    grid-template-columns: repeat(2, 48%);
+    grid-template-rows: auto;
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
   }
 }
