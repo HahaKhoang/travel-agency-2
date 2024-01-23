@@ -50,7 +50,11 @@ function NavBar() {
 
   return (
     <div className={scrolledNav}>
-      <NavLink to="/" className={scrolledName}>
+      <NavLink
+        to="/"
+        className={scrolledName}
+        onClick={() => setHamburgerOpen(false)}
+      >
         Tabi Tomodachi
       </NavLink>
       <nav
