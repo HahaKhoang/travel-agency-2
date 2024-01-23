@@ -7,7 +7,6 @@ import contact from "../../public/img/undraw/contact.svg";
 function Contact() {
   return (
     <div>
-      {/* <Banner img={contact} text="Ready for your next adventure?" /> */}
       <Banner2
         h1="How can we help you?"
         text1="Just fill out the form and we will respond as soon as possible"
