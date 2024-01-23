@@ -23,8 +23,9 @@
   border: none;
   border-radius: 0;
   text-transform: none;
+  text-align: start;
 
-  @media (max-width: 700px) {
+  @media (max-width: 1000px) {
     font-size: var(--font-med);
     padding: 1.2rem;
     font-weight: 600;
@@ -39,8 +40,13 @@
   padding: 3rem;
   font-size: var(--font-med);
 
-  @media (max-width: 700px) {
+  @media (max-width: 1000px) {
     font-size: var(--font-small);
+    padding: 2rem;
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-med);
     padding: 2rem;
   }
 }
