@@ -1,36 +1,11 @@
 .types {
-  width: 35rem;
-  padding: 1rem;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  gap: 1.6rem;
+  gap: 3rem;
   color: var(--color-blue-dark);
   // background-color: pink;
-  height: 50rem;
-
-  @media (max-width: 1700px) {
-    width: 30rem;
-  }
-
-  @media (max-width: 1400px) {
-    width: 50rem;
-  }
-
-  @media (max-width: 1200px) {
-    width: 40rem;
-  }
-
-  @media (max-width: 1000px) {
-    width: 35rem;
-  }
-
-  @media (max-width: 800px) {
-    width: 45rem;
-  }
-
-  @media (max-width: 650px) {
-    width: 100%;
-  }
 }
 
 .illustration {
@@ -52,7 +27,8 @@
   color: white;
   line-height: 3.6rem;
   text-align: center;
-  @media (max-width: 1700px) {
+
+  @media (max-width: 1000px) {
     font-size: var(--font-xl);
   }
 }
@@ -60,15 +36,24 @@
 .description {
   font-size: var(--font-med);
 
-  @media (max-width: 1700px) {
+  @media (max-width: 1000px) {
     font-size: var(--font-small);
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-med);
   }
 }
 
 .budget {
   font-size: var(--font-med);
-  @media (max-width: 1700px) {
+
+  @media (max-width: 1000px) {
     font-size: var(--font-small);
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-med);
   }
 }
 
@@ -76,8 +61,12 @@
   font-size: var(--font-med);
   color: var(--color-blue-dark);
 
-  @media (max-width: 1700px) {
+  @media (max-width: 1000px) {
     font-size: var(--font-small);
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-med);
   }
 
   &:hover {

@@ -1,8 +1,7 @@
 .container {
   width: 100%;
   background-color: var(--color-blue-light);
-  // padding-bottom: 8rem;
-  padding: 8rem 0 12rem 0;
+  padding: 6rem 0 12rem 0;
 
   @media (max-width: 650px) {
     padding: 6rem 0;
@@ -11,44 +10,68 @@
 
 .header {
   text-align: center;
-  padding-top: 15rem;
-  padding-bottom: 4rem;
+  padding-top: 12rem;
+  padding-bottom: 6rem;
   color: white;
+  // background-color: burlywood;
+
+  @media (max-width: 1000px) {
+    font-size: 4.8rem;
+    padding-top: 4rem;
+  }
 
   @media (max-width: 650px) {
-    padding: 0;
+    font-size: 3.6rem;
+    padding-top: 2rem;
   }
 }
 
 .types-container {
-  // display: flex;
-  // gap: 3rem;
-  // justify-content: space-evenly;
-  margin: 10rem 6rem;
+  // margin: 10rem 6rem;
+  height: 100%;
+  margin: 0 6rem;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: space-evenly;
-  justify-items: center;
-  align-content: space-evenly;
-  align-items: center;
+  grid-template-columns: repeat(4, minmax(20%, 23%));
+  column-gap: 3rem;
+  justify-content: space-between;
+
+  // justify-content: space-evenly;
+  // justify-items: center;
+  // align-content: space-evenly;
+  // align-items: center;
   // background-color: orange;
 
-  @media (max-width: 1400px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 5rem;
-  }
-
-  @media (max-width: 1000px) {
-    row-gap: 5rem;
-    column-gap: 3rem;
+  @media (max-width: 1500px) {
+    grid-template-columns: repeat(2, minmax(42%, 47%));
+    row-gap: 8rem;
   }
 
   @media (max-width: 800px) {
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: 10rem;
+    margin: 0 2rem;
   }
 
   @media (max-width: 650px) {
-    margin: 4rem 2rem;
+    grid-template-columns: 1fr;
+    row-gap: 10rem;
   }
+
+  // @media (max-width: 1400px) {
+  //   grid-template-columns: repeat(2, 1fr);
+  //   gap: 5rem;
+  // }
+
+  // @media (max-width: 1000px) {
+  //   row-gap: 5rem;
+  //   column-gap: 3rem;
+  //   margin: 6rem;
+  // }
+
+  // @media (max-width: 800px) {
+  //   grid-template-columns: repeat(1, 1fr);
+  //   row-gap: 10rem;
+  // }
+
+  // @media (max-width: 650px) {
+  //   margin: 4rem 2rem;
+  // }
 }
