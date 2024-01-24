@@ -1,22 +1,43 @@
 .container {
-  //   background-color: green;
+  // background-color: green;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 6rem;
   row-gap: 10rem;
   padding: 6rem;
   color: var(--color-blue-dark);
-}
 
-.review-container {
+  @media (max-width: 800px) {
+    padding: 4rem 2rem;
+    column-gap: 4rem;
+    row-gap: 6rem;
+  }
+
+  @media (max-width: 650px) {
+    grid-template-columns: 1fr;
+    row-gap: 10rem;
+  }
 }
 
 .review {
   font-size: var(--font-xl);
+
+  @media (max-width: 1000px) {
+    font-size: var(--font-large);
+  }
 }
 
 .name {
   font-size: var(--font-med);
   text-align: center;
   color: var(--color-red-dark);
+  margin-top: 2rem;
+
+  @media (max-width: 1000px) {
+    font-size: var(--font-small);
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-med);
+  }
 }
