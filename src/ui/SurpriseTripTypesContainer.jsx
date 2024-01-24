@@ -9,11 +9,11 @@ function SurpriseTripTypesContainer() {
     <div className={styles.container}>
       <div className={styles.header}>
         <div className={styles["header-text"]}>
-          <p className={styles.main}>Itching to go somewhere different?</p>
-          <p className={styles.text}>
+          <h2 className={styles.title}>Itching to go somewhere different?</h2>
+          <p className={styles["title-text"]}>
             Sometimes changing your scenery is just what you need
           </p>
-          <p className={styles.text}>
+          <p className={styles["title-text"]}>
             Check out the different types of trips we plan
           </p>
         </div>
@@ -23,7 +23,7 @@ function SurpriseTripTypesContainer() {
           <img src={plane} className={styles.picture} />
         </div>
         <div className={styles["text-container"]}>
-          <p className={styles.main}>Plane trips</p>
+          <h2 className={styles.title}>Plane trips</h2>
           <p className={styles.text}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem
             ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos,
@@ -40,7 +40,7 @@ function SurpriseTripTypesContainer() {
       </div>
       <div className={styles["trip-container-2"]}>
         <div className={styles["text-container-2"]}>
-          <p className={styles.main}>Road trips</p>
+          <h2 className={styles.title}>Road trips</h2>
           <p className={styles.text}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem
             ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos,
@@ -63,7 +63,7 @@ function SurpriseTripTypesContainer() {
           <img src={weekend} className={styles.picture} />
         </div>
         <div className={styles["text-container"]}>
-          <p className={styles.main}>Weekend Getaways</p>
+          <h2 className={styles.title}>Weekend Getaways</h2>
           <p className={styles.text}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem
             ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos,
@@ -80,7 +80,7 @@ function SurpriseTripTypesContainer() {
       </div>
       <div className={styles["trip-container-2"]}>
         <div className={styles["text-container-2"]}>
-          <p className={styles.main}>Day trips</p>
+          <h2 className={styles.title}>Day trips</h2>
           <p className={styles.text}>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem
             ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos,
