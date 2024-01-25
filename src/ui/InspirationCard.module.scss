@@ -16,11 +16,18 @@
   background-color: rgba(0, 0, 0, 0.634);
   top: 0;
   z-index: 5;
-  display: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.image-container:hover .info {
-  display: block;
+.hidden {
+  opacity: 0;
+}
+
+.image-container:hover .hidden {
+  opacity: 1;
+  transition: all 0.7s;
 }
 
 .content {
@@ -30,13 +37,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 6rem 4rem 4rem;
+  justify-content: center;
+  gap: 3rem;
+
+  @media (max-width: 1500px) {
+    gap: 2rem;
+  }
+
+  @media (max-width: 1000px) {
+    gap: 1.4rem;
+  }
+
+  @media (max-width: 800px) {
+    gap: 2rem;
+  }
 }
 
 .title {
-  font-size: var(--font-large);
+  font-size: var(--font-xl);
   text-align: center;
+
+  @media (max-width: 1500px) {
+    font-size: var(--font-large);
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-xl);
+  }
 }
 
 .image {
@@ -47,7 +74,6 @@
 }
 
 .location {
-  position: absolute;
   color: white;
   width: 100%;
   display: flex;
@@ -55,14 +81,12 @@
   justify-content: center;
   gap: 0.4rem;
   font-size: var(--font-small);
-  top: 50%;
-  transform: translateY(-50%);
   z-index: 10;
 }
 
 .icon {
-  width: 2.2rem;
-  height: 2.2rem;
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 .button {
@@ -72,10 +96,30 @@
   transition: all 0.5s;
   outline: none;
   color: white;
-  padding: 1.4rem 4.6rem;
+  padding: 1rem 4rem;
   border-radius: 500px;
   cursor: pointer;
   text-transform: uppercase;
+  margin-top: 0.6rem;
+
+  @media (max-width: 1500px) {
+    padding: 1rem 3.6rem;
+    font-size: var(--font-xs);
+  }
+
+  @media (max-width: 1000px) {
+    padding: 0.8rem 3rem;
+    font-size: var(--font-xs);
+  }
+
+  @media (max-width: 800px) {
+    padding: 1rem 3.6rem;
+  }
+
+  @media (max-width: 650px) {
+    padding: 1rem 4rem;
+    font-size: var(--font-small);
+  }
 }
 
 .button:hover {
