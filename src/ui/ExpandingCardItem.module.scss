@@ -51,33 +51,40 @@
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 
-  @media (max-width: 1400px) {
-    width: 27%;
+  @media (max-width: 1700px) {
+    width: 28%;
   }
 
-  @media (max-width: 1200px) {
-    width: 35%;
+  @media (max-width: 1400px) {
+    width: 42%;
   }
 
   @media (max-width: 1000px) {
-    width: 40%;
+    width: 50%;
+    height: 85%;
   }
 
   @media (max-width: 800px) {
-    width: 35%;
+    width: 45%;
   }
 
   @media (max-width: 650px) {
-    height: 60%;
-    width: 65%;
+    height: 75%;
+    width: 75%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
   }
 
   @media (max-width: 500px) {
-    height: 75%;
-    width: 75%;
+    height: 80%;
+    width: 85%;
+    padding: 2rem;
+  }
+
+  @media (max-width: 400px) {
+    height: 87%;
+    width: 87%;
   }
 }
 
@@ -99,17 +106,13 @@
   margin-bottom: 1rem;
   color: var(--color-blue-dark);
 
-  @media (max-width: 1000px) {
+  @media (max-width: 650px) {
     font-size: var(--font-xl);
   }
 }
 
 .description {
   font-size: var(--font-med);
-
-  @media (max-width: 1700px) {
-    font-size: var(--font-small);
-  }
 }
 
 .link {
@@ -118,10 +121,6 @@
   right: 2rem;
   font-size: var(--font-med);
   color: var(--color-blue-dark);
-
-  @media (max-width: 1700px) {
-    font-size: var(--font-small);
-  }
 
   &:hover {
     color: var(--color-red-dark);
