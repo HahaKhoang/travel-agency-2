@@ -1,7 +1,7 @@
 import styles from "./CustomizedStep3.module.scss";
-import jk4 from "../../public/img/jk4.jpg";
-import bi10 from "../../public/img/bi10.jpg";
-import jk6 from "../../public/img/jk6.jpg";
+import machuPichu from "../../public/img/inspiration/machuPichu.jpg";
+import capetown from "../../public/img/inspiration/capetown.jpg";
+import tori from "../../public/img/inspiration/tori.jpg";
 
 function CustomizedStep3() {
   return (
@@ -18,12 +18,12 @@ function CustomizedStep3() {
           </p>
         </div>
         <div className={styles["step-3-picture-container"]}>
-          <img src={jk4} className={styles.picture} />
+          <img src={machuPichu} className={styles.picture} />
         </div>
       </div>
       <div className={styles["step-4"]}>
         <div className={styles["step-4-picture-container"]}>
-          <img src={bi10} className={styles.picture} />
+          <img src={capetown} className={styles.picture} />
         </div>
         <div className={styles["step-4-text-container"]}>
           <h2 className={styles.header}>Step 4</h2>
@@ -42,7 +42,7 @@ function CustomizedStep3() {
           </p>
         </div>
         <div className={styles["step-5-picture-container"]}>
-          <img src={jk6} className={styles.picture} />
+          <img src={tori} className={styles.picture} />
         </div>
       </div>
     </div>

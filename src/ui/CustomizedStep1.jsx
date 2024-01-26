@@ -1,6 +1,6 @@
 import styles from "./CustomizedStep1.module.scss";
-import jk8 from "../../public/img/jk8.jpg";
-import bi6 from "../../public/img/bi6.jpg";
+import horseshoe from "../../public/img/inspiration/horseshoe.jpg";
+import taipei from "../../public/img/inspiration/taipei.jpg";
 import { NavLink } from "react-router-dom";
 
 function CustomizedStep1() {
@@ -20,12 +20,12 @@ function CustomizedStep1() {
           </NavLink>
         </div>
         <div className={styles["step-1-picture-container"]}>
-          <img src={jk8} className={styles.picture}></img>
+          <img src={horseshoe} className={styles.picture}></img>
         </div>
       </div>
       <div className={styles["step-2"]}>
         <div className={styles["step-2-picture-container"]}>
-          <img src={bi6} className={styles.picture}></img>
+          <img src={taipei} className={styles.picture}></img>
         </div>
         <div className={styles["step-2-text-container"]}>
           <h2 className={styles.header}>Step 2</h2>
