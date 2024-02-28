@@ -42,55 +42,461 @@ function ItineraryContainer() {
     day14Desc,
     day15Desc,
   ] = dayDesc;
-  const [img1, img2, img3, img4, img5, img6, img7, img8] = dayImages;
+  const [img1, img2, img3, img4, img5, img6, img7] = dayImages;
+
+  let itinerary;
+
+  if (tour.duration === 1) {
+    itinerary = (
+      <ItineraryDays img1={img1} day1Title={day1Title} day1Desc={day1Desc} />
+    );
+  }
+
+  if (tour.duration === 2) {
+    itinerary = (
+      <ItineraryDays
+        img1={img1}
+        day1Title={day1Title}
+        day1Desc={day1Desc}
+        day2Title={day2Title}
+        day2Desc={day2Desc}
+      />
+    );
+  }
+
+  if (tour.duration === 3) {
+    itinerary = (
+      <ItineraryDays
+        img1={img1}
+        img2={img2}
+        day1Title={day1Title}
+        day1Desc={day1Desc}
+        day2Title={day2Title}
+        day2Desc={day2Desc}
+        day3Title={day3Title}
+        day3Desc={day3Desc}
+      />
+    );
+  }
+
+  if (tour.duration === 4) {
+    itinerary = (
+      <ItineraryDays
+        img1={img1}
+        img2={img2}
+        day1Title={day1Title}
+        day1Desc={day1Desc}
+        day2Title={day2Title}
+        day2Desc={day2Desc}
+        day3Title={day3Title}
+        day3Desc={day3Desc}
+        day4Title={day4Title}
+        day4Desc={day4Desc}
+      />
+    );
+  }
+
+  if (tour.duration === 5) {
+    itinerary = (
+      <ItineraryDays
+        img1={img1}
+        img2={img2}
+        day1Title={day1Title}
+        day1Desc={day1Desc}
+        day2Title={day2Title}
+        day2Desc={day2Desc}
+        day3Title={day3Title}
+        day3Desc={day3Desc}
+        day4Title={day4Title}
+        day4Desc={day4Desc}
+        day5Title={day5Title}
+        day5Desc={day5Desc}
+      />
+    );
+  }
+
+  if (tour.duration === 6) {
+    itinerary = (
+      <ItineraryDays
+        img1={img1}
+        img2={img2}
+        img3={img3}
+        day1Title={day1Title}
+        day1Desc={day1Desc}
+        day2Title={day2Title}
+        day2Desc={day2Desc}
+        day3Title={day3Title}
+        day3Desc={day3Desc}
+        day4Title={day4Title}
+        day4Desc={day4Desc}
+        day5Title={day5Title}
+        day5Desc={day5Desc}
+        day6Title={day6Title}
+        day6Desc={day6Desc}
+      />
+    );
+  }
+
+  if (tour.duration === 7) {
+    itinerary = (
+      <ItineraryDays
+        img1={img1}
+        img2={img2}
+        img3={img3}
+        img4={img4}
+        day1Title={day1Title}
+        day1Desc={day1Desc}
+        day2Title={day2Title}
+        day2Desc={day2Desc}
+        day3Title={day3Title}
+        day3Desc={day3Desc}
+        day4Title={day4Title}
+        day4Desc={day4Desc}
+        day5Title={day5Title}
+        day5Desc={day5Desc}
+        day6Title={day6Title}
+        day6Desc={day6Desc}
+        day7Title={day7Title}
+        day7Desc={day7Desc}
+      />
+    );
+  }
+
+  if (tour.duration === 8) {
+    itinerary = (
+      <ItineraryDays
+        img1={img1}
+        img2={img2}
+        img3={img3}
+        img4={img4}
+        day1Title={day1Title}
+        day1Desc={day1Desc}
+        day2Title={day2Title}
+        day2Desc={day2Desc}
+        day3Title={day3Title}
+        day3Desc={day3Desc}
+        day4Title={day4Title}
+        day4Desc={day4Desc}
+        day5Title={day5Title}
+        day5Desc={day5Desc}
+        day6Title={day6Title}
+        day6Desc={day6Desc}
+        day7Title={day7Title}
+        day7Desc={day7Desc}
+        day8Title={day8Title}
+        day8Desc={day8Desc}
+      />
+    );
+  }
+
+  if (tour.duration === 9) {
+    itinerary = (
+      <ItineraryDays
+        img1={img1}
+        img2={img2}
+        img3={img3}
+        img4={img4}
+        day1Title={day1Title}
+        day1Desc={day1Desc}
+        day2Title={day2Title}
+        day2Desc={day2Desc}
+        day3Title={day3Title}
+        day3Desc={day3Desc}
+        day4Title={day4Title}
+        day4Desc={day4Desc}
+        day5Title={day5Title}
+        day5Desc={day5Desc}
+        day6Title={day6Title}
+        day6Desc={day6Desc}
+        day7Title={day7Title}
+        day7Desc={day7Desc}
+        day8Title={day8Title}
+        day8Desc={day8Desc}
+        day9Title={day9Title}
+        day9Desc={day9Desc}
+      />
+    );
+  }
+
+  if (tour.duration === 10) {
+    itinerary = (
+      <ItineraryDays
+        img1={img1}
+        img2={img2}
+        img3={img3}
+        img4={img4}
+        img5={img5}
+        day1Title={day1Title}
+        day1Desc={day1Desc}
+        day2Title={day2Title}
+        day2Desc={day2Desc}
+        day3Title={day3Title}
+        day3Desc={day3Desc}
+        day4Title={day4Title}
+        day4Desc={day4Desc}
+        day5Title={day5Title}
+        day5Desc={day5Desc}
+        day6Title={day6Title}
+        day6Desc={day6Desc}
+        day7Title={day7Title}
+        day7Desc={day7Desc}
+        day8Title={day8Title}
+        day8Desc={day8Desc}
+        day9Title={day9Title}
+        day9Desc={day9Desc}
+        day10Title={day10Title}
+        day10Desc={day10Desc}
+      />
+    );
+  }
+
+  if (tour.duration === 11) {
+    itinerary = (
+      <ItineraryDays
+        img1={img1}
+        img2={img2}
+        img3={img3}
+        img4={img4}
+        img5={img5}
+        img6={img6}
+        day1Title={day1Title}
+        day1Desc={day1Desc}
+        day2Title={day2Title}
+        day2Desc={day2Desc}
+        day3Title={day3Title}
+        day3Desc={day3Desc}
+        day4Title={day4Title}
+        day4Desc={day4Desc}
+        day5Title={day5Title}
+        day5Desc={day5Desc}
+        day6Title={day6Title}
+        day6Desc={day6Desc}
+        day7Title={day7Title}
+        day7Desc={day7Desc}
+        day8Title={day8Title}
+        day8Desc={day8Desc}
+        day9Title={day9Title}
+        day9Desc={day9Desc}
+        day10Title={day10Title}
+        day10Desc={day10Desc}
+        day11Title={day11Title}
+        day11Desc={day11Desc}
+      />
+    );
+  }
+
+  if (tour.duration === 12) {
+    itinerary = (
+      <ItineraryDays
+        img1={img1}
+        img2={img2}
+        img3={img3}
+        img4={img4}
+        img5={img5}
+        img6={img6}
+        day1Title={day1Title}
+        day1Desc={day1Desc}
+        day2Title={day2Title}
+        day2Desc={day2Desc}
+        day3Title={day3Title}
+        day3Desc={day3Desc}
+        day4Title={day4Title}
+        day4Desc={day4Desc}
+        day5Title={day5Title}
+        day5Desc={day5Desc}
+        day6Title={day6Title}
+        day6Desc={day6Desc}
+        day7Title={day7Title}
+        day7Desc={day7Desc}
+        day8Title={day8Title}
+        day8Desc={day8Desc}
+        day9Title={day9Title}
+        day9Desc={day9Desc}
+        day10Title={day10Title}
+        day10Desc={day10Desc}
+        day11Title={day11Title}
+        day11Desc={day11Desc}
+        day12Title={day12Title}
+        day12Desc={day12Desc}
+      />
+    );
+  }
+
+  if (tour.duration === 13) {
+    itinerary = (
+      <ItineraryDays
+        img1={img1}
+        img2={img2}
+        img3={img3}
+        img4={img4}
+        img5={img5}
+        img6={img6}
+        img7={img7}
+        day1Title={day1Title}
+        day1Desc={day1Desc}
+        day2Title={day2Title}
+        day2Desc={day2Desc}
+        day3Title={day3Title}
+        day3Desc={day3Desc}
+        day4Title={day4Title}
+        day4Desc={day4Desc}
+        day5Title={day5Title}
+        day5Desc={day5Desc}
+        day6Title={day6Title}
+        day6Desc={day6Desc}
+        day7Title={day7Title}
+        day7Desc={day7Desc}
+        day8Title={day8Title}
+        day8Desc={day8Desc}
+        day9Title={day9Title}
+        day9Desc={day9Desc}
+        day10Title={day10Title}
+        day10Desc={day10Desc}
+        day11Title={day11Title}
+        day11Desc={day11Desc}
+        day12Title={day12Title}
+        day12Desc={day12Desc}
+        day13Title={day13Title}
+        day13Desc={day13Desc}
+      />
+    );
+  }
+
+  if (tour.duration === 14) {
+    itinerary = (
+      <ItineraryDays
+        img1={img1}
+        img2={img2}
+        img3={img3}
+        img4={img4}
+        img5={img5}
+        img6={img6}
+        img7={img7}
+        day1Title={day1Title}
+        day1Desc={day1Desc}
+        day2Title={day2Title}
+        day2Desc={day2Desc}
+        day3Title={day3Title}
+        day3Desc={day3Desc}
+        day4Title={day4Title}
+        day4Desc={day4Desc}
+        day5Title={day5Title}
+        day5Desc={day5Desc}
+        day6Title={day6Title}
+        day6Desc={day6Desc}
+        day7Title={day7Title}
+        day7Desc={day7Desc}
+        day8Title={day8Title}
+        day8Desc={day8Desc}
+        day9Title={day9Title}
+        day9Desc={day9Desc}
+        day10Title={day10Title}
+        day10Desc={day10Desc}
+        day11Title={day11Title}
+        day11Desc={day11Desc}
+        day12Title={day12Title}
+        day12Desc={day12Desc}
+        day13Title={day13Title}
+        day13Desc={day13Desc}
+        day14Title={day14Title}
+        day14Desc={day14Desc}
+      />
+    );
+  }
+
+  if (tour.duration === 15) {
+    itinerary = (
+      <ItineraryDays
+        img1={img1}
+        img2={img2}
+        img3={img3}
+        img4={img4}
+        img5={img5}
+        img6={img6}
+        img7={img7}
+        day1Title={day1Title}
+        day1Desc={day1Desc}
+        day2Title={day2Title}
+        day2Desc={day2Desc}
+        day3Title={day3Title}
+        day3Desc={day3Desc}
+        day4Title={day4Title}
+        day4Desc={day4Desc}
+        day5Title={day5Title}
+        day5Desc={day5Desc}
+        day6Title={day6Title}
+        day6Desc={day6Desc}
+        day7Title={day7Title}
+        day7Desc={day7Desc}
+        day8Title={day8Title}
+        day8Desc={day8Desc}
+        day9Title={day9Title}
+        day9Desc={day9Desc}
+        day10Title={day10Title}
+        day10Desc={day10Desc}
+        day11Title={day11Title}
+        day11Desc={day11Desc}
+        day12Title={day12Title}
+        day12Desc={day12Desc}
+        day13Title={day13Title}
+        day13Desc={day13Desc}
+        day14Title={day14Title}
+        day14Desc={day14Desc}
+        day15Title={day15Title}
+        day15Desc={day15Desc}
+      />
+    );
+  }
 
   return (
     <>
       <ItineraryHeader header="A look at the itinerary" />
-      <div className={styles.container}>
-        <ItineraryDays
-          img1={img1}
-          img2={img2}
-          img3={img3}
-          img4={img4}
-          img5={img5}
-          img6={img6}
-          img7={img7}
-          img8={img8}
-          day1Title={day1Title}
-          day1Desc={day1Desc}
-          day2Title={day2Title}
-          day2Desc={day2Desc}
-          day3Title={day3Title}
-          day3Desc={day3Desc}
-          day4Title={day4Title}
-          day4Desc={day4Desc}
-          day5Title={day5Title}
-          day5Desc={day5Desc}
-          day6Title={day6Title}
-          day6Desc={day6Desc}
-          day7Title={day7Title}
-          day7Desc={day7Desc}
-          day8Title={day8Title}
-          day8Desc={day8Desc}
-          day9Title={day9Title}
-          day9Desc={day9Desc}
-          day10Title={day10Title}
-          day10Desc={day10Desc}
-          day11Title={day11Title}
-          day11Desc={day11Desc}
-          day12Title={day12Title}
-          day12Desc={day12Desc}
-          day13Title={day13Title}
-          day13Desc={day13Desc}
-          day14Title={day14Title}
-          day14Desc={day14Desc}
-          day15Title={day15Title}
-          day15Desc={day15Desc}
-        />
-      </div>
+      <div className={styles.container}>{itinerary}</div>
     </>
   );
 }
 
 export default ItineraryContainer;
+
+{
+  /* <ItineraryDays
+img1={img1}
+img2={img2}
+img3={img3}
+img4={img4}
+img5={img5}
+img6={img6}
+img7={img7}
+img8={img8}
+day1Title={day1Title}
+day1Desc={day1Desc}
+day2Title={day2Title}
+day2Desc={day2Desc}
+day3Title={day3Title}
+day3Desc={day3Desc}
+day4Title={day4Title}
+day4Desc={day4Desc}
+day5Title={day5Title}
+day5Desc={day5Desc}
+day6Title={day6Title}
+day6Desc={day6Desc}
+day7Title={day7Title}
+day7Desc={day7Desc}
+day8Title={day8Title}
+day8Desc={day8Desc}
+day9Title={day9Title}
+day9Desc={day9Desc}
+day10Title={day10Title}
+day10Desc={day10Desc}
+day11Title={day11Title}
+day11Desc={day11Desc}
+day12Title={day12Title}
+day12Desc={day12Desc}
+day13Title={day13Title}
+day13Desc={day13Desc}
+day14Title={day14Title}
+day14Desc={day14Desc}
+day15Title={day15Title}
+day15Desc={day15Desc}
+/> */
+}
