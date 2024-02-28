@@ -19,7 +19,9 @@ function PageNotFound() {
         padding: "4rem",
       }}
     >
-      <h1 style={{ textAlign: "center" }}>Something went wrong</h1>
+      <h1 style={{ textAlign: "center" }}>
+        Something went wrong! So sorry about that
+      </h1>
       <p style={{ fontSize: "2rem" }}>{error.data || error.message}</p>
       <button onClick={() => navigate(-1)}>Go back</button>
     </div>
