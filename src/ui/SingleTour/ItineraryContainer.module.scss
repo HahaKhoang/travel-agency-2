@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    // background-color: pink;
+  
+    @media (max-width: 650px) {
+      gap: 3rem;
+    }
+  }
+  

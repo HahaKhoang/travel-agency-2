@@ -1,0 +1,102 @@
+:root {
+  --color-blue-dark: #1d3557;
+  --color-blue-med: #457b9d;
+  --color-blue-light: #a8dadc;
+  --color-red-dark: #e63946;
+  --color-red-light: #ee747e;
+  --color-grey-dark: #9ca3af;
+  --color-grey-med: #d1d5db;
+  --color-grey-light: #e5e7eb;
+  --color-bg: #f5f5f5;
+
+  --font-xl: 3rem;
+  --font-large: 2.4rem;
+  --font-med: 2rem;
+  --font-small: 1.6rem;
+  --font-xs: 1.2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-red-light);
+  }
+}
+
+html {
+  font-size: 62.5%;
+  background-color: #f5f5f5;
+  color: #020617;
+}
+
+body {
+  font-family: "DM Serif Display", serif;
+  font-family: "Source Sans 3", sans-serif;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+h1 {
+  font-size: 5.6rem;
+  line-height: 6rem;
+  font-family: "DM Serif Display", serif;
+}
+
+h2 {
+  font-size: 4.8rem;
+  line-height: 5rem;
+  font-family: "DM Serif Display", serif;
+}
+
+h3 {
+  font-size: 3.6rem;
+  line-height: 4rem;
+  font-family: "DM Serif Display", serif;
+}
+
+h4 {
+  font-size: 2.6rem;
+  line-height: 3rem;
+  font-family: "DM Serif Display", serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  border: 1px solid white;
+  outline: none;
+  color: white;
+  padding: 1.4rem 4.6rem;
+  font-size: var(--font-med);
+  border-radius: 500px;
+  cursor: pointer;
+  background-color: transparent;
+  text-transform: uppercase;
+  transition: all 0.5s;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("../../public/svg/selectArrow.svg");
+  background-size: 2.2rem;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 4px) center;
+}
+
+/* // Fonts sizes
+// 1700px med
+// 1000px small
+// 650px xs/med */

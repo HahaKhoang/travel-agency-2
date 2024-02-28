@@ -1,0 +1,270 @@
+import styles from "./ItineraryDays.module.scss";
+
+type ItineraryDaysProps = {
+  img1: string;
+  img2?: string;
+  img3?: string;
+  img4?: string;
+  img5?: string;
+  img6?: string;
+  img7?: string;
+  img8?: string;
+  day1Title: string;
+  day1Desc: string;
+  day2Title?: string;
+  day2Desc?: string;
+  day3Title?: string;
+  day3Desc?: string;
+  day4Title?: string;
+  day4Desc?: string;
+  day5Title?: string;
+  day5Desc?: string;
+  day6Title?: string;
+  day6Desc?: string;
+  day7Title?: string;
+  day7Desc?: string;
+  day8Title?: string;
+  day8Desc?: string;
+  day9Title?: string;
+  day9Desc?: string;
+  day10Title?: string;
+  day10Desc?: string;
+  day11Title?: string;
+  day11Desc?: string;
+  day12Title?: string;
+  day12Desc?: string;
+  day13Title?: string;
+  day13Desc?: string;
+  day14Title?: string;
+  day14Desc?: string;
+  day15Title?: string;
+  day15Desc?: string;
+};
+
+function ItineraryDays({
+  img1,
+  img2,
+  img3,
+  img4,
+  img5,
+  img6,
+  img7,
+  img8,
+  day1Title,
+  day1Desc,
+  day2Title,
+  day2Desc,
+  day3Title,
+  day3Desc,
+  day4Title,
+  day4Desc,
+  day5Title,
+  day5Desc,
+  day6Title,
+  day6Desc,
+  day7Title,
+  day7Desc,
+  day8Title,
+  day8Desc,
+  day9Title,
+  day9Desc,
+  day10Title,
+  day10Desc,
+  day11Title,
+  day11Desc,
+  day12Title,
+  day12Desc,
+  day13Title,
+  day13Desc,
+  day14Title,
+  day14Desc,
+  day15Title,
+  day15Desc,
+}: ItineraryDaysProps) {
+  const container6 = day7Title
+    ? `${styles["container-6-7"]}`
+    : `${styles["container-small-6-7"]}`;
+
+  const container11 = day12Title
+    ? `${styles["container-11-12"]}`
+    : `${styles["container-small-11-12"]}`;
+
+  return (
+    <>
+      <div className={styles["container-1-2"]}>
+        <div className={styles["day-container-1-2"]}>
+          <div className={styles.day}>
+            <h3 className={styles["number-day"]}>Day 1</h3>
+            <p className={styles.text}>{day1Title}</p>
+            <p className={styles.text}>{day1Desc}</p>
+          </div>
+          {day2Title && (
+            <div className={styles.day}>
+              <h3 className={styles["number-day"]}>Day 2</h3>
+              <p className={styles.text}>{day2Title}</p>
+              <p className={styles.text}>{day2Desc}</p>
+            </div>
+          )}
+        </div>
+        <div className={styles["picture-container-1-2"]}>
+          <img src={img1} className={styles.picture} />
+        </div>
+      </div>
+      <div className={styles["container-3-5"]}>
+        {!day5Title ? (
+          <div className={styles["picture-container-small-3-5"]}>
+            <img src={img2} className={styles.picture} />
+          </div>
+        ) : (
+          <div className={styles["picture-container-3-5"]}>
+            <img src={img2} className={styles.picture} />
+          </div>
+        )}
+        <div className={styles["day-container-3-5"]}>
+          <div className={styles.day}>
+            <h3 className={styles["number-day"]}>Day 3</h3>
+            <p className={styles.text}>{day3Title}</p>
+            <p className={styles.text}>{day3Desc}</p>
+          </div>
+          {day4Title && (
+            <div className={styles.day}>
+              <h3 className={styles["number-day"]}>Day 4</h3>
+              <p className={styles.text}>{day4Title}</p>
+              <p className={styles.text}>{day4Desc}</p>
+            </div>
+          )}
+          {day5Title && (
+            <div className={styles.day}>
+              <h3 className={styles["number-day"]}>Day 5</h3>
+              <p className={styles.text}>{day5Title}</p>
+              <p className={styles.text}>{day5Desc}</p>
+            </div>
+          )}
+        </div>
+      </div>
+      <div className={container6}>
+        <div className={styles["container-top"]}>
+          <div className={styles["day-6"]}>
+            <div className={styles.day}>
+              <h3 className={styles["number-day"]}>Day 6</h3>
+              <p className={styles.text}>{day6Title}</p>
+              <p className={styles.text}>{day6Desc}</p>
+            </div>
+          </div>
+          <div className={styles["picture-container-top"]}>
+            <img src={img3} className={styles.picture} />
+          </div>
+        </div>
+        {day7Title && (
+          <div className={styles["container-bottom"]}>
+            <div className={styles["picture-container-bottom"]}>
+              <img src={img4} className={styles.picture} />
+            </div>
+            <div className={styles["day-7"]}>
+              <div className={styles.day}>
+                <h3 className={styles["number-day"]}>Day 7</h3>
+                <p className={styles.text}>{day7Title}</p>
+                <p className={styles.text}>{day7Desc}</p>
+              </div>
+            </div>
+          </div>
+        )}
+      </div>
+      <div className={styles["container-8-10"]}>
+        <div className={styles["day-container-8-10"]}>
+          <div className={styles.day}>
+            <h3 className={styles["number-day"]}>Day 8</h3>
+            <p className={styles.text}>{day8Title}</p>
+            <p className={styles.text}>{day8Desc}</p>
+          </div>
+          {day9Title && (
+            <div className={styles.day}>
+              <h3 className={styles["number-day"]}>Day 9</h3>
+              <p className={styles.text}>{day9Title}</p>
+              <p className={styles.text}>{day9Desc}</p>
+            </div>
+          )}
+          {day10Title && (
+            <div className={styles.day}>
+              <h3 className={styles["number-day"]}>Day 10</h3>
+              <p className={styles.text}>{day10Title}</p>
+              <p className={styles.text}>{day10Desc}</p>
+            </div>
+          )}
+        </div>
+        {!day10Title ? (
+          <div className={styles["picture-container-small"]}>
+            <img src={img5} className={styles.picture} />
+          </div>
+        ) : (
+          <div className={styles["picture-container-8-10"]}>
+            <img src={img5} className={styles.picture} />
+          </div>
+        )}
+      </div>
+      <div className={container11}>
+        <div className={styles["container-top"]}>
+          <div className={styles["picture-container-top"]}>
+            <img src={img6} className={styles.picture} />
+          </div>
+          <div className={styles["day-11"]}>
+            <div className={styles.day}>
+              <h3 className={styles["number-day"]}>Day 11</h3>
+              <p className={styles.text}>{day11Title}</p>
+              <p className={styles.text}>{day11Desc}</p>
+            </div>
+          </div>
+        </div>
+        {day12Title && (
+          <div className={styles["container-bottom"]}>
+            <div className={styles["day-12"]}>
+              <div className={styles.day}>
+                <h3 className={styles["number-day"]}>Day 12</h3>
+                <p className={styles.text}>{day12Title}</p>
+                <p className={styles.text}>{day12Desc}</p>
+              </div>
+            </div>
+            <div className={styles["picture-container-bottom"]}>
+              <img src={img7} className={styles.picture} />
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div className={styles["container-13-15"]}>
+        {!day15Title ? (
+          <div className={styles["picture-container-small-13-15"]}>
+            <img src={img8} className={styles.picture} />
+          </div>
+        ) : (
+          <div className={styles["picture-container-13-15"]}>
+            <img src={img8} className={styles.picture} />
+          </div>
+        )}
+        <div className={styles["day-container-13-15"]}>
+          <div className={styles.day}>
+            <h3 className={styles["number-day"]}>Day 13</h3>
+            <p className={styles.text}>{day13Title}</p>
+            <p className={styles.text}>{day13Desc}</p>
+          </div>
+          {day14Title && (
+            <div className={styles.day}>
+              <h3 className={styles["number-day"]}>Day 14</h3>
+              <p className={styles.text}>{day14Title}</p>
+              <p className={styles.text}>{day14Desc}</p>
+            </div>
+          )}
+          {day15Title && (
+            <div className={styles.day}>
+              <h3 className={styles["number-day"]}>Day 15</h3>
+              <p className={styles.text}>{day15Title}</p>
+              <p className={styles.text}>{day15Desc}</p>
+            </div>
+          )}
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default ItineraryDays;
