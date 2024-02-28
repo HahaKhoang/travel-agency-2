@@ -1,7 +1,7 @@
-import TourBanner from "./TourBanner";
+import SingleTourHero from "./SingleTourHero.tsx";
 import { useSingleTour } from "../../features/tours/useSingleTour.tsx";
 import SingleTourCarousel from "./SingleTourCarousel";
-import SingleTourHeader from "./SingleTourHeader";
+import SingleTourHeader from "./SingleTourHeader.tsx";
 import SingleTourLargePicture from "./SingleTourLargePicture";
 import ItineraryContainer from "./ItineraryContainer";
 import SingleTourBookNow from "./SingleTourBookNow";
@@ -48,9 +48,9 @@ function SingleTourContainer() {
 
   return (
     <div>
-      {/* <TourBanner img={imageWelcome} title={welcome} text={welcomeDesc} /> */}
+      <SingleTourHero img={imageWelcome} title={welcome} text={welcomeDesc} />
       <SingleTourCarousel carousel={carousel} />
-      {/* <SingleTourHeader message={message} /> */}
+      <SingleTourHeader message={message} />
       <SingleTourLargePicture
         imageBG={imageBG}
         imageHeader={imageHeader}
