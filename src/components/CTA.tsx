@@ -3,15 +3,16 @@ import styles from "./CTA.module.scss";
 
 type CTAProps = {
   h1: string;
+  bgColor: string;
   desc1: string;
   desc2?: string;
   linkTo: string;
   buttonText: string;
 };
 
-function CTA({ h1, desc1, desc2, linkTo, buttonText }: CTAProps) {
+function CTA({ h1, bgColor, desc1, desc2, linkTo, buttonText }: CTAProps) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container} style={{ backgroundColor: `${bgColor}` }}>
       <div className={styles.header}>
         <h1 className={styles.main}>{h1}</h1>
         <div className={styles["desc-container"]}>
