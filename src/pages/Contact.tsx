@@ -1,7 +1,7 @@
 import Banner from "../components/Banner.tsx";
-import ContactForm from "../ui/ContactForm";
-// import contact from "../../public/img/website/contact.jpg";
+
 import contact from "../assets/img/undraw/contact.svg";
+import ContactForm from "../ui/ContactForm.tsx";
 
 function Contact() {
   return (
@@ -12,7 +12,7 @@ function Contact() {
         svg={contact}
         bgColor="var(--color-red-dark)"
       />
-      {/* <ContactForm /> */}
+      <ContactForm />
     </div>
   );
 }

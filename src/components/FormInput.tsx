@@ -4,9 +4,9 @@ import { ComponentPropsWithoutRef, useState, type ReactNode } from "react";
 
 type FormProps = {
   id: string;
-  name: string;
-  value: string;
-  label: string;
+  name?: string;
+  value?: string;
+  label?: string;
 };
 
 type FormInputProps = FormProps & {
@@ -44,6 +44,11 @@ function FormInput(
     | FormSelectProps
     | FormTextareaProps
 ) {
+  const {
+    register,
+    formState: { errors },
+  } = useFormContext();
+
   if (props.type === "checkbox") {
     return (
       <div className={styles["checkbox-container"]}>
@@ -95,7 +100,11 @@ function FormInput(
   return (
     <div className={styles["input-container"]}>
       <label htmlFor={props.id}>{props.label}</label>
-      <input id={props.id} value={props.value} name={props.name}></input>
+      <input
+        id={props.id}
+        value={props.value}
+        {...register(`${props.name}`, { required: "This field is required" })}
+      ></input>
     </div>
   );
 }

@@ -1,0 +1,42 @@
+.container {
+  background-color: var(--color-blue-dark);
+  width: 100%;
+}
+
+.form {
+  color: white;
+  width: 50%;
+  margin: 0 auto;
+  padding: 4rem 0;
+
+  @media (max-width: 1200px) {
+    width: 70%;
+  }
+
+  @media (max-width: 800px) {
+    width: 80%;
+  }
+
+  @media (max-width: 650px) {
+    width: calc(100% - 4rem);
+  }
+}
+
+.fieldset-container {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.button {
+  border-radius: 0;
+  border: none;
+  background-color: var(--color-red-dark);
+  margin-top: 2rem;
+  align-self: start;
+
+  &:hover {
+    background-color: var(--color-blue-light);
+  }
+}
