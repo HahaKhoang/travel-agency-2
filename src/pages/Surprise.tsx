@@ -1,9 +1,9 @@
 import Banner from "../components/Banner.tsx";
-import SurpriseHeader from "../ui/SurpriseHeader";
 import SurpriseTypes from "../ui/Surprise/SurpriseTypes";
 import SurpriseHow from "../ui/Surprise/SurpriseHow";
-import SurpriseCTA from "../ui/SurpriseCTA";
 import surprise from "../assets/img/undraw/surprise.svg";
+import CTA from "../components/CTA.tsx";
+import SurprisePictureBanner from "../ui/Surprise/SurprisePictureBanner.tsx";
 function Surprise() {
   return (
     <div>
@@ -14,10 +14,17 @@ function Surprise() {
         svg={surprise}
         bgColor="var(--color-red-dark)"
       />
-      {/* <SurpriseHeader /> */}
+      <SurprisePictureBanner />
       <SurpriseTypes />
       <SurpriseHow />
-      {/* <SurpriseCTA bgColor="var(--color-blue-med)" /> */}
+      <CTA
+        h1="So what are you waiting for?"
+        desc1="Lorem ipsum dolor sit, amet consectetur adipisicing elit."
+        desc2="
+         Aliquid earum aspernatur libero doloremque, dolorum, necessitatibus"
+        linkTo="booking"
+        buttonText="Book now"
+      />
     </div>
   );
 }
