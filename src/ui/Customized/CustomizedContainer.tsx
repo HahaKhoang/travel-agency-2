@@ -1,4 +1,3 @@
-import CustomizedTitle from "./CustomizedTitle";
 import HowToSteps from "../../components/HowToSteps.tsx";
 import CustomizedPictureBanner from "./CustomizedPictureBanner.tsx";
 import CTA from "../../components/CTA.tsx";
@@ -7,12 +6,16 @@ import taipei from "../../assets/img/inspiration/taipei.jpg";
 import machuPichu from "../../assets/img/inspiration/machuPichu.jpg";
 import capetown from "../../assets/img/inspiration/capetown.jpg";
 import tori from "../../assets/img/inspiration/tori.jpg";
+import Subheading from "../../components/Subheading.tsx";
 
 function CustomizedContainer() {
   return (
     <div>
       <CustomizedPictureBanner />
-      {/* <CustomizedTitle />  */}
+      <Subheading
+        h1="Tell us about your perfect trip and we'll help you make it come true"
+        h3="Here's how it works"
+      />
       <HowToSteps
         bgColor="var(--color-blue-dark)"
         fontColor="white"
