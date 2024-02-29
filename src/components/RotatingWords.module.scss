@@ -1,57 +1,131 @@
 .container {
-  font-family: "DM Serif Display", serif;
-  box-sizing: content-box;
+  width: 100%;
+  // background-color: pink;
+  margin: 0 2rem;
+
+  @media (max-width: 1200px) {
+    margin: 0 1rem;
+  }
+
+  @media (max-width: 650px) {
+    margin: 0 2rem;
+    width: 100%;
+  }
+}
+
+.rotating-words {
+  width: 100%;
   display: flex;
-  font-size: 4rem;
-  height: 100%;
   align-items: center;
-  margin-left: 8rem;
+  justify-content: start;
 }
 
-.first-part {
+.text-container {
   position: relative;
-  line-height: 4rem;
-}
-
-.words {
+  height: 6rem;
+  display: inline;
   overflow: hidden;
-  position: absolute;
-  right: -15rem;
-  top: 0;
-  height: 8rem;
+  // background-color: green;
+
+  @media (max-width: 800px) {
+    height: 4rem;
+  }
 }
 
-.word {
+.words-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  // background-color: orange;
+  width: 15rem;
+  margin-top: -0.5rem;
+  padding-left: 1rem;
+  color: var(--color-blue-dark);
+
+  @media (max-width: 1200px) {
+    width: 12rem;
+  }
+
+  @media (max-width: 1000px) {
+    width: 10rem;
+  }
+
+  @media (max-width: 800px) {
+    width: 8rem;
+    margin-top: -1.6rem;
+    padding-left: 0.8rem;
+  }
+
+  @media (max-width: 650px) {
+    width: 10rem;
+    margin-top: -1.4rem;
+    padding-left: 1rem;
+  }
+}
+
+.static-text {
+  @media (max-width: 1400px) {
+    font-size: var(--font-xl);
+  }
+
+  @media (max-width: 1200px) {
+    font-size: var(--font-large);
+  }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-med);
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-large);
+  }
+}
+
+.text-word {
+  height: 70px;
+  font-weight: 600;
+  // color: white;
   display: block;
-  height: 100%;
-  padding-left: 10px;
-  color: #0e6ffc;
-  animation: spin_words 10s infinite;
+  transition: 0.5s;
+  line-height: 70px;
+  font-size: 3.6rem;
+  font-family: "DM Serif Display", serif;
+
+  @media (max-width: 1400px) {
+    font-size: var(--font-xl);
+  }
+
+  @media (max-width: 1200px) {
+    font-size: var(--font-large);
+  }
+
+  @media (max-width: 800px) {
+    font-size: var(--font-med);
+  }
+
+  @media (max-width: 650px) {
+    font-size: var(--font-large);
+  }
 }
 
-@keyframes spin_words {
-  10% {
-    transform: translateY(-100%);
+.text-2 {
+  margin-top: -1rem;
+
+  @media (max-width: 1400px) {
+    font-size: var(--font-xl);
+    margin-top: -1.4rem;
   }
-  25% {
-    transform: translateY(-100%);
+
+  @media (max-width: 1200px) {
+    font-size: var(--font-large);
   }
-  35% {
-    transform: translateY(-200%);
+
+  @media (max-width: 800px) {
+    font-size: var(--font-med);
+    margin-top: -0.6rem;
   }
-  50% {
-    transform: translateY(-200%);
-  }
-  60% {
-    transform: translateY(-300%);
-  }
-  75% {
-    transform: translateY(-300%);
-  }
-  85% {
-    transform: translateY(-400%);
-  }
-  100% {
-    transform: translateY(-400%);
+
+  @media (max-width: 650px) {
+    font-size: var(--font-large);
   }
 }
