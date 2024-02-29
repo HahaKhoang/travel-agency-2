@@ -4,6 +4,7 @@ import SurpriseHow from "../ui/Surprise/SurpriseHow";
 import surprise from "../assets/img/undraw/surprise.svg";
 import CTA from "../components/CTA.tsx";
 import SurprisePictureBanner from "../ui/Surprise/SurprisePictureBanner.tsx";
+
 function Surprise() {
   return (
     <div>

@@ -1,7 +1,12 @@
 import styles from "./SurpriseHow.module.scss";
 import jump from "../../assets/img/website/jump.jpg";
-import SurpriseStep1 from "./SurpriseStep1";
-import SurpriseStep3 from "./SurpriseStep3";
+import HowToSteps from "../../components/HowToSteps";
+
+import tent from "../../assets/img/website/tent.jpg";
+import bicycle from "../../assets/img/website/bicycle.jpg";
+import trolley from "../../assets/img/website/trolley.jpg";
+import kayak from "../../assets/img/website/kayak.jpg";
+import adventure from "../../assets/img/website/adventure.jpg";
 
 function SurpriseHow() {
   return (
@@ -18,8 +23,30 @@ function SurpriseHow() {
           <img src={jump} className={styles.picture} />
         </div>
       </div>
-      {/* <SurpriseStep1 />
-      <SurpriseStep3 /> */}
+      <HowToSteps
+        img1={bicycle}
+        img2={tent}
+        img3={trolley}
+        img4={kayak}
+        img5={adventure}
+        fontColor="black"
+        direction="left"
+        button={false}
+        step1text1="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+        suscipit"
+        li1="Lorem ipsum dolor sit amet"
+        li2="Lorem ipsum dolor sit amet"
+        li3="Lorem ipsum dolor sit amet"
+        step2text1="Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
+        suscipit"
+        step2text2="Lorem, ipsum dolor sit amet consectetur adipisicing"
+        step3text1="Lorem, ipsum dolor sit amet consectetur adipisicing"
+        step3text2="Lorem, ipsum dolor sit amet consectetur adipisicing"
+        step4text1="Lorem, ipsum dolor sit amet consectetur adipisicing"
+        step4text2="Lorem, ipsum dolor sit amet consectetur adipisicing"
+        step5text1="Lorem, ipsum dolor sit amet consectetur adipisicing"
+        step5text2="Lorem, ipsum dolor sit amet consectetur adipisicing"
+      />
     </div>
   );
 }
