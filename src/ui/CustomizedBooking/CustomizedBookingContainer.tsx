@@ -1,4 +1,4 @@
-import CustomizedForm from "./CustomizedForm";
+import CustomizedBookingForm from "./CustomizedBookingForm.tsx";
 import styles from "./CustomizedBookingContainer.module.scss";
 import TripSummary from "./TripSummary";
 import customized from "../../public/img/website/customized.jpg";
@@ -7,6 +7,7 @@ function CustomizedBookingContainer() {
   return (
     <div style={{ backgroundColor: "var(--color-blue-dark" }}>
       <div className={styles.container}>
+        <CustomizedBookingForm />
         {/* <CustomizedForm />
         <TripSummary
           image={customized}

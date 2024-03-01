@@ -4,24 +4,11 @@
 }
 
 .checkbox-container {
-  //   background-color: pink;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.4rem;
   font-size: var(--font-small);
-}
-
-.checkbox-container input[type="checkbox"] {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 1.4rem;
-  height: 1.4rem;
-  border: 0.2rem solid white;
-  background-color: white;
-  outline: none;
-  cursor: pointer;
-  border-radius: 0;
 }
 
 .radio-label {
@@ -31,23 +18,4 @@
   font-size: var(--font-small);
   cursor: pointer;
   line-height: 1.6rem;
-}
-
-input[type="radio"] {
-  box-sizing: border-box;
-  appearance: none;
-  background: white;
-  border: 0.15rem solid white;
-  width: 1.4rem;
-  height: 1.4rem;
-  border-radius: 50px;
-  cursor: pointer;
-
-  &:focus {
-    outline: 1px solid var(--color-blue-light);
-  }
-}
-
-input[type="radio"]:checked {
-  background: var(--color-red-dark);
 }

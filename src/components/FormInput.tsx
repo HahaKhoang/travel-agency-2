@@ -59,6 +59,7 @@ function FormInput(
       <div className={styles["radio-container"]}>
         <label className={styles["radio-label"]}>
           <input
+            className={styles["radio-button"]}
             type="radio"
             id={props.id}
             value={props.label}
