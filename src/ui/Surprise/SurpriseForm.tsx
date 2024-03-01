@@ -35,7 +35,6 @@ function SurpriseForm() {
   const [showModal, setShowModal] = useState(false);
   const methods = useForm();
   const {
-    register,
     handleSubmit,
     reset,
     formState: { errors },
@@ -168,7 +167,7 @@ function SurpriseForm() {
               <FormInput
                 type="select"
                 id="budget"
-                onChange={(e) => dispatch(updateQuantity(e.target.value))}
+                onChange={(e) => dispatch(updatePrice(e.target.value))}
               >
                 <option value={500}>$500</option>
                 <option value={1000}>$1000</option>
