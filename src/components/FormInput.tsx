@@ -1,10 +1,9 @@
 import { useFormContext } from "react-hook-form";
 import styles from "./FormInput.module.scss";
-import { ComponentPropsWithoutRef, useState, type ReactNode } from "react";
+import { ComponentPropsWithoutRef, type ReactNode } from "react";
 
 type FormProps = {
   id: string;
-  name?: string;
   value?: string;
   label?: string;
 };
@@ -21,18 +20,13 @@ type FormRadioProps = FormProps & {
   type: "radio";
 } & ComponentPropsWithoutRef<"input">;
 
-type FormSelectProps = {
+type FormSelectProps = FormProps & {
   type: "select";
-  id: string;
-  name: string;
   children: ReactNode;
 } & ComponentPropsWithoutRef<"select">;
 
-type FormTextareaProps = {
+type FormTextareaProps = FormProps & {
   type: "textarea";
-  name: string;
-  label?: string;
-  id: string;
   rows: number;
 } & ComponentPropsWithoutRef<"textarea">;
 
@@ -44,10 +38,7 @@ function FormInput(
     | FormSelectProps
     | FormTextareaProps
 ) {
-  const {
-    register,
-    formState: { errors },
-  } = useFormContext();
+  const { register } = useFormContext();
 
   if (props.type === "checkbox") {
     return (
@@ -55,8 +46,8 @@ function FormInput(
         <input
           type="checkbox"
           id={props.id}
-          name={props.name}
           value={props.label}
+          {...register(`${props.id}`, { required: "This field is required" })}
         ></input>
         <label>{props.label}</label>
       </div>
@@ -70,8 +61,8 @@ function FormInput(
           <input
             type="radio"
             id={props.id}
-            name={props.name}
             value={props.label}
+            {...register(`${props.id}`, { required: "This field is required" })}
           />
           {props.label}
         </label>
@@ -82,7 +73,10 @@ function FormInput(
   if (props.type === "select") {
     return (
       <div className={styles["input-container"]}>
-        <select id={props.id} name={props.name}>
+        <select
+          id={props.id}
+          {...register(`${props.id}`, { required: "This field is required" })}
+        >
           {props.children}
         </select>
       </div>
@@ -93,7 +87,11 @@ function FormInput(
     return (
       <div className={styles["input-container"]}>
         <label>{props.label}</label>
-        <textarea name={props.name} id={props.id} rows={props.rows} />
+        <textarea
+          id={props.id}
+          rows={props.rows}
+          {...register(`${props.id}`, { required: "This field is required" })}
+        />
       </div>
     );
   }
@@ -103,7 +101,7 @@ function FormInput(
       <input
         id={props.id}
         value={props.value}
-        {...register(`${props.name}`, { required: "This field is required" })}
+        {...register(`${props.id}`, { required: "This field is required" })}
       ></input>
     </div>
   );

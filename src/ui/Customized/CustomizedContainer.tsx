@@ -42,6 +42,7 @@ function CustomizedContainer() {
       />
       <CTA
         h1="So what are you waiting for?"
+        bgColor="var(--color-blue-med)"
         desc1="Lorem ipsum dolor sit, amet consectetur adipisicing elit."
         desc2="
          Aliquid earum aspernatur libero doloremque, dolorum, necessitatibus"

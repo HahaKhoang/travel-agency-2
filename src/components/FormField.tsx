@@ -2,25 +2,25 @@ import { ReactNode } from "react";
 import styles from "./FormField.module.scss";
 import { FieldError } from "react-hook-form";
 
-type FormFieldProps = {
+export type FormFieldProps = {
   label: string;
-  error?: FieldError;
+  error?: string | undefined;
   children?: ReactNode;
-  htmlFor?: string;
+  id: string;
 };
 
-function FormField({ label, children, htmlFor, error }: FormFieldProps) {
+function FormField({ label, children, id, error }: FormFieldProps) {
   return (
     <div className={styles.container}>
       {label && (
-        <label className={styles.label} htmlFor={htmlFor}>
+        <label className={styles.label} htmlFor={id}>
           {label}
         </label>
       )}
       {children}
       {error && (
         <div role="alert" className={styles.error}>
-          {error.message}
+          {error}
         </div>
       )}
     </div>
