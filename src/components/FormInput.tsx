@@ -6,6 +6,8 @@ type FormProps = {
   id: string;
   value?: string;
   label?: string;
+  name?: string;
+  required?: boolean;
 };
 
 type FormInputProps = FormProps & {
@@ -42,15 +44,24 @@ function FormInput(
 
   if (props.type === "checkbox") {
     return (
-      <div className={styles["checkbox-container"]}>
-        <input
-          type="checkbox"
-          id={props.id}
-          value={props.label}
-          {...register(`${props.id}`, { required: "This field is required" })}
-        ></input>
-        <label>{props.label}</label>
-      </div>
+      <label className={styles["checkbox-container"]}>
+        {props.required ? (
+          <input
+            type="checkbox"
+            id={props.id}
+            value={props.label}
+            {...register(`${props.id}`, { required: "Please select one" })}
+          />
+        ) : (
+          <input
+            type="checkbox"
+            id={props.id}
+            value={props.label}
+            {...register(`${props.id}`)}
+          />
+        )}
+        {props.label}
+      </label>
     );
   }
 
@@ -63,7 +74,7 @@ function FormInput(
             type="radio"
             id={props.id}
             value={props.label}
-            {...register(`${props.id}`, { required: "This field is required" })}
+            {...register(`${props.id}`, { required: "Please select one" })}
           />
           {props.label}
         </label>
@@ -88,22 +99,36 @@ function FormInput(
     return (
       <div className={styles["input-container"]}>
         <label>{props.label}</label>
-        <textarea
-          id={props.id}
-          rows={props.rows}
-          {...register(`${props.id}`, { required: "This field is required" })}
-        />
+        {props.required ? (
+          <textarea
+            id={props.id}
+            rows={props.rows}
+            {...register(`${props.id}`, {
+              required: "Please provide requested information",
+            })}
+          />
+        ) : (
+          <textarea
+            id={props.id}
+            rows={props.rows}
+            {...register(`${props.id}`)}
+          />
+        )}
       </div>
     );
   }
   return (
     <div className={styles["input-container"]}>
       <label htmlFor={props.id}>{props.label}</label>
-      <input
-        id={props.id}
-        value={props.value}
-        {...register(`${props.id}`, { required: "This field is required" })}
-      ></input>
+      {props.required ? (
+        <input
+          id={props.id}
+          value={props.value}
+          {...register(`${props.id}`, { required: "This field is required" })}
+        />
+      ) : (
+        <input id={props.id} value={props.value} {...register(`${props.id}`)} />
+      )}
     </div>
   );
 }

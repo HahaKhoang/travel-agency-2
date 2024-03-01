@@ -1,6 +1,5 @@
 import { ReactNode } from "react";
 import styles from "./FormField.module.scss";
-import { FieldError } from "react-hook-form";
 
 export type FormFieldProps = {
   label: string;

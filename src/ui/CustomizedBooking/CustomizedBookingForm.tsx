@@ -9,8 +9,10 @@ import customized from "../../assets/img/website/customized.jpg";
 import {
   updateAccommodation,
   updateDuration,
+  updateFlight,
   updatePrice,
   updateQuantity,
+  updateReservations,
 } from "../../features/tours/customizedSlice";
 
 const categories = [
@@ -23,6 +25,16 @@ const categories = [
   { label: "Undecided", category: "undecided", id: "undecided" },
 ];
 
+// const categories = [
+//   { label: "Everything", id: "everything" },
+//   { label: "Nature", id: "nature" },
+//   { label: "Culture", id: "culture" },
+//   { label: "Shopping", id: "shopping" },
+//   { label: "Food", id: "food" },
+//   { label: "Nightlife", id: "nightlife" },
+//   { label: "Undecided", id: "undecided" },
+// ];
+
 const tourTypes = [
   { label: "International trip" },
   { label: "Domestic trip" },
@@ -31,8 +43,6 @@ const tourTypes = [
   { label: "Day trip" },
   { label: "Undecided" },
 ];
-
-const childFriendly = [{ label: "Yes" }, { label: "No" }];
 
 function CustomizedBookingForm() {
   const [showModal, setShowModal] = useState(false);
@@ -76,36 +86,72 @@ function CustomizedBookingForm() {
             className={styles["fieldset-container"]}
           >
             <FormField
-              label="Category of interest (select all that apply)"
-              id="interests"
+              label="*Full name"
+              id="name"
+              error={errors?.name?.message?.toString()}
+            >
+              <FormInput type="input" id="name" required={true} />
+            </FormField>
+
+            <FormField
+              label="*Email address"
+              id="email"
+              error={errors?.email?.message?.toString()}
+            >
+              <FormInput type="input" id="email" required={true} />
+            </FormField>
+
+            <FormField
+              label="*Phone number"
+              id="phone"
+              error={errors?.phone?.message?.toString()}
+            >
+              <FormInput type="input" id="phone" required={true} />
+            </FormField>
+
+            <FormField
+              label="*Category of interest (select all that apply):"
+              id="category"
+              error={errors?.category?.message?.toString()}
             >
               <div className={styles["checkbox-container"]}>
                 {categories.map((el, i) => (
                   <FormInput
                     type="checkbox"
-                    id={el.id}
-                    name={el.label}
-                    value={el.category}
+                    id="category"
+                    value={el.label}
                     label={el.label}
                     key={i}
+                    required={true}
                   />
                 ))}
               </div>
             </FormField>
-            <FormField label="Type of tour (select one):" id="tourType">
+
+            <FormField
+              label="*Type of tour (select one):"
+              id="tourType"
+              error={errors?.tourType?.message?.toString()}
+            >
               <div className={styles["radio-container"]}>
                 {tourTypes.map((el, i) => (
                   <FormInput
                     type="radio"
+                    id="tourType"
                     value={el.label}
-                    id={el.label}
                     label={el.label}
                     key={i}
+                    required={true}
                   />
                 ))}
               </div>
             </FormField>
-            <FormField label="Duration" id="duration">
+
+            <FormField
+              label="Duration"
+              id="duration"
+              error={errors?.duration?.message?.toString()}
+            >
               <FormInput
                 type="select"
                 id="duration"
@@ -128,7 +174,11 @@ function CustomizedBookingForm() {
                 <option value="flexible">I'm flexible</option>
               </FormInput>
             </FormField>
-            <FormField label="How many people?" id="people">
+            <FormField
+              label="How many people?"
+              id="people"
+              error={errors?.people?.message?.toString()}
+            >
               <FormInput
                 type="select"
                 id="people"
@@ -148,41 +198,118 @@ function CustomizedBookingForm() {
             </FormField>
 
             <FormField
-              label="Do you need help finding and booking accommodation for an additional fee of $90?"
-              id="accommodation"
+              label="*Does it have to be child friendly?"
+              id="child"
+              error={errors?.child?.message?.toString()}
             >
               <div className={styles["radio-container"]}>
                 <FormInput
                   type="radio"
-                  id="accommodation-yes"
+                  id="child"
                   label="Yes"
+                  value="child-yes"
+                />
+                <FormInput
+                  type="radio"
+                  id="child"
+                  label="No"
+                  value="child-no"
+                />
+              </div>
+            </FormField>
+
+            <FormField
+              label="*Countries of interest:"
+              id="countries"
+              error={errors?.countries?.message?.toString()}
+            >
+              <FormInput
+                type="textarea"
+                id="countries"
+                rows={5}
+                required={true}
+              />
+            </FormField>
+
+            <FormField
+              label="*Do you need help finding and booking accommodation for an additional fee of $90?"
+              id="accommodation"
+              error={errors?.accommodation?.message?.toString()}
+            >
+              <div className={styles["radio-container"]}>
+                <FormInput
+                  type="radio"
+                  id="accommodation"
+                  label="Yes"
+                  value="accommodation-yes"
                   onClick={() => dispatch(updateAccommodation(true))}
                 />
                 <FormInput
                   type="radio"
-                  id="accommodation-no"
+                  id="accommodation"
                   label="No"
+                  value="accommodation-no"
                   onClick={() => dispatch(updateAccommodation(false))}
                 />
               </div>
             </FormField>
 
-            <FormField label="Does it have to be child friendly?" id="child">
+            <FormField
+              label="*Do you need help finding and booking flight(s) for an additional fee of $140?"
+              id="flight"
+              error={errors?.flight?.message?.toString()}
+            >
               <div className={styles["radio-container"]}>
-                <FormInput type="radio" id="child-yes" label="Yes" />
-                <FormInput type="radio" id="child-no" label="No" />
+                <FormInput
+                  type="radio"
+                  id="flight"
+                  label="Yes"
+                  value="flight-yes"
+                  onClick={() => dispatch(updateFlight(true))}
+                />
+                <FormInput
+                  type="radio"
+                  id="flight"
+                  label="No"
+                  value="flight-no"
+                  onClick={() => dispatch(updateFlight(false))}
+                />
               </div>
             </FormField>
 
-            <FormField label="Countries of interest:" id="countries">
-              <FormInput type="textarea" id="countries" rows={5} />
+            <FormField
+              label="*Do you need help booking necessary reservations for an additional fee of $130?"
+              id="reservation"
+              error={errors?.reservation?.message?.toString()}
+            >
+              <div className={styles["radio-container"]}>
+                <FormInput
+                  type="radio"
+                  id="reservation"
+                  label="Yes"
+                  value="reservation-yes"
+                  onClick={() => dispatch(updateReservations(true))}
+                />
+                <FormInput
+                  type="radio"
+                  id="reservation"
+                  label="No"
+                  value="reservation-no"
+                  onClick={() => dispatch(updateReservations(false))}
+                />
+              </div>
             </FormField>
 
             <FormField label="Additional comments:" id="comments">
-              <FormInput type="textarea" id="comments" rows={8}></FormInput>
+              <FormInput
+                type="textarea"
+                id="comments"
+                rows={5}
+                required={false}
+              />
             </FormField>
           </fieldset>
-          <button className={styles.button}>Submit</button>
+          <button className={styles.button}>Book</button>
         </form>
       </FormProvider>
     </div>
