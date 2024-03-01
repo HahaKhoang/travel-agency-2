@@ -43,3 +43,15 @@
   gap: 1rem 4rem;
   margin-top: 0.8rem;
 }
+
+.button {
+  align-self: start;
+  border-radius: 0;
+  background-color: var(--color-red-dark);
+  border: none;
+  margin-top: 2rem;
+
+  &:hover {
+    background-color: var(--color-blue-light);
+  }
+}

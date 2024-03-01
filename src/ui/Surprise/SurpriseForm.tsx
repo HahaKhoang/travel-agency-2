@@ -13,13 +13,13 @@ import {
 } from "../../features/tours/surpriseSlice.tsx";
 
 const categories = [
-  { label: "Everything", category: "everything", id: "everything" },
-  { label: "Nature", category: "nature", id: "nature" },
-  { label: "Culture", category: "culture", id: "culture" },
-  { label: "Shopping", category: "shopping", id: "shopping" },
-  { label: "Food", category: "food", id: "food" },
-  { label: "Nightlife", category: "nightlife", id: "nightlife" },
-  { label: "Undecided", category: "undecided", id: "undecided" },
+  { label: "Everything", id: "everything" },
+  { label: "Nature", id: "nature" },
+  { label: "Culture", id: "culture" },
+  { label: "Shopping", id: "shopping" },
+  { label: "Food", id: "food" },
+  { label: "Nightlife", id: "nightlife" },
+  { label: "Undecided", id: "undecided" },
 ];
 
 const tourTypes = [
@@ -30,8 +30,6 @@ const tourTypes = [
   { label: "Day trip" },
   { label: "Undecided" },
 ];
-
-const childFriendly = [{ label: "Yes" }, { label: "No" }];
 
 function SurpriseForm() {
   const [showModal, setShowModal] = useState(false);
@@ -73,52 +71,75 @@ function SurpriseForm() {
         >
           <fieldset id="surprise-form" className={styles["fieldset-container"]}>
             <FormField
-              label="Category of interest (select all that apply)"
-              error={errors?.category}
+              label="*Full name"
+              id="name"
+              error={errors?.name?.message?.toString()}
+            >
+              <FormInput type="input" id="name" required={true} />
+            </FormField>
+
+            <FormField
+              label="*Email address"
+              id="email"
+              error={errors?.email?.message?.toString()}
+            >
+              <FormInput type="input" id="email" required={true} />
+            </FormField>
+
+            <FormField
+              label="*Phone number"
+              id="phone"
+              error={errors?.phone?.message?.toString()}
+            >
+              <FormInput type="input" id="phone" required={true} />
+            </FormField>
+
+            <FormField
+              label="*Category of interest (select all that apply):"
+              id="category"
+              error={errors?.category?.message?.toString()}
             >
               <div className={styles["checkbox-container"]}>
                 {categories.map((el, i) => (
                   <FormInput
                     type="checkbox"
-                    id={el.id}
-                    name={el.label}
-                    value={el.category}
+                    id="category"
+                    value={el.label}
                     label={el.label}
                     key={i}
+                    required={true}
                   />
                 ))}
               </div>
             </FormField>
 
             <FormField
-              label="Type of tour (select one):"
-              error={errors?.tourType}
+              label="*Type of tour (select one):"
+              id="tourType"
+              error={errors?.tourType?.message?.toString()}
             >
               <div className={styles["radio-container"]}>
                 {tourTypes.map((el, i) => (
                   <FormInput
                     type="radio"
+                    id="tourType"
                     value={el.label}
-                    // name="tourType"
-                    id={el.label}
                     label={el.label}
                     key={i}
-                    {...register("tourType", {
-                      required: "Please select one",
-                    })}
+                    required={true}
                   />
                 ))}
               </div>
             </FormField>
 
-            <FormField label="Duration">
+            <FormField
+              label="Duration"
+              id="duration"
+              error={errors?.duration?.message?.toString()}
+            >
               <FormInput
                 type="select"
                 id="duration"
-                //   name="duration"
-                {...register("duration", {
-                  required: "This field is required",
-                })}
                 onChange={(e) => dispatch(updateDuration(e.target.value))}
               >
                 <option value="1">1 day</option>
@@ -139,13 +160,15 @@ function SurpriseForm() {
               </FormInput>
             </FormField>
 
-            <FormField label="Budget per person">
+            <FormField
+              label="Budget per person"
+              id="budget"
+              error={errors?.budget?.message?.toString()}
+            >
               <FormInput
                 type="select"
                 id="budget"
-                // name="budget"
-                {...register("budget", { required: "This field is required" })}
-                onChange={(e) => dispatch(updatePrice(e.target.value))}
+                onChange={(e) => dispatch(updateQuantity(e.target.value))}
               >
                 <option value={500}>$500</option>
                 <option value={1000}>$1000</option>
@@ -160,12 +183,14 @@ function SurpriseForm() {
               </FormInput>
             </FormField>
 
-            <FormField label="How many people?">
+            <FormField
+              label="How many people?"
+              id="people"
+              error={errors?.people?.message?.toString()}
+            >
               <FormInput
                 type="select"
                 id="people"
-                // name="people"
-                {...register("people", { required: "This field is required" })}
                 onChange={(e) => dispatch(updateQuantity(e.target.value))}
               >
                 <option value="1">1</option>
@@ -182,65 +207,61 @@ function SurpriseForm() {
             </FormField>
 
             <FormField
-              label="Does it have to be child friendly?"
-              error={errors?.child}
-            />
-            <div className={styles["radio-container"]}>
-              {childFriendly.map((el, i) => (
+              label="*Does it have to be child friendly?"
+              id="child"
+              error={errors?.child?.message?.toString()}
+            >
+              <div className={styles["radio-container"]}>
                 <FormInput
                   type="radio"
-                  value={el.label}
-                  //   name="child"
-                  id={el.label}
-                  label={el.label}
-                  key={i}
-                  {...register("child", {
-                    required: "Please select one",
-                  })}
+                  id="child"
+                  label="Yes"
+                  value="child-yes"
                 />
-              ))}
-            </div>
+                <FormInput
+                  type="radio"
+                  id="child"
+                  label="No"
+                  value="child-no"
+                />
+              </div>
+            </FormField>
 
-            <FormField label="List of interests:">
+            <FormField label="List of interests:" id="interests">
               <FormInput
                 type="textarea"
-                // name="interests"
                 id="interests"
                 rows={5}
-                {...register("interests")}
-              ></FormInput>
+                required={false}
+              />
             </FormField>
 
-            <FormField label="Things to avoid:">
-              <FormInput
-                type="textarea"
-                // name="avoid"
-                id="avoid"
-                rows={5}
-                {...register("avoid")}
-              ></FormInput>
+            <FormField label="Things to avoid:" id="avoid">
+              <FormInput type="textarea" id="avoid" rows={5} required={false} />
             </FormField>
 
-            <FormField label="Disabilities/concerns to be aware of:">
+            <FormField
+              label="Disabilities/concerns to be aware of:"
+              id="disabilities"
+            >
               <FormInput
                 type="textarea"
-                // name="disabilities"
                 id="disabilities"
                 rows={8}
-                {...register("disabilities")}
-              ></FormInput>
+                required={false}
+              />
             </FormField>
 
-            <FormField label="Additional comments:">
+            <FormField label="Additional comments:" id="comments">
               <FormInput
                 type="textarea"
-                // name="comments"
                 id="comments"
                 rows={8}
-                {...register("comments")}
-              ></FormInput>
+                required={false}
+              />
             </FormField>
           </fieldset>
+          <button className={styles.button}>Book</button>
         </form>
       </FormProvider>
     </div>

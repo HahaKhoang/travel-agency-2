@@ -10,30 +10,19 @@ import {
   updateAccommodation,
   updateDuration,
   updateFlight,
-  updatePrice,
   updateQuantity,
   updateReservations,
 } from "../../features/tours/customizedSlice";
 
 const categories = [
-  { label: "Everything", category: "everything", id: "everything" },
-  { label: "Nature", category: "nature", id: "nature" },
-  { label: "Culture", category: "culture", id: "culture" },
-  { label: "Shopping", category: "shopping", id: "shopping" },
-  { label: "Food", category: "food", id: "food" },
-  { label: "Nightlife", category: "nightlife", id: "nightlife" },
-  { label: "Undecided", category: "undecided", id: "undecided" },
+  { label: "Everything", id: "everything" },
+  { label: "Nature", id: "nature" },
+  { label: "Culture", id: "culture" },
+  { label: "Shopping", id: "shopping" },
+  { label: "Food", id: "food" },
+  { label: "Nightlife", id: "nightlife" },
+  { label: "Undecided", id: "undecided" },
 ];
-
-// const categories = [
-//   { label: "Everything", id: "everything" },
-//   { label: "Nature", id: "nature" },
-//   { label: "Culture", id: "culture" },
-//   { label: "Shopping", id: "shopping" },
-//   { label: "Food", id: "food" },
-//   { label: "Nightlife", id: "nightlife" },
-//   { label: "Undecided", id: "undecided" },
-// ];
 
 const tourTypes = [
   { label: "International trip" },
@@ -174,6 +163,7 @@ function CustomizedBookingForm() {
                 <option value="flexible">I'm flexible</option>
               </FormInput>
             </FormField>
+
             <FormField
               label="How many people?"
               id="people"
@@ -304,7 +294,7 @@ function CustomizedBookingForm() {
               <FormInput
                 type="textarea"
                 id="comments"
-                rows={5}
+                rows={8}
                 required={false}
               />
             </FormField>
