@@ -1,16 +1,16 @@
 import styles from "./SurpriseBookingSummary.module.scss";
 import { useAppSelector } from "../../store/hooks";
 
-function SurpriseBookingSummary({ image, header, disclaimer }) {
+import night from "../../assets/img/website/night.jpg";
+
+function SurpriseBookingSummary() {
   const { duration, quantity, price } = useAppSelector(
     (state) => state.surprise
   );
   const day = duration < 2 ? "day" : "days";
+  const durationField = duration === 0 ? "I'm flexible" : `${duration} ${day}`;
 
   const tourTotal = price * quantity;
-  // const totalPrice = accommodationFee ? tourTotal + 90 : tourTotal;
-  // const totalPrice2 = flightFee ? totalPrice + 140 : totalPrice;
-  // const totalPrice3 = reservationFee ? totalPrice2 + 130 : totalPrice2;
   const deposit = Math.floor(tourTotal / 3);
   const finalPayment = Math.ceil(tourTotal - deposit);
 
@@ -18,10 +18,10 @@ function SurpriseBookingSummary({ image, header, disclaimer }) {
     <div className={styles.container}>
       <div className={styles.box}>
         <div className={styles["picture-container"]}>
-          <img src={image} className={styles.picture} />
+          <img src={night} className={styles.picture} />
         </div>
 
-        <h3>{header ? `${header}` : `${name}`}</h3>
+        <h3>Surprise trip</h3>
         <div className={styles["details-container"]}>
           <div className={styles.details}>
             <p>Price</p>
@@ -33,9 +33,7 @@ function SurpriseBookingSummary({ image, header, disclaimer }) {
           </div>
           <div className={styles.details}>
             <p>Duration</p>
-            <p className={styles.content}>
-              {duration} {day}
-            </p>
+            <p className={styles.content}>{durationField}</p>
           </div>
         </div>
         <div className={styles["price-details"]}>
@@ -63,7 +61,11 @@ function SurpriseBookingSummary({ image, header, disclaimer }) {
             </div>
           </div>
         </div>
-        <p className={styles.disclaimer}>{disclaimer}</p>
+        <p className={styles.disclaimer}>
+          *Flights and accommodation are included in the final price. A 30%
+          deposit is required and the remaining 70% will be invoiced before we
+          send you the final details of your trip.
+        </p>
       </div>
     </div>
   );

@@ -1,6 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
+type surpriseStateProps = {
+  duration: number;
+  price: number;
+  quantity: number;
+};
+
+const initialState: surpriseStateProps = {
   duration: 1,
   price: 500,
   quantity: 1,

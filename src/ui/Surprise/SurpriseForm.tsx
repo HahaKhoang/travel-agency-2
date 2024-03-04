@@ -139,7 +139,7 @@ function SurpriseForm() {
               <FormInput
                 type="select"
                 id="duration"
-                onChange={(e) => dispatch(updateDuration(e.target.value))}
+                onChange={(e) => dispatch(updateDuration(+e.target.value))}
               >
                 <option value="1">1 day</option>
                 <option value="2">2 days</option>
@@ -155,7 +155,7 @@ function SurpriseForm() {
                 <option value="12">12 days</option>
                 <option value="13">13 days</option>
                 <option value="14">14 days</option>
-                <option value="flexible">I'm flexible</option>
+                <option value="0">I'm flexible</option>
               </FormInput>
             </FormField>
 
@@ -167,7 +167,7 @@ function SurpriseForm() {
               <FormInput
                 type="select"
                 id="budget"
-                onChange={(e) => dispatch(updatePrice(e.target.value))}
+                onChange={(e) => dispatch(updatePrice(+e.target.value))}
               >
                 <option value={500}>$500</option>
                 <option value={1000}>$1000</option>
@@ -190,7 +190,7 @@ function SurpriseForm() {
               <FormInput
                 type="select"
                 id="people"
-                onChange={(e) => dispatch(updateQuantity(e.target.value))}
+                onChange={(e) => dispatch(updateQuantity(+e.target.value))}
               >
                 <option value="1">1</option>
                 <option value="2">2 </option>

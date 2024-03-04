@@ -1,8 +1,9 @@
 import styles from "./CustomizedBookingSummary.module.scss";
-import customized from "../../public/img/website/customized.jpg";
 import { useAppSelector } from "../../store/hooks";
 
-function CustomizedBookingSummary({ image, header, disclaimer }) {
+import customized from "../../assets/img/website/customized.jpg";
+
+function CustomizedBookingSummary() {
   const {
     duration,
     quantity,
@@ -13,8 +14,7 @@ function CustomizedBookingSummary({ image, header, disclaimer }) {
   } = useAppSelector((state) => state.customized);
 
   const day = duration < 2 ? "day" : "days";
-  const durationField =
-    duration === "flexible" ? "I'm flexible" : `${duration} ${day}`;
+  const durationField = duration === 0 ? "I'm flexible" : `${duration} ${day}`;
 
   const tourTotal = price * quantity;
   const totalPrice = accommodationFee ? tourTotal + 90 : tourTotal;
@@ -25,10 +25,10 @@ function CustomizedBookingSummary({ image, header, disclaimer }) {
     <div className={styles.container}>
       <div className={styles.box}>
         <div className={styles["picture-container"]}>
-          <img src={image} className={styles.picture} />
+          <img src={customized} className={styles.picture} />
         </div>
 
-        <h3>{header ? `${header}` : `${name}`}</h3>
+        <h3>Customized tour</h3>
         <div className={styles["details-container"]}>
           <div className={styles.details}>
             <p>Price</p>
@@ -40,9 +40,7 @@ function CustomizedBookingSummary({ image, header, disclaimer }) {
           </div>
           <div className={styles.details}>
             <p>Duration</p>
-            <p className={styles.content}>
-              {duration} {day}
-            </p>
+            <p className={styles.content}>{durationField}</p>
           </div>
         </div>
         <div className={styles["price-details"]}>
@@ -77,7 +75,10 @@ function CustomizedBookingSummary({ image, header, disclaimer }) {
             </div>
           </div>
         </div>
-        <p className={styles.disclaimer}>{disclaimer}</p>
+        <p className={styles.disclaimer}>
+          *Price does not include flight, accommodation, or additional costs.
+          The total cost only covers the itinerary and any additional features.
+        </p>
       </div>
     </div>
   );

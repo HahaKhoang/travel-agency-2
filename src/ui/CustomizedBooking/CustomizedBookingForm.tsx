@@ -160,7 +160,7 @@ function CustomizedBookingForm() {
                 <option value="12">12 days</option>
                 <option value="13">13 days</option>
                 <option value="14">14 days</option>
-                <option value="flexible">I'm flexible</option>
+                <option value="0">I'm flexible</option>
               </FormInput>
             </FormField>
 

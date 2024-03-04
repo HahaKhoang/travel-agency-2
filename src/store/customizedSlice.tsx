@@ -1,15 +1,15 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
-// type CustomizedInitialState = {
-//   duration: number;
-//   price: number;
-//   quantity: number;
-//   accommodationFee: boolean;
-//   flightFee: boolean;
-//   reservationFee: boolean;
-// };
+type CustomizedInitialState = {
+  duration: number;
+  price: number;
+  quantity: number;
+  accommodationFee: boolean;
+  flightFee: boolean;
+  reservationFee: boolean;
+};
 
-const initialState = {
+const initialState: CustomizedInitialState = {
   duration: 1,
   price: 300,
   quantity: 1,
