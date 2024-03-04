@@ -1,57 +1,69 @@
 import styles from "./SurpriseBookingSummary.module.scss";
-import jk4 from "../../public/img/jk4.jpg";
-import { useSelector } from "react-redux";
+import { useAppSelector } from "../../store/hooks";
 
-function SurpriseBookingSummary() {
-  const duration = useSelector((state) => state.surprise.duration);
-  const price = useSelector((state) => state.surprise.price);
-  const quantity = useSelector((state) => state.surprise.quantity);
+function SurpriseBookingSummary({ image, header, disclaimer }) {
+  const { duration, quantity, price } = useAppSelector(
+    (state) => state.surprise
+  );
   const day = duration < 2 ? "day" : "days";
-  const total = price * quantity;
-  const durationField =
-    duration === "flexible" ? "Surprise me" : `${duration} ${day}`;
+
+  const tourTotal = price * quantity;
+  // const totalPrice = accommodationFee ? tourTotal + 90 : tourTotal;
+  // const totalPrice2 = flightFee ? totalPrice + 140 : totalPrice;
+  // const totalPrice3 = reservationFee ? totalPrice2 + 130 : totalPrice2;
+  const deposit = Math.floor(tourTotal / 3);
+  const finalPayment = Math.ceil(tourTotal - deposit);
 
   return (
     <div className={styles.container}>
       <div className={styles.box}>
-        <div className={styles["info-container"]}>
-          <h3>Trip summary</h3>
-          <div className={styles["picture-container"]}>
-            <img src={jk4} className={styles.picture} />
-          </div>
-          <h3>Surprise tour</h3>
-          <div className={styles["content-container"]}>
-            <p className={styles.label}>Duration</p>
-            <p className={styles.content}>{durationField}</p>
-          </div>
-          <div className={styles["content-container"]}>
-            <p className={styles.label}>Price per person</p>
+        <div className={styles["picture-container"]}>
+          <img src={image} className={styles.picture} />
+        </div>
+
+        <h3>{header ? `${header}` : `${name}`}</h3>
+        <div className={styles["details-container"]}>
+          <div className={styles.details}>
+            <p>Price</p>
             <p className={styles.content}>${price}</p>
           </div>
-          <div className={styles["content-container"]}>
-            <p className={styles.label}>Number of people</p>
+          <div className={styles.details}>
+            <p>Number of people</p>
             <p className={styles.content}>{quantity}</p>
+          </div>
+          <div className={styles.details}>
+            <p>Duration</p>
+            <p className={styles.content}>
+              {duration} {day}
+            </p>
+          </div>
+        </div>
+        <div className={styles["price-details"]}>
+          <p className={styles.price}>Price details</p>
+          <div className={styles.breakdown}>
+            <p>Tour x{quantity}</p>
+            <p className={styles.content}>${tourTotal}</p>
           </div>
 
           <div className={styles["total-container"]}>
-            <p className={styles.label}>Cost breakdown</p>
-            <div className={styles.extras}>
-              <p>Tour x{quantity}</p>
-              <p>${total}</p>
+            <>
+              <div className={styles.breakdown}>
+                <p>Deposit</p>
+                <p className={styles.content}>${deposit}</p>
+              </div>
+              <div className={styles.breakdown}>
+                <p>Final Payment</p>
+                <p className={styles.content}>${finalPayment}</p>
+              </div>
+            </>
+
+            <div className={styles.total}>
+              <p>Total</p>
+              <p>${tourTotal}</p>
             </div>
           </div>
-          <div className={styles.extras}>
-            <p className={styles.total}>Total</p>
-            <p className={styles.price}>${total}</p>
-          </div>
-          <p>
-            *For tours $5000+, we will charge $5000 per person first and will
-            invoice the rest of the costs before sending you the itinerary
-          </p>
-          <button className={styles.button} type="submit" form="surprise-form">
-            Book
-          </button>
         </div>
+        <p className={styles.disclaimer}>{disclaimer}</p>
       </div>
     </div>
   );

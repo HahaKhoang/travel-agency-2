@@ -1,7 +1,7 @@
 import Banner from "../components/Banner.tsx";
-import CustomizedBookingHeader from "../ui/CustomizedBookingHeader";
 import customizedBooking from "../assets/img/undraw/customizedBooking.svg";
 import CustomizedBookingContainer from "../ui/CustomizedBooking/CustomizedBookingContainer";
+import Subheading from "../components/Subheading.tsx";
 
 function CustomizedBooking() {
   return (
@@ -12,7 +12,10 @@ function CustomizedBooking() {
         svg={customizedBooking}
         bgColor="var(--color-red-dark)"
       />
-      {/* <CustomizedBookingHeader /> */}
+      <Subheading
+        h1="In order to perfect your customized tour, we will need some details about your dream trip 💕"
+        h3="Please fill out the form below so we can get more details about your preferences and tastes"
+      />
       <CustomizedBookingContainer />
     </div>
   );

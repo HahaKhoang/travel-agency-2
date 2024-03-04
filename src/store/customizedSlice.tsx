@@ -1,4 +1,13 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
+
+// type CustomizedInitialState = {
+//   duration: number;
+//   price: number;
+//   quantity: number;
+//   accommodationFee: boolean;
+//   flightFee: boolean;
+//   reservationFee: boolean;
+// };
 
 const initialState = {
   duration: 1,
@@ -13,22 +22,22 @@ const customizedSlice = createSlice({
   name: "customized",
   initialState,
   reducers: {
-    updateDuration(state, action) {
+    updateDuration(state, action: PayloadAction<number>) {
       state.duration = action.payload;
     },
-    updatePrice(state, action) {
+    updatePrice(state, action: PayloadAction<number>) {
       state.price = action.payload;
     },
-    updateQuantity(state, action) {
+    updateQuantity(state, action: PayloadAction<number>) {
       state.quantity = action.payload;
     },
-    updateAccommodation(state, action) {
+    updateAccommodation(state, action: PayloadAction<boolean>) {
       state.accommodationFee = action.payload;
     },
-    updateFlight(state, action) {
+    updateFlight(state, action: PayloadAction<boolean>) {
       state.flightFee = action.payload;
     },
-    updateReservations(state, action) {
+    updateReservations(state, action: PayloadAction<boolean>) {
       state.reservationFee = action.payload;
     },
   },

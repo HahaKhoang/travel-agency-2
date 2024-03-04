@@ -2,7 +2,6 @@ import { FormProvider, useForm } from "react-hook-form";
 import FormInput from "../../components/FormInput.tsx";
 import styles from "./SurpriseForm.module.scss";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
 import Modal from "../../components/Modal.tsx";
 import FormField from "../../components/FormField.tsx";
 import map from "../../assets/img/website/map.jpg";
@@ -10,7 +9,8 @@ import {
   updateDuration,
   updatePrice,
   updateQuantity,
-} from "../../features/tours/surpriseSlice.tsx";
+} from "../../store/surpriseSlice.tsx";
+import { useAppDispatch } from "../../store/hooks.tsx";
 
 const categories = [
   { label: "Everything", id: "everything" },
@@ -40,7 +40,7 @@ function SurpriseForm() {
     formState: { errors },
   } = methods;
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   function onSubmit(data) {
     console.log(data);

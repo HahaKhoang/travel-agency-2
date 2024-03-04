@@ -3,7 +3,7 @@ import { usePopularTours } from "../../features/tours/usePopularTours.tsx";
 import { NavLink } from "react-router-dom";
 import LoadingSpinner from "../../components/LoadingSpinner.tsx";
 import { useDispatch } from "react-redux";
-import { addTour } from "../../features/tours/tourSlice.tsx";
+import { addTour } from "../../store/tourSlice.tsx";
 
 function PopularSection() {
   const { popularTours, isLoading } = usePopularTours();

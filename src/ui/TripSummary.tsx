@@ -1,16 +1,35 @@
-import { useSelector } from "react-redux";
 import styles from "./TripSummary.module.scss";
+import { useAppSelector } from "../store/hooks.tsx";
 
-function TripSummary({ image, header, slice, disclaimer }) {
+type TripSummaryProps = {
+  image: string;
+  header: string;
+  slice: "customized" | "surprise";
+  disclaimer: string;
+};
+
+function TripSummary({ image, header, slice, disclaimer }: TripSummaryProps) {
   const {
-    name,
     duration,
     quantity,
     price,
     accommodationFee,
     flightFee,
     reservationFee,
-  } = useSelector((state) => state[slice]);
+  } = useAppSelector((state) => state.surprise);
+  console.log(duration, quantity, price);
+
+  let sliceState;
+
+  if (slice === "customized") {
+    const sliceState = useAppSelector((state) => state.surprise);
+  }
+  if (slice === "surprise") {
+    const sliceState = useAppSelector((state) => state.surprise);
+  }
+
+  console.log(sliceState);
+
   const day = duration < 2 ? "day" : "days";
 
   const tourTotal = price * quantity;

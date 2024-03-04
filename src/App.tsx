@@ -17,10 +17,6 @@ import Customized from "./pages/Customized";
 import CustomizedBooking from "./pages/CustomizedBooking";
 import Booking from "./pages/Booking";
 
-import Test from "./pages/Test.js";
-import SurpriseForm from "./ui/Surprise/SurpriseForm.tsx";
-import CustomizedSteps from "./components/HowToSteps.tsx";
-
 const router = createBrowserRouter([
   {
     element: <AppLayout />,
@@ -63,9 +59,5 @@ function App() {
     </QueryClientProvider>
   );
 }
-
-// function App() {
-//   return <CustomizedSteps />;
-// }
 
 export default App;

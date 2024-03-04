@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import styles from "./TourCard.module.scss";
 import { NavLink } from "react-router-dom";
-import { addTour } from "../../features/tours/tourSlice.tsx";
+import { addTour } from "../../store/tourSlice.tsx";
 
 function TourCard({
   mainImage,

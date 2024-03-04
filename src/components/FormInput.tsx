@@ -75,6 +75,7 @@ function FormInput(
             id={props.id}
             value={props.label}
             {...register(`${props.id}`, { required: "Please select one" })}
+            {...props}
           />
           {props.label}
         </label>
@@ -88,6 +89,7 @@ function FormInput(
         <select
           id={props.id}
           {...register(`${props.id}`, { required: "This field is required" })}
+          {...props}
         >
           {props.children}
         </select>

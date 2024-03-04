@@ -4,7 +4,6 @@ import Modal from "../../components/Modal";
 import FormField from "../../components/FormField";
 import FormInput from "../../components/FormInput";
 import { useState } from "react";
-import { useDispatch } from "react-redux";
 import customized from "../../assets/img/website/customized.jpg";
 import {
   updateAccommodation,
@@ -12,7 +11,8 @@ import {
   updateFlight,
   updateQuantity,
   updateReservations,
-} from "../../features/tours/customizedSlice";
+} from "../../store/customizedSlice.tsx";
+import { useAppDispatch } from "../../store/hooks";
 
 const categories = [
   { label: "Everything", id: "everything" },
@@ -42,7 +42,7 @@ function CustomizedBookingForm() {
     formState: { errors },
   } = methods;
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   function onSubmit(data) {
     console.log(data);
@@ -144,7 +144,7 @@ function CustomizedBookingForm() {
               <FormInput
                 type="select"
                 id="duration"
-                onChange={(e) => dispatch(updateDuration(e.target.value))}
+                onChange={(e) => dispatch(updateDuration(+e.target.value))}
               >
                 <option value="1">1 day</option>
                 <option value="2">2 days</option>
@@ -172,7 +172,7 @@ function CustomizedBookingForm() {
               <FormInput
                 type="select"
                 id="people"
-                onChange={(e) => dispatch(updateQuantity(e.target.value))}
+                onChange={(e) => dispatch(updateQuantity(+e.target.value))}
               >
                 <option value="1">1</option>
                 <option value="2">2 </option>
