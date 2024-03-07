@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
 type surpriseStateProps = {
   duration: number;
@@ -16,13 +16,13 @@ const surpriseSlice = createSlice({
   name: "surprise",
   initialState,
   reducers: {
-    updateDuration(state, action) {
+    updateDuration(state, action: PayloadAction<number>) {
       state.duration = action.payload;
     },
-    updatePrice(state, action) {
+    updatePrice(state, action: PayloadAction<number>) {
       state.price = action.payload;
     },
-    updateQuantity(state, action) {
+    updateQuantity(state, action: PayloadAction<number>) {
       state.quantity = action.payload;
     },
   },
