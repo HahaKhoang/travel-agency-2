@@ -1,6 +1,19 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
-const initialState = {
+type tourInitialState = {
+  id: number;
+  name: string;
+  slug: string;
+  duration: number;
+  quantity: number;
+  price: number;
+  totalPrice: number;
+  accommodationFee: boolean;
+  flightFee: boolean;
+  reservationFee: boolean;
+};
+
+const initialState: tourInitialState = {
   id: 2,
   name: "Japan Test",
   slug: "japan-test",
@@ -17,7 +30,7 @@ const tourSlice = createSlice({
   name: "tour",
   initialState,
   reducers: {
-    addTour(state, action) {
+    addTour(_, action: PayloadAction<tourInitialState>) {
       return {
         id: action.payload.id,
         name: action.payload.name,
@@ -31,16 +44,16 @@ const tourSlice = createSlice({
         reservationFee: false,
       };
     },
-    updateQuantity(state, action) {
+    updateQuantity(state, action: PayloadAction<number>) {
       state.quantity = action.payload;
     },
-    updateAccommodation(state, action) {
+    updateAccommodation(state, action: PayloadAction<boolean>) {
       state.accommodationFee = action.payload;
     },
-    updateFlight(state, action) {
+    updateFlight(state, action: PayloadAction<boolean>) {
       state.flightFee = action.payload;
     },
-    updateReservations(state, action) {
+    updateReservations(state, action: PayloadAction<boolean>) {
       state.reservationFee = action.payload;
     },
   },
