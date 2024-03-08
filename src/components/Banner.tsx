@@ -1,6 +1,15 @@
 import styles from "./Banner.module.scss";
 
-function Banner({ h1, text1, text2, svg, bgColor, bgImg }) {
+type BannerProps = {
+  h1: string;
+  text1: string;
+  text2: string;
+  svg: string;
+  bgColor: string;
+  bgImg: string;
+};
+
+function Banner({ h1, text1, text2, svg, bgColor, bgImg }: BannerProps) {
   return (
     <div
       className={styles.container}
