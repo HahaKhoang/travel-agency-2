@@ -1,6 +1,6 @@
 import { FormProvider, useForm } from "react-hook-form";
 import FormInput from "../../components/FormInput.tsx";
-import styles from "./SurpriseForm.module.scss";
+import styles from "./SurpriseBookingForm.module.scss";
 import { useState } from "react";
 import Modal from "../../components/Modal.tsx";
 import FormField from "../../components/FormField.tsx";
@@ -31,7 +31,7 @@ const tourTypes = [
   { label: "Undecided" },
 ];
 
-function SurpriseForm() {
+function SurpriseBookingForm() {
   const [showModal, setShowModal] = useState(false);
   const methods = useForm();
   const {
@@ -267,4 +267,4 @@ function SurpriseForm() {
   );
 }
 
-export default SurpriseForm;
+export default SurpriseBookingForm;
