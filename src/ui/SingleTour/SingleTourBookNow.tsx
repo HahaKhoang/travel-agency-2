@@ -1,11 +1,27 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./SingleTourBookNow.module.scss";
+import { MouseEvent } from "react";
 
-function SingleTourBookNow({ duration, price, cities, category, slug }) {
+type SingleTourBookNowProps = {
+  duration: number;
+  price: number;
+  cities: string[];
+  category: string;
+  slug: string;
+};
+
+function SingleTourBookNow({
+  duration,
+  price,
+  cities,
+  category,
+  slug,
+}: SingleTourBookNowProps) {
   const navigate = useNavigate();
   const formattedCities = cities.join(", ");
   const day = duration < 2 ? "day" : "days";
-  function onClick(e) {
+
+  function onClick(e: MouseEvent) {
     e.preventDefault();
     navigate(`/booking/${slug}`);
   }
