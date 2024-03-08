@@ -1,6 +1,12 @@
 import styles from "./CarouselItem.module.scss";
 
-function CarouselItem({ name, tour, image }) {
+type CarouselItemProps = {
+  name: string;
+  tour: string;
+  image: string;
+};
+
+function CarouselItem({ name, tour, image }: CarouselItemProps) {
   return (
     <div className={styles.container}>
       <div className={styles["left-container"]}>
