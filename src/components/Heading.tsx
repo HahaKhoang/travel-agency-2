@@ -1,6 +1,13 @@
 import styles from "./Heading.module.scss";
 
-function Heading({ text1, text2, bgColor, fontColor }) {
+type HeadingProps = {
+  text1: string;
+  text2: string;
+  bgColor: string;
+  fontColor: string;
+};
+
+function Heading({ text1, text2, bgColor, fontColor }: HeadingProps) {
   return (
     <div
       className={styles.container}
