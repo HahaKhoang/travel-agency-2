@@ -1,7 +1,19 @@
 import { NavLink } from "react-router-dom";
 import styles from "./SurpriseTypeCards.module.scss";
 
-function SurpriseTypeCards({ icon, title, description, budget }) {
+type SurpriseTypeCardsProps = {
+  icon: string;
+  title: string;
+  description: string;
+  budget: number;
+};
+
+function SurpriseTypeCards({
+  icon,
+  title,
+  description,
+  budget,
+}: SurpriseTypeCardsProps) {
   return (
     <div className={styles.types}>
       <div className={styles.illustration}>
