@@ -1,25 +1,29 @@
 import styles from "./TourBookingSummary.module.scss";
 import { useAppSelector } from "../../store/hooks";
 
-import night from "../../assets/img/website/night.jpg";
+function TourBookingSummary({ tour }) {
+  const { tourName, price, duration, imageWelcome } = tour;
 
-function TourBookingSummary() {
-  const { duration, quantity, price } = useAppSelector((state) => state.tour);
+  const { quantity, accommodationFee, flightFee, reservationFee } =
+    useAppSelector((state) => state.tour);
+
   const day = duration < 2 ? "day" : "days";
   const durationField = duration === 0 ? "I'm flexible" : `${duration} ${day}`;
+  console.log(tour);
 
   const tourTotal = price * quantity;
-  const deposit = Math.floor(tourTotal / 3);
-  const finalPayment = Math.ceil(tourTotal - deposit);
+  const totalPrice = accommodationFee ? tourTotal + 90 : tourTotal;
+  const totalPrice2 = flightFee ? totalPrice + 140 : totalPrice;
+  const totalPrice3 = reservationFee ? totalPrice2 + 130 : totalPrice2;
 
   return (
     <div className={styles.container}>
       <div className={styles.box}>
         <div className={styles["picture-container"]}>
-          <img src={night} className={styles.picture} />
+          <img src={imageWelcome} className={styles.picture} />
         </div>
 
-        <h3>Surprise trip</h3>
+        <h3>{tourName}</h3>
         <div className={styles["details-container"]}>
           <div className={styles.details}>
             <p>Price</p>
@@ -40,29 +44,35 @@ function TourBookingSummary() {
             <p>Tour x{quantity}</p>
             <p className={styles.content}>${tourTotal}</p>
           </div>
+          {accommodationFee && (
+            <div className={styles.breakdown}>
+              <p>Accommodation booking service</p>
+              <p className={styles.content}>$90</p>
+            </div>
+          )}
+          {flightFee && (
+            <div className={styles.breakdown}>
+              <p>Flight booking service</p>
+              <p className={styles.content}>$140</p>
+            </div>
+          )}
+          {reservationFee && (
+            <div className={styles.breakdown}>
+              <p>Reservation booking service</p>
+              <p className={styles.content}>$130</p>
+            </div>
+          )}
 
           <div className={styles["total-container"]}>
-            <>
-              <div className={styles.breakdown}>
-                <p>Deposit</p>
-                <p className={styles.content}>${deposit}</p>
-              </div>
-              <div className={styles.breakdown}>
-                <p>Final Payment</p>
-                <p className={styles.content}>${finalPayment}</p>
-              </div>
-            </>
-
             <div className={styles.total}>
               <p>Total</p>
-              <p>${tourTotal}</p>
+              <p>${totalPrice3}</p>
             </div>
           </div>
         </div>
         <p className={styles.disclaimer}>
-          *Flights and accommodation are included in the final price. A 30%
-          deposit is required and the remaining 70% will be invoiced before we
-          send you the final details of your trip.
+          *Price does not include flight, accommodation, or additional costs.
+          The total cost only covers the itinerary and any additional features.
         </p>
       </div>
     </div>

@@ -20,7 +20,7 @@ function Booking() {
       />
       <BookingContainer>
         <TourBookingForm />
-        <TourBookingSummary />
+        <TourBookingSummary tour={tour} />
       </BookingContainer>
     </div>
   );
