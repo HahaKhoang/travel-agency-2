@@ -1,7 +1,9 @@
 import Banner from "../components/Banner.tsx";
 import customizedBooking from "../assets/img/undraw/customizedBooking.svg";
-import CustomizedBookingContainer from "../ui/CustomizedBooking/CustomizedBookingContainer";
 import Subheading from "../components/Subheading.tsx";
+import BookingContainer from "../components/BookingContainer.tsx";
+import CustomizedBookingForm from "../ui/CustomizedBooking/CustomizedBookingForm.tsx";
+import CustomizedBookingSummary from "../ui/CustomizedBooking/CustomizedBookingSummary.tsx";
 
 function CustomizedBooking() {
   return (
@@ -16,7 +18,10 @@ function CustomizedBooking() {
         h1="In order to perfect your customized tour, we will need some details about your dream trip 💕"
         h3="Please fill out the form below so we can get more details about your preferences and tastes"
       />
-      <CustomizedBookingContainer />
+      <BookingContainer>
+        <CustomizedBookingForm />
+        <CustomizedBookingSummary />
+      </BookingContainer>
     </div>
   );
 }

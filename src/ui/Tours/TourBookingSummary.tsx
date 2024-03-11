@@ -4,9 +4,7 @@ import { useAppSelector } from "../../store/hooks";
 import night from "../../assets/img/website/night.jpg";
 
 function TourBookingSummary() {
-  const { duration, quantity, price } = useAppSelector(
-    (state) => state.surprise
-  );
+  const { duration, quantity, price } = useAppSelector((state) => state.tour);
   const day = duration < 2 ? "day" : "days";
   const durationField = duration === 0 ? "I'm flexible" : `${duration} ${day}`;
 

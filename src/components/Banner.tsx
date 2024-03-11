@@ -3,10 +3,10 @@ import styles from "./Banner.module.scss";
 type BannerProps = {
   h1: string;
   text1: string;
-  text2: string;
+  text2?: string;
   svg: string;
   bgColor: string;
-  bgImg: string;
+  bgImg?: string;
 };
 
 function Banner({ h1, text1, text2, svg, bgColor, bgImg }: BannerProps) {

@@ -1,7 +1,9 @@
 import Banner from "../components/Banner.tsx";
 import SurpriseBookingHeader from "../ui/SurpriseBookingHeader";
 import surpriseBooking from "../assets/img/undraw/surpriseBooking.svg";
-import SurpriseBookingContainer from "../ui/SurpriseBooking/SurpriseBookingContainer";
+import BookingContainer from "../components/BookingContainer.tsx";
+import SurpriseBookingForm from "../ui/SurpriseBooking/SurpriseBookingForm.tsx";
+import SurpriseBookingSummary from "../ui/SurpriseBooking/SurpriseBookingSummary.tsx";
 
 function SurpriseBooking() {
   return (
@@ -14,7 +16,10 @@ function SurpriseBooking() {
         bgColor="var(--color-red-dark)"
       />
       {/* <SurpriseBookingHeader /> */}
-      <SurpriseBookingContainer />
+      <BookingContainer>
+        <SurpriseBookingForm />
+        <SurpriseBookingSummary />
+      </BookingContainer>
     </div>
   );
 }
