@@ -3,13 +3,20 @@ import { RiCloseFill } from "react-icons/ri";
 import { createPortal } from "react-dom";
 import { useEffect, useRef } from "react";
 
-function Modal({ onClose, img, header, text }) {
-  const ref = useRef();
+type ModalProps = {
+  onClose: () => void;
+  img: string;
+  header: string;
+  text: string;
+};
+
+function Modal({ onClose, img, header, text }: ModalProps) {
+  const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(
     function () {
-      function handleClick(e) {
-        if (ref.current && !ref.current.contains(e.target)) {
+      function handleClick(e: MouseEvent) {
+        if (ref.current && !ref.current.contains(e.target as Node)) {
           onClose();
         }
       }
