@@ -1,5 +1,5 @@
-import { ReactNode } from "react";
 import styles from "./BookingContainer.module.scss";
+import { ReactNode } from "react";
 
 type BookingContainerProps = {
   children: ReactNode;

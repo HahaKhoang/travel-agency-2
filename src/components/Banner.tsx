@@ -42,5 +42,3 @@ function Banner({ h1, text1, text2, svg, bgColor, bgImg }: BannerProps) {
 }
 
 export default Banner;
-
-// style={{ backgroundColor: `${bgColor}` }}

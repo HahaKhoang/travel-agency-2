@@ -1,5 +1,5 @@
-import { RiArrowDownSLine } from "react-icons/ri";
 import styles from "./AccordionItem.module.scss";
+import { RiArrowDownSLine } from "react-icons/ri";
 import { type ReactNode, useRef } from "react";
 
 type AccordionItemProps = {

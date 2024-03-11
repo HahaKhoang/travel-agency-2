@@ -1,5 +1,18 @@
-import { NavLink } from "react-router-dom";
 import styles from "./ExpandingCardItem.module.scss";
+import { NavLink } from "react-router-dom";
+import { type ReactNode } from "react";
+
+type ExpandingCardItemsProps = {
+  img: string;
+  text: string;
+  key: string;
+  num: number;
+  desc: string;
+  icon: ReactNode;
+  link: string;
+  curActive: number;
+  onActive: (num: number) => void;
+};
 
 function ExpandingCardItem({
   curActive,
@@ -10,7 +23,7 @@ function ExpandingCardItem({
   desc,
   icon,
   link,
-}) {
+}: ExpandingCardItemsProps) {
   const isOpen = num === curActive;
 
   function handleToggle() {

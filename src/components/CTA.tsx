@@ -1,5 +1,5 @@
-import { NavLink } from "react-router-dom";
 import styles from "./CTA.module.scss";
+import { NavLink } from "react-router-dom";
 
 type CTAProps = {
   h1: string;

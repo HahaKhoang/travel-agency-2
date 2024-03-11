@@ -1,10 +1,10 @@
+import styles from "./Carousel.module.scss";
 import review1 from "../assets/img/people/review1.jpg";
 import review2 from "../assets/img/people/review2.jpg";
 import review3 from "../assets/img/people/review3.jpg";
 import review4 from "../assets/img/people/review4.jpg";
 import jk4 from "../assets/img/people/jk4.jpg";
 import CarouselItem from "./CarouselItem";
-import styles from "./Carousel.module.scss";
 import { useState } from "react";
 import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
 

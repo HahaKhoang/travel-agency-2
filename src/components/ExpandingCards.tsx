@@ -62,7 +62,7 @@ const tours = [
 ];
 
 function ExpandingCards() {
-  const [curActive, setCurActive] = useState(0);
+  const [curActive, setCurActive] = useState<number>(0);
 
   return (
     <div className={styles.container}>
@@ -73,11 +73,11 @@ function ExpandingCards() {
           key={el.text}
           num={i}
           desc={el.desc}
-          curActive={curActive}
-          onActive={setCurActive}
           icon={el.icon}
           link={el.link}
-        ></ExpandingCardItem>
+          curActive={curActive}
+          onActive={setCurActive}
+        />
       ))}
     </div>
   );
