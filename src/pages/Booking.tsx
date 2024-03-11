@@ -1,7 +1,7 @@
 import Banner from "../components/Banner.tsx";
 import LoadingSpinner from "../components/LoadingSpinner.tsx";
 import { useSingleTour } from "../features/tours/useSingleTour.js";
-import TourBookingContainer from "../components/TourBookingContainer.tsx";
+import TourBookingContainer from "../ui/Tours/TourBookingContainer.tsx";
 
 function Booking() {
   const { isLoading, tour } = useSingleTour();

@@ -1,7 +1,7 @@
 .container {
   background-color: var(--color-blue-dark);
   display: flex;
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   gap: 5rem;
 
@@ -10,7 +10,16 @@
     gap: 5rem;
   }
 
+  @media (max-width: 1400px) {
+    width: calc(100% - 12rem);
+    gap: 5rem;
+  }
+
   @media (max-width: 1000px) {
     flex-direction: column-reverse;
+  }
+
+  @media (max-width: 800px) {
+    width: calc(100% - 4rem);
   }
 }
