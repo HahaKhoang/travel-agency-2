@@ -1,15 +1,24 @@
 import styles from "./TourBookingSummary.module.scss";
 import { useAppSelector } from "../../store/hooks";
 
-function TourBookingSummary({ tour }) {
-  const { tourName, price, duration, imageWelcome } = tour;
+type TourBookingSummaryProps = {
+  tourName: string;
+  price: number;
+  duration: number;
+  imageWelcome: string;
+};
 
+function TourBookingSummary({
+  tourName,
+  price,
+  duration,
+  imageWelcome,
+}: TourBookingSummaryProps) {
   const { quantity, accommodationFee, flightFee, reservationFee } =
     useAppSelector((state) => state.tour);
 
   const day = duration < 2 ? "day" : "days";
   const durationField = duration === 0 ? "I'm flexible" : `${duration} ${day}`;
-  console.log(tour);
 
   const tourTotal = price * quantity;
   const totalPrice = accommodationFee ? tourTotal + 90 : tourTotal;

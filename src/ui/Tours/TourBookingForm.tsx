@@ -12,7 +12,7 @@ import {
   updateReservations,
 } from "../../store/tourSlice.tsx";
 
-function TourBookingForm() {
+function TourBookingForm({ tour }) {
   const [showModal, setShowModal] = useState(false);
   const methods = useForm();
   const {
@@ -20,6 +20,7 @@ function TourBookingForm() {
     reset,
     formState: { errors },
   } = methods;
+  const { tourName, imageWelcome } = tour;
 
   const dispatch = useAppDispatch();
 
@@ -39,9 +40,9 @@ function TourBookingForm() {
         {showModal && (
           <Modal
             onClose={() => setShowModal(false)}
-            header="Thank you for booking a surprise trip with us!"
+            header={`Thank you for booking ${tourName} with us!`}
             text="We will send you a confirmation email with all your details shortly"
-            img={map}
+            img={imageWelcome}
           />
         )}
         <form
