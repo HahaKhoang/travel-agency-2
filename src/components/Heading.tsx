@@ -2,8 +2,8 @@ import styles from "./Heading.module.scss";
 
 type HeadingProps = {
   text1: string;
-  text2: string;
-  bgColor: string;
+  text2?: string;
+  bgColor?: string;
   fontColor: string;
 };
 

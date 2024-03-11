@@ -2,7 +2,14 @@ import { NavLink } from "react-router-dom";
 import styles from "./InspirationCard.module.scss";
 import { RiMapPin2Line } from "react-icons/ri";
 
-function TourCard({ name, location, img, slug }) {
+type InspirationCardProps = {
+  name: string;
+  location: string;
+  img: string;
+  slug: string;
+};
+
+function InspirationCard({ name, location, img, slug }: InspirationCardProps) {
   return (
     <>
       <div className={styles.container}>
@@ -26,4 +33,4 @@ function TourCard({ name, location, img, slug }) {
   );
 }
 
-export default TourCard;
+export default InspirationCard;
