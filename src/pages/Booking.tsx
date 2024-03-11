@@ -7,17 +7,18 @@ import TourBookingSummary from "../ui/Tours/TourBookingSummary.tsx";
 
 function Booking() {
   const { isLoading, tour } = useSingleTour();
-  const { tourName, price, duration, imageWelcome } = tour;
+  const { tourName, welcome, country, price, duration, imageWelcome, imageBG } =
+    tour;
 
   if (isLoading) return <LoadingSpinner />;
 
   return (
     <div>
       <Banner
-        h1={tour.tourName}
-        text1={`${tour.welcome}!`}
-        text2={`Welcome to ${tour.country}!`}
-        bgImg={tour.imageWelcome}
+        h1={tourName}
+        text1={welcome}
+        text2={`Welcome to ${country}!`}
+        bgImg={imageBG}
       />
       <BookingContainer>
         <TourBookingForm tour={tour} />
