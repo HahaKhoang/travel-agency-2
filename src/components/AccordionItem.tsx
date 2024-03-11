@@ -2,17 +2,23 @@ import { RiArrowDownSLine } from "react-icons/ri";
 import styles from "./AccordionItem.module.scss";
 import { type ReactNode, useRef } from "react";
 
-// type AccordionItemProps = {
-//   num: number;
-//   title: string;
-//   curOpen: boolean;
-//   onOpen: () => void;
-//   children: ReactNode;
-// };
+type AccordionItemProps = {
+  num: number;
+  title: string;
+  curOpen: number | null;
+  onOpen: (arg: number | null) => void;
+  children: ReactNode;
+};
 
-function AccordionItem({ num, title, curOpen, onOpen, children }) {
+function AccordionItem({
+  num,
+  title,
+  curOpen,
+  onOpen,
+  children,
+}: AccordionItemProps) {
   const isOpen = num === curOpen;
-  const contentEl = useRef();
+  const contentEl = useRef<HTMLDivElement | null>(null);
 
   function handleToggle() {
     onOpen(isOpen ? null : num);
@@ -47,7 +53,7 @@ function AccordionItem({ num, title, curOpen, onOpen, children }) {
         className={textOpen}
         style={
           isOpen
-            ? { height: contentEl.current.scrollHeight }
+            ? { height: contentEl.current?.scrollHeight }
             : { height: "0px" }
         }
       >

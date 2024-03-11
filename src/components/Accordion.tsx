@@ -34,7 +34,9 @@ const data = [
 ];
 
 function Accordion() {
-  const [curOpen, setCurOpen] = useState(null);
+  const [curOpen, setCurOpen] = useState<number | null>(null);
+
+  console.log(curOpen);
 
   return (
     <ul className={styles.container}>
