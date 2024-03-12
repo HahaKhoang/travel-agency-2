@@ -12,7 +12,7 @@ const RotatingWords = () => {
     "party",
   ]);
 
-  const wrapperRef = useRef();
+  const wrapperRef = useRef<HTMLDivElement>(null);
 
   const handleAnim = () => {
     setTimeout(() => {

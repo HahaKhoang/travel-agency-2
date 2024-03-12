@@ -12,7 +12,7 @@ export async function getAllTours() {
   return data;
 }
 
-export async function getTour(slug) {
+export async function getTour(slug: string) {
   const { data: tour, error } = await supabase
     .from("tours")
     .select("*")

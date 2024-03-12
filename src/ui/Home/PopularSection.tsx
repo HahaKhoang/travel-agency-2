@@ -13,7 +13,7 @@ function PopularSection() {
 
   return (
     <div className={styles.container}>
-      {popularTours.map((el, i) => (
+      {popularTours?.map((el, i) => (
         <div className={styles["rank-container"]} key={i}>
           <div className={styles["picture-container"]}>
             <NavLink

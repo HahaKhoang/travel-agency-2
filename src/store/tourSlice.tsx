@@ -5,12 +5,12 @@ type tourInitialState = {
   name: string;
   slug: string;
   duration: number;
-  quantity: number;
+  quantity?: number;
   price: number;
   totalPrice: number;
-  accommodationFee: boolean;
-  flightFee: boolean;
-  reservationFee: boolean;
+  accommodationFee?: boolean;
+  flightFee?: boolean;
+  reservationFee?: boolean;
 };
 
 const initialState: tourInitialState = {
