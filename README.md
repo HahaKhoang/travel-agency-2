@@ -1,30 +1,12 @@
-# React + TypeScript + Vite
+# Tabi Tomodachi
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+https://tabi-tomodachi.netlify.app/
 
-Currently, two official plugins are available:
+Tabi Tomodachi is a travel consultancy website.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- It is a multi-page application built using React, Vite, Typescript, and Sass
+- It implements a backend using React Query and Supabase
+- Redux is used to manage the booking state for tours
+- React-hook-form library was used to create the form components
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Photos used in this project come from Unsplash and Pexel.
