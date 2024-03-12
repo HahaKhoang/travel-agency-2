@@ -33,15 +33,17 @@ function TourContainer() {
   const sortBy = searchParams.get("sortBy") || "name-asc";
   const [field, direction] = sortBy.split("-");
   const modifier = direction === "asc" ? 1 : -1;
-  function compare(a, b) {
-    if (a["name"] < b["name"]) {
+
+  function compare(a: { tourName: string }, b: { tourName: string }) {
+    if (a["tourName"] < b["tourName"]) {
       return -1 * modifier;
     }
-    if (a["name"] > b["name"]) {
+    if (a["tourName"] > b["tourName"]) {
       return 1 * modifier;
     }
     return 0;
   }
+
   const sortedTours =
     field === "name"
       ? filteredTours?.sort(compare)
