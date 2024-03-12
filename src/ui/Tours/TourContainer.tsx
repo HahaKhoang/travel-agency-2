@@ -17,17 +17,17 @@ function TourContainer() {
   let filteredTours;
   if (filterValue === "all") filteredTours = tours;
   if (filterValue === "nature")
-    filteredTours = tours.filter((tour) => tour.category === "nature");
+    filteredTours = tours?.filter((tour) => tour.category === "nature");
   if (filterValue === "shopping")
-    filteredTours = tours.filter((tour) => tour.category === "shopping");
+    filteredTours = tours?.filter((tour) => tour.category === "shopping");
   if (filterValue === "nightlife")
-    filteredTours = tours.filter((tour) => tour.category === "nightlife");
+    filteredTours = tours?.filter((tour) => tour.category === "nightlife");
   if (filterValue === "culture")
-    filteredTours = tours.filter((tour) => tour.category === "culture");
+    filteredTours = tours?.filter((tour) => tour.category === "culture");
   if (filterValue === "food")
-    filteredTours = tours.filter((tour) => tour.category === "food");
+    filteredTours = tours?.filter((tour) => tour.category === "food");
   if (filterValue === "everything")
-    filteredTours = tours.filter((tour) => tour.category === "everything");
+    filteredTours = tours?.filter((tour) => tour.category === "everything");
 
   // SORT
   const sortBy = searchParams.get("sortBy") || "name-asc";
@@ -44,8 +44,8 @@ function TourContainer() {
   }
   const sortedTours =
     field === "name"
-      ? filteredTours.sort(compare)
-      : filteredTours.sort((a, b) => (a[field] - b[field]) * modifier);
+      ? filteredTours?.sort(compare)
+      : filteredTours?.sort((a, b) => (a[field] - b[field]) * modifier);
 
   return (
     <>
@@ -88,7 +88,7 @@ function TourContainer() {
         ]}
       />
       <section className={styles.container}>
-        {sortedTours.map((el, i) => (
+        {sortedTours?.map((el, i) => (
           <TourCard
             key={i}
             name={el.tourName}

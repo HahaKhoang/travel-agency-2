@@ -1,11 +1,21 @@
 import { useSearchParams } from "react-router-dom";
 import styles from "./Filter.module.scss";
 
-function Filter({ filterField, options }) {
+type FilterOptionsProps = {
+  value: string;
+  label: string;
+};
+
+type FilterProps = {
+  filterField: string;
+  options: FilterOptionsProps[];
+};
+
+function Filter({ filterField, options }: FilterProps) {
   const [searchParams, setSearchParams] = useSearchParams();
   const currentFilter = searchParams.get(filterField) || options[0].value;
 
-  function handleClick(value) {
+  function handleClick(value: string) {
     searchParams.set(filterField, value);
     setSearchParams(searchParams);
   }
