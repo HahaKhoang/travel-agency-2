@@ -10,7 +10,7 @@ type OptionsProps = {
 type SelectProps = {
   filterField: string;
   filterOptions: OptionsProps[];
-  sortByOptions: OptionsProps[];
+  sortByOptions?: OptionsProps[];
 };
 
 function Select({ filterField, filterOptions, sortByOptions }: SelectProps) {

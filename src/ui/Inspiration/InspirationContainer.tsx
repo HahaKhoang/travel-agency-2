@@ -6,7 +6,7 @@ import LoadingSpinner from "../../components/LoadingSpinner.tsx";
 import Select from "../../components/Select.tsx";
 
 function InspirationContainer() {
-  const { isLoading, inspiration, error } = useInspiration();
+  const { isLoading, inspiration } = useInspiration();
   const [searchParams] = useSearchParams();
 
   if (isLoading) return <LoadingSpinner />;
@@ -17,27 +17,27 @@ function InspirationContainer() {
   let filteredInspiration;
   if (filterValue === "all") filteredInspiration = inspiration;
   if (filterValue === "asia")
-    filteredInspiration = inspiration.filter(
+    filteredInspiration = inspiration?.filter(
       (tour) => tour.continent === "asia"
     );
   if (filterValue === "north-america")
-    filteredInspiration = inspiration.filter(
+    filteredInspiration = inspiration?.filter(
       (tour) => tour.continent === "north-america"
     );
   if (filterValue === "south-america")
-    filteredInspiration = inspiration.filter(
+    filteredInspiration = inspiration?.filter(
       (tour) => tour.continent === "south-america"
     );
   if (filterValue === "europe")
-    filteredInspiration = inspiration.filter(
+    filteredInspiration = inspiration?.filter(
       (tour) => tour.continent === "europe"
     );
   if (filterValue === "africa")
-    filteredInspiration = inspiration.filter(
+    filteredInspiration = inspiration?.filter(
       (tour) => tour.continent === "africa"
     );
   if (filterValue === "oceania")
-    filteredInspiration = inspiration.filter(
+    filteredInspiration = inspiration?.filter(
       (tour) => tour.continent === "oceania"
     );
 
@@ -56,7 +56,7 @@ function InspirationContainer() {
         ]}
       />
       <div className={styles.container}>
-        {filteredInspiration.map((el) => (
+        {filteredInspiration?.map((el) => (
           <InspirationCard
             name={el.name}
             location={el.location}

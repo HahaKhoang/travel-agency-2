@@ -7,6 +7,7 @@ type InspirationCardProps = {
   location: string;
   img: string;
   slug: string;
+  continent?: string;
 };
 
 function InspirationCard({ name, location, img, slug }: InspirationCardProps) {
