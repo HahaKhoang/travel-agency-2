@@ -22,7 +22,15 @@ type DataType = {
   reservation: "reservation-yes" | "reservation-no";
 };
 
-function TourBookingForm({ tour }) {
+type TourBookingFormProps = {
+  tour: {
+    tourName: string;
+    imageWelcome: string;
+  };
+};
+
+function TourBookingForm({ tour }: TourBookingFormProps) {
+  console.log(tour);
   const [showModal, setShowModal] = useState(false);
   const methods = useForm<DataType>();
   const {
