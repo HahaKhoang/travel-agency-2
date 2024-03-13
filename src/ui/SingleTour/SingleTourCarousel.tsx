@@ -1,7 +1,11 @@
 import styles from "./SingleTourCarousel.module.scss";
 import { useEffect, useState } from "react";
 
-function SingleTourCarousel({ carousel }) {
+type SingleTourCarouselProps = {
+  carousel: { img: string; title: string; location: string; color: string }[];
+};
+
+function SingleTourCarousel({ carousel }: SingleTourCarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const length = carousel.length - 1;
 

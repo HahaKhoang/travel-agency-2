@@ -37,9 +37,9 @@ function SingleTourContainer() {
     "var(--color-blue-light)",
   ];
 
-  const carousel = carouselImages.map(function (x, i) {
+  const carousel = carouselImages.map((el: string, i: number) => {
     return {
-      img: x,
+      img: el,
       title: carouselTitles[i],
       location: carouselLocations[i],
       color: bgColors[i],
