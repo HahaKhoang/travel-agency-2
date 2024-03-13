@@ -33,9 +33,25 @@ const tourTypes = [
   { label: "Undecided" },
 ];
 
+type DataType = {
+  name: string;
+  email: string;
+  phone: string;
+  category: string[];
+  tourType: string;
+  duration: string;
+  people: string;
+  child: "child-yes" | "child-no";
+  countries: string;
+  accommodation: "accommodation-yes" | "accommodation-no";
+  flight: "flight-yes" | "flight-no";
+  reservation: "reservation-yes" | "reservation-no";
+  comments?: string;
+};
+
 function CustomizedBookingForm() {
   const [showModal, setShowModal] = useState(false);
-  const methods = useForm();
+  const methods = useForm<DataType>();
   const {
     handleSubmit,
     reset,
@@ -44,13 +60,13 @@ function CustomizedBookingForm() {
 
   const dispatch = useAppDispatch();
 
-  function onSubmit(data) {
+  function onSubmit(data: DataType) {
     console.log(data);
     setShowModal(true);
     reset();
   }
 
-  function onError(errors) {
+  function onError(errors: {}) {
     console.log(errors);
   }
 

@@ -12,9 +12,19 @@ import {
   updateReservations,
 } from "../../store/tourSlice.tsx";
 
+type DataType = {
+  name: string;
+  email: string;
+  phone: string;
+  people: string;
+  accommodation: "accommodation-yes" | "accommodation-no";
+  flight: "flight-yes" | "flight-no";
+  reservation: "reservation-yes" | "reservation-no";
+};
+
 function TourBookingForm({ tour }) {
   const [showModal, setShowModal] = useState(false);
-  const methods = useForm();
+  const methods = useForm<DataType>();
   const {
     handleSubmit,
     reset,
@@ -24,13 +34,13 @@ function TourBookingForm({ tour }) {
 
   const dispatch = useAppDispatch();
 
-  function onSubmit(data) {
+  function onSubmit(data: DataType) {
     console.log(data);
     setShowModal(true);
     reset();
   }
 
-  function onError(errors) {
+  function onError(errors: {}) {
     console.log(errors);
   }
 

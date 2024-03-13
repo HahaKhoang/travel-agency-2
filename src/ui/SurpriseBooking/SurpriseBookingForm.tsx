@@ -31,9 +31,25 @@ const tourTypes = [
   { label: "Undecided" },
 ];
 
+type DataType = {
+  name: string;
+  email: string;
+  phone: string;
+  category: string[];
+  tourType: string;
+  duration: string;
+  budget: string;
+  people: string;
+  child: "child-yes" | "child-no";
+  interests?: string;
+  avoid?: string;
+  disabilities?: string;
+  comments?: string;
+};
+
 function SurpriseBookingForm() {
   const [showModal, setShowModal] = useState(false);
-  const methods = useForm();
+  const methods = useForm<DataType>();
   const {
     handleSubmit,
     reset,
@@ -42,13 +58,13 @@ function SurpriseBookingForm() {
 
   const dispatch = useAppDispatch();
 
-  function onSubmit(data) {
+  function onSubmit(data: DataType) {
     console.log(data);
     setShowModal(true);
     reset();
   }
 
-  function onError(errors) {
+  function onError(errors: {}) {
     console.log(errors);
   }
 
