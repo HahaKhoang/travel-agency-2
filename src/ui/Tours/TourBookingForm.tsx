@@ -30,7 +30,6 @@ type TourBookingFormProps = {
 };
 
 function TourBookingForm({ tour }: TourBookingFormProps) {
-  console.log(tour);
   const [showModal, setShowModal] = useState(false);
   const methods = useForm<DataType>();
   const {
