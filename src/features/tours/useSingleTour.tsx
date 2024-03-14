@@ -11,7 +11,7 @@ export function useSingleTour() {
     error,
   } = useQuery({
     queryKey: ["tour", slug],
-    queryFn: () => getTour(slug),
+    queryFn: () => getTour(slug!),
     retry: false,
   });
 
