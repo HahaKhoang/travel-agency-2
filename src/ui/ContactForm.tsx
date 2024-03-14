@@ -6,22 +6,29 @@ import contactModal from "../assets/img/website/contactModal.jpg";
 import FormField from "../components/FormField.tsx";
 import FormInput from "../components/FormInput.tsx";
 
+type DataType = {
+  name: string;
+  email: string;
+  reason?: string;
+  question?: string;
+};
+
 function ContactForm() {
   const [showModal, setShowModal] = useState(false);
-  const methods = useForm();
+  const methods = useForm<DataType>();
   const {
     handleSubmit,
     reset,
     formState: { errors },
   } = methods;
 
-  function onSubmit(data) {
+  function onSubmit(data: DataType) {
     console.log(data);
     setShowModal(true);
     reset();
   }
 
-  function onError(errors) {
+  function onError(errors: {}) {
     console.log(errors);
   }
 
@@ -46,7 +53,7 @@ function ContactForm() {
               id="name"
               error={errors?.name?.message?.toString()}
             >
-              <FormInput type="input" id="name" />
+              <FormInput type="input" id="name" required={true} />
             </FormField>
 
             <FormField
@@ -54,7 +61,7 @@ function ContactForm() {
               id="email"
               error={errors?.email?.message?.toString()}
             >
-              <FormInput type="input" id="email" />
+              <FormInput type="input" id="email" required={true} />
             </FormField>
 
             <FormField
