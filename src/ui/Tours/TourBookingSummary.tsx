@@ -20,7 +20,7 @@ function TourBookingSummary({
   const day = duration < 2 ? "day" : "days";
   const durationField = duration === 0 ? "I'm flexible" : `${duration} ${day}`;
 
-  const tourTotal = price * quantity;
+  const tourTotal = price * quantity!;
   const totalPrice = accommodationFee ? tourTotal + 90 : tourTotal;
   const totalPrice2 = flightFee ? totalPrice + 140 : totalPrice;
   const totalPrice3 = reservationFee ? totalPrice2 + 130 : totalPrice2;
