@@ -1,9 +1,18 @@
-import { useNavigate, useRouteError } from "react-router-dom";
+import {
+  isRouteErrorResponse,
+  useNavigate,
+  useRouteError,
+} from "react-router-dom";
 
 function PageNotFound() {
   const navigate = useNavigate();
-  const error = useRouteError();
+  const error = useRouteError() as Error;
   console.log(error);
+
+  if (!isRouteErrorResponse(error)) {
+    return null;
+  }
+
   return (
     <div
       style={{
