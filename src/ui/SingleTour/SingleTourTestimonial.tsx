@@ -31,7 +31,7 @@ const reviews = [
   },
 ];
 
-function SingleTourTestimonial({ reviewImg }) {
+function SingleTourTestimonial({ reviewImg }: { reviewImg: string }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const length = reviews.length - 1;
 

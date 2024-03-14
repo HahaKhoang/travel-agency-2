@@ -1,6 +1,12 @@
 import styles from "./SingleTourHero.module.scss";
 
-function SingleTourHero({ img, title, text }) {
+type SingleTourHeroProps = {
+  img: string;
+  title: string;
+  text: string;
+};
+
+function SingleTourHero({ img, title, text }: SingleTourHeroProps) {
   return (
     <div
       className={styles.container}

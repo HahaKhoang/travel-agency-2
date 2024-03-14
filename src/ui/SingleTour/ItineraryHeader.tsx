@@ -1,10 +1,6 @@
 import styles from "./ItineraryHeader.module.scss";
 
-type ItineraryHeaderProps = {
-  header: string;
-};
-
-function ItineraryHeader({ header }: ItineraryHeaderProps) {
+function ItineraryHeader({ header }: { header: string }) {
   return (
     <div className={styles.container}>
       <h1 className={styles.header}>{header}</h1>

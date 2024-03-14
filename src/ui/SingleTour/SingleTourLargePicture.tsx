@@ -1,6 +1,16 @@
 import styles from "./SingleTourLargePicture.module.scss";
 
-function SingleTourLargePicture({ imageBG, imageHeader, imageText }) {
+type SingleTourLargePictureProps = {
+  imageBG: string;
+  imageHeader: string;
+  imageText: string;
+};
+
+function SingleTourLargePicture({
+  imageBG,
+  imageHeader,
+  imageText,
+}: SingleTourLargePictureProps) {
   return (
     <div className={styles.container}>
       <img src={imageBG} className={styles.picture} />
