@@ -3,6 +3,18 @@ import styles from "./TourCard.module.scss";
 import { NavLink } from "react-router-dom";
 import { addTour } from "../../store/tourSlice.tsx";
 
+type TourCardProps = {
+  mainImage: string;
+  name: string;
+  shortDesc: string;
+  duration: number;
+  category: string;
+  price: number;
+  country: string;
+  slug: string;
+  id: number;
+};
+
 function TourCard({
   mainImage,
   name,
@@ -13,7 +25,7 @@ function TourCard({
   country,
   slug,
   id,
-}) {
+}: TourCardProps) {
   const dispatch = useDispatch();
   const capitalized = category.charAt(0).toUpperCase() + category.slice(1);
   const day = duration < 2 ? "day" : "days";
