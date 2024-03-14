@@ -5,7 +5,7 @@ type SurpriseTypeCardsProps = {
   icon: string;
   title: string;
   description: string;
-  budget: number;
+  budget: string;
 };
 
 function SurpriseTypeCards({
