@@ -1,5 +1,4 @@
 import Banner from "../components/Banner.tsx";
-import SurpriseBookingHeader from "../ui/SurpriseBookingHeader";
 import surpriseBooking from "../assets/img/undraw/surpriseBooking.svg";
 import BookingContainer from "../components/BookingContainer.tsx";
 import SurpriseBookingForm from "../ui/SurpriseBooking/SurpriseBookingForm.tsx";
@@ -15,7 +14,6 @@ function SurpriseBooking() {
         svg={surpriseBooking}
         bgColor="var(--color-red-dark)"
       />
-      {/* <SurpriseBookingHeader /> */}
       <BookingContainer>
         <SurpriseBookingForm />
         <SurpriseBookingSummary />

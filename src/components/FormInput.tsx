@@ -71,11 +71,11 @@ function FormInput(
         <label className={styles["radio-label"]}>
           <input
             className={styles["radio-button"]}
-            type="radio"
-            id={props.id}
             value={props.label}
             {...register(`${props.id}`, { required: "Please select one" })}
             {...props}
+            type="radio"
+            id={props.id}
           />
           {props.label}
         </label>
@@ -87,9 +87,9 @@ function FormInput(
     return (
       <div className={styles["input-container"]}>
         <select
-          id={props.id}
           {...register(`${props.id}`, { required: "This field is required" })}
           {...props}
+          id={props.id}
         >
           {props.children}
         </select>
