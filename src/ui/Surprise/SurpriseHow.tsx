@@ -25,10 +25,15 @@ function SurpriseHow() {
       </div>
       <HowToSteps
         img1={bicycle}
+        img1Alt="Bicycle leaning against a cute boutique"
         img2={tent}
+        img2Alt="A tent at night"
         img3={trolley}
+        img3Alt="A trolley going up the road"
         img4={kayak}
+        img4Alt="A kayak in the water between mountains"
         img5={adventure}
+        img5Alt="A backpack, mug, and boots resting during a hike"
         fontColor="black"
         direction="left"
         button={false}

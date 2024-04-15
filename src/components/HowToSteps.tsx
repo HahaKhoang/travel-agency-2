@@ -7,10 +7,15 @@ type HowToProps = {
   direction: "right" | "left";
   button: boolean;
   img1: string;
+  img1Alt: string;
   img2: string;
+  img2Alt: string;
   img3: string;
+  img3Alt: string;
   img4: string;
+  img4Alt: string;
   img5: string;
+  img5Alt: string;
   step1text1: string;
   step1text2?: string;
   step2text1: string;
@@ -56,14 +61,22 @@ function HowToSteps(props: HowToProps) {
             )}
           </div>
           <div className={styles["step-1-picture-container"]}>
-            <img src={props.img1} className={styles.picture} />
+            <img
+              src={props.img1}
+              className={styles.picture}
+              alt={props.img1Alt}
+            />
           </div>
         </div>
         <div className={styles[`step-2-${props.direction}`]}>
           <div
             className={styles[`step-2-picture-container-${props.direction}`]}
           >
-            <img src={props.img2} className={styles.picture} />
+            <img
+              src={props.img2}
+              className={styles.picture}
+              alt={props.img2Alt}
+            />
           </div>
           <div className={styles[`step-2-text-container-${props.direction}`]}>
             <h2 className={styles.header}>Step 2</h2>
@@ -87,12 +100,20 @@ function HowToSteps(props: HowToProps) {
             <p className={styles.text}>{props.step3text2}</p>
           </div>
           <div className={styles["step-3-picture-container"]}>
-            <img src={props.img3} className={styles.picture} />
+            <img
+              src={props.img3}
+              className={styles.picture}
+              alt={props.img3Alt}
+            />
           </div>
         </div>
         <div className={styles[`step-4-${props.direction}`]}>
           <div className={styles["step-4-picture-container"]}>
-            <img src={props.img4} className={styles.picture} />
+            <img
+              src={props.img4}
+              className={styles.picture}
+              alt={props.img4Alt}
+            />
           </div>
           <div className={styles["step-4-text-container"]}>
             <h2 className={styles.header}>Step 4</h2>
@@ -107,7 +128,11 @@ function HowToSteps(props: HowToProps) {
             <p className={styles.text}>{props.step5text2}</p>
           </div>
           <div className={styles["step-5-picture-container"]}>
-            <img src={props.img5} className={styles.picture} />
+            <img
+              src={props.img5}
+              className={styles.picture}
+              alt={props.img5Alt}
+            />
           </div>
         </div>
       </div>

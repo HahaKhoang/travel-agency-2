@@ -22,10 +22,15 @@ function CustomizedContainer() {
         direction="right"
         button={true}
         img1={horseshoe}
+        img1Alt="Horseshoe bend in the US"
         img2={taipei}
+        img2Alt="Taipei night market"
         img3={machuPichu}
+        img3Alt="Machu Pichu"
         img4={capetown}
+        img4Alt="Capetown, South Africa"
         img5={tori}
+        img5Alt="Tori gate in a forest"
         step1text1=" Fill out a survey so we can get to know you better"
         step1text2="The more details you provide, the more customizations we can
         provide"
