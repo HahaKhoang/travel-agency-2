@@ -9,6 +9,7 @@ function SurpriseTripTypes() {
       <Banner
         h1="Explore our different types of trips"
         svg={tripTypes}
+        bannerImg="Illustration of a person holding the world"
         bgColor="var(--color-blue-dark)"
       />
       <SurpriseTripTypesContainer />

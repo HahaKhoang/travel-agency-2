@@ -5,11 +5,20 @@ type BannerProps = {
   text1?: string;
   text2?: string;
   svg?: string;
+  bannerImg?: string;
   bgColor?: string;
   bgImg?: string;
 };
 
-function Banner({ h1, text1, text2, svg, bgColor, bgImg }: BannerProps) {
+function Banner({
+  h1,
+  text1,
+  text2,
+  svg,
+  bannerImg,
+  bgColor,
+  bgImg,
+}: BannerProps) {
   return (
     <div
       className={styles.container}
@@ -35,7 +44,9 @@ function Banner({ h1, text1, text2, svg, bgColor, bgImg }: BannerProps) {
         </div>
       </div>
       <div className={styles["image-container"]}>
-        {!bgImg && <img src={svg} className={styles.picture} />}
+        {!bgImg && (
+          <img src={svg} className={styles.picture} alt={`${bannerImg} `} />
+        )}
       </div>
     </div>
   );

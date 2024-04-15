@@ -8,6 +8,7 @@ function Reviews() {
       <Banner
         h1="See what our travelers love most about us!"
         svg={reviews}
+        bannerImg="Illustration of 2 people celebrating"
         bgColor="var(--color-red-dark)"
       />
       <ReviewsContainer />

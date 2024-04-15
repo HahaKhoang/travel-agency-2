@@ -10,6 +10,7 @@ function Tours() {
         text1="Browse through our selection of tours"
         text2="  If you can't find one to your liking, we also do customized tours!"
         svg={tour}
+        bannerImg="Illustration of a person looking at the world"
         bgColor="var(--color-red-dark)"
       />
       <TourContainer />

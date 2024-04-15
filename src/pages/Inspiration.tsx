@@ -9,6 +9,7 @@ function Inspiration() {
         h1="Looking for some inspiration?"
         text1="Check out some of the photos from our tours"
         svg={inspiration}
+        bannerImg="Illustration of a person holding heart balloons"
         bgColor="var(--color-red-dark)"
       />
       <InspirationContainer />

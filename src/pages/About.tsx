@@ -9,6 +9,7 @@ function About() {
         h1="Hi! It's nice to meet you!"
         text1="Let's get to know each other better"
         svg={about}
+        bannerImg="Illustration of 2 people high fiving"
         bgColor="var(--color-red-dark)"
       />
       <AboutContainer />

@@ -12,6 +12,7 @@ function CustomizedBooking() {
         h1="Tell us about yourself"
         text1="In order to perfect your customized tour, we'll need some details about your dream trip"
         svg={customizedBooking}
+        bannerImg="Illustration of a person with thumbs up and thumbs down for likes and dislikes"
         bgColor="var(--color-red-dark)"
       />
       <Subheading

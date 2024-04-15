@@ -12,6 +12,7 @@ function SurpriseBooking() {
         text1="Provide us with some basic details"
         text2="And let us handle the rest"
         svg={surpriseBooking}
+        bannerImg="Illustration of 2 people getting ready for a trip"
         bgColor="var(--color-red-dark)"
       />
       <BookingContainer>

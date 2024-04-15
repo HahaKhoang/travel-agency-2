@@ -10,6 +10,7 @@ function FAQ() {
         text1="Still have an unanswered question?"
         text2="Feel free to contact us"
         svg={faq}
+        bannerImg="Illustration of 2 people with a giant question mark"
         bgColor="var(--color-red-dark)"
       />
       <Accordion />

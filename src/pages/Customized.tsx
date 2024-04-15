@@ -10,6 +10,7 @@ function Customized() {
         text1="We're here to make your dreams come true"
         text2="You can travel the way you want"
         svg={bestLife}
+        bannerImg="Illustration of 2 celebrating"
         bgColor="var(--color-red-dark)"
       />
       <CustomizedContainer />

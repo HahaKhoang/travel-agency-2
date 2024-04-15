@@ -13,6 +13,7 @@ function Surprise() {
         text1="Let us plan a surprise trip for you"
         text2="All you have to do is bring your spirit of adventure!"
         svg={surprise}
+        bannerImg="Illustration of a person with the world"
         bgColor="var(--color-red-dark)"
       />
       <SurprisePictureBanner />

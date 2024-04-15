@@ -10,6 +10,7 @@ function Contact() {
         h1="How can we help you?"
         text1="Just fill out the form and we will respond as soon as possible"
         svg={contact}
+        bannerImg="Illustration of a man using a cellphone"
         bgColor="var(--color-red-dark)"
       />
       <ContactForm />
