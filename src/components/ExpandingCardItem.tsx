@@ -4,6 +4,7 @@ import { type ReactNode } from "react";
 
 type ExpandingCardItemsProps = {
   img: string;
+  alt: string;
   text: string;
   key: string;
   num: number;
@@ -18,6 +19,7 @@ function ExpandingCardItem({
   curActive,
   onActive,
   img,
+  alt,
   text,
   num,
   desc,
@@ -44,6 +46,8 @@ function ExpandingCardItem({
         rgba(53, 53, 53, 0.443)), url(${img})`,
       }}
       onClick={handleToggle}
+      role="img"
+      aria-label={alt}
     >
       <div className={`${textActive} ${styles.box}`}>
         <h3 className={styles.header}> {text}</h3>

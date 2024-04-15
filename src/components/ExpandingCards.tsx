@@ -19,6 +19,7 @@ import {
 const tours = [
   {
     img: culture,
+    alt: "Japanese kids dressed in traditional clothing",
     text: "Culture",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
     icon: <RiBankFill />,
@@ -26,6 +27,7 @@ const tours = [
   },
   {
     img: nature,
+    alt: "Upward view of a bamboo forrest",
     text: "Nature",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
     icon: <RiLeafFill />,
@@ -33,6 +35,7 @@ const tours = [
   },
   {
     img: shopping,
+    alt: "Handmade bags",
     text: "Shopping",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
     icon: <RiShoppingBag2Fill />,
@@ -40,6 +43,7 @@ const tours = [
   },
   {
     img: food,
+    alt: "Brunch with waffles, fruit, and juice",
     text: "Food",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
     icon: <RiRestaurantFill />,
@@ -47,6 +51,7 @@ const tours = [
   },
   {
     img: nightlife,
+    alt: "People partying in a club",
     text: "Nightlife",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
     icon: <RiGobletFill />,
@@ -54,6 +59,7 @@ const tours = [
   },
   {
     img: everything,
+    alt: "Colorful town with a canal and boats",
     text: "Everything",
     desc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe facere aut dolore doloribus sequi. Soluta dolores ullam corporis, suscipit quidem repellat odit repellendus, enim nemo officia delectus blanditiis magnam illum.",
     icon: <RiMagicFill />,
@@ -69,6 +75,7 @@ function ExpandingCards() {
       {tours.map((el, i) => (
         <ExpandingCardItem
           img={el.img}
+          alt={el.alt}
           text={el.text}
           key={el.text}
           num={i}
