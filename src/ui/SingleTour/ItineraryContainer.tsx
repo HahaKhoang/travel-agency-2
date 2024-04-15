@@ -7,7 +7,7 @@ import ItineraryHeader from "./ItineraryHeader";
 function ItineraryContainer() {
   const { tour } = useSingleTour();
 
-  const { dayTitle, dayDesc, dayImages } = tour;
+  const { dayTitle, dayDesc, dayImages, dayAlt } = tour;
   const [
     day1Title,
     day2Title,
@@ -43,12 +43,19 @@ function ItineraryContainer() {
     day15Desc,
   ] = dayDesc;
   const [img1, img2, img3, img4, img5, img6, img7] = dayImages;
+  const [img1Alt, img2Alt, img3Alt, img4Alt, img5Alt, img6Alt, img7Alt] =
+    dayAlt;
 
   let itinerary;
 
   if (tour.duration === 1) {
     itinerary = (
-      <ItineraryDays img1={img1} day1Title={day1Title} day1Desc={day1Desc} />
+      <ItineraryDays
+        img1={img1}
+        img1Alt={img1Alt}
+        day1Title={day1Title}
+        day1Desc={day1Desc}
+      />
     );
   }
 
@@ -56,6 +63,7 @@ function ItineraryContainer() {
     itinerary = (
       <ItineraryDays
         img1={img1}
+        img1Alt={img1Alt}
         day1Title={day1Title}
         day1Desc={day1Desc}
         day2Title={day2Title}
@@ -68,7 +76,9 @@ function ItineraryContainer() {
     itinerary = (
       <ItineraryDays
         img1={img1}
+        img1Alt={img1Alt}
         img2={img2}
+        img2Alt={img2Alt}
         day1Title={day1Title}
         day1Desc={day1Desc}
         day2Title={day2Title}
@@ -83,7 +93,9 @@ function ItineraryContainer() {
     itinerary = (
       <ItineraryDays
         img1={img1}
+        img1Alt={img1Alt}
         img2={img2}
+        img2Alt={img2Alt}
         day1Title={day1Title}
         day1Desc={day1Desc}
         day2Title={day2Title}
@@ -100,7 +112,9 @@ function ItineraryContainer() {
     itinerary = (
       <ItineraryDays
         img1={img1}
+        img1Alt={img1Alt}
         img2={img2}
+        img2Alt={img2Alt}
         day1Title={day1Title}
         day1Desc={day1Desc}
         day2Title={day2Title}
@@ -119,8 +133,11 @@ function ItineraryContainer() {
     itinerary = (
       <ItineraryDays
         img1={img1}
+        img1Alt={img1Alt}
         img2={img2}
+        img2Alt={img2Alt}
         img3={img3}
+        img3Alt={img3Alt}
         day1Title={day1Title}
         day1Desc={day1Desc}
         day2Title={day2Title}
@@ -141,9 +158,13 @@ function ItineraryContainer() {
     itinerary = (
       <ItineraryDays
         img1={img1}
+        img1Alt={img1Alt}
         img2={img2}
+        img2Alt={img2Alt}
         img3={img3}
+        img3Alt={img3Alt}
         img4={img4}
+        img4Alt={img4Alt}
         day1Title={day1Title}
         day1Desc={day1Desc}
         day2Title={day2Title}
@@ -166,9 +187,13 @@ function ItineraryContainer() {
     itinerary = (
       <ItineraryDays
         img1={img1}
+        img1Alt={img1Alt}
         img2={img2}
+        img2Alt={img2Alt}
         img3={img3}
+        img3Alt={img3Alt}
         img4={img4}
+        img4Alt={img4Alt}
         day1Title={day1Title}
         day1Desc={day1Desc}
         day2Title={day2Title}
@@ -193,9 +218,13 @@ function ItineraryContainer() {
     itinerary = (
       <ItineraryDays
         img1={img1}
+        img1Alt={img1Alt}
         img2={img2}
+        img2Alt={img2Alt}
         img3={img3}
+        img3Alt={img3Alt}
         img4={img4}
+        img4Alt={img4Alt}
         day1Title={day1Title}
         day1Desc={day1Desc}
         day2Title={day2Title}
@@ -222,10 +251,15 @@ function ItineraryContainer() {
     itinerary = (
       <ItineraryDays
         img1={img1}
+        img1Alt={img1Alt}
         img2={img2}
+        img2Alt={img2Alt}
         img3={img3}
+        img3Alt={img3Alt}
         img4={img4}
+        img4Alt={img4Alt}
         img5={img5}
+        img5Alt={img5Alt}
         day1Title={day1Title}
         day1Desc={day1Desc}
         day2Title={day2Title}
@@ -254,11 +288,17 @@ function ItineraryContainer() {
     itinerary = (
       <ItineraryDays
         img1={img1}
+        img1Alt={img1Alt}
         img2={img2}
+        img2Alt={img2Alt}
         img3={img3}
+        img3Alt={img3Alt}
         img4={img4}
+        img4Alt={img4Alt}
         img5={img5}
+        img5Alt={img5Alt}
         img6={img6}
+        img6Alt={img6Alt}
         day1Title={day1Title}
         day1Desc={day1Desc}
         day2Title={day2Title}
@@ -289,11 +329,17 @@ function ItineraryContainer() {
     itinerary = (
       <ItineraryDays
         img1={img1}
+        img1Alt={img1Alt}
         img2={img2}
+        img2Alt={img2Alt}
         img3={img3}
+        img3Alt={img3Alt}
         img4={img4}
+        img4Alt={img4Alt}
         img5={img5}
+        img5Alt={img5Alt}
         img6={img6}
+        img6Alt={img6Alt}
         day1Title={day1Title}
         day1Desc={day1Desc}
         day2Title={day2Title}
@@ -326,12 +372,19 @@ function ItineraryContainer() {
     itinerary = (
       <ItineraryDays
         img1={img1}
+        img1Alt={img1Alt}
         img2={img2}
+        img2Alt={img2Alt}
         img3={img3}
+        img3Alt={img3Alt}
         img4={img4}
+        img4Alt={img4Alt}
         img5={img5}
+        img5Alt={img5Alt}
         img6={img6}
+        img6Alt={img6Alt}
         img7={img7}
+        img7Alt={img7Alt}
         day1Title={day1Title}
         day1Desc={day1Desc}
         day2Title={day2Title}
@@ -366,12 +419,19 @@ function ItineraryContainer() {
     itinerary = (
       <ItineraryDays
         img1={img1}
+        img1Alt={img1Alt}
         img2={img2}
+        img2Alt={img2Alt}
         img3={img3}
+        img3Alt={img3Alt}
         img4={img4}
+        img4Alt={img4Alt}
         img5={img5}
+        img5Alt={img5Alt}
         img6={img6}
+        img6Alt={img6Alt}
         img7={img7}
+        img7Alt={img7Alt}
         day1Title={day1Title}
         day1Desc={day1Desc}
         day2Title={day2Title}
@@ -408,12 +468,19 @@ function ItineraryContainer() {
     itinerary = (
       <ItineraryDays
         img1={img1}
+        img1Alt={img1Alt}
         img2={img2}
+        img2Alt={img2Alt}
         img3={img3}
+        img3Alt={img3Alt}
         img4={img4}
+        img4Alt={img4Alt}
         img5={img5}
+        img5Alt={img5Alt}
         img6={img6}
+        img6Alt={img6Alt}
         img7={img7}
+        img7Alt={img7Alt}
         day1Title={day1Title}
         day1Desc={day1Desc}
         day2Title={day2Title}

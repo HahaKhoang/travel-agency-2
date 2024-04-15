@@ -2,12 +2,19 @@ import styles from "./ItineraryDays.module.scss";
 
 type ItineraryDaysProps = {
   img1: string;
+  img1Alt: string;
   img2?: string;
+  img2Alt?: string;
   img3?: string;
+  img3Alt?: string;
   img4?: string;
+  img4Alt?: string;
   img5?: string;
+  img5Alt?: string;
   img6?: string;
+  img6Alt?: string;
   img7?: string;
+  img7Alt?: string;
   day1Title: string;
   day1Desc: string;
   day2Title?: string;
@@ -67,18 +74,30 @@ function ItineraryDays(props: ItineraryDaysProps) {
           )}
         </div>
         <div className={styles["picture-container-1-2"]}>
-          <img src={props.img1} className={styles.picture} />
+          <img
+            src={props.img1}
+            className={styles.picture}
+            alt={props.img1Alt}
+          />
         </div>
       </div>
       {props.day3Title && (
         <div className={styles["container-3-5"]}>
           {!props.day5Title ? (
             <div className={styles["picture-container-small-3-5"]}>
-              <img src={props.img2} className={styles.picture} />
+              <img
+                src={props.img2}
+                className={styles.picture}
+                alt={props.img2Alt}
+              />
             </div>
           ) : (
             <div className={styles["picture-container-3-5"]}>
-              <img src={props.img2} className={styles.picture} />
+              <img
+                src={props.img2}
+                className={styles.picture}
+                alt={props.img2Alt}
+              />
             </div>
           )}
           <div className={styles["day-container-3-5"]}>
@@ -115,13 +134,21 @@ function ItineraryDays(props: ItineraryDaysProps) {
               </div>
             </div>
             <div className={styles["picture-container-top"]}>
-              <img src={props.img3} className={styles.picture} />
+              <img
+                src={props.img3}
+                className={styles.picture}
+                alt={props.img3Alt}
+              />
             </div>
           </div>
           {props.day7Title && (
             <div className={styles["container-bottom"]}>
               <div className={styles["picture-container-bottom"]}>
-                <img src={props.img4} className={styles.picture} />
+                <img
+                  src={props.img4}
+                  className={styles.picture}
+                  alt={props.img4Alt}
+                />
               </div>
               <div className={styles["day-7"]}>
                 <div className={styles.day}>
@@ -159,11 +186,19 @@ function ItineraryDays(props: ItineraryDaysProps) {
           </div>
           {!props.day10Title ? (
             <div className={styles["picture-container-small-8-10"]}>
-              <img src={props.img5} className={styles.picture} />
+              <img
+                src={props.img5}
+                className={styles.picture}
+                alt={props.img5Alt}
+              />
             </div>
           ) : (
             <div className={styles["picture-container-8-10"]}>
-              <img src={props.img5} className={styles.picture} />
+              <img
+                src={props.img5}
+                className={styles.picture}
+                alt={props.img5Alt}
+              />
             </div>
           )}
         </div>
@@ -172,7 +207,11 @@ function ItineraryDays(props: ItineraryDaysProps) {
         <div className={container11}>
           <div className={styles["container-top"]}>
             <div className={styles["picture-container-top"]}>
-              <img src={props.img6} className={styles.picture} />
+              <img
+                src={props.img6}
+                className={styles.picture}
+                alt={props.img6Alt}
+              />
             </div>
             <div className={styles["day-11"]}>
               <div className={styles.day}>
@@ -192,7 +231,11 @@ function ItineraryDays(props: ItineraryDaysProps) {
                 </div>
               </div>
               <div className={styles["picture-container-bottom"]}>
-                <img src={props.img6} className={styles.picture} />
+                <img
+                  src={props.img6}
+                  className={styles.picture}
+                  alt={props.img6Alt}
+                />
               </div>
             </div>
           )}
@@ -203,11 +246,19 @@ function ItineraryDays(props: ItineraryDaysProps) {
         <div className={styles["container-13-15"]}>
           {!props.day15Title ? (
             <div className={styles["picture-container-small-13-15"]}>
-              <img src={props.img7} className={styles.picture} />
+              <img
+                src={props.img7}
+                className={styles.picture}
+                alt={props.img7Alt}
+              />
             </div>
           ) : (
             <div className={styles["picture-container-13-15"]}>
-              <img src={props.img6} className={styles.picture} />
+              <img
+                src={props.img6}
+                className={styles.picture}
+                alt={props.img6Alt}
+              />
             </div>
           )}
           <div className={styles["day-container-13-15"]}>
