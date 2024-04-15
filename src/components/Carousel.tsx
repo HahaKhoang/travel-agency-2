@@ -1,9 +1,9 @@
 import styles from "./Carousel.module.scss";
-import review1 from "../assets/img/people/review1.jpg";
-import review2 from "../assets/img/people/review2.jpg";
-import review3 from "../assets/img/people/review3.jpg";
-import review4 from "../assets/img/people/review4.jpg";
-import jk4 from "../assets/img/people/jk4.jpg";
+import hanbok from "../assets/img/korea/hanbok.jpg";
+import kiyomizu from "../assets/img/japan/kiyomizu.jpg";
+import fuji from "../assets/img/japan/fuji.jpg";
+import tokyo from "../assets/img/japan/tokyo.jpg";
+import japaneseFood from "../assets/img/japan/japaneseFood.jpg";
 import CarouselItem from "./CarouselItem";
 import { useState } from "react";
 import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";
@@ -12,16 +12,28 @@ const reviews = [
   {
     name: "Jungkook",
     tour: "Seoul Searching",
-    image: jk4,
+    image: hanbok,
+    alt: "4 women wearing traditional korean hanbok",
   },
   {
     name: "Hanbin",
     tour: "Explore Kyoto",
-    image: review1,
+    image: kiyomizu,
+    alt: "2 women wearing traditional japanese yukata in front of Kiyomizu temple",
   },
-  { name: "Dongwoon", tour: "Explore Fuji", image: review2 },
-  { name: "Keanu", tour: "Explore Tokyo", image: review4 },
-  { name: "Tablo", tour: "Food Tour", image: review3 },
+  {
+    name: "Dongwoon",
+    tour: "Explore Fuji",
+    image: fuji,
+    alt: "Mt. Fuji with cherry blossoms in the foreground",
+  },
+  { name: "Keanu", tour: "Explore Tokyo", image: tokyo, alt: "Tokyo at night" },
+  {
+    name: "Tablo",
+    tour: "Food Tour",
+    image: japaneseFood,
+    alt: "Traditional Japanese meal",
+  },
 ];
 
 function Carousel() {
@@ -70,7 +82,12 @@ function Carousel() {
               transform: `translateX(${100 * (i - activeIndex)}%)`,
             }}
           >
-            <CarouselItem name={el.name} tour={el.tour} image={el.image} />
+            <CarouselItem
+              name={el.name}
+              tour={el.tour}
+              image={el.image}
+              alt={el.alt}
+            />
           </div>
         ))}
       </div>

@@ -4,13 +4,14 @@ type CarouselItemProps = {
   name: string;
   tour: string;
   image: string;
+  alt: string;
 };
 
-function CarouselItem({ name, tour, image }: CarouselItemProps) {
+function CarouselItem({ name, tour, image, alt }: CarouselItemProps) {
   return (
     <div className={styles.container}>
       <div className={styles["left-container"]}>
-        <img src={image} className={styles.picture} />
+        <img src={image} className={styles.picture} alt={alt} />
       </div>
       <div className={styles["right-container"]}>
         <div className={styles["text-container"]}>
