@@ -77,6 +77,7 @@ function SurpriseBookingForm() {
             header="Thank you for booking a surprise trip with us!"
             text="We will send you a confirmation email with all your details shortly"
             img={map}
+            alt="A map with travel items on top"
           />
         )}
         <form

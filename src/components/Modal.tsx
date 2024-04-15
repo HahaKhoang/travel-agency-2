@@ -8,9 +8,10 @@ type ModalProps = {
   img: string;
   header: string;
   text: string;
+  alt: string;
 };
 
-function Modal({ onClose, img, header, text }: ModalProps) {
+function Modal({ onClose, img, header, text, alt }: ModalProps) {
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(
@@ -35,7 +36,7 @@ function Modal({ onClose, img, header, text }: ModalProps) {
           <RiCloseFill />
         </button>
         <div className={styles["picture-container"]}>
-          <img src={img} className={styles.picture} />
+          <img src={img} className={styles.picture} alt={alt} />
         </div>
         <div className={styles["text-container"]}>
           <h3 className={styles.header}>{header}</h3>

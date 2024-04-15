@@ -79,6 +79,7 @@ function CustomizedBookingForm() {
             header="Thank you for booking a customized tour!"
             text="We will send you a confirmation email with all your details shortly"
             img={customized}
+            alt="An open map with a notebook to plan a trip"
           />
         )}
         <form

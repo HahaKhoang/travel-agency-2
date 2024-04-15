@@ -56,14 +56,14 @@ function HowToSteps(props: HowToProps) {
             )}
           </div>
           <div className={styles["step-1-picture-container"]}>
-            <img src={props.img1} className={styles.picture}></img>
+            <img src={props.img1} className={styles.picture} />
           </div>
         </div>
         <div className={styles[`step-2-${props.direction}`]}>
           <div
             className={styles[`step-2-picture-container-${props.direction}`]}
           >
-            <img src={props.img2} className={styles.picture}></img>
+            <img src={props.img2} className={styles.picture} />
           </div>
           <div className={styles[`step-2-text-container-${props.direction}`]}>
             <h2 className={styles.header}>Step 2</h2>

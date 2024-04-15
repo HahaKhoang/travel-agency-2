@@ -60,6 +60,7 @@ function TourBookingForm({ tour }: TourBookingFormProps) {
             header={`Thank you for booking ${tourName} with us!`}
             text="We will send you a confirmation email with all your details shortly"
             img={imageWelcome}
+            alt={`Main photo for ${tourName}`}
           />
         )}
         <form

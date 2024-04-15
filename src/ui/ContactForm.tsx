@@ -41,6 +41,7 @@ function ContactForm() {
             header="Thank you for contacting us!"
             text="We will reply as soon as we can (usually within 48 hours)"
             onClose={() => setShowModal(false)}
+            alt="Person typing on a laptop"
           />
         )}
         <form
