@@ -50,10 +50,18 @@ function Carousel() {
 
   return (
     <div className={styles.container}>
-      <button className={styles["button-left"]} onClick={prevSlide}>
+      <button
+        className={styles["button-left"]}
+        onClick={prevSlide}
+        aria-label="prev button"
+      >
         <RiArrowLeftLine className={styles.button} />
       </button>
-      <button className={styles["button-right"]} onClick={nextSlide}>
+      <button
+        className={styles["button-right"]}
+        onClick={nextSlide}
+        aria-label="next button"
+      >
         <RiArrowRightLine className={styles.button} />
       </button>
       <div className={styles.dots}>
