@@ -65,6 +65,7 @@ function PopularSection() {
                   };
                   dispatch(addTour(tour));
                 }}
+                aria-label={`Click to read more about the ${el.slug} tour`}
               >
                 Read more
               </NavLink>

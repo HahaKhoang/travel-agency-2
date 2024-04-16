@@ -45,7 +45,11 @@ function TourCard({
 
   return (
     <div className={styles.container}>
-      <NavLink to={slug} className={styles["picture-container"]}>
+      <NavLink
+        to={slug}
+        className={styles["picture-container"]}
+        aria-label={`Main image of the ${slug} tour`}
+      >
         <img src={mainImage} className={styles.picture} />
       </NavLink>
       <div className={styles["detail-container"]}>
@@ -60,7 +64,12 @@ function TourCard({
           </div>
           <p className={styles.price}>Price: ${price}</p>
         </div>
-        <NavLink to={`${slug}`} className={styles.button} onClick={updateTour}>
+        <NavLink
+          to={`${slug}`}
+          className={styles.button}
+          onClick={updateTour}
+          aria-label={`Click to read more about the ${slug} tour`}
+        >
           Let's go to {country}!
         </NavLink>
       </div>
