@@ -23,6 +23,7 @@ function PopularSection() {
                   id: el.id,
                   name: el.tourName,
                   slug: el.slug,
+                  country: el.country,
                   price: el.price,
                   duration: el.duration,
                   totalPrice: el.price,
@@ -58,6 +59,7 @@ function PopularSection() {
                   const tour = {
                     id: el.id,
                     name: el.tourName,
+                    country: el.country,
                     slug: el.slug,
                     price: el.price,
                     duration: el.duration,
@@ -65,9 +67,8 @@ function PopularSection() {
                   };
                   dispatch(addTour(tour));
                 }}
-                aria-label={`Click to read more about the ${el.slug} tour`}
               >
-                Read more
+                {`Let's go to ${el.country}`}
               </NavLink>
             </div>
           </div>

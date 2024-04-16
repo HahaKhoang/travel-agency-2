@@ -21,12 +21,8 @@ function FeaturedSection() {
             illo ducimus, explicabo excepturi obcaecati beatae, dolore natus!
             Molestias, consectetur accusamus!
           </p>
-          <NavLink
-            to="/all-tours/essential-japan"
-            className={styles.button}
-            aria-label="Click to read more about the featured Essential Japan tour"
-          >
-            Read more
+          <NavLink to="/all-tours/essential-japan" className={styles.button}>
+            Let's go to Japan
           </NavLink>
         </div>
       </div>
