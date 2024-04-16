@@ -4,7 +4,7 @@ import Modal from "../../components/Modal";
 import FormField from "../../components/FormField";
 import FormInput from "../../components/FormInput";
 import { useState } from "react";
-import customized from "../../assets/img/website/customized.jpg";
+import customized from "../../assets/img/website/customized.webp";
 import {
   updateAccommodation,
   updateDuration,
