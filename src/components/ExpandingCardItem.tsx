@@ -52,7 +52,11 @@ function ExpandingCardItem({
       <div className={`${textActive} ${styles.box}`}>
         <h3 className={styles.header}> {text}</h3>
         <p className={styles.description}>{desc}</p>
-        <NavLink to={link} className={styles.link}>
+        <NavLink
+          to={link}
+          className={styles.link}
+          aria-label={`Click to see more ${text} based tours`}
+        >
           &rarr; Read more
         </NavLink>
       </div>

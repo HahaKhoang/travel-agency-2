@@ -22,7 +22,11 @@ function InspirationCard({ name, location, img, slug }: InspirationCardProps) {
                 <RiMapPin2Line className={styles.icon} />
                 <p>{location}</p>
               </div>
-              <NavLink to={`/all-tours/${slug}`} className={styles.button}>
+              <NavLink
+                to={`/all-tours/${slug}`}
+                className={styles.button}
+                aria-label={`Click to read more about the ${slug} tour`}
+              >
                 Read more
               </NavLink>
             </div>
