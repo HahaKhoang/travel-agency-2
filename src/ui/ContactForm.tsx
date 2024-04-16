@@ -2,7 +2,7 @@ import styles from "./ContactForm.module.scss";
 import { FormProvider, useForm } from "react-hook-form";
 import { useState } from "react";
 import Modal from "../components/Modal.tsx";
-import contactModal from "../assets/img/website/contactModal.jpg";
+import contactModal from "../assets/img/website/contactModal.webp";
 import FormField from "../components/FormField.tsx";
 import FormInput from "../components/FormInput.tsx";
 

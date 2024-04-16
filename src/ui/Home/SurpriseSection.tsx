@@ -1,5 +1,5 @@
 import styles from "./SurpriseSection.module.scss";
-import roadtrip from "../../assets/img/website/roadtrip.jpg";
+import roadtrip from "../../assets/img/website/roadtrip.webp";
 import { NavLink } from "react-router-dom";
 
 function SurpriseSection() {

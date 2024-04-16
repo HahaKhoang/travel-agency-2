@@ -1,12 +1,11 @@
 import styles from "./SurpriseHow.module.scss";
-import jump from "../../assets/img/website/jump.jpg";
 import HowToSteps from "../../components/HowToSteps";
-
-import tent from "../../assets/img/website/tent.jpg";
-import bicycle from "../../assets/img/website/bicycle.jpg";
-import trolley from "../../assets/img/website/trolley.jpg";
-import kayak from "../../assets/img/website/kayak.jpg";
-import adventure from "../../assets/img/website/adventure.jpg";
+import jump from "../../assets/img/website/jump.webp";
+import tent from "../../assets/img/website/tent.webp";
+import bicycle from "../../assets/img/website/bicycle.webp";
+import trolley from "../../assets/img/website/trolley.webp";
+import kayak from "../../assets/img/website/kayak.webp";
+import adventure from "../../assets/img/website/adventure.webp";
 
 function SurpriseHow() {
   return (

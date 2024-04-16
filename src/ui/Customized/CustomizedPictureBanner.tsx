@@ -1,12 +1,12 @@
 import styles from "./CustomizedPictureBanner.module.scss";
-import contact from "../../assets/img/website/contact.jpg";
-import tent from "../../assets/img/website/tent.jpg";
-import mountain from "../../assets/img/website/mountain.jpg";
-import shopping from "../../assets/img/website/shopping.jpg";
-import road from "../../assets/img/website/road.jpg";
-import food from "../../assets/img/website/food.jpg";
-import culture from "../../assets/img/website/culture.jpg";
-import tour from "../../assets/img/website/tour.jpg";
+import contact from "../../assets/img/website/contact.webp";
+import tent from "../../assets/img/website/tent.webp";
+import mountain from "../../assets/img/website/mountain.webp";
+import shopping from "../../assets/img/website/shopping.webp";
+import road from "../../assets/img/website/road.webp";
+import food from "../../assets/img/website/food.webp";
+import culture from "../../assets/img/website/culture.webp";
+import tour from "../../assets/img/website/tour.webp";
 import { useEffect, useState } from "react";
 import RotatingWords from "../../components/RotatingWords.tsx";
 

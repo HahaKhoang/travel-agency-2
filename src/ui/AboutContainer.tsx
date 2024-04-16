@@ -1,4 +1,4 @@
-import kathy from "../assets/img/website/kathy.jpg";
+import kathy from "../assets/img/website/kathy.webp";
 import styles from "./AboutContainer.module.scss";
 
 function AboutContainer() {

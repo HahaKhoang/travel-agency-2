@@ -1,5 +1,5 @@
 import styles from "./SurprisePictureBanner.module.scss";
-import explore from "../../assets/img/website/explore.jpg";
+import explore from "../../assets/img/website/explore.webp";
 
 function SurprisePictureBanner() {
   return (

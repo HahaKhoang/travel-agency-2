@@ -1,5 +1,5 @@
 import styles from "./FeaturedSection.module.scss";
-import kyoto from "../../assets/img/japan/kyoto.jpg";
+import kyoto from "../../assets/img/japan/kyoto.webp";
 import { NavLink } from "react-router-dom";
 
 function FeaturedSection() {

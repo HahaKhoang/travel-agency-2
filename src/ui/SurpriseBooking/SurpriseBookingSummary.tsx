@@ -1,7 +1,6 @@
 import styles from "./SurpriseBookingSummary.module.scss";
 import { useAppSelector } from "../../store/hooks";
-
-import night from "../../assets/img/website/night.jpg";
+import night from "../../assets/img/website/night.webp";
 
 function SurpriseBookingSummary() {
   const { duration, quantity, price } = useAppSelector(

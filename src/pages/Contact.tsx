@@ -1,5 +1,4 @@
 import Banner from "../components/Banner.tsx";
-
 import contact from "../assets/img/undraw/contact.svg";
 import ContactForm from "../ui/ContactForm.tsx";
 

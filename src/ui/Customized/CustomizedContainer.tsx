@@ -1,11 +1,11 @@
 import HowToSteps from "../../components/HowToSteps.tsx";
 import CustomizedPictureBanner from "./CustomizedPictureBanner.tsx";
 import CTA from "../../components/CTA.tsx";
-import horseshoe from "../../assets/img/inspiration/horseshoe.jpg";
-import taipei from "../../assets/img/inspiration/taipei.jpg";
-import machuPichu from "../../assets/img/inspiration/machuPichu.jpg";
-import capetown from "../../assets/img/inspiration/capetown.jpg";
-import tori from "../../assets/img/inspiration/tori.jpg";
+import horseshoe from "../../assets/img/inspiration/horseshoe.webp";
+import taipei from "../../assets/img/inspiration/taipei.webp";
+import machuPichu from "../../assets/img/inspiration/machuPichu.webp";
+import capetown from "../../assets/img/inspiration/capetown.webp";
+import tori from "../../assets/img/inspiration/tori.webp";
 import Subheading from "../../components/Subheading.tsx";
 
 function CustomizedContainer() {

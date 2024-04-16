@@ -1,5 +1,5 @@
 import styles from "./Hero.module.scss";
-import hero8 from "../../assets/img/japan/hero8.jpg";
+import hero8 from "../../assets/img/japan/hero8.webp";
 import { NavLink } from "react-router-dom";
 
 function Hero() {

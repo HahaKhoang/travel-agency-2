@@ -1,5 +1,5 @@
 import styles from "./SurpriseHeader.module.scss";
-import explore from "../../public/img/website/explore.jpg";
+import explore from "../../public/img/website/explore.webp";
 
 function MysteryHeader() {
   return (

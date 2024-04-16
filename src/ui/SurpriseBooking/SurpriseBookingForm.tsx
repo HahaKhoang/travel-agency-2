@@ -4,7 +4,7 @@ import styles from "./SurpriseBookingForm.module.scss";
 import { useState } from "react";
 import Modal from "../../components/Modal.tsx";
 import FormField from "../../components/FormField.tsx";
-import map from "../../assets/img/website/map.jpg";
+import map from "../../assets/img/website/map.webp";
 import {
   updateDuration,
   updatePrice,

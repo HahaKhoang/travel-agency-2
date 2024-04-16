@@ -1,9 +1,9 @@
 import styles from "./Carousel.module.scss";
-import hanbok from "../assets/img/korea/hanbok.jpg";
-import kiyomizu from "../assets/img/japan/kiyomizu.jpg";
-import fuji from "../assets/img/japan/fuji.jpg";
-import tokyo from "../assets/img/japan/tokyo.jpg";
-import japaneseFood from "../assets/img/japan/japaneseFood.jpg";
+import hanbok from "../assets/img/korea/hanbok.webp";
+import kiyomizu from "../assets/img/japan/kiyomizu.webp";
+import fuji from "../assets/img/japan/fuji.webp";
+import tokyo from "../assets/img/japan/tokyo.webp";
+import japaneseFood from "../assets/img/japan/japaneseFood.webp";
 import CarouselItem from "./CarouselItem";
 import { useState } from "react";
 import { RiArrowLeftLine, RiArrowRightLine } from "react-icons/ri";

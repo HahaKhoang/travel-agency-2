@@ -1,7 +1,6 @@
 import styles from "./CustomizedBookingSummary.module.scss";
 import { useAppSelector } from "../../store/hooks";
-
-import customized from "../../assets/img/website/customized.jpg";
+import customized from "../../assets/img/website/customized.webp";
 
 function CustomizedBookingSummary() {
   const {

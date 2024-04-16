@@ -1,5 +1,5 @@
 import styles from "./CustomizedSection.module.scss";
-import map from "../../assets/img/website/map.jpg";
+import map from "../../assets/img/website/map.webp";
 import { RiNumber1, RiNumber2, RiNumber3 } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
 
