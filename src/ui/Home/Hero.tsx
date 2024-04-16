@@ -5,7 +5,11 @@ import { NavLink } from "react-router-dom";
 function Hero() {
   return (
     <div className={styles.container}>
-      <img src={hero8} className={styles.hero} />
+      <img
+        src={hero8}
+        className={styles.hero}
+        alt="Temple in the mountains in Japan"
+      />
       <div className={styles.box}>
         <h1 className={styles.title}>Curated trips for every traveler</h1>
         <p className={styles.description}>

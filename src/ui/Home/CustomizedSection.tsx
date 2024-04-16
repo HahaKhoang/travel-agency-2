@@ -31,7 +31,11 @@ function CustomizedSection() {
         </NavLink>
       </div>
       <div className={styles["right-container"]}>
-        <img src={map} className={styles.picture} />
+        <img
+          src={map}
+          className={styles.picture}
+          alt="Map with cameras, sunglasses, and passports on top of it"
+        />
       </div>
     </section>
   );

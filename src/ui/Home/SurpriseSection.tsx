@@ -20,7 +20,11 @@ function SurpriseSection() {
         </div>
       </div>
       <div className={styles["picture-container"]}>
-        <img src={roadtrip} className={styles.picture} />
+        <img
+          src={roadtrip}
+          className={styles.picture}
+          alt="Woman sticking her head and arm out of a car during a road trip"
+        />
       </div>
     </section>
   );

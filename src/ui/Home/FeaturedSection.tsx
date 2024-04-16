@@ -6,7 +6,11 @@ function FeaturedSection() {
   return (
     <section className={styles.container}>
       <div className={styles["left-container"]}>
-        <img src={kyoto} className={styles.picture} />
+        <img
+          src={kyoto}
+          className={styles.picture}
+          alt="Cherry blossoms in traditional Kyoto area"
+        />
       </div>
       <div className={styles["right-container"]}>
         <div className={styles["discover-container"]}>
@@ -17,7 +21,6 @@ function FeaturedSection() {
             illo ducimus, explicabo excepturi obcaecati beatae, dolore natus!
             Molestias, consectetur accusamus!
           </p>
-          {/* <button className={styles.button}>Browse all Japan tours</button> */}
           <NavLink to="/all-tours/essential-japan" className={styles.button}>
             Read more
           </NavLink>

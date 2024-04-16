@@ -30,7 +30,11 @@ function PopularSection() {
                 dispatch(addTour(tour));
               }}
             >
-              <img src={el.imageWelcome} className={styles.picture} />
+              <img
+                src={el.imageWelcome}
+                className={styles.picture}
+                alt={`Main photo for ${el.tourName}`}
+              />
             </NavLink>
           </div>
           <div className={styles["text-container"]}>
